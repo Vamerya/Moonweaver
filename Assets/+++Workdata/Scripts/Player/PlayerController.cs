@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
-    Animator anim;
+    public Animator anim;
     SpriteRenderer playerSpriteRenderer;
     PlayerInfos playerInfos;
     PlayerCombat playerCombat;

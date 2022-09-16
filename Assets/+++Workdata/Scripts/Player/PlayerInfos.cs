@@ -32,5 +32,7 @@ public class PlayerInfos : MonoBehaviour
             inventoryState = 1;
         else
             inventoryState = 0;
+
+        playerController.anim.SetFloat("InventoryState", inventoryState);
     }
 }

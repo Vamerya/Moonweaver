@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwapWeapon",
+                    "type": "Button",
+                    "id": "613147af-5da8-4095-b432-fa1ca46d413a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -110,6 +119,17 @@
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4585046-a135-411f-b626-01f25db844cc",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwapWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -139,6 +159,15 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "97bb2498-77c9-4798-9da3-ecc00bed1fae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwapWeapon",
+                    "type": "Button",
+                    "id": "691d4cc3-b084-499c-9822-0b14e2656229",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -220,6 +249,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a7f99dd-643b-4028-aefe-d8aa9c7b851e",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwapWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

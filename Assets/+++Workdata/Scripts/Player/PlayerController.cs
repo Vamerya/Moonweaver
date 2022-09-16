@@ -7,23 +7,25 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer playerSpriteRenderer;
+    PlayerInfos playerInfos;
+    PlayerCombat playerCombat;
 
     public float speed;
     public float movementX, movementY;
     private bool isMoving, isInteracting, isAttacking;
     private InputActions inputActions;
 
-    private void OnEnable()
+    void OnEnable()
     {
         inputActions.Enable();
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         inputActions.Disable();
     }
 
-    private void Awake()
+    void Awake()
     {
         inputActions = new InputActions();
 
@@ -33,23 +35,30 @@ public class PlayerController : MonoBehaviour
         inputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact(true);
         inputActions.PlayerKeyboardMouseActionMap.Interact.canceled += ctx => Interact(false);
         
-        inputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => Attack();
-        inputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => AttackRelease();
+        inputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
+        inputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+
+        inputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+
+
     }
 
-    private void Start()
+    void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         playerSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        playerInfos = gameObject.GetComponent<PlayerInfos>();
+        playerCombat = gameObject.GetComponent<PlayerCombat>();
     }
 
-    private void Update()
+    void Update()
     {
 
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         Vector2 move;
         move = new Vector2(movementX * speed, movementY * speed);
@@ -58,7 +67,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(move);
     }
 
-    private void Movement(Vector2 direction)
+    void Movement(Vector2 direction)
     {
         movementX = direction.x;
         movementY = direction.y;
@@ -69,21 +78,15 @@ public class PlayerController : MonoBehaviour
         else
             isMoving = false;
 
+        anim.SetFloat("MovementX", movementX);
+        anim.SetFloat("MovementY", movementY);
+
+
         //anim.SetBool("isMoving", isMoving);
     }
 
-    private void Interact(bool isInteracting)
+    void Interact(bool isInteracting)
     {
         isInteracting = !isInteracting;
-    }
-
-    private void Attack()
-    {
-        
-    }
-    
-    private void AttackRelease()
-    {
-        
     }
 }

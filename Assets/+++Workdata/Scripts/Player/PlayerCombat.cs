@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    // Start is called before the first frame update
+    PlayerController playerController;
+    PlayerInfos playerInfos;
     void Start()
+    {
+        playerController = gameObject.GetComponent<PlayerController>();
+        playerInfos = gameObject.GetComponent<PlayerInfos>();
+    }
+
+    void Update()
+    {
+
+    }
+    public void Attack()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void AttackRelease()
     {
         
     }

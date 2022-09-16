@@ -1,5 +1,5 @@
 {
-    "name": "PlayerController",
+    "name": "InputActions",
     "maps": [
         {
             "name": "PlayerKeyboardMouseActionMap",
@@ -127,18 +127,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "97bb2498-77c9-4798-9da3-ecc00bed1fae",
+                    "id": "48508fcc-f954-483a-993f-b6265cae38cf",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Interact",
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "48508fcc-f954-483a-993f-b6265cae38cf",
+                    "id": "97bb2498-77c9-4798-9da3-ecc00bed1fae",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -203,23 +203,23 @@
                 },
                 {
                     "name": "",
-                    "id": "e25f47b8-b7f5-422a-bea0-c8ed68116503",
-                    "path": "<XInputController>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "3f69355f-975b-478e-8466-875b8172f041",
                     "path": "<XInputController>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e25f47b8-b7f5-422a-bea0-c8ed68116503",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

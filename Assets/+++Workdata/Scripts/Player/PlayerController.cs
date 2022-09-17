@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     PlayerCombat playerCombat;
 
     public float speed;
-    public float movementX, movementY;
+    public float movementX, movementY, flashingTimer;
     private bool isMoving, isInteracting, isAttacking;
     private InputActions inputActions;
 
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         inputActions = new InputActions();
 
+        //KEYBOARD AND MOUSE
         inputActions.PlayerKeyboardMouseActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
         inputActions.PlayerKeyboardMouseActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
@@ -41,21 +42,43 @@ public class PlayerController : MonoBehaviour
         inputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
 
+        //CONTROLLER
+        inputActions.PlayerControllerActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
+        inputActions.PlayerControllerActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
+
+        inputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact(true);
+        inputActions.PlayerControllerActionMap.Interact.canceled += ctx => Interact(false);
+        
+        inputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
+        inputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+
+        inputActions.PlayerControllerActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+
+
     }
 
     void Start()
     {
+        playerSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
-        playerSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-        playerInfos = gameObject.GetComponent<PlayerInfos>();
         playerCombat = gameObject.GetComponent<PlayerCombat>();
+        playerInfos = gameObject.GetComponent<PlayerInfos>();
     }
 
     void Update()
     {
+        if(!playerInfos.isAlive)
+        {
+            inputActions.Disable();
+        }
+        else
+        {
+            inputActions.Enable();
+        }
 
+        anim.SetBool("isAlive", playerInfos.isAlive);
     }
 
     void FixedUpdate()
@@ -63,8 +86,6 @@ public class PlayerController : MonoBehaviour
         Vector2 move;
         move = new Vector2(movementX * speed, movementY * speed);
         rb.velocity = move;
-
-        Debug.Log(move);
     }
 
     void Movement(Vector2 direction)
@@ -82,7 +103,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("MovementY", movementY);
 
 
-        //anim.SetBool("isMoving", isMoving);
+        anim.SetBool("isMoving", isMoving);
     }
 
     void Interact(bool isInteracting)

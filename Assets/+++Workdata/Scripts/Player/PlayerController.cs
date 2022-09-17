@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
     PlayerCombat playerCombat;
 
     public float speed;
-    public float movementX, movementY, flashingTimer;
-    private bool isMoving, isInteracting, isAttacking;
+    public float movementX, movementY;
+    private bool isMoving, isAttacking;
+    public bool isInteracting;
     private InputActions inputActions;
 
     void OnEnable()
@@ -88,6 +89,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = move;
     }
 
+    //Method gives back Vector2 values for the playermovement
     void Movement(Vector2 direction)
     {
         movementX = direction.x;
@@ -106,8 +108,9 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isMoving", isMoving);
     }
 
-    void Interact(bool isInteracting)
+    //checks whether the player is interacting via assigned button
+    void Interact(bool isInteractingX)
     {
-        isInteracting = !isInteracting;
+        isInteracting = isInteractingX;
     }
 }

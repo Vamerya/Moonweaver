@@ -7,7 +7,8 @@ public class PlayerInfos : MonoBehaviour
     PlayerController playerController;
     PlayerCombat playerCombat;
     Vector3 startingPos;
-    public float playerMaxHealth, playerHealth, playerStamina, respawnTimer, respawnTimerInit, invincibilityTimer, invincibilityTimerInit;
+    public float respawnTimer, respawnTimerInit, invincibilityTimer, invincibilityTimerInit;
+    public float playerLevel, playerMaxHealth, playerHealth, playerMaxStamina, playerStamina;
     public int inventoryState;
     public bool obtainedRangedWeapon, swappedWeapon, isAlive, isDamaged;
 
@@ -43,6 +44,7 @@ public class PlayerInfos : MonoBehaviour
             isDamaged = false;
     }
 
+    //manages the state of the currently equipped weapon 
     public void SwapWeapon()
     {
         if(obtainedRangedWeapon)
@@ -56,7 +58,8 @@ public class PlayerInfos : MonoBehaviour
         playerController.anim.SetInteger("InventoryState", inventoryState);
     }
 
-    void CalculatePlayerHealth()
+    //calculates player health 
+    void CalculatePlayerHealth() 
     {
         if(isDamaged)
             playerHealth -= 1;
@@ -65,6 +68,7 @@ public class PlayerInfos : MonoBehaviour
             isAlive = false;
     }
     
+    //Resets PlayerValues
     void ResetPlayer()
     {
         playerHealth = playerMaxHealth;
@@ -72,7 +76,8 @@ public class PlayerInfos : MonoBehaviour
         respawnTimer = respawnTimerInit;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    //tracks collisions
+    void OnTriggerEnter2D(Collider2D collision) 
     {
         if(collision.CompareTag("Enemy") && !isDamaged)
         {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     public GameObject[] interactableType;
+    InteractableType interactableTypeID;
     PlayerController playerController;
     PlayerInfos playerInfos;
 
@@ -19,7 +20,7 @@ public class PlayerInteract : MonoBehaviour
 
     void Start()
     {
-
+        interactableTypeID = gameObject.GetComponent<InteractableType>();
     }
 
     void Update()
@@ -31,19 +32,19 @@ public class PlayerInteract : MonoBehaviour
     {
         if(collision.CompareTag("Interactable") && playerController.isInteracting) 
         {
-            if(interactableType[0]) //COLLECT RANGED WEAPON
+            if(interactableTypeID.interactableID == 0) //COLLECT RANGED WEAPON
             {
                 playerInfos.obtainedRangedWeapon = true;
                 Destroy(collision.gameObject);
             }  
 
-            if(interactableType[1]) //OPENS LEVEL UP UI
+            if(interactableTypeID.interactableID == 1) //OPENS LEVEL UP UI
             {
                 Debug.Log("LevelUp UI");
                 //OPEN LEVELUP UI  
             }   
 
-            if(interactableType[2]) //OPENS DIALOGUE UI
+            if(interactableTypeID.interactableID == 2) //OPENS DIALOGUE UI
             {
                 Debug.Log("Dialogue");
                 //Triggers dialogue

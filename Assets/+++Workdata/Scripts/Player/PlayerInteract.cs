@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public GameObject[] interactableType;
-    InteractableType interactableTypeID;
     PlayerController playerController;
     PlayerInfos playerInfos;
-
-    //INDEX: 0 = RangedWeapon, 1 = ALtar, 2 = Dialogue Trigger 
 
     void Awake()
     {
         playerController = gameObject.GetComponent<PlayerController>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
-        interactableType = GameObject.FindGameObjectsWithTag("Interactable");
     }
 
     void Start()
     {
-        interactableTypeID = gameObject.GetComponent<InteractableType>();
+ 
     }
 
     void Update()
@@ -30,30 +25,28 @@ public class PlayerInteract : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Interactable") && playerController.isInteracting) 
+
+        if(collision.CompareTag("WeaponPickup") && playerController.isInteracting) //COLLECT RANGED WEAPON
         {
-            if(interactableTypeID.interactableID == 0) //COLLECT RANGED WEAPON
-            {
-                playerInfos.obtainedRangedWeapon = true;
-                Destroy(collision.gameObject);
-            }  
+            playerInfos.obtainedRangedWeapon = true;
+            Destroy(collision.gameObject);
+        }  
 
-            if(interactableTypeID.interactableID == 1) //OPENS LEVEL UP UI
-            {
-                Debug.Log("LevelUp UI");
-                //OPEN LEVELUP UI  
-            }   
+        if(collision.CompareTag("Shrine") && playerController.isInteracting) //OPENS LEVEL UP UI
+        {
+            Debug.Log("LevelUp UI");
+            //OPEN LEVELUP UI  
+        }   
 
-            if(interactableTypeID.interactableID == 2) //OPENS DIALOGUE UI
-            {
-                Debug.Log("Dialogue");
-                //Triggers dialogue
-            }
+        if(collision.CompareTag("Dialogue") && playerController.isInteracting) //OPENS DIALOGUE UI
+        {
+            Debug.Log("Dialogue");
+            //Triggers dialogue
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        interactableType = GameObject.FindGameObjectsWithTag("Interactable");
+
     }
 }

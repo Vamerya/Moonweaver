@@ -6,6 +6,7 @@ public class PlayerInfos : MonoBehaviour
 {
     PlayerController playerController;
     PlayerCombat playerCombat;
+    EnemyInfos enemyInfos;
     Vector3 startingPos;
     public float respawnTimer, respawnTimerInit, invincibilityTimer, invincibilityTimerInit;
     public float playerLevel, playerMaxHealth, playerHealth, playerMaxStamina, playerStamina;
@@ -18,6 +19,7 @@ public class PlayerInfos : MonoBehaviour
     {
         playerController = gameObject.GetComponent<PlayerController>();
         playerCombat = gameObject.GetComponent<PlayerCombat>();
+        enemyInfos = gameObject.GetComponent<EnemyInfos>();
 
         startingPos = transform.position;
         respawnTimer = respawnTimerInit;
@@ -59,16 +61,16 @@ public class PlayerInfos : MonoBehaviour
     }
 
     //calculates player health 
-    void CalculatePlayerHealth() 
+    void CalculatePlayerHealth(float dmg) 
     {
         if(isDamaged)
-            playerHealth -= 1;
+            playerHealth -= dmg;
 
-        if(playerHealth == 0)
+        if(playerHealth <= 0)
             isAlive = false;
     }
     
-    //Resets PlayerValues
+    //Resets player values
     void ResetPlayer()
     {
         playerHealth = playerMaxHealth;
@@ -83,7 +85,7 @@ public class PlayerInfos : MonoBehaviour
         {
             isDamaged = true;
             invincibilityTimer = invincibilityTimerInit;
-            CalculatePlayerHealth();
+            CalculatePlayerHealth(collision.gameObject.GetComponent<EnemyInfos>().runesDamageHP.y);
         }
     }
 }

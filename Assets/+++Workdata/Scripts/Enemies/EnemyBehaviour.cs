@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public EnemyInfos enemyInfos;
+
+
+    public int enemyID;
+
+    void Awake()
+    {
+        enemyInfos = gameObject.GetComponent<EnemyInfos>();
+    }
     void Start()
     {
-        
+        enemyInfos.DetermineEnemyType(enemyID);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

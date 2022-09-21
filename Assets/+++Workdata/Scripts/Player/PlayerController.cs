@@ -71,13 +71,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(!playerInfos.isAlive)
-        {
             inputActions.Disable();
-        }
         else
-        {
             inputActions.Enable();
-        }
 
         anim.SetBool("isAlive", playerInfos.isAlive);
     }
@@ -103,14 +99,12 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("MovementX", movementX);
         anim.SetFloat("MovementY", movementY);
-
-
         anim.SetBool("isMoving", isMoving);
     }
 
-    //checks whether the player is interacting via assigned button
-    void Interact(bool isInteractingX)
+    //checks whether the player is interacting via assigned button and sets bool accordingly
+    void Interact(bool i)
     {
-        isInteracting = isInteractingX;
+        isInteracting = i;
     }
 }

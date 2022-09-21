@@ -60,7 +60,7 @@ public class PlayerInfos : MonoBehaviour
         playerController.anim.SetInteger("InventoryState", inventoryState);
     }
 
-    //calculates player health 
+    //calculates player health with the damage values from the EnemyInfos.cs script
     void CalculatePlayerHealth(float dmg) 
     {
         if(isDamaged)

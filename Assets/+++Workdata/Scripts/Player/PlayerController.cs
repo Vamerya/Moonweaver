@@ -10,11 +10,14 @@ public class PlayerController : MonoBehaviour
     PlayerInfos playerInfos;
     PlayerCombat playerCombat;
 
+    [SerializeField] GameObject _playerInventory;
+    [SerializeField] GameObject _playerHotbar;
     public float speed;
     public float movementX, movementY;
-    private bool isMoving, isAttacking;
+    public int inventoryState;
+    bool isMoving, isAttacking;
     public bool isInteracting;
-    private InputActions inputActions;
+    InputActions inputActions;
 
     void OnEnable()
     {
@@ -40,6 +43,8 @@ public class PlayerController : MonoBehaviour
         inputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
         inputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
+        inputActions.PlayerKeyboardMouseActionMap.OpenInventory.performed += ctx => InventoryToggle();
+
         inputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
 
@@ -52,6 +57,8 @@ public class PlayerController : MonoBehaviour
         
         inputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
         inputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+
+        inputActions.PlayerControllerActionMap.OpenInventory.performed += ctx => InventoryToggle();
 
         inputActions.PlayerControllerActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
@@ -106,5 +113,23 @@ public class PlayerController : MonoBehaviour
     void Interact(bool i)
     {
         isInteracting = i;
+    }
+
+    void InventoryToggle()
+    {
+        if(inventoryState == 0)
+        {
+            inventoryState = 1;
+            _playerHotbar.SetActive(false);
+            _playerInventory.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else if(inventoryState == 1)
+        {
+            inventoryState = 0;
+            _playerHotbar.SetActive(true);
+            _playerInventory.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 }

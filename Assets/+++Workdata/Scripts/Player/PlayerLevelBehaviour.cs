@@ -28,8 +28,8 @@ public class PlayerLevelBehaviour : MonoBehaviour
     public int luck;    
 
     #region Stats to level
-    // - HP
-    // - Stamina
+    // - Vigor -> Overall HP
+    // - Endurance -> Overall stamina
     // - Mind -> Ult Recharge
     // - Strength -> Overall damage
     // - Dexterity -> Invincibility time
@@ -52,7 +52,7 @@ public class PlayerLevelBehaviour : MonoBehaviour
 
     void Update()
     {
-        if(runes >= requiredRunes)
+        if(runes >= requiredRunes) 
             levelUpReady = true;
         else
             levelUpReady = false;

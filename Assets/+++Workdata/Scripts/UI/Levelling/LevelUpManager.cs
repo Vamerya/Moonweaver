@@ -15,8 +15,8 @@ public class LevelUpManager : MonoBehaviour
     public int currentLevel;
     public int levelUpMenuState = 0;
     #region Stats
-    // - HP
-    // - Stamina
+    // - Vigor -> Overall HP
+    // - Endurance -> Overall stamina
     // - Mind -> Ult Recharge
     // - Strength -> Overall damage
     // - Dexterity -> Invincibility time
@@ -47,7 +47,7 @@ public class LevelUpManager : MonoBehaviour
                     playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
                 break;
                 case 1:
-                playerLevelBehaviour.IncreasePlayerEndurance();
+                    playerLevelBehaviour.IncreasePlayerEndurance();
                     statName = "Endurance";
                     currentLevel = playerLevelBehaviour.endurance;
                     playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);

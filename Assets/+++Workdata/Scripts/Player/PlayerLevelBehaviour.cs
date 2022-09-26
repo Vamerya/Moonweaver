@@ -69,7 +69,7 @@ public class PlayerLevelBehaviour : MonoBehaviour
         LevelUp();
         _playerLevel += 1;
         // y = 0.02x³ + 3.06x² + 105.6x - 895
-        requiredRunes= _playerLevel * (_playerLevel * (0.02f * _playerLevel +3.06f)) + 105.6f * _playerLevel; 
+        requiredRunes = _playerLevel * (_playerLevel * (0.02f * _playerLevel +3.06f)) + 105.6f * _playerLevel; 
         requiredRunes = Mathf.Floor(requiredRunes);
         Debug.Log(requiredRunes);
     }

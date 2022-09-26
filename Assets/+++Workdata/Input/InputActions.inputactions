@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "6cf07c57-eb05-444e-87a7-193c0abadb4e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "SwapWeapon",
                     "type": "Button",
                     "id": "613147af-5da8-4095-b432-fa1ca46d413a",
@@ -150,6 +159,17 @@
                     "action": "OpenInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f337afef-9b9b-41ad-a677-0c00da3699c0",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -179,6 +199,15 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "97bb2498-77c9-4798-9da3-ecc00bed1fae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "00707ded-db4c-42cb-8fba-64e205278442",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -273,7 +302,7 @@
                 {
                     "name": "",
                     "id": "e25f47b8-b7f5-422a-bea0-c8ed68116503",
-                    "path": "<XInputController>/buttonEast",
+                    "path": "<XInputController>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -295,11 +324,22 @@
                 {
                     "name": "",
                     "id": "912fccdb-f147-48e8-a52c-fb520e275bfd",
-                    "path": "<XboxOneGampadiOS>/dpad/up",
+                    "path": "<XInputController>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "OpenInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67569f4e-d5fc-4ee6-b61a-899e108d5fb3",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

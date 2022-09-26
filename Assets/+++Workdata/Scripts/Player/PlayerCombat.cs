@@ -4,11 +4,27 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    #region Variables
+    [Header ("Main Components")]
     PlayerController playerController;
     PlayerInfos playerInfos;
-    public int attackState;
-    public float attackTimer, attackTimerInit, chargingTimer, chargingTimerGoal;
-    public bool isAttacking, isCharging, attackReleased;
+
+    [Header ("Timer")]
+    [SerializeField] float attackTimer;
+    [SerializeField] float attackTimerInit;
+    [SerializeField] float chargingTimer;
+    [SerializeField] float chargingTimerGoal;
+    [SerializeField] float requiredStamina;
+
+    [Header ("Attack State")]
+    [SerializeField] int attackState;
+
+    [Header ("Bools")]
+    [SerializeField] bool isAttacking;
+    [SerializeField] bool isCharging;
+    [SerializeField] bool isUlting;
+    [SerializeField] bool attackReleased;
+    #endregion
     void Start()
     {
         playerController = gameObject.GetComponent<PlayerController>();
@@ -41,6 +57,8 @@ public class PlayerCombat : MonoBehaviour
             }
         else
             isCharging = false;
+
+        playerController.anim.SetBool("isCharging", isCharging);
     }
     public void Attack()
     {
@@ -126,5 +144,17 @@ public class PlayerCombat : MonoBehaviour
     {
         isAttacking = false;
         playerController.anim.SetBool("isAttacking", isAttacking);
+    }
+
+    public void UltAttack()
+    {
+        isUlting = true;
+        playerController.speed = 0;
+    }
+
+    public void StopUlting()
+    {
+        isUlting = false;
+        playerController.speed = playerController.maxSpeed;
     }
 }

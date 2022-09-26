@@ -4,16 +4,40 @@ using UnityEngine;
 
 public class PlayerInfos : MonoBehaviour
 {
+    #region Variables
+    [Header ("Main Components")]
     PlayerController playerController;
     PlayerCombat playerCombat;
     EnemyInfos enemyInfos;
     Vector3 startingPos;
-    public float respawnTimer, respawnTimerInit, invincibilityTimer, invincibilityTimerInit;
-    public float playerLevel, playerMaxHealth, playerHealth, playerMaxStamina, playerStamina;
+
+    [Header ("Timer")]
+    [SerializeField] float respawnTimer;
+    [SerializeField] float respawnTimerInit;
+    [SerializeField] float invincibilityTimer;
+    [SerializeField] public float invincibilityTimerInit;
+
+    [Header ("Player Stats")]
+    [SerializeField] public int playerLevel;
+    [SerializeField] public float playerMaxHealth;
+    [SerializeField] public float playerHealth;
+    [SerializeField] public float playerMaxStamina;
+    [SerializeField] public float playerStamina;
+    [SerializeField] public float playerMaxUltCharg;
+    [SerializeField] public float playerUltCharge;
+    [SerializeField] public float playerStrength;
+    [SerializeField] public float playerDexterity;
+    [SerializeField] public float playerUltDamage;
+    [SerializeField] public float playerFaith;
+    [SerializeField] public float playerLuck;
     public int inventoryState;
-    public bool obtainedRangedWeapon, swappedWeapon, isAlive, isDamaged;
 
-
+    [Header ("Bools")]
+    public bool isAlive;
+    public bool obtainedRangedWeapon;
+    [SerializeField] bool isDamaged;
+    [SerializeField] bool swappedWeapon;
+    #endregion
 
     void Start()
     {

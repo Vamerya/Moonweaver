@@ -55,6 +55,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""6cf07c57-eb05-444e-87a7-193c0abadb4e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""SwapWeapon"",
                     ""type"": ""Button"",
                     ""id"": ""613147af-5da8-4095-b432-fa1ca46d413a"",
@@ -172,6 +181,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""OpenInventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f337afef-9b9b-41ad-a677-0c00da3699c0"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -201,6 +221,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""97bb2498-77c9-4798-9da3-ecc00bed1fae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""00707ded-db4c-42cb-8fba-64e205278442"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -295,7 +324,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e25f47b8-b7f5-422a-bea0-c8ed68116503"",
-                    ""path"": ""<XInputController>/buttonEast"",
+                    ""path"": ""<XInputController>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -317,11 +346,22 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""912fccdb-f147-48e8-a52c-fb520e275bfd"",
-                    ""path"": ""<XboxOneGampadiOS>/dpad/up"",
+                    ""path"": ""<XInputController>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""OpenInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""67569f4e-d5fc-4ee6-b61a-899e108d5fb3"",
+                    ""path"": ""<XInputController>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -335,6 +375,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PlayerKeyboardMouseActionMap_Movement = m_PlayerKeyboardMouseActionMap.FindAction("Movement", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_Interact = m_PlayerKeyboardMouseActionMap.FindAction("Interact", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_Attack = m_PlayerKeyboardMouseActionMap.FindAction("Attack", throwIfNotFound: true);
+        m_PlayerKeyboardMouseActionMap_Dash = m_PlayerKeyboardMouseActionMap.FindAction("Dash", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_SwapWeapon = m_PlayerKeyboardMouseActionMap.FindAction("SwapWeapon", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_OpenInventory = m_PlayerKeyboardMouseActionMap.FindAction("OpenInventory", throwIfNotFound: true);
         // PlayerControllerActionMap
@@ -342,6 +383,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PlayerControllerActionMap_Movement = m_PlayerControllerActionMap.FindAction("Movement", throwIfNotFound: true);
         m_PlayerControllerActionMap_Interact = m_PlayerControllerActionMap.FindAction("Interact", throwIfNotFound: true);
         m_PlayerControllerActionMap_Attack = m_PlayerControllerActionMap.FindAction("Attack", throwIfNotFound: true);
+        m_PlayerControllerActionMap_Dash = m_PlayerControllerActionMap.FindAction("Dash", throwIfNotFound: true);
         m_PlayerControllerActionMap_SwapWeapon = m_PlayerControllerActionMap.FindAction("SwapWeapon", throwIfNotFound: true);
         m_PlayerControllerActionMap_OpenInventory = m_PlayerControllerActionMap.FindAction("OpenInventory", throwIfNotFound: true);
     }
@@ -406,6 +448,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerKeyboardMouseActionMap_Movement;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_Interact;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_Attack;
+    private readonly InputAction m_PlayerKeyboardMouseActionMap_Dash;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_SwapWeapon;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_OpenInventory;
     public struct PlayerKeyboardMouseActionMapActions
@@ -415,6 +458,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PlayerKeyboardMouseActionMap_Movement;
         public InputAction @Interact => m_Wrapper.m_PlayerKeyboardMouseActionMap_Interact;
         public InputAction @Attack => m_Wrapper.m_PlayerKeyboardMouseActionMap_Attack;
+        public InputAction @Dash => m_Wrapper.m_PlayerKeyboardMouseActionMap_Dash;
         public InputAction @SwapWeapon => m_Wrapper.m_PlayerKeyboardMouseActionMap_SwapWeapon;
         public InputAction @OpenInventory => m_Wrapper.m_PlayerKeyboardMouseActionMap_OpenInventory;
         public InputActionMap Get() { return m_Wrapper.m_PlayerKeyboardMouseActionMap; }
@@ -435,6 +479,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnAttack;
+                @Dash.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnDash;
                 @SwapWeapon.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnSwapWeapon;
                 @SwapWeapon.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnSwapWeapon;
                 @SwapWeapon.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnSwapWeapon;
@@ -454,6 +501,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
                 @SwapWeapon.started += instance.OnSwapWeapon;
                 @SwapWeapon.performed += instance.OnSwapWeapon;
                 @SwapWeapon.canceled += instance.OnSwapWeapon;
@@ -471,6 +521,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControllerActionMap_Movement;
     private readonly InputAction m_PlayerControllerActionMap_Interact;
     private readonly InputAction m_PlayerControllerActionMap_Attack;
+    private readonly InputAction m_PlayerControllerActionMap_Dash;
     private readonly InputAction m_PlayerControllerActionMap_SwapWeapon;
     private readonly InputAction m_PlayerControllerActionMap_OpenInventory;
     public struct PlayerControllerActionMapActions
@@ -480,6 +531,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PlayerControllerActionMap_Movement;
         public InputAction @Interact => m_Wrapper.m_PlayerControllerActionMap_Interact;
         public InputAction @Attack => m_Wrapper.m_PlayerControllerActionMap_Attack;
+        public InputAction @Dash => m_Wrapper.m_PlayerControllerActionMap_Dash;
         public InputAction @SwapWeapon => m_Wrapper.m_PlayerControllerActionMap_SwapWeapon;
         public InputAction @OpenInventory => m_Wrapper.m_PlayerControllerActionMap_OpenInventory;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControllerActionMap; }
@@ -500,6 +552,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnAttack;
+                @Dash.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnDash;
                 @SwapWeapon.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnSwapWeapon;
                 @SwapWeapon.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnSwapWeapon;
                 @SwapWeapon.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnSwapWeapon;
@@ -519,6 +574,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
                 @SwapWeapon.started += instance.OnSwapWeapon;
                 @SwapWeapon.performed += instance.OnSwapWeapon;
                 @SwapWeapon.canceled += instance.OnSwapWeapon;
@@ -534,6 +592,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
         void OnSwapWeapon(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
     }
@@ -542,6 +601,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
         void OnSwapWeapon(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
     }

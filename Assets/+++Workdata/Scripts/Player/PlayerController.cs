@@ -4,65 +4,86 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Variables
+    [Header ("Main Components")]
     Rigidbody2D rb;
     public Animator anim;
     SpriteRenderer playerSpriteRenderer;
     PlayerInfos playerInfos;
     PlayerCombat playerCombat;
 
-    [SerializeField] GameObject _playerInventory;
-    [SerializeField] GameObject _playerHotbar;
+    [Header ("Inventory")]
+    [SerializeField] public GameObject _playerInventory;
+    [SerializeField] public GameObject _playerHotbar;
+
+    [Header ("Movement, interaction and inventory")]
+    public float maxSpeed;
     public float speed;
     public float movementX, movementY;
-    public int inventoryState;
     bool isMoving, isAttacking;
     public bool isInteracting;
-    InputActions inputActions;
+    public int inventoryHotbarState;
+
+    [Header ("Dash Variables")]
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashLength;
+    [SerializeField] private float dashBufferLength;
+    float dashBufferCounter; 
+    bool isDashing, hasDashed;
+    bool canDash => dashBufferCounter > 0f && !hasDashed;
+
+    [Header ("Input actions")]
+    InputActions inGameInputActions;
+    #endregion
 
     void OnEnable()
     {
-        inputActions.Enable();
+        inGameInputActions.Enable();
+        //menuInputActions.Enable();
     }
 
     void OnDisable()
     {
-        inputActions.Disable();
+        inGameInputActions.Disable();
+        //menuInputActions.Disable();
     }
 
     void Awake()
     {
-        inputActions = new InputActions();
+        inGameInputActions = new InputActions();
 
         //KEYBOARD AND MOUSE
-        inputActions.PlayerKeyboardMouseActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
-        inputActions.PlayerKeyboardMouseActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
+        inGameInputActions.PlayerKeyboardMouseActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
+        inGameInputActions.PlayerKeyboardMouseActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
-        inputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact(true);
-        inputActions.PlayerKeyboardMouseActionMap.Interact.canceled += ctx => Interact(false);
+        inGameInputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact(true);
+        inGameInputActions.PlayerKeyboardMouseActionMap.Interact.canceled += ctx => Interact(false);
         
-        inputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
-        inputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+        inGameInputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
+        inGameInputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
-        inputActions.PlayerKeyboardMouseActionMap.OpenInventory.performed += ctx => InventoryToggle();
+        inGameInputActions.PlayerKeyboardMouseActionMap.Dash.performed += ctx => Dash();
 
-        inputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+        inGameInputActions.PlayerKeyboardMouseActionMap.OpenInventory.performed += ctx => InventoryToggle();
+
+        inGameInputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
 
         //CONTROLLER
-        inputActions.PlayerControllerActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
-        inputActions.PlayerControllerActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
+        inGameInputActions.PlayerControllerActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
+        inGameInputActions.PlayerControllerActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
-        inputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact(true);
-        inputActions.PlayerControllerActionMap.Interact.canceled += ctx => Interact(false);
+        inGameInputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact(true);
+        inGameInputActions.PlayerControllerActionMap.Interact.canceled += ctx => Interact(false);
         
-        inputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
-        inputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+        inGameInputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
+        inGameInputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
-        inputActions.PlayerControllerActionMap.OpenInventory.performed += ctx => InventoryToggle();
+        inGameInputActions.PlayerControllerActionMap.Dash.performed += ctx => Dash();
 
-        inputActions.PlayerControllerActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+        inGameInputActions.PlayerControllerActionMap.OpenInventory.performed += ctx => InventoryToggle();
 
-
+        inGameInputActions.PlayerControllerActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
     }
 
     void Start()
@@ -73,14 +94,16 @@ public class PlayerController : MonoBehaviour
 
         playerCombat = gameObject.GetComponent<PlayerCombat>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
+
+        speed = maxSpeed;
     }
 
     void Update()
     {
         if(!playerInfos.isAlive)
-            inputActions.Disable();
+            inGameInputActions.Disable();
         else
-            inputActions.Enable();
+            inGameInputActions.Enable();
 
         anim.SetBool("isAlive", playerInfos.isAlive);
     }
@@ -115,21 +138,27 @@ public class PlayerController : MonoBehaviour
         isInteracting = i;
     }
 
+    //toggles between the player hotbar and inventory, sets time scale to 0 when inventory is openend
     void InventoryToggle()
     {
-        if(inventoryState == 0)
+        if(inventoryHotbarState == 0)
         {
-            inventoryState = 1;
+            inventoryHotbarState = 1;
             _playerHotbar.SetActive(false);
             _playerInventory.SetActive(true);
             Time.timeScale = 0f;
         }
-        else if(inventoryState == 1)
+        else if(inventoryHotbarState == 1)
         {
-            inventoryState = 0;
+            inventoryHotbarState = 0;
             _playerHotbar.SetActive(true);
             _playerInventory.SetActive(false);
             Time.timeScale = 1f;
         }
+    }
+
+    void Dash()
+    {
+
     }
 }

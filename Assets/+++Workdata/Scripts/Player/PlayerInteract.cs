@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    #region Variables
+    [Header ("Main Components")]
     PlayerController playerController;
     PlayerInfos playerInfos;
+    [SerializeField] LevelUpManager levelUpManager;
+    #endregion
 
     void Awake()
     {
@@ -34,8 +38,8 @@ public class PlayerInteract : MonoBehaviour
 
         if(collision.CompareTag("Shrine") && playerController.isInteracting) //OPENS LEVEL UP UI
         {
-            Debug.Log("LevelUp UI");
-            //OPEN LEVELUP UI  
+            //BUT HOW DOES IT CLOSE
+            levelUpManager.ToggleLevelUpUI(); 
         }   
 
         if(collision.CompareTag("Dialogue") && playerController.isInteracting) //OPENS DIALOGUE UI

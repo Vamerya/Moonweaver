@@ -8,13 +8,16 @@ public class PlayerCombat : MonoBehaviour
     [Header ("Main Components")]
     PlayerController playerController;
     PlayerInfos playerInfos;
+    [SerializeField] StatBarBehaviour staminaBarBehaviour;
 
     [Header ("Timer")]
     [SerializeField] float attackTimer;
     [SerializeField] float attackTimerInit;
     [SerializeField] float chargingTimer;
     [SerializeField] float chargingTimerGoal;
-    [SerializeField] float requiredStamina;
+    [SerializeField] float requiredStaminaLight;
+    [SerializeField] float requiredStaminaHeavy;
+    [SerializeField] float requiredStaminaUltimate;
 
     [Header ("Attack State")]
     [SerializeField] int attackState;
@@ -25,6 +28,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] bool isUlting;
     [SerializeField] bool attackReleased;
     #endregion
+
     void Start()
     {
         playerController = gameObject.GetComponent<PlayerController>();
@@ -64,17 +68,18 @@ public class PlayerCombat : MonoBehaviour
     {
         if(playerInfos.inventoryState == 0)
         {
-            if(attackState == 0)
+            if(attackState == 0 && playerInfos.playerStamina > requiredStaminaLight)
             {
+                playerInfos.playerStamina -= requiredStaminaLight;
                 attackTimer = attackTimerInit;
                 chargingTimer = 0;
                 Debug.Log("Attack 1");   
             }
-            else if(attackState == 1)
+            else if(attackState == 1 && playerInfos.playerStamina > requiredStaminaLight)
             {
                 AttackFollowup1();
             }
-            else if(attackState == 2)
+            else if(attackState == 2 && playerInfos.playerStamina > requiredStaminaLight)
             {
                 AttackFollowup2();
             }
@@ -91,6 +96,8 @@ public class PlayerCombat : MonoBehaviour
                 attackReleased = true;   
             }
             attackReleased = false;
+            
+            staminaBarBehaviour.FadingBarBehaviour();
                 
         }
         else 
@@ -102,6 +109,7 @@ public class PlayerCombat : MonoBehaviour
 
     void AttackFollowup1()
     {
+        playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
         chargingTimer = 0;
         Debug.Log("Attack 2");
@@ -109,6 +117,7 @@ public class PlayerCombat : MonoBehaviour
     
     void AttackFollowup2()
     {
+        playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
         attackState = -1;
         chargingTimer = 0;
@@ -133,11 +142,16 @@ public class PlayerCombat : MonoBehaviour
 
     public void HeavyAttack()
     {
-        isCharging = false;
-        chargingTimer = 0;
-        StopAttacking();
+        if(playerInfos.playerStamina > requiredStaminaHeavy)
+        {
+            playerInfos.playerStamina -= requiredStaminaHeavy;      
+            isCharging = false;
+            chargingTimer = 0;
+            staminaBarBehaviour.FadingBarBehaviour();
+            StopAttacking();
 
-        Debug.Log("Heavy attack");
+            Debug.Log("Heavy attack");
+        }
     }
 
     public void StopAttacking()
@@ -148,8 +162,12 @@ public class PlayerCombat : MonoBehaviour
 
     public void UltAttack()
     {
-        isUlting = true;
-        playerController.speed = 0;
+        if(playerInfos.playerStamina > requiredStaminaUltimate)
+        {
+            playerInfos.playerStamina -= requiredStaminaUltimate;
+            isUlting = true;
+            playerController.speed = 0;
+        }
     }
 
     public void StopUlting()

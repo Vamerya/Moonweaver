@@ -30,6 +30,8 @@ public class LevelUpSlot : MonoBehaviour
         statLevel.text = levelUpManager.currentLevel.ToString();
 
         randomMessage.text = playerLevelBehaviour.requiredRunes.ToString() + " runes are required for the next level up";
+        errorMessage.text = "You have " + playerLevelBehaviour.runes.ToString() + " runes available";
+
     }
 
     void Update()

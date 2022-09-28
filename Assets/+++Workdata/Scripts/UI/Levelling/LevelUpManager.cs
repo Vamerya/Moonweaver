@@ -24,7 +24,7 @@ public class LevelUpManager : MonoBehaviour
     // - Luck -> increased item drop chance/runes
     #endregion
 
-    void Awake()
+    void Awake() 
     {
         //playerLevelBehaviour = gameObject.GetComponent<PlayerLevelBehaviour>();
     }
@@ -131,12 +131,12 @@ public class LevelUpManager : MonoBehaviour
 
     public void ToggleLevelUpUI()
     {
+        Debug.Log(levelUpMenuState.ToString());
+        
         if(levelUpMenuState == 0)
         {
             levelUpMenuState = 1;
             _levelUpUI.SetActive(true);
-            _errorMessage.SetActive(true);
-            _requiredRunesText.SetActive(true);
             playerController._playerHotbar.SetActive(false);
             playerController._playerInventory.SetActive(false);
             Time.timeScale = 0f;
@@ -145,8 +145,6 @@ public class LevelUpManager : MonoBehaviour
         {
             levelUpMenuState = 0;
             _levelUpUI.SetActive(false);
-            _errorMessage.SetActive(false);
-            _requiredRunesText.SetActive(false);
             playerController._playerHotbar.SetActive(true);
             Time.timeScale = 1f;
         }

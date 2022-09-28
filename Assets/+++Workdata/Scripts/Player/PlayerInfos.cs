@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerInfos : MonoBehaviour
 {
     #region Variables
-    [Header ("Main Components")]
+    [Header ("Components")]
     PlayerController playerController;
     PlayerCombat playerCombat;
     EnemyInfos enemyInfos;
+    [SerializeField] StatBarBehaviour healthBarBehaviour;
     Vector3 startingPos;
 
     [Header ("Timer")]
@@ -21,6 +22,7 @@ public class PlayerInfos : MonoBehaviour
     [SerializeField] public int playerLevel;
     [SerializeField] public float playerMaxHealth;
     [SerializeField] public float playerHealth;
+    [SerializeField] float staminaRechargeSpeed;
     [SerializeField] public float playerMaxStamina;
     [SerializeField] public float playerStamina;
     [SerializeField] public float playerMaxUltCharg;
@@ -30,12 +32,14 @@ public class PlayerInfos : MonoBehaviour
     [SerializeField] public float playerUltDamage;
     [SerializeField] public float playerFaith;
     [SerializeField] public float playerLuck;
+    [SerializeField] public float playerHealthPercentage;
+    [SerializeField] public float playerStaminaPercentage;
     public int inventoryState;
 
     [Header ("Bools")]
     public bool isAlive;
     public bool obtainedRangedWeapon;
-    [SerializeField] bool isDamaged;
+    [SerializeField] public bool isDamaged;
     [SerializeField] bool swappedWeapon;
     #endregion
 
@@ -48,7 +52,10 @@ public class PlayerInfos : MonoBehaviour
         startingPos = transform.position;
         respawnTimer = respawnTimerInit;
         playerHealth = playerMaxHealth;
+        playerStamina = playerMaxStamina;
         invincibilityTimer = invincibilityTimerInit;
+
+        PlayerStatPercentage();
     }
 
     void Update()
@@ -68,6 +75,13 @@ public class PlayerInfos : MonoBehaviour
             invincibilityTimer -= Time.deltaTime;
         else
             isDamaged = false;
+
+        if(playerStamina < playerMaxStamina)
+        {
+            playerStamina += Time.deltaTime * staminaRechargeSpeed;
+        }
+
+        PlayerStatPercentage();
     }
 
     //manages the state of the currently equipped weapon 
@@ -92,6 +106,15 @@ public class PlayerInfos : MonoBehaviour
 
         if(playerHealth <= 0)
             isAlive = false;
+
+        healthBarBehaviour.FadingBarBehaviour();
+    }
+
+    //gives back a value from 0-1 for the player Health, Stamina and UltCharge
+    void PlayerStatPercentage()
+    {
+        playerHealthPercentage = playerHealth / playerMaxHealth;
+        playerStaminaPercentage = playerStamina / playerMaxStamina;
     }
     
     //Resets player values
@@ -100,6 +123,8 @@ public class PlayerInfos : MonoBehaviour
         playerHealth = playerMaxHealth;
         transform.position = startingPos;
         respawnTimer = respawnTimerInit;
+        PlayerStatPercentage();
+        healthBarBehaviour.SetStat(playerHealthPercentage);
     }
 
     //tracks collisions

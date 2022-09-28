@@ -20,16 +20,16 @@ public class EnemyInfos : MonoBehaviour
         switch(ID)
         {
             case 0:
-                runesDamageHP = new Vector3(500, 100, 1000); //normal melee add
+                runesDamageHP = new Vector3(Random.Range(400, 600), Random.Range(80, 120), 1000); //normal melee add
             break; 
             case 1:
-                runesDamageHP = new Vector3(500, 200, 500); //normal ranged add
+                runesDamageHP = new Vector3(Random.Range(400, 600), Random.Range(180, 220), 500); //normal ranged add
             break; 
             case 2:
-                runesDamageHP = new Vector3(1000, 100, 1500); //tanky enemy
+                runesDamageHP = new Vector3(Random.Range(800, 1200), Random.Range(80, 120), 1500); //tanky enemy
             break; 
             case 3:
-                runesDamageHP = new Vector3(1500, 1000, 500); //assassin
+                runesDamageHP = new Vector3(Random.Range(1300, 1700), Random.Range(800, 1200), 500); //assassin
             break; 
             case 4:
                 runesDamageHP = new Vector3(500, 100, 1000); //open slot

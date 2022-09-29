@@ -24,6 +24,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Ultimate",
+                    "type": "Button",
+                    "id": "682bf956-d287-4d70-a51f-7225552ced05",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "869709af-5c52-474b-b3f3-b6a19a014154",
@@ -170,6 +179,17 @@
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c4f0fed-3f10-4ba8-8699-8ef2aa895eaf",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ultimate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -199,6 +219,15 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "97bb2498-77c9-4798-9da3-ecc00bed1fae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ultimate",
+                    "type": "Button",
+                    "id": "a1063420-f10d-42b0-b5e2-7504586ab7bd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -340,6 +369,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd41180c-bb37-4c8e-9bc7-a3a54c6bbcf9",
+                    "path": "<XInputController>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ultimate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

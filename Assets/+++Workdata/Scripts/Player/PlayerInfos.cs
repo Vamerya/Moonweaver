@@ -25,6 +25,7 @@ public class PlayerInfos : MonoBehaviour
     [SerializeField] float staminaRechargeSpeed;
     [SerializeField] public float playerMaxStamina;
     [SerializeField] public float playerStamina;
+    [SerializeField] public float dashStaminaRequirement;
     [SerializeField] public float playerMaxUltCharg;
     [SerializeField] public float playerUltCharge;
     [SerializeField] public float playerStrength;
@@ -77,9 +78,7 @@ public class PlayerInfos : MonoBehaviour
             isDamaged = false;
 
         if(playerStamina < playerMaxStamina)
-        {
             playerStamina += Time.deltaTime * staminaRechargeSpeed;
-        }
 
         PlayerStatPercentage();
     }

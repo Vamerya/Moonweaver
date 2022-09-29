@@ -130,9 +130,7 @@ public class LevelUpManager : MonoBehaviour
     }
 
     public void ToggleLevelUpUI()
-    {
-        Debug.Log(levelUpMenuState.ToString());
-        
+    {        
         if(levelUpMenuState == 0)
         {
             levelUpMenuState = 1;

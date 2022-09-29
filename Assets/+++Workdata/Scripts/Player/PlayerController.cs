@@ -8,9 +8,13 @@ public class PlayerController : MonoBehaviour
     [Header ("Main Components")]
     Rigidbody2D rb;
     public Animator anim;
+    TrailRenderer trailRenderer;
     SpriteRenderer playerSpriteRenderer;
     PlayerInfos playerInfos;
     PlayerCombat playerCombat;
+    [SerializeField] StatBarBehaviour staminaBarBehaviour;
+    [SerializeField] ShrineBehaviour shrineBehaviour;
+    [SerializeField] LevelUpManager levelUpManager;
 
     [Header ("Inventory")]
     [SerializeField] public GameObject _playerInventory;
@@ -25,28 +29,30 @@ public class PlayerController : MonoBehaviour
     public int inventoryHotbarState;
 
     [Header ("Dash Variables")]
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashLength;
-    [SerializeField] private float dashBufferLength;
-    float dashBufferCounter; 
-    bool isDashing, hasDashed;
-    bool canDash => dashBufferCounter > 0f && !hasDashed;
+    [SerializeField] float dashBufferLength;
+    [SerializeField] float dashingVelocity;
+    [SerializeField] float dashingTime;
+    [SerializeField] bool canDash;
+    Vector2 dashingDir;
+    float dashBufferTimer;
+    bool dashInput;
+    bool isDashing;
 
     [Header ("Input actions")]
     InputActions inGameInputActions;
     #endregion
 
+    #region Input Enable/Disable
     void OnEnable()
     {
         inGameInputActions.Enable();
-        //menuInputActions.Enable();
     }
 
     void OnDisable()
     {
         inGameInputActions.Disable();
-        //menuInputActions.Disable();
     }
+    #endregion
 
     void Awake()
     {
@@ -62,7 +68,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
-        inGameInputActions.PlayerKeyboardMouseActionMap.Dash.performed += ctx => Dash();
+        inGameInputActions.PlayerKeyboardMouseActionMap.Dash.performed += ctx => Dash(true);
+        inGameInputActions.PlayerKeyboardMouseActionMap.Dash.canceled += ctx => Dash(false);
 
         inGameInputActions.PlayerKeyboardMouseActionMap.OpenInventory.performed += ctx => InventoryToggle();
 
@@ -79,7 +86,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
-        inGameInputActions.PlayerControllerActionMap.Dash.performed += ctx => Dash();
+        inGameInputActions.PlayerControllerActionMap.Dash.performed += ctx => Dash(true);
+        inGameInputActions.PlayerControllerActionMap.Dash.canceled += ctx => Dash(false);
 
         inGameInputActions.PlayerControllerActionMap.OpenInventory.performed += ctx => InventoryToggle();
 
@@ -89,6 +97,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        trailRenderer = gameObject.GetComponent<TrailRenderer>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
 
@@ -106,6 +115,14 @@ public class PlayerController : MonoBehaviour
             inGameInputActions.Enable();
 
         anim.SetBool("isAlive", playerInfos.isAlive);
+
+        if(dashBufferTimer > 0)
+        {
+            dashBufferTimer -= Time.deltaTime;
+            canDash = false;
+        }
+        else if(playerInfos.playerStamina > playerInfos.dashStaminaRequirement)
+            canDash = true;
     }
 
     void FixedUpdate()
@@ -113,6 +130,29 @@ public class PlayerController : MonoBehaviour
         Vector2 move;
         move = new Vector2(movementX * speed, movementY * speed);
         rb.velocity = move;
+
+        if(dashInput && canDash)
+        {
+            isDashing = true;
+            canDash = false;
+            trailRenderer.emitting = true;
+            dashingDir = move;
+            if(dashingDir == Vector2.zero)
+            {
+                dashingDir = new Vector2(transform.localScale.x, transform.localScale.y);
+            }
+            StartCoroutine(StopDashing());
+        }
+
+        if(isDashing)
+        {
+            rb.velocity = dashingDir.normalized * dashingVelocity;
+            dashBufferTimer = dashBufferLength;
+            return;
+        }
+
+
+        anim.SetBool("isDashing", isDashing);
     }
 
     //Method gives back Vector2 values for the playermovement
@@ -136,6 +176,11 @@ public class PlayerController : MonoBehaviour
     void Interact(bool i)
     {
         isInteracting = i;
+
+        if(isInteracting && shrineBehaviour.playerInRange)
+        {
+            levelUpManager.ToggleLevelUpUI();
+        }
     }
 
     //toggles between the player hotbar and inventory, sets time scale to 0 when inventory is openend
@@ -157,8 +202,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Dash()
+    void Dash(bool i)
     {
-
+        dashInput = i;   
+    }
+    IEnumerator StopDashing()
+    {
+        yield return new WaitForSeconds(dashingTime);
+        trailRenderer.emitting = false;
+        isDashing = false;
+        staminaBarBehaviour.FadingBarBehaviour();
+        playerInfos.playerStamina -= playerInfos.dashStaminaRequirement;
+        dashBufferTimer = dashBufferLength;
     }
 }

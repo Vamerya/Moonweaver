@@ -83,14 +83,18 @@ public class PlayerLevelBehaviour : MonoBehaviour
     public void IncreasePlayerHP()
     {
         vigor += 1;
-        playerInfos.playerMaxHealth += Random.Range(25, 45);
+        int rnd = Random.Range(25, 45);
+        playerInfos.playerMaxHealth += rnd;
+        playerInfos.playerHealth += rnd;
     }
 
     //increases the playerStamina by 1-3
     public void IncreasePlayerEndurance()
     {
         endurance  += 1;
-        playerInfos.playerMaxStamina += Random.Range(1, 3);
+        int rnd = Random.Range(1, 3);
+        playerInfos.playerMaxStamina += rnd;
+        playerInfos.playerStamina += rnd;
     }
 
     //increases the amount of charge per hit for the playerUltimate

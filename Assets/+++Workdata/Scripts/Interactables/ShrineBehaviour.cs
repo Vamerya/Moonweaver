@@ -7,22 +7,18 @@ public class ShrineBehaviour : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] LevelUpManager levelUpManager;
     [SerializeField] GameObject levelUpUI;
-    bool playerInRange;
+    public bool playerInRange;
 
-    void Awake()
-    {
-        
-    }
     void Update()
     {
-        if(playerController.isInteracting && playerInRange)
-        {
-            if(levelUpUI.activeInHierarchy)
-                levelUpManager.ToggleLevelUpUI();
+        // if(playerController.isInteracting && playerInRange)
+        // {
+        //     if(levelUpUI.activeInHierarchy)
+        //         levelUpManager.ToggleLevelUpUI();
 
-            else
-                levelUpManager.ToggleLevelUpUI();
-        }
+        //     else
+        //         levelUpManager.ToggleLevelUpUI();
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

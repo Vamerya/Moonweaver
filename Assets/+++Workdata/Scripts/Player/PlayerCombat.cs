@@ -45,57 +45,48 @@ public class PlayerCombat : MonoBehaviour
         }
         else 
         {
+            StopAttacking();
             attackState = 0;
-            playerController.anim.SetInteger("attackState", attackState);
         }
 
-        if(!attackReleased && isAttacking)
-            {
-                isCharging = true;
-                chargingTimer += Time.deltaTime;
+        if(!attackReleased && isCharging)
+        {
+            chargingTimer += Time.deltaTime;
 
-                if(chargingTimer > chargingTimerGoal)
-                {
-                    HeavyAttack();
-                }
-            }
-        else
+            if(chargingTimer > chargingTimerGoal)
+                HeavyAttack();
+        }
+        else    
             isCharging = false;
 
+        playerController.anim.SetInteger("attackState", attackState);
         playerController.anim.SetBool("isCharging", isCharging);
     }
     public void Attack()
     {
         if(playerInfos.inventoryState == 0)
         {
+            attackReleased = false;
+
             if(attackState == 0 && playerInfos.playerStamina > requiredStaminaLight)
             {
-                playerInfos.playerStamina -= requiredStaminaLight;
-                attackTimer = attackTimerInit;
-                chargingTimer = 0;
-                Debug.Log("Attack 1");   
+                Attack1();
             }
             else if(attackState == 1 && playerInfos.playerStamina > requiredStaminaLight)
             {
-                AttackFollowup1();
+                Attack2();
             }
             else if(attackState == 2 && playerInfos.playerStamina > requiredStaminaLight)
             {
-                AttackFollowup2();
+                Attack3();
+            }
+            else if(attackState > 2 && playerInfos.playerStamina > requiredStaminaLight)
+            {
+                attackState = 0;
+                Attack1();
             }
 
-            if(!attackReleased && attackTimer < 0)
-            {
-                isCharging = true;
-                isAttacking = true;
-                attackReleased = false;
-            }
-            else if (attackReleased)
-            {
-                isAttacking = false;
-                attackReleased = true;   
-            }
-            attackReleased = false;
+            HeavyAttackCharge();
             
             staminaBarBehaviour.FadingBarBehaviour();
                 
@@ -107,7 +98,15 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void AttackFollowup1()
+    void Attack1()
+    {
+        playerInfos.playerStamina -= requiredStaminaLight;
+        attackTimer = attackTimerInit;
+        chargingTimer = 0;
+        Debug.Log("Attack 1");  
+    }
+
+    void Attack2()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
@@ -115,11 +114,10 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Attack 2");
     }
     
-    void AttackFollowup2()
+    void Attack3()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
-        attackState = -1;
         chargingTimer = 0;
         Debug.Log("Attack 3");
     }
@@ -131,7 +129,6 @@ public class PlayerCombat : MonoBehaviour
             if(attackTimer > 0)
             {
                 attackState++;
-                playerController.anim.SetInteger("attackState", attackState);
             }
 
             attackReleased = true;
@@ -140,6 +137,19 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    void HeavyAttackCharge()
+    {
+        if(!attackReleased && attackTimer > 0)
+            {
+                isCharging = true;
+                isAttacking = true;
+            }
+            else if (attackReleased)
+            {
+                StopAttacking();
+            }
+
+    }
     public void HeavyAttack()
     {
         if(playerInfos.playerStamina > requiredStaminaHeavy)
@@ -166,7 +176,7 @@ public class PlayerCombat : MonoBehaviour
         {
             playerInfos.playerStamina -= requiredStaminaUltimate;
             isUlting = true;
-            playerController.speed = 0;
+            playerController.speed = .5f;
         }
     }
 

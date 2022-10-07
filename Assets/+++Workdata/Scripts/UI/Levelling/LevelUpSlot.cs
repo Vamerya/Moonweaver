@@ -29,8 +29,8 @@ public class LevelUpSlot : MonoBehaviour
         statText.text = levelUpManager.statName.ToString() + ": ";
         statLevel.text = levelUpManager.currentLevel.ToString();
 
-        randomMessage.text = playerLevelBehaviour.requiredRunes.ToString() + " runes are required for the next level up";
-        errorMessage.text = "You have " + playerLevelBehaviour.runes.ToString() + " runes available";
+        randomMessage.text = playerLevelBehaviour.requiredMoonLight.ToString() + " Moonlight is required for the next level up";
+        errorMessage.text = "You have " + playerLevelBehaviour.moonLight.ToString() + " Moonlight available";
 
     }
 
@@ -38,7 +38,7 @@ public class LevelUpSlot : MonoBehaviour
     {
         timer -= Time.deltaTime;
         if(timer < 0)
-            errorMessage.text = "You have " + playerLevelBehaviour.runes.ToString() + " runes available";
+            errorMessage.text = "You have " + playerLevelBehaviour.moonLight.ToString() + " Moonlight available";
     }
 
     public void InitiateLevelUP()
@@ -49,11 +49,11 @@ public class LevelUpSlot : MonoBehaviour
         
             statText.text = levelUpManager.statName.ToString() + ": ";
             statLevel.text = levelUpManager.currentLevel.ToString();
-            randomMessage.text = playerLevelBehaviour.requiredRunes.ToString() + " runes are required for the next level up";
+            randomMessage.text = playerLevelBehaviour.requiredMoonLight.ToString() + " Moonlight is required for the next level up";
         }
         else
         {
-            errorMessage.text = "Not enough runes";
+            errorMessage.text = "Not enough Moonlight";
             timer = 4f;        
         }    
     }

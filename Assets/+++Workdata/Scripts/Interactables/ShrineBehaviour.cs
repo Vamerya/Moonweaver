@@ -7,18 +7,14 @@ public class ShrineBehaviour : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] LevelUpManager levelUpManager;
     [SerializeField] GameObject levelUpUI;
-    public bool playerInRange;
+    bool playerInRange;
 
     void Update()
     {
-        // if(playerController.isInteracting && playerInRange)
-        // {
-        //     if(levelUpUI.activeInHierarchy)
-        //         levelUpManager.ToggleLevelUpUI();
-
-        //     else
-        //         levelUpManager.ToggleLevelUpUI();
-        // }
+        if(playerInRange && playerController.isInteracting)
+            levelUpUI.SetActive(true);
+        else
+            levelUpUI.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +26,9 @@ public class ShrineBehaviour : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
+        {
             playerInRange = false;
+            playerController.isInteracting = false;
+        }
     }
 }

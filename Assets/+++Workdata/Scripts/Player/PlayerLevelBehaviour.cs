@@ -8,13 +8,14 @@ public class PlayerLevelBehaviour : MonoBehaviour
     [Header ("Main Components")]
     PlayerController playerController;
     PlayerCombat playerCombat;
+    PlayerWeaponBehaviour playerWeaponBehaviour;
     PlayerInfos playerInfos;
     EnemyInfos enemyInfos;
 
     [Header ("Level Up Values")]
     [SerializeField] int collectedMoonFragments;
-    [SerializeField] public float runes;
-    [SerializeField] public float requiredRunes;
+    [SerializeField] public float moonLight;
+    [SerializeField] public float requiredMoonLight;
     [SerializeField] float playerHealthIncrease;
     [SerializeField] float staminaIncrease;
     [SerializeField] public bool levelUpReady;
@@ -41,6 +42,7 @@ public class PlayerLevelBehaviour : MonoBehaviour
     {
         playerController = gameObject.GetComponent<PlayerController>();
         playerCombat = gameObject.GetComponent<PlayerCombat>();
+        playerWeaponBehaviour = gameObject.GetComponentInChildren<PlayerWeaponBehaviour>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
         enemyInfos = gameObject.GetComponent<EnemyInfos>();
     }
@@ -52,7 +54,7 @@ public class PlayerLevelBehaviour : MonoBehaviour
 
     void Update()
     {
-        if(runes >= requiredRunes) 
+        if(moonLight >= requiredMoonLight) 
             levelUpReady = true;
         else
             levelUpReady = false;
@@ -61,20 +63,21 @@ public class PlayerLevelBehaviour : MonoBehaviour
     //removes the needed amount of runes from the player, increases playerLevel by 1
     public void LevelUp()
     {
-       runes -= requiredRunes; 
-       playerInfos.playerLevel += 1;
+        moonLight -= requiredMoonLight; 
+        playerInfos.playerLevel += 1;
+        playerWeaponBehaviour.DetermineWeaponDamage();
     }
 
     //calculates the needed amount of runes based on the formula
-    // y = 0.02x³ + 3.06x² + 105.6x - 895 => y = requiredRunes, x = playerLevel + 1
+    // y = 0.02x³ + 3.06x² + 105.6x - 895 => y = requiredMoonLight, x = playerLevel + 1
     //idk if the conversion is right, but the returned values make sense
     public void RequiredRunes(int _playerLevel)
     {
         LevelUp();
         _playerLevel += 1;
-        requiredRunes = _playerLevel * (_playerLevel * (0.02f * _playerLevel + 3.06f)) + 105.6f * _playerLevel; 
-        requiredRunes = Mathf.Floor(requiredRunes);
-        Debug.Log(requiredRunes);
+        requiredMoonLight = _playerLevel * (_playerLevel * (0.02f * _playerLevel + 3.06f)) + 105.6f * _playerLevel; 
+        requiredMoonLight = Mathf.Floor(requiredMoonLight);
+        Debug.Log(requiredMoonLight);
     }
 
     #region Stat increases
@@ -131,8 +134,8 @@ public class PlayerLevelBehaviour : MonoBehaviour
     public void IncreasePlayerLuck()
     {
         luck  += 1;
-        enemyInfos.runesDamageHP.x *= 1.2f;
-        enemyInfos.runesDamageHP.x = Mathf.Floor(enemyInfos.runesDamageHP.x);
+        enemyInfos.moonLightDamageHP.x *= 1.2f;
+        enemyInfos.moonLightDamageHP.x = Mathf.Floor(enemyInfos.moonLightDamageHP.x);
         //dropchance increase
     }
     #endregion

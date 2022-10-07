@@ -62,8 +62,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerKeyboardMouseActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
         inGameInputActions.PlayerKeyboardMouseActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
-        inGameInputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact(true);
-        inGameInputActions.PlayerKeyboardMouseActionMap.Interact.canceled += ctx => Interact(false);
+        inGameInputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact();
+        //inGameInputActions.PlayerKeyboardMouseActionMap.Interact.canceled += ctx => Interact();
         
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
@@ -80,8 +80,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerControllerActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
         inGameInputActions.PlayerControllerActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
-        inGameInputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact(true);
-        inGameInputActions.PlayerControllerActionMap.Interact.canceled += ctx => Interact(false);
+        inGameInputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact();
+        //inGameInputActions.PlayerControllerActionMap.Interact.canceled += ctx => Interact();
         
         inGameInputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
@@ -173,14 +173,12 @@ public class PlayerController : MonoBehaviour
     }
 
     //checks whether the player is interacting via assigned button and sets bool accordingly
-    void Interact(bool i)
+    void Interact()
     {
-        isInteracting = i;
-
-        if(isInteracting && shrineBehaviour.playerInRange)
-        {
-            levelUpManager.ToggleLevelUpUI();
-        }
+        if(!isInteracting)
+            isInteracting = true;
+        else if(isInteracting)
+            isInteracting = false;
     }
 
     //toggles between the player hotbar and inventory, sets time scale to 0 when inventory is openend

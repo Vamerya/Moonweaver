@@ -15,7 +15,7 @@ public class PlayerInfos : MonoBehaviour
     [Header ("Timer")]
     [SerializeField] float respawnTimer;
     [SerializeField] float respawnTimerInit;
-    [SerializeField] float invincibilityTimer;
+    [SerializeField] public float invincibilityTimer;
     [SerializeField] public float invincibilityTimerInit;
 
     [Header ("Player Stats")]
@@ -63,7 +63,6 @@ public class PlayerInfos : MonoBehaviour
     {
         if(playerHealth > 0)
             isAlive = true;
-
         if(!isAlive)
         {
             if(respawnTimer > 0)
@@ -98,11 +97,10 @@ public class PlayerInfos : MonoBehaviour
     }
 
     //calculates player health with the damage values from the EnemyInfos.cs script
-    void CalculatePlayerHealth(float dmg) 
+    public void CalculatePlayerHealth(float dmg) 
     {
         if(isDamaged)
             playerHealth -= dmg;
-
         if(playerHealth <= 0)
             isAlive = false;
 
@@ -124,16 +122,5 @@ public class PlayerInfos : MonoBehaviour
         respawnTimer = respawnTimerInit;
         PlayerStatPercentage();
         healthBarBehaviour.SetStat(playerHealthPercentage);
-    }
-
-    //tracks collisions
-    void OnTriggerEnter2D(Collider2D collision) 
-    {
-        if(collision.CompareTag("Enemy") && !isDamaged)
-        {
-            isDamaged = true;
-            invincibilityTimer = invincibilityTimerInit;
-            CalculatePlayerHealth(collision.gameObject.GetComponent<EnemyInfos>().runesDamageHP.y);
-        }
     }
 }

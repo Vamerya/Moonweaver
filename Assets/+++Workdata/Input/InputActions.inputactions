@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UseFlask",
+                    "type": "Button",
+                    "id": "8e0b1669-dd9e-4f6e-9352-3c7837b2b122",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -183,11 +192,22 @@
                 {
                     "name": "",
                     "id": "4c4f0fed-3f10-4ba8-8699-8ef2aa895eaf",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Ultimate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8467dc6a-1ef2-4afe-b618-4ae62c75bf7f",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseFlask",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -255,6 +275,15 @@
                     "name": "OpenInventory",
                     "type": "Button",
                     "id": "c4669f3d-f35f-4542-bda8-dd43362305c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseFlask",
+                    "type": "Button",
+                    "id": "fd63564f-cdb1-43f9-9256-e573d2cc669c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -380,6 +409,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Ultimate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2616fee0-ba88-4155-812b-4f2e787dbc75",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseFlask",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer playerSpriteRenderer;
     PlayerInfos playerInfos;
     PlayerCombat playerCombat;
+    [SerializeField] PlayerHealthflaskBehaviour playerHealthflaskBehaviour;
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
     [SerializeField] ShrineBehaviour shrineBehaviour;
     [SerializeField] LevelUpManager levelUpManager;
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerKeyboardMouseActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
         inGameInputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact();
-        //inGameInputActions.PlayerKeyboardMouseActionMap.Interact.canceled += ctx => Interact();
+        inGameInputActions.PlayerKeyboardMouseActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
         
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
@@ -81,7 +82,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerControllerActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
         inGameInputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact();
-        //inGameInputActions.PlayerControllerActionMap.Interact.canceled += ctx => Interact();
+        inGameInputActions.PlayerControllerActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
+
         
         inGameInputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
@@ -103,6 +105,7 @@ public class PlayerController : MonoBehaviour
 
         playerCombat = gameObject.GetComponent<PlayerCombat>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
+        playerHealthflaskBehaviour = gameObject.GetComponent<PlayerHealthflaskBehaviour>();
 
         speed = maxSpeed;
     }
@@ -204,6 +207,7 @@ public class PlayerController : MonoBehaviour
     {
         dashInput = i;   
     }
+
     IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(dashingTime);

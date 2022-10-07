@@ -134,8 +134,8 @@ public class PlayerLevelBehaviour : MonoBehaviour
     public void IncreasePlayerLuck()
     {
         luck  += 1;
-        enemyInfos.moonLightDamageHP.x *= 1.2f;
-        enemyInfos.moonLightDamageHP.x = Mathf.Floor(enemyInfos.moonLightDamageHP.x);
+        // enemyInfos.moonLightDamageHP.x *= 1.2f;
+        // enemyInfos.moonLightDamageHP.x = Mathf.Floor(enemyInfos.moonLightDamageHP.x);
         //dropchance increase
     }
     #endregion

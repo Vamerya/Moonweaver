@@ -89,6 +89,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseFlask"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e0b1669-dd9e-4f6e-9352-3c7837b2b122"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -205,11 +214,22 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4c4f0fed-3f10-4ba8-8699-8ef2aa895eaf"",
-                    ""path"": ""<Keyboard>/r"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Ultimate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8467dc6a-1ef2-4afe-b618-4ae62c75bf7f"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseFlask"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -277,6 +297,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""name"": ""OpenInventory"",
                     ""type"": ""Button"",
                     ""id"": ""c4669f3d-f35f-4542-bda8-dd43362305c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseFlask"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd63564f-cdb1-43f9-9256-e573d2cc669c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -404,6 +433,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Ultimate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2616fee0-ba88-4155-812b-4f2e787dbc75"",
+                    ""path"": ""<XInputController>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseFlask"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -419,6 +459,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PlayerKeyboardMouseActionMap_Dash = m_PlayerKeyboardMouseActionMap.FindAction("Dash", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_SwapWeapon = m_PlayerKeyboardMouseActionMap.FindAction("SwapWeapon", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_OpenInventory = m_PlayerKeyboardMouseActionMap.FindAction("OpenInventory", throwIfNotFound: true);
+        m_PlayerKeyboardMouseActionMap_UseFlask = m_PlayerKeyboardMouseActionMap.FindAction("UseFlask", throwIfNotFound: true);
         // PlayerControllerActionMap
         m_PlayerControllerActionMap = asset.FindActionMap("PlayerControllerActionMap", throwIfNotFound: true);
         m_PlayerControllerActionMap_Movement = m_PlayerControllerActionMap.FindAction("Movement", throwIfNotFound: true);
@@ -428,6 +469,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PlayerControllerActionMap_Dash = m_PlayerControllerActionMap.FindAction("Dash", throwIfNotFound: true);
         m_PlayerControllerActionMap_SwapWeapon = m_PlayerControllerActionMap.FindAction("SwapWeapon", throwIfNotFound: true);
         m_PlayerControllerActionMap_OpenInventory = m_PlayerControllerActionMap.FindAction("OpenInventory", throwIfNotFound: true);
+        m_PlayerControllerActionMap_UseFlask = m_PlayerControllerActionMap.FindAction("UseFlask", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -494,6 +536,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerKeyboardMouseActionMap_Dash;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_SwapWeapon;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_OpenInventory;
+    private readonly InputAction m_PlayerKeyboardMouseActionMap_UseFlask;
     public struct PlayerKeyboardMouseActionMapActions
     {
         private @InputActions m_Wrapper;
@@ -505,6 +548,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_PlayerKeyboardMouseActionMap_Dash;
         public InputAction @SwapWeapon => m_Wrapper.m_PlayerKeyboardMouseActionMap_SwapWeapon;
         public InputAction @OpenInventory => m_Wrapper.m_PlayerKeyboardMouseActionMap_OpenInventory;
+        public InputAction @UseFlask => m_Wrapper.m_PlayerKeyboardMouseActionMap_UseFlask;
         public InputActionMap Get() { return m_Wrapper.m_PlayerKeyboardMouseActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -535,6 +579,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @OpenInventory.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnOpenInventory;
                 @OpenInventory.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnOpenInventory;
                 @OpenInventory.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnOpenInventory;
+                @UseFlask.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnUseFlask;
+                @UseFlask.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnUseFlask;
+                @UseFlask.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnUseFlask;
             }
             m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -560,6 +607,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @OpenInventory.started += instance.OnOpenInventory;
                 @OpenInventory.performed += instance.OnOpenInventory;
                 @OpenInventory.canceled += instance.OnOpenInventory;
+                @UseFlask.started += instance.OnUseFlask;
+                @UseFlask.performed += instance.OnUseFlask;
+                @UseFlask.canceled += instance.OnUseFlask;
             }
         }
     }
@@ -575,6 +625,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControllerActionMap_Dash;
     private readonly InputAction m_PlayerControllerActionMap_SwapWeapon;
     private readonly InputAction m_PlayerControllerActionMap_OpenInventory;
+    private readonly InputAction m_PlayerControllerActionMap_UseFlask;
     public struct PlayerControllerActionMapActions
     {
         private @InputActions m_Wrapper;
@@ -586,6 +637,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_PlayerControllerActionMap_Dash;
         public InputAction @SwapWeapon => m_Wrapper.m_PlayerControllerActionMap_SwapWeapon;
         public InputAction @OpenInventory => m_Wrapper.m_PlayerControllerActionMap_OpenInventory;
+        public InputAction @UseFlask => m_Wrapper.m_PlayerControllerActionMap_UseFlask;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControllerActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -616,6 +668,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @OpenInventory.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnOpenInventory;
                 @OpenInventory.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnOpenInventory;
                 @OpenInventory.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnOpenInventory;
+                @UseFlask.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnUseFlask;
+                @UseFlask.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnUseFlask;
+                @UseFlask.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnUseFlask;
             }
             m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -641,6 +696,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @OpenInventory.started += instance.OnOpenInventory;
                 @OpenInventory.performed += instance.OnOpenInventory;
                 @OpenInventory.canceled += instance.OnOpenInventory;
+                @UseFlask.started += instance.OnUseFlask;
+                @UseFlask.performed += instance.OnUseFlask;
+                @UseFlask.canceled += instance.OnUseFlask;
             }
         }
     }
@@ -654,6 +712,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnSwapWeapon(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
+        void OnUseFlask(InputAction.CallbackContext context);
     }
     public interface IPlayerControllerActionMapActions
     {
@@ -664,5 +723,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnSwapWeapon(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
+        void OnUseFlask(InputAction.CallbackContext context);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLevelBehaviour : MonoBehaviour
+public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
 {
     #region Variables
     [Header ("Main Components")]
@@ -52,6 +52,32 @@ public class PlayerLevelBehaviour : MonoBehaviour
         RequiredRunes(playerInfos.playerLevel);
     }
 
+    public void LoadData(GameData data)
+    {
+        this.moonLight = data.moonLight;
+
+        this.vigor = data.vigor;
+        this.endurance = data.endurance;
+        this.mind = data.mind;
+        this.strength = data.strength;
+        this.dexterity = data.dexterity;
+        this.faith = data.faith;
+        this.luck = data.luck;
+
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.moonLight = this.moonLight;
+
+        data.vigor = this.vigor;
+        data.endurance = this.endurance;
+        data.mind = this.mind;
+        data.strength = this.strength;
+        data.dexterity = this.dexterity;
+        data.faith = this.faith;
+        data.luck = this.luck;
+    }
     void Update()
     {
         if(moonLight >= requiredMoonLight) 

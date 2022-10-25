@@ -2,22 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyInfos : MonoBehaviour
+public class EnemyInfos : MonoBehaviour, IDataPersistence
 {
+    
+    [SerializeField] string id;
+    [ContextMenu("Generate guid for id")]
+    void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     public Vector3 moonLightDamageHP;
+    public bool isDead;
     void Start()
     {
-    
+        isDead = false;
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.enemiesDefeated.TryGetValue(id, out isDead);
+        if(isDead)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if(data.enemiesDefeated.ContainsKey(id))
+        {
+            data.enemiesDefeated.Remove(id);
+        }
+        data.enemiesDefeated.Add(id, isDead);
     }
 
     void Update()
     {
-        if(moonLightDamageHP.z < 1)
-        {
-            AddMoonLight();
-            Destroy(gameObject);
-        }
+
     }
 
     public Vector3 DetermineEnemyType(int ID)
@@ -54,6 +77,13 @@ public class EnemyInfos : MonoBehaviour
     void EnemyTakeDamage(float dmg)
     {
         moonLightDamageHP.z -= dmg;
+        
+        if(moonLightDamageHP.z < 1)
+        {
+            AddMoonLight();
+            isDead = true;
+            Destroy(gameObject);
+        }
     }
 
     void AddMoonLight()

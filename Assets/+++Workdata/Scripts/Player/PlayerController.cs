@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
     [SerializeField] ShrineBehaviour shrineBehaviour;
     [SerializeField] LevelUpManager levelUpManager;
+    [SerializeField] MenuButtons menuButtons;
 
     [Header ("Inventory")]
     [SerializeField] public GameObject _playerInventory;
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
     bool isDashing;
 
     [Header ("Input actions")]
-    InputActions inGameInputActions;
+    public InputActions inGameInputActions;
     #endregion
 
     #region Input Enable/Disable
@@ -76,6 +77,8 @@ public class PlayerController : MonoBehaviour
 
         inGameInputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
+        inGameInputActions.PlayerKeyboardMouseActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
+
 
         //CONTROLLER
         inGameInputActions.PlayerControllerActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
@@ -94,6 +97,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerControllerActionMap.OpenInventory.performed += ctx => InventoryToggle();
 
         inGameInputActions.PlayerControllerActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+
+        inGameInputActions.PlayerControllerActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
     }
 
     void Start()
@@ -109,7 +114,16 @@ public class PlayerController : MonoBehaviour
 
         speed = maxSpeed;
     }
+    public void LoadData(GameData data)
+    {
+       this.transform.position = data.playerPos;
 
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPos= this.transform.position;
+    }
     void Update()
     {
         if(!playerInfos.isAlive)

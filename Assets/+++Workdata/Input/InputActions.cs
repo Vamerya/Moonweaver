@@ -98,6 +98,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TogglePauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""f00dd86a-df2d-49d1-a092-87ec0b8a0355"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -232,6 +241,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""UseFlask"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""68de7e1d-e088-42c5-b82f-dc9cf58ecd13"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -306,6 +326,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""name"": ""UseFlask"",
                     ""type"": ""Button"",
                     ""id"": ""fd63564f-cdb1-43f9-9256-e573d2cc669c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TogglePauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""06603cb7-7785-4ae5-ba69-71f03551f6e0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -444,6 +473,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""UseFlask"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6445aab6-c264-4df0-bd53-97fe59d9cc97"",
+                    ""path"": ""<XInputController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -460,6 +500,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PlayerKeyboardMouseActionMap_SwapWeapon = m_PlayerKeyboardMouseActionMap.FindAction("SwapWeapon", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_OpenInventory = m_PlayerKeyboardMouseActionMap.FindAction("OpenInventory", throwIfNotFound: true);
         m_PlayerKeyboardMouseActionMap_UseFlask = m_PlayerKeyboardMouseActionMap.FindAction("UseFlask", throwIfNotFound: true);
+        m_PlayerKeyboardMouseActionMap_TogglePauseMenu = m_PlayerKeyboardMouseActionMap.FindAction("TogglePauseMenu", throwIfNotFound: true);
         // PlayerControllerActionMap
         m_PlayerControllerActionMap = asset.FindActionMap("PlayerControllerActionMap", throwIfNotFound: true);
         m_PlayerControllerActionMap_Movement = m_PlayerControllerActionMap.FindAction("Movement", throwIfNotFound: true);
@@ -470,6 +511,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PlayerControllerActionMap_SwapWeapon = m_PlayerControllerActionMap.FindAction("SwapWeapon", throwIfNotFound: true);
         m_PlayerControllerActionMap_OpenInventory = m_PlayerControllerActionMap.FindAction("OpenInventory", throwIfNotFound: true);
         m_PlayerControllerActionMap_UseFlask = m_PlayerControllerActionMap.FindAction("UseFlask", throwIfNotFound: true);
+        m_PlayerControllerActionMap_TogglePauseMenu = m_PlayerControllerActionMap.FindAction("TogglePauseMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -537,6 +579,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerKeyboardMouseActionMap_SwapWeapon;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_OpenInventory;
     private readonly InputAction m_PlayerKeyboardMouseActionMap_UseFlask;
+    private readonly InputAction m_PlayerKeyboardMouseActionMap_TogglePauseMenu;
     public struct PlayerKeyboardMouseActionMapActions
     {
         private @InputActions m_Wrapper;
@@ -549,6 +592,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @SwapWeapon => m_Wrapper.m_PlayerKeyboardMouseActionMap_SwapWeapon;
         public InputAction @OpenInventory => m_Wrapper.m_PlayerKeyboardMouseActionMap_OpenInventory;
         public InputAction @UseFlask => m_Wrapper.m_PlayerKeyboardMouseActionMap_UseFlask;
+        public InputAction @TogglePauseMenu => m_Wrapper.m_PlayerKeyboardMouseActionMap_TogglePauseMenu;
         public InputActionMap Get() { return m_Wrapper.m_PlayerKeyboardMouseActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -582,6 +626,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @UseFlask.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnUseFlask;
                 @UseFlask.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnUseFlask;
                 @UseFlask.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnUseFlask;
+                @TogglePauseMenu.started -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnTogglePauseMenu;
+                @TogglePauseMenu.performed -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnTogglePauseMenu;
+                @TogglePauseMenu.canceled -= m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface.OnTogglePauseMenu;
             }
             m_Wrapper.m_PlayerKeyboardMouseActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -610,6 +657,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @UseFlask.started += instance.OnUseFlask;
                 @UseFlask.performed += instance.OnUseFlask;
                 @UseFlask.canceled += instance.OnUseFlask;
+                @TogglePauseMenu.started += instance.OnTogglePauseMenu;
+                @TogglePauseMenu.performed += instance.OnTogglePauseMenu;
+                @TogglePauseMenu.canceled += instance.OnTogglePauseMenu;
             }
         }
     }
@@ -626,6 +676,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControllerActionMap_SwapWeapon;
     private readonly InputAction m_PlayerControllerActionMap_OpenInventory;
     private readonly InputAction m_PlayerControllerActionMap_UseFlask;
+    private readonly InputAction m_PlayerControllerActionMap_TogglePauseMenu;
     public struct PlayerControllerActionMapActions
     {
         private @InputActions m_Wrapper;
@@ -638,6 +689,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @SwapWeapon => m_Wrapper.m_PlayerControllerActionMap_SwapWeapon;
         public InputAction @OpenInventory => m_Wrapper.m_PlayerControllerActionMap_OpenInventory;
         public InputAction @UseFlask => m_Wrapper.m_PlayerControllerActionMap_UseFlask;
+        public InputAction @TogglePauseMenu => m_Wrapper.m_PlayerControllerActionMap_TogglePauseMenu;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControllerActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -671,6 +723,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @UseFlask.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnUseFlask;
                 @UseFlask.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnUseFlask;
                 @UseFlask.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnUseFlask;
+                @TogglePauseMenu.started -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnTogglePauseMenu;
+                @TogglePauseMenu.performed -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnTogglePauseMenu;
+                @TogglePauseMenu.canceled -= m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface.OnTogglePauseMenu;
             }
             m_Wrapper.m_PlayerControllerActionMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -699,6 +754,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @UseFlask.started += instance.OnUseFlask;
                 @UseFlask.performed += instance.OnUseFlask;
                 @UseFlask.canceled += instance.OnUseFlask;
+                @TogglePauseMenu.started += instance.OnTogglePauseMenu;
+                @TogglePauseMenu.performed += instance.OnTogglePauseMenu;
+                @TogglePauseMenu.canceled += instance.OnTogglePauseMenu;
             }
         }
     }
@@ -713,6 +771,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnSwapWeapon(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
         void OnUseFlask(InputAction.CallbackContext context);
+        void OnTogglePauseMenu(InputAction.CallbackContext context);
     }
     public interface IPlayerControllerActionMapActions
     {
@@ -724,5 +783,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnSwapWeapon(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
         void OnUseFlask(InputAction.CallbackContext context);
+        void OnTogglePauseMenu(InputAction.CallbackContext context);
     }
 }

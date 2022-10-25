@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInfos : MonoBehaviour
+public class PlayerInfos : MonoBehaviour, IDataPersistence
 {
     #region Variables
     [Header ("Components")]
@@ -57,6 +57,25 @@ public class PlayerInfos : MonoBehaviour
         invincibilityTimer = invincibilityTimerInit;
 
         PlayerStatPercentage();
+    }
+
+    public void LoadData(GameData data)
+    {
+       this.playerLevel = data.playerLevel;
+       this.obtainedRangedWeapon = data.obtainedRangedWeapon;
+       this.transform.position = data.playerPos;
+       if(data.obtainedRangedWeapon)
+       {
+            Destroy(GameObject.FindGameObjectWithTag("WeaponPickup"));
+       }
+
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerLevel = this.playerLevel;
+        data.obtainedRangedWeapon = this.obtainedRangedWeapon;
+        data.playerPos = this.transform.position;
     }
 
     void Update()

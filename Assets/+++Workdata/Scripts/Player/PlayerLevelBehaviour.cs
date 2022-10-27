@@ -91,7 +91,6 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     {
         moonLight -= requiredMoonLight; 
         playerInfos.playerLevel += 1;
-        playerWeaponBehaviour.DetermineWeaponDamage();
     }
 
     //calculates the needed amount of runes based on the formula
@@ -130,14 +129,15 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     public void IncreasePlayerMind()
     {
         mind  += 1;
-        //Increase Ult charge gained per hit
+        //ToDo - Increase Ult charge gained per hit
     }
 
     //increases damage dealt by the player
     public void IncreasePlayerStrength()
     {
         strength  += 1;
-        //increase damage of melee and ranged weapon
+        playerWeaponBehaviour.DetermineWeaponDamage();
+        //ToDo - think of better formula for weapon damage
     }
 
     //increases playerMovementspeed and invincibility timer
@@ -153,7 +153,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     {
         faith  += 1;
         playerInfos.playerUltDamage += 50;
-        //increase spell damage
+        //ToDo - increase spell damage
     }
 
     //increases the drop amount of runes and items by enemies
@@ -162,7 +162,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         luck  += 1;
         // enemyInfos.moonLightDamageHP.x *= 1.2f;
         // enemyInfos.moonLightDamageHP.x = Mathf.Floor(enemyInfos.moonLightDamageHP.x);
-        //dropchance increase
+        //ToDo - dropchance increase
     }
     #endregion
 }

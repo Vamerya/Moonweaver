@@ -14,6 +14,7 @@ public class PlayerWeaponBehaviour : MonoBehaviour
 
     public void DetermineWeaponDamage()
     {
+        //ToDo - think of better formula for weapon damage
         playerWeaponDamage = playerLevelBehaviour.strength * 50f;
         playerWeaponDamage = Mathf.RoundToInt(playerWeaponDamage); 
     }

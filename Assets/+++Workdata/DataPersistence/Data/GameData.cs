@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameData
 {
     public Vector3 playerPos;
+    public int moonwater;
     public bool obtainedRangedWeapon;
     #region Stats
     public float moonLight;
@@ -33,6 +34,7 @@ public class GameData
         this.dexterity = 1;
         this.faith = 1;
         this.luck = 1;
+        this.moonwater = 3;
         playerPos = Vector3.zero;
         obtainedRangedWeapon = false;
         enemiesDefeated = new SerializableDictionary<string, bool>();

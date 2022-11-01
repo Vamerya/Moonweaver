@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealthflaskBehaviour : MonoBehaviour
+public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
 {
     [SerializeField] PlayerInfos playerInfos;
     [SerializeField] DisplayMoonwaterAmount moonwaterAmount;
@@ -15,9 +15,19 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour
     }
     void Start()
     {
-        amountAvailable = maxAmount;
         moonwaterAmount.UpdateMoonWaterAmount();
     }
+
+    public void LoadData(GameData data)
+    {
+        this.amountAvailable = data.moonwater;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.moonwater = this.amountAvailable;
+    }
+
     public void UseFlask()
     {
         if(amountAvailable > 0 && playerInfos.playerHealth < playerInfos.playerMaxHealth)

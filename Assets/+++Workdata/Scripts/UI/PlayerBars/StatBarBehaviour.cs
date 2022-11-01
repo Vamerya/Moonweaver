@@ -12,7 +12,7 @@ public class StatBarBehaviour : MonoBehaviour
     Color fadingBarColor;
     const float fadingBarTimerMAX = 1f;
     float fadingBarTimer;
-    public int iD;
+    public int id;
     void Awake()
     {
         barImage = transform.Find("Bar").GetComponent<Image>();
@@ -24,7 +24,7 @@ public class StatBarBehaviour : MonoBehaviour
 
     void Start()
     {
-        switch(iD)
+        switch(id)
         {
             case 0:
                 SetStat(playerInfos.playerHealthPercentage);
@@ -38,7 +38,7 @@ public class StatBarBehaviour : MonoBehaviour
 
     void Update()
     {
-        switch(iD)
+        switch(id)
         {
             case 0:
                 SetStat(playerInfos.playerHealthPercentage);
@@ -82,7 +82,7 @@ public class StatBarBehaviour : MonoBehaviour
                 fadingBarColor.a = 1;
                 fadingBarImage.color = fadingBarColor;
                 fadingBarTimer = fadingBarTimerMAX;
-                switch (iD)
+                switch (id)
                 {
                     case 0:
                     SetStat(playerInfos.playerHealthPercentage);

@@ -9,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
     PlayerController playerController;
     PlayerInfos playerInfos;
     [SerializeField] LevelUpManager levelUpManager;
+   
     #endregion
 
     void Awake()

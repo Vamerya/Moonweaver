@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float movementX, movementY;
     bool isMoving, isAttacking;
-    public bool isInteracting;
+    public bool isInteracting, isTalking;
     public int inventoryHotbarState;
 
     [Header ("Dash Variables")]
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        if(!playerInfos.isAlive)
+        if(!playerInfos.isAlive || isTalking)
             inGameInputActions.Disable();
         else
             inGameInputActions.Enable();
@@ -219,7 +219,7 @@ public class PlayerController : MonoBehaviour
 
     void Dash(bool i)
     {
-        dashInput = i;   
+        dashInput = i;
     }
 
     IEnumerator StopDashing()

@@ -67,7 +67,8 @@ public class DialogueManager : MonoBehaviour
             _backgroundDim.SetActive(true);
             _inventoryCanvas.SetActive(false);
             _hotbarCanvas.SetActive(false);
-            _nextButton.SetActive(true);
+            _nextButton.SetActive(false);
+            _closeButton.SetActive(true);
             dialogueLength = npcDialogue.Length;
             potraitImage.sprite = npcPotrait;
             dialogueName.text = npcName;
@@ -84,7 +85,8 @@ public class DialogueManager : MonoBehaviour
             _backgroundDim.SetActive(true);
             _inventoryCanvas.SetActive(false);
             _hotbarCanvas.SetActive(false);
-            _nextButton.SetActive(true);
+            _nextButton.SetActive(false);
+            _closeButton.SetActive(true);
             dialogueLength = npcDialogue.Length;
             potraitImage.sprite = npcPotrait;
             dialogueName.text = npcName;

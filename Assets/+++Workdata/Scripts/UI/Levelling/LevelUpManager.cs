@@ -17,16 +17,16 @@ public class LevelUpManager : MonoBehaviour
     #region Stats
     // - Vigor -> Overall HP
     // - Endurance -> Overall stamina
-    // - Mind -> Ult Recharge
-    // - Strength -> Overall damage
-    // - Dexterity -> Invincibility time
-    // - Faith -> Increased spell damage (ult for now)
-    // - Luck -> increased item drop chance/runes
+    // - Mind -> Execute @ specific hp% || bleed build-up
+    // - Strength -> do stuff but heavy
+    // - Dexterity -> do stuff but fast
+    // - Faith -> radiant/burning damage
+    // - Luck -> crit damage
     #endregion
 
     void Awake() 
     {
-        //playerLevelBehaviour = gameObject.GetComponent<PlayerLevelBehaviour>();
+
     }
 
     void Start()

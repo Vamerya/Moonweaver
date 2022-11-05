@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
     [Header ("Movement, interaction and inventory")]
     public float maxSpeed;
     public float speed;
-    public float movementX, movementY;
-    bool isMoving, isAttacking;
+    public float movementX, movementY, directionState;
+    bool isMoving;
     public bool isInteracting, isTalking;
     public int inventoryHotbarState;
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashBufferLength;
     [SerializeField] float dashingVelocity;
     [SerializeField] float dashingTime;
-    [SerializeField] bool canDash;
+    [SerializeField] public bool canDash;
     Vector2 dashingDir;
     float dashBufferTimer;
     bool dashInput;
@@ -140,6 +140,18 @@ public class PlayerController : MonoBehaviour
         }
         else if(playerInfos.playerStamina > playerInfos.dashStaminaRequirement)
             canDash = true;
+
+        if(movementX < 0)
+            playerSpriteRenderer.flipX = true;
+        else if(movementX > 0)
+            playerSpriteRenderer.flipX = false;
+
+        if(playerCombat.isAttacking || playerCombat.isCharging)
+            speed = maxSpeed / 3;
+        else
+            speed = maxSpeed;
+
+        DetermineDirectionState();
     }
 
     void FixedUpdate()
@@ -172,7 +184,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isDashing", isDashing);
     }
 
-    //Method gives back Vector2 values for the playermovement
+    //Method gives back Vector2 values for the playermovement, sets according values fo the playerAnimator
     void Movement(Vector2 direction)
     {
         movementX = direction.x;
@@ -215,6 +227,28 @@ public class PlayerController : MonoBehaviour
             _playerInventory.SetActive(false);
             Time.timeScale = 1f;
         }
+    }
+
+    void DetermineDirectionState()
+    {
+        if (movementX == 0 && movementY > 0)        //Up
+            directionState = 0;
+        else if(movementX > 0 && movementY > 0)     //UpRight
+            directionState = 1;
+        else if(movementX > 0 && movementY == 0)    //Right
+            directionState = 2;
+        else if(movementX > 0 && movementY < 0)     //DownRight
+            directionState = 3;
+        else if(movementX == 0 && movementY < 0)    //Down
+            directionState = 4;
+        else if(movementX < 0 && movementY < 0)     //DownLeft
+            directionState = 5;
+        else if(movementX < 0 && movementY == 0)    //Left
+            directionState = 6;
+        else if(movementX < 0 && movementY > 0)     //UpLeft
+            directionState = 7;
+
+        anim.SetFloat("DirectionState", directionState);
     }
 
     void Dash(bool i)

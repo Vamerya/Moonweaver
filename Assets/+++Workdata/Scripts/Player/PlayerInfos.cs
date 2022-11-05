@@ -19,28 +19,24 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     [SerializeField] public float invincibilityTimerInit;
 
     [Header ("Player Stats")]
-    [SerializeField] public int playerLevel;
-    [SerializeField] public float playerMaxHealth;
-    [SerializeField] public float playerHealth;
-    [SerializeField] float staminaRechargeSpeed;
-    [SerializeField] public float playerMaxStamina;
-    [SerializeField] public float playerStamina;
-    [SerializeField] public float dashStaminaRequirement;
-    [SerializeField] public float playerMaxUltCharg;
-    [SerializeField] public float playerUltCharge;
-    [SerializeField] public float playerStrength;
-    [SerializeField] public float playerDexterity;
-    [SerializeField] public float playerUltDamage;
-    [SerializeField] public float playerFaith;
-    [SerializeField] public float playerLuck;
-    [SerializeField] public float playerHealthPercentage;
-    [SerializeField] public float playerStaminaPercentage;
+    public int playerLevel;
+    public float playerMaxHealth;
+    public float playerHealth;
+    public float staminaRechargeSpeed;
+    public float playerMaxStamina;
+    public float playerStamina;
+    public float dashStaminaRequirement;
+    public float playerMaxUltCharg;
+    public float playerUltCharge;
+    public float playerUltDamage;
+    public float playerHealthPercentage;
+    public float playerStaminaPercentage;
     public int inventoryState;
 
     [Header ("Bools")]
     public bool isAlive;
     public bool obtainedRangedWeapon;
-    [SerializeField] public bool isDamaged;
+    public bool isDamaged;
     [SerializeField] bool swappedWeapon;
     #endregion
 

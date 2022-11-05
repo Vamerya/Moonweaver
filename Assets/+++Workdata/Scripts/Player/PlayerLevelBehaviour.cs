@@ -26,16 +26,16 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     public int strength;
     public int dexterity;
     public int faith;
-    public int luck;    
+    public int luck;
 
     #region Stats to level
     // - Vigor -> Overall HP
     // - Endurance -> Overall stamina
-    // - Mind -> Ult Recharge
-    // - Strength -> Overall damage
-    // - Dexterity -> Invincibility time
-    // - Faith -> Increased spell damage (ult for now)
-    // - Luck -> increased item drop chance/runes
+    // - Mind -> Execute @ specific hp% || bleed build-up
+    // - Strength -> do stuff but heavy
+    // - Dexterity -> do stuff but fast
+    // - Faith -> radiant/burning damage
+    // - Luck -> crit damage
     #endregion
 
     void Awake()
@@ -91,6 +91,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     {
         moonLight -= requiredMoonLight; 
         playerInfos.playerLevel += 1;
+        playerWeaponBehaviour.DetermineAllTheDamages();
     }
 
     //calculates the needed amount of runes based on the formula
@@ -125,44 +126,35 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         playerInfos.playerStamina += rnd;
     }
 
-    //increases the amount of charge per hit for the playerUltimate
+    //DoT || execute @ specific hp%
     public void IncreasePlayerMind()
     {
         mind  += 1;
-        //ToDo - Increase Ult charge gained per hit
     }
 
     //increases damage dealt by the player
     public void IncreasePlayerStrength()
     {
         strength  += 1;
-        playerWeaponBehaviour.DetermineWeaponDamage();
-        //ToDo - think of better formula for weapon damage
     }
 
     //increases playerMovementspeed and invincibility timer
     public void IncreasePlayerDexterity()
     {
         dexterity  += 1;
-        playerInfos.invincibilityTimerInit += .1f;
         playerController.maxSpeed += .2f;
     }
 
-    //increases the damage of the ultimate
+    //burning/radiant damage
     public void IncreasePlayerFaith()
     {
         faith  += 1;
-        playerInfos.playerUltDamage += 50;
-        //ToDo - increase spell damage
     }
 
-    //increases the drop amount of runes and items by enemies
+    //increases crit chance
     public void IncreasePlayerLuck()
     {
         luck  += 1;
-        // enemyInfos.moonLightDamageHP.x *= 1.2f;
-        // enemyInfos.moonLightDamageHP.x = Mathf.Floor(enemyInfos.moonLightDamageHP.x);
-        //ToDo - dropchance increase
     }
     #endregion
 }

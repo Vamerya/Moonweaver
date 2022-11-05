@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] float attackTimer;
     [SerializeField] float attackTimerInit;
     [SerializeField] float chargingTimer;
-    [SerializeField] float chargingTimerGoal;
+    [SerializeField] public float chargingTimerGoal;
     [SerializeField] float requiredStaminaLight;
     [SerializeField] float requiredStaminaHeavy;
     [SerializeField] float requiredStaminaUltimate;
@@ -23,8 +23,9 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] int attackState;
 
     [Header ("Bools")]
-    [SerializeField] bool isAttacking;
-    [SerializeField] bool isCharging;
+    [SerializeField] public bool isAttacking;
+    [SerializeField] public bool isCharging;
+    [SerializeField] bool staminaLight, staminaHeavy;
     [SerializeField] bool isUlting;
     [SerializeField] bool attackReleased;
     #endregion
@@ -40,12 +41,9 @@ public class PlayerCombat : MonoBehaviour
         if(attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
-            isAttacking = true;
-            playerController.anim.SetBool("isAttacking", isAttacking);
         }
         else 
         {
-            StopAttacking();
             attackState = 0;
         }
 
@@ -59,8 +57,21 @@ public class PlayerCombat : MonoBehaviour
         else    
             isCharging = false;
 
-        playerController.anim.SetInteger("attackState", attackState);
+        if(playerInfos.playerStamina > requiredStaminaLight)
+            staminaLight = true;
+        else
+            staminaLight = false;
+
+        if(playerInfos.playerStamina > requiredStaminaHeavy)
+            staminaHeavy = true;
+        else
+            staminaHeavy = false;   
+
+        playerController.anim.SetFloat("attackState", attackState);
+        playerController.anim.SetBool("isAttacking", isAttacking);
         playerController.anim.SetBool("isCharging", isCharging);
+        playerController.anim.SetBool("staminaLight", staminaLight);
+        playerController.anim.SetBool("staminaHeavy", staminaHeavy);
     }
     public void Attack()
     {
@@ -68,19 +79,19 @@ public class PlayerCombat : MonoBehaviour
         {
             attackReleased = false;
 
-            if(attackState == 0 && playerInfos.playerStamina > requiredStaminaLight)
+            if(attackState == 0 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 Attack1();
             }
-            else if(attackState == 1 && playerInfos.playerStamina > requiredStaminaLight)
+            else if(attackState == 1 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 Attack2();
             }
-            else if(attackState == 2 && playerInfos.playerStamina > requiredStaminaLight)
+            else if(attackState == 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 Attack3();
             }
-            else if(attackState > 2 && playerInfos.playerStamina > requiredStaminaLight)
+            else if(attackState > 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 attackState = 0;
                 Attack1();
@@ -94,7 +105,7 @@ public class PlayerCombat : MonoBehaviour
         else 
         {
             Debug.Log("Ranged weapon equipped");
-            //Shooting stuff
+            //shooting but it comes back!
         }
     }
 
@@ -102,24 +113,30 @@ public class PlayerCombat : MonoBehaviour
     {
         playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
+        isAttacking = true;
         chargingTimer = 0;
-        Debug.Log("Attack 1");  
+        playerController.canDash = false;
+        //Debug.Log("Attack 1");  
     }
 
     void Attack2()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
+        isAttacking = true;
         chargingTimer = 0;
-        Debug.Log("Attack 2");
+        playerController.canDash = false;
+        //Debug.Log("Attack 2");
     }
     
     void Attack3()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
         attackTimer = attackTimerInit;
+        isAttacking = true;
         chargingTimer = 0;
-        Debug.Log("Attack 3");
+        playerController.canDash = false;
+        //Debug.Log("Attack 3");
     }
 
     public void AttackRelease()
@@ -133,7 +150,6 @@ public class PlayerCombat : MonoBehaviour
 
             attackReleased = true;
             isCharging = false;
-            StopAttacking();
         }
     }
 
@@ -167,6 +183,7 @@ public class PlayerCombat : MonoBehaviour
     public void StopAttacking()
     {
         isAttacking = false;
+        playerController.canDash = true;
         playerController.anim.SetBool("isAttacking", isAttacking);
     }
 

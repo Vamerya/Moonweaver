@@ -108,7 +108,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         else
             inventoryState = 0;
 
-        playerController.anim.SetInteger("InventoryState", inventoryState);
+        playerController.anim.SetFloat("InventoryState", inventoryState);
     }
 
     //calculates player health with the damage values from the EnemyInfos.cs script

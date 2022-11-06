@@ -23651,6 +23651,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &460580007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460580008}
+  m_Layer: 0
+  m_Name: ProjectileSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &460580008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460580007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1284838109}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &462129027
 GameObject:
   m_ObjectHideFlags: 0
@@ -61946,6 +61977,7 @@ GameObject:
   - component: {fileID: 1284838111}
   - component: {fileID: 1284838112}
   - component: {fileID: 1284838117}
+  - component: {fileID: 1284838122}
   - component: {fileID: 1284838118}
   - component: {fileID: 1284838120}
   - component: {fileID: 1284838119}
@@ -62024,6 +62056,7 @@ Transform:
   - {fileID: 1257050471}
   - {fileID: 199941085}
   - {fileID: 2070874753}
+  - {fileID: 460580008}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62073,6 +62106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de81f6b4b637ba6478299fba322b53c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  playerInfos: {fileID: 0}
+  playerRangedWeaponBehaviour: {fileID: 0}
   staminaBarBehaviour: {fileID: 374963252}
   attackTimer: 0
   attackTimerInit: 1
@@ -62101,6 +62137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  mainCamera: {fileID: 519420031}
   playerHealthflaskBehaviour: {fileID: 0}
   staminaBarBehaviour: {fileID: 374963252}
   shrineBehaviour: {fileID: 2041352833}
@@ -62113,6 +62150,8 @@ MonoBehaviour:
   movementX: 0
   movementY: 0
   directionState: 0
+  mousePos: {x: 0, y: 0}
+  lookDir: {x: 0, y: 0, z: 0}
   isInteracting: 0
   isTalking: 0
   inventoryHotbarState: 0
@@ -62161,7 +62200,7 @@ MonoBehaviour:
   levelUpReady: 0
   vigor: 1
   endurance: 1
-  mind: 1
+  mind: 17
   strength: 1
   dexterity: 1
   faith: 1
@@ -62324,6 +62363,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1284838122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284838107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ef86064f5237c48a06c4cf2d2c004d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpriteRenderer: {fileID: 1284838108}
+  projectileSpawner: {fileID: 460580008}
+  playerController: {fileID: 0}
+  playerLevelBehaviour: {fileID: 0}
+  projectilePrefab: {fileID: 2691000903862361706, guid: dee1db1513831c342a95dbaa10f65b23, type: 3}
 --- !u!1 &1285809530
 GameObject:
   m_ObjectHideFlags: 0

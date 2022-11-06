@@ -6,8 +6,9 @@ public class PlayerCombat : MonoBehaviour
 {
     #region Variables
     [Header ("Main Components")]
-    PlayerController playerController;
-    PlayerInfos playerInfos;
+    [SerializeField] PlayerController playerController;
+    [SerializeField] PlayerInfos playerInfos;
+    [SerializeField] PlayerRangedWeaponBehaviour playerRangedWeaponBehaviour;
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
 
     [Header ("Timer")]
@@ -34,6 +35,7 @@ public class PlayerCombat : MonoBehaviour
     {
         playerController = gameObject.GetComponent<PlayerController>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
+        playerRangedWeaponBehaviour = gameObject.GetComponent<PlayerRangedWeaponBehaviour>();
     }
 
     void Update()
@@ -105,7 +107,7 @@ public class PlayerCombat : MonoBehaviour
         else 
         {
             Debug.Log("Ranged weapon equipped");
-            //shooting but it comes back!
+            playerRangedWeaponBehaviour.Shoot();
         }
     }
 

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer playerSpriteRenderer;
     PlayerInfos playerInfos;
     PlayerCombat playerCombat;
+    [SerializeField] Camera mainCamera;
     [SerializeField] PlayerHealthflaskBehaviour playerHealthflaskBehaviour;
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
     [SerializeField] ShrineBehaviour shrineBehaviour;
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
     public float speed;
     public float movementX, movementY, directionState;
+    public Vector2 mousePos;
+    public Vector3 lookDir;
     bool isMoving;
     public bool isInteracting, isTalking;
     public int inventoryHotbarState;
@@ -78,6 +81,8 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
         inGameInputActions.PlayerKeyboardMouseActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
+
+        inGameInputActions.PlayerKeyboardMouseActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
 
 
         //CONTROLLER
@@ -151,6 +156,23 @@ public class PlayerController : MonoBehaviour
         else
             speed = maxSpeed;
 
+
+        if(playerInfos.inventoryState == 1)
+        {
+            lookDir = mainCamera.ScreenToWorldPoint(mousePos);
+            var dir = lookDir.normalized;
+            // playerGun.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
+
+            anim.SetFloat("LookDirX", dir.x);
+            anim.SetFloat("LookDirY", dir.y);
+
+            if (dir.x > 0) //right
+                playerSpriteRenderer.flipX = false;
+
+            else if (dir.x < 0) //left
+                playerSpriteRenderer.flipX = true;
+        }
+
         DetermineDirectionState();
     }
 
@@ -199,6 +221,11 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("MovementX", movementX);
         anim.SetFloat("MovementY", movementY);
         anim.SetBool("isMoving", isMoving);
+    }
+
+    void Look(Vector3 direction)
+    {
+        mousePos = direction;
     }
 
     //checks whether the player is interacting via assigned button and sets bool accordingly

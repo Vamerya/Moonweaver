@@ -8,7 +8,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     [Header ("Main Components")]
     PlayerController playerController;
     PlayerCombat playerCombat;
-    PlayerWeaponBehaviour playerWeaponBehaviour;
+    PlayerMeleeWeaponBehaviour playerMeleeWeaponBehaviour;
     PlayerInfos playerInfos;
     EnemyInfos enemyInfos;
 
@@ -42,7 +42,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     {
         playerController = gameObject.GetComponent<PlayerController>();
         playerCombat = gameObject.GetComponent<PlayerCombat>();
-        playerWeaponBehaviour = gameObject.GetComponentInChildren<PlayerWeaponBehaviour>();
+        playerMeleeWeaponBehaviour = gameObject.GetComponentInChildren<PlayerMeleeWeaponBehaviour>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
         enemyInfos = gameObject.GetComponent<EnemyInfos>();
     }
@@ -91,7 +91,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     {
         moonLight -= requiredMoonLight; 
         playerInfos.playerLevel += 1;
-        playerWeaponBehaviour.DetermineAllTheDamages();
+        playerMeleeWeaponBehaviour.DetermineAllTheDamages();
     }
 
     //calculates the needed amount of runes based on the formula

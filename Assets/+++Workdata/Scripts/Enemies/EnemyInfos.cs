@@ -123,15 +123,20 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     {
         if(collision.CompareTag("Weapon"))
         {
-            EnemyTakeDamage(collision.GetComponent<PlayerWeaponBehaviour>().DamageEnemy());
+            EnemyTakeDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DamageEnemyMelee());
             if(collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
             {
                 isBurning = true;
                 burningTimer = burningTimerInit;
-                StartCoroutine(EnemyTakeBurnDamage(collision.GetComponent<PlayerWeaponBehaviour>().DetermineBurningDamage()));
+                StartCoroutine(EnemyTakeBurnDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineBurningDamage()));
             }
             Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
-            Debug.Log("enemy hit");
+        }
+        
+        if(collision.CompareTag("Bullet"))
+        {
+            EnemyTakeDamage(collision.GetComponent<ProjectileBehaviour>().DamageEnemyRanged());
+            Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
         }
     }
 }

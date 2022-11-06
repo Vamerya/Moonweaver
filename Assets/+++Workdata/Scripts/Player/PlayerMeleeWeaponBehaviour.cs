@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWeaponBehaviour : MonoBehaviour
+public class PlayerMeleeWeaponBehaviour : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
@@ -84,7 +84,7 @@ public class PlayerWeaponBehaviour : MonoBehaviour
         //ToDo - add execute
     }
 
-    public float DamageEnemy()
+    public float DamageEnemyMelee()
     {
         if(Random.value < playerCriticalStrikeChance)
         {

@@ -7,7 +7,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] PlayerCombat playerCombat;
-    [SerializeField] public float playerWeaponDamage, playerWeaponDamageCrit;
+    [SerializeField] public float playerWeaponDamage;
     [SerializeField] float playerCriticalStrikeChance;
     [SerializeField] float playerCriticalStrikeDamage;
     [SerializeField] public float playerBurnDamage;
@@ -16,10 +16,10 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     #region stats and what they do
     // - Vigor -> Overall HP
     // - Endurance -> Overall stamina
-    // - Mind -> Execute @ specific hp% || bleed build-up
+    // - Mind -> Execute @ specific hp% && crit chance
     // - Strength -> do stuff but heavy
-    // - Dexterity -> do stuff but fast
-    // - Faith -> radiant/burning damage
+    // - Dexterity -> do stuff but fast || increase ranged weapon damage
+    // - Faith -> burning damage
     // - Luck -> crit damage
     #endregion
 
@@ -42,6 +42,11 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         DetermineCriticalStrikeDamage();
     }
 
+
+/// <summary>
+/// 
+/// </summary>
+/// <returns></returns>
     public float DetermineWeaponDamage()
     {
         playerWeaponDamage = Mathf.Log(playerLevelBehaviour.strength, 5) * 50;
@@ -62,7 +67,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
 
     public float DetermineBurningDamage()
     {
-        playerBurnDamage = Mathf.Log(playerLevelBehaviour.faith, 5) * 2.5f;
+        playerBurnDamage = Mathf.Log(playerLevelBehaviour.faith, 2) * 2.5f;
         playerBurnDamage = Mathf.Floor(playerBurnDamage);
         return playerBurnDamage;
     }

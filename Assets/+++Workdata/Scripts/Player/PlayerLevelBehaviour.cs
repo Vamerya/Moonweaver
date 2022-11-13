@@ -80,7 +80,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     }
     void Update()
     {
-        if(moonLight >= requiredMoonLight) 
+        if(moonLight >= requiredMoonLight)
             levelUpReady = true;
         else
             levelUpReady = false;

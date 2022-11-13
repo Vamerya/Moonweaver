@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the attack states of the player as well heavy attacks, ultimate attacks and the according stamina drain 
+/// for said attacks
+/// </summary>
 public class PlayerCombat : MonoBehaviour
 {
     #region Variables
@@ -31,6 +35,10 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] bool attackReleased;
     #endregion
 
+
+    /// <summary>
+    /// Grabs necessary references to other scripts
+    /// </summary>
     void Start()
     {
         playerController = gameObject.GetComponent<PlayerController>();
@@ -38,6 +46,11 @@ public class PlayerCombat : MonoBehaviour
         playerRangedWeaponBehaviour = gameObject.GetComponent<PlayerRangedWeaponBehaviour>();
     }
 
+
+    /// <summary>
+    /// mainly controls the timer used to increase attackState with successive attacks or reset the state back to 0 after the timer reached 0
+    /// also controls the parameters for the playerAnimator as well as some necessary bools
+    /// </summary>
     void Update()
     {
         if(attackTimer > 0)
@@ -75,6 +88,15 @@ public class PlayerCombat : MonoBehaviour
         playerController.anim.SetBool("staminaLight", staminaLight);
         playerController.anim.SetBool("staminaHeavy", staminaHeavy);
     }
+
+    /// <summary>
+    /// is called when attacking
+    /// checks whether the player has enough stamina. released their attack and which attackState the player currently has
+    /// before calling the method with the according attack from 1-3
+    /// if the attack is not released a counter will start counting up from 0, calling the HeavyAttack method when reaching its goal
+    /// 
+    /// depending on the inventoryState the player either attacks (inventoryState 0) melee or (inventoryState 1) ranged
+    /// </summary>
     public void Attack()
     {
         if(playerInfos.inventoryState == 0)
@@ -106,11 +128,15 @@ public class PlayerCombat : MonoBehaviour
         }
         else 
         {
-            Debug.Log("Ranged weapon equipped");
             playerRangedWeaponBehaviour.Shoot();
         }
     }
 
+    /// <summary>
+    /// if the player has enough stamina, the required stamina gets removed from the player, the attack timer is reset to the inital attackTimer
+    /// isAttacking is set to true and the charging timer gets reset to 0 
+    /// while attacking the player can't dash
+    /// </summary>
     void Attack1()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
@@ -121,6 +147,11 @@ public class PlayerCombat : MonoBehaviour
         //Debug.Log("Attack 1");  
     }
 
+    /// <summary>
+    /// if the player has enough stamina, the required stamina gets removed from the player, the attack timer is reset to the inital attackTimer
+    /// isAttacking is set to true and the charging timer gets reset to 0 
+    /// while attacking the player can't dash
+    /// </summary>
     void Attack2()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
@@ -130,7 +161,12 @@ public class PlayerCombat : MonoBehaviour
         playerController.canDash = false;
         //Debug.Log("Attack 2");
     }
-    
+
+    /// <summary>
+    /// if the player has enough stamina, the required stamina gets removed from the player, the attack timer is reset to the inital attackTimer
+    /// isAttacking is set to true and the charging timer gets reset to 0 
+    /// while attacking the player can't dash
+    /// </summary>
     void Attack3()
     {
         playerInfos.playerStamina -= requiredStaminaLight;
@@ -141,6 +177,12 @@ public class PlayerCombat : MonoBehaviour
         //Debug.Log("Attack 3");
     }
 
+    /// <summary>
+    /// if the attack is released before the attackTimer reaches 0, the attackState gets increased by one, ensuring the next attack is gonna be the
+    /// next part of the combo
+    /// 
+    /// attackReleased gets set to true and isCharging to false
+    /// </summary>
     public void AttackRelease()
     {
         if(playerInfos.inventoryState == 0)
@@ -155,9 +197,13 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// while the player doesn't release the button to attack isCharging gets set to true, causing the heavyChargeTimer to count up
+    /// otherwise if the attack is released the StopAttacking method gets called
+    /// </summary>
     void HeavyAttackCharge()
     {
-        if(!attackReleased && attackTimer > 0)
+        if(!attackReleased)
             {
                 isCharging = true;
                 isAttacking = true;
@@ -168,6 +214,12 @@ public class PlayerCombat : MonoBehaviour
             }
 
     }
+
+    /// <summary>
+    /// similar to the normal attacks the script first checks whether the player has enough stamina
+    /// if so the required stamina gets reduced from the players stamina, isCharging gets set to false, the chargingTimer is reset to 0
+    /// and the StopAttacking method is called
+    /// </summary>
     public void HeavyAttack()
     {
         if(playerInfos.playerStamina > requiredStaminaHeavy)
@@ -182,6 +234,9 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// sets the isAttacking bool to false, the player can dash again and the according parameter in the animator gets set
+    /// </summary>
     public void StopAttacking()
     {
         isAttacking = false;

@@ -13,6 +13,14 @@ public class PlayerRangedWeaponBehaviour : MonoBehaviour
 
     float bulletDamage;
 
+    // - Vigor -> Overall HP
+    // - Endurance -> Overall stamina
+    // - Mind -> Execute @ specific hp% && crit chance
+    // - Strength -> do stuff but heavy
+    // - Dexterity -> do stuff but fast || increase ranged weapon damage
+    // - Faith -> burning damage
+    // - Luck -> crit damage
+
     void Awake()
     {
         playerLevelBehaviour = gameObject.GetComponent<PlayerLevelBehaviour>();

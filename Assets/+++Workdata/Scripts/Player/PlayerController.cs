@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// used mainly for playerMovement as well and some menu toggles
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     #region Variables
@@ -59,6 +62,9 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    /// <summary>
+    /// assigns all the methods to their respective key-/button binds
+    /// </summary>
     void Awake()
     {
         inGameInputActions = new InputActions();
@@ -92,7 +98,6 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact();
         inGameInputActions.PlayerControllerActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
 
-        
         inGameInputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
@@ -106,6 +111,10 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerControllerActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
     }
 
+    /// <summary>
+    /// grabs references to components as well as the other scripts necessary for the player
+    /// sets the playerSpeed to their maxSpeed value
+    /// </summary>
     void Start()
     {
         playerSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -119,16 +128,41 @@ public class PlayerController : MonoBehaviour
 
         speed = maxSpeed;
     }
+
+    /// <summary>
+    /// loads saved data
+    /// loads default data if there's no saved data
+    /// </summary>
+    /// <param name="data"></param>
     public void LoadData(GameData data)
     {
        this.transform.position = data.playerPos;
 
     }
 
+    /// <summary>
+    /// saves the data upon exiting the game
+    /// </summary>
+    /// <param name="data"></param>
     public void SaveData(ref GameData data)
     {
         data.playerPos= this.transform.position;
     }
+
+    /// <summary>
+    /// disables the playerInput if the player is dead, enables it if the player is alive and sets according bool in animator
+    /// 
+    /// dashBufferTimer is the cooldown between dashes, if it's 0 and the player has enough stamina they can dash again
+    /// 
+    /// flips the sprite depending on the movement on the X axis
+    /// 
+    /// reduces playerSpeed while attacking or charging a heavy attack, resets it back to its maxSpeed if neither of those are happening
+    /// 
+    /// if the inventory state is 1 the playerSprites are now determined by the position of the mouse in relation to the player and sets according 
+    /// parameters in the animator
+    /// 
+    /// the DetermineDirectionState gets called 
+    /// </summary>
     void Update()
     {
         if(!playerInfos.isAlive || isTalking)
@@ -176,6 +210,18 @@ public class PlayerController : MonoBehaviour
         DetermineDirectionState();
     }
 
+    /// <summary>
+    /// player is moved depending on the input of the player
+    /// 
+    /// if the player can dash and is inputting the key, isDashing gets sets set to true, canDash to false, the trailrenderer is emitting during the dash
+    /// and the dashingDirection is determined by the movementDirection of the player
+    /// if the direction would be 0 the direction just gets set to 1, 1
+    /// afterwards the StopDashing method gets called
+    /// 
+    /// if the player is dashing, the dashingDirection gets normalized and multiplied by the dashSpeed and applied to the rb.velocity,
+    /// the dashBufferTimer is reset to the dashBufferLength (dash cooldown) 
+    /// sets according parameter in player animator
+    /// </summary>
     void FixedUpdate()
     {
         Vector2 move;
@@ -206,7 +252,10 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isDashing", isDashing);
     }
 
-    //Method gives back Vector2 values for the playermovement, sets according values fo the playerAnimator
+    /// <summary>
+    /// Method gives back Vector2 values for the playermovement, sets according values fo the playerAnimator
+    /// </summary>
+    /// <param name="direction">direction from the X and Y axis depending on the playerInput of the WASD keys</param>
     void Movement(Vector2 direction)
     {
         movementX = direction.x;
@@ -223,12 +272,18 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isMoving", isMoving);
     }
 
+    /// <summary>
+    /// direction gets set to the mousePosition
+    /// </summary>
+    /// <param name="direction">used to determine where the mouse is in relation to the player</param>
     void Look(Vector3 direction)
     {
         mousePos = direction;
     }
 
-    //checks whether the player is interacting via assigned button and sets bool accordingly
+    /// <summary>
+    /// checks whether the player is interacting via assigned button and sets bool accordingly
+    /// </summary>
     void Interact()
     {
         if(!isInteracting)
@@ -237,7 +292,9 @@ public class PlayerController : MonoBehaviour
             isInteracting = false;
     }
 
-    //toggles between the player hotbar and inventory, sets time scale to 0 when inventory is openend
+    /// <summary>
+    /// toggles between the player hotbar and inventory, sets time scale to 0 when inventory is openend
+    /// </summary>
     void InventoryToggle()
     {
         if(inventoryHotbarState == 0)
@@ -256,6 +313,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// determines the direction the player last faced at before they stopped moving
+    /// </summary>
     void DetermineDirectionState()
     {
         if (movementX == 0 && movementY > 0)        //Up
@@ -278,18 +338,28 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("DirectionState", directionState);
     }
 
-    void Dash(bool i)
+    /// <summary>
+    /// sets the dashInput depending on whether the player is inputting the key 
+    /// </summary>
+    /// <param name="value">bool that's given from the input of whether the player is pressing the assigned key</param>
+    void Dash(bool value)
     {
-        dashInput = i;
+        dashInput = value;
     }
 
+    /// <summary>
+    /// after being called the method is halted for the length of the dashingTime which causes the player to dash for that amount of time
+    /// afterwards the trailRenderer stops emitting, isDashing gets set to false the players stamina is drained and applied to the staminaBar
+    /// and the dashBufferTimer is reset to the dashBufferLength
+    /// </summary>
+    /// <returns>waits for the dashingTimer to reach 0 before continuing with the rest</returns>
     IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(dashingTime);
         trailRenderer.emitting = false;
         isDashing = false;
-        staminaBarBehaviour.FadingBarBehaviour();
         playerInfos.playerStamina -= playerInfos.dashStaminaRequirement;
+        staminaBarBehaviour.FadingBarBehaviour();
         dashBufferTimer = dashBufferLength;
     }
 }

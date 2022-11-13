@@ -1,0 +1,64 @@
+Date : 2022-11-11 13:08:01
+Directory : d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts
+Total : 28 files,  1731 codes, 84 comments, 327 blanks, all 2142 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |         28 |      1,731 |         84 |        327 |      2,142 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |         28 |      1,731 |         84 |        327 |      2,142 |
+| Companion                                                                                |          1 |         32 |          0 |          7 |         39 |
+| Enemies                                                                                  |          2 |        143 |          0 |         26 |        169 |
+| Interactables                                                                            |          1 |         34 |          0 |          5 |         39 |
+| Items                                                                                    |          2 |         33 |          0 |          6 |         39 |
+| MainMenu                                                                                 |          2 |         89 |          4 |         10 |        103 |
+| Player                                                                                   |         10 |        900 |         67 |        190 |      1,157 |
+| Player\Projectile                                                                        |          1 |         43 |          0 |         11 |         54 |
+| UI                                                                                       |         10 |        500 |         13 |         83 |        596 |
+| UI\Dialogue                                                                              |          3 |        153 |          3 |         35 |        191 |
+| UI\Inventory                                                                             |          2 |         71 |          2 |         14 |         87 |
+| UI\Levelling                                                                             |          2 |        162 |          7 |         18 |        187 |
+| UI\PlayerBars                                                                            |          3 |        114 |          1 |         16 |        131 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                 | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Companion\CompanionBehaviour.cs          | C#       |         32 |          0 |          7 |         39 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyBehaviour.cs                | C#       |         19 |          0 |          7 |         26 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyInfos.cs                    | C#       |        124 |          0 |         19 |        143 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\ShrineBehaviour.cs         | C#       |         34 |          0 |          5 |         39 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items\ItemBehaviour.cs                   | C#       |         24 |          0 |          5 |         29 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items\ItemScriptableObject.cs            | C#       |          9 |          0 |          1 |         10 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MainMenu\MenuButtons.cs                  | C#       |         82 |          4 |          8 |         94 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MainMenu\SaveFileSlot.cs                 | C#       |          7 |          0 |          2 |          9 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerCombat.cs                   | C#       |        178 |          3 |         27 |        208 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerController.cs               | C#       |        233 |          6 |         57 |        296 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerHealthflaskBehaviour.cs     | C#       |         42 |          0 |          8 |         50 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInfos.cs                    | C#       |        116 |          4 |         22 |        142 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInteract.cs                 | C#       |         34 |         10 |         14 |         58 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerLevelBehaviour.cs           | C#       |        122 |         18 |         21 |        161 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerMeleeWeaponBehaviour.cs     | C#       |         80 |         14 |         16 |        110 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerRangedWeaponBehaviour.cs    | C#       |         32 |         12 |         11 |         55 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\Projectile\ProjectileBehaviour.cs | C#       |         43 |          0 |         11 |         54 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\TakeDamageBehaviour.cs            | C#       |         20 |          0 |          3 |         23 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\ButtonBehaviour.cs           | C#       |         22 |          0 |          7 |         29 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\DialogueManager.cs           | C#       |         91 |          3 |         18 |        112 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\NPCDialogueBehaviour.cs      | C#       |         40 |          0 |         10 |         50 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory\InventoryManager.cs         | C#       |         30 |          0 |          5 |         35 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory\InventorySlot.cs            | C#       |         41 |          2 |          9 |         52 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling\LevelUpManager.cs           | C#       |        112 |          7 |          7 |        126 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling\LevelUpSlot.cs              | C#       |         50 |          0 |         11 |         61 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayHeldMoonlight.cs    | C#       |         13 |          0 |          4 |         17 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayMoonwaterAmount.cs  | C#       |         13 |          0 |          3 |         16 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\StatBarBehaviour.cs        | C#       |         88 |          1 |          9 |         98 |
+| Total                                                                                    |          |      1,731 |         84 |        327 |      2,142 |
++------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

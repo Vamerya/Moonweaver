@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages the players level and calculates the amount of Moonlight (currency) needed for the next level-up
+/// </summary>
 public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
 {
     #region Variables
@@ -10,7 +13,6 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     PlayerCombat playerCombat;
     PlayerMeleeWeaponBehaviour playerMeleeWeaponBehaviour;
     PlayerInfos playerInfos;
-    EnemyInfos enemyInfos;
 
     [Header ("Level Up Values")]
     [SerializeField] int collectedMoonFragments;
@@ -38,20 +40,30 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     // - Luck -> crit damage
     #endregion
 
+    /// <summary>
+    /// grabs references to necessary scripts of the player
+    /// </summary>
     void Awake()
     {
+        playerMeleeWeaponBehaviour = gameObject.GetComponentInChildren<PlayerMeleeWeaponBehaviour>();
         playerController = gameObject.GetComponent<PlayerController>();
         playerCombat = gameObject.GetComponent<PlayerCombat>();
-        playerMeleeWeaponBehaviour = gameObject.GetComponentInChildren<PlayerMeleeWeaponBehaviour>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
-        enemyInfos = gameObject.GetComponent<EnemyInfos>();
     }
 
+    /// <summary>
+    /// determines the required moonlight based on the players level at the start of the game
+    /// </summary>
     void Start()
     {
-        RequiredRunes(playerInfos.playerLevel);
+        RequiredMoonlight(playerInfos.playerLevel);
     }
 
+    /// <summary>
+    /// loads data based on what has been saved
+    /// loads default data if none has been saved beforehand
+    /// </summary>
+    /// <param name="data"></param>
     public void LoadData(GameData data)
     {
         this.moonLight = data.moonLight;
@@ -66,6 +78,10 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
 
     }
 
+    /// <summary>
+    /// saves the data upon exiting the game
+    /// </summary>
+    /// <param name="data"></param>
     public void SaveData(ref GameData data)
     {
         data.moonLight = this.moonLight;
@@ -78,6 +94,10 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         data.faith = this.faith;
         data.luck = this.luck;
     }
+
+    /// <summary>
+    /// checks whether the player has enough Moonlight to level up
+    /// </summary>
     void Update()
     {
         if(moonLight >= requiredMoonLight)
@@ -86,7 +106,9 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
             levelUpReady = false;
     }
 
-    //removes the needed amount of runes from the player, increases playerLevel by 1
+    /// <summary>
+    /// removes the needed amount of Moonlight from the player, increases playerLevel by 1
+    /// </summary>
     public void LevelUp()
     {
         moonLight -= requiredMoonLight; 
@@ -94,10 +116,13 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         playerMeleeWeaponBehaviour.DetermineAllTheDamages();
     }
 
-    //calculates the needed amount of runes based on the formula
-    // y = 0.02x³ + 3.06x² + 105.6x - 895 => y = requiredMoonLight, x = playerLevel + 1
-    //idk if the conversion is right, but the returned values make sense
-    public void RequiredRunes(int _playerLevel)
+    /// <summary>
+    /// calculates the needed amount of Moonlight based on the formula and the players overall level
+    /// y = 0.02x³ + 3.06x² + 105.6x - 895 => y = requiredMoonLight, x = playerLevel + 1
+    /// idk if the conversion is right, but the returned values make sense
+    /// </summary>
+    /// <param name="_playerLevel">requires the playerlevel to determine the amount of Moonlight needed</param>
+    public void RequiredMoonlight(int _playerLevel)
     {
         LevelUp();
         _playerLevel += 1;
@@ -107,8 +132,10 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     }
 
     #region Stat increases
-    
-    //increases the playerHealth by 25-45HP
+
+    /// <summary>
+    /// increases the playerHealth by 25-45HP
+    /// </summary>
     public void IncreasePlayerHP()
     {
         vigor += 1;
@@ -117,7 +144,9 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         playerInfos.playerHealth += rnd;
     }
 
-    //increases the playerStamina by 1-3
+    /// <summary>
+    /// increases the playerStamina by 1-3
+    /// </summary>
     public void IncreasePlayerEndurance()
     {
         endurance  += 1;
@@ -126,32 +155,43 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         playerInfos.playerStamina += rnd;
     }
 
-    //DoT || execute @ specific hp%
+    /// <summary>
+    /// the total level of this stat is used to increase the playeres criticalStrikeDamage
+    /// </summary>
     public void IncreasePlayerMind()
     {
         mind  += 1;
     }
 
-    //increases damage dealt by the player
+    /// <summary>
+    /// the total level of this stat is used to increase the players overall melee damage
+    /// </summary>
     public void IncreasePlayerStrength()
     {
         strength  += 1;
     }
 
-    //increases playerMovementspeed and invincibility timer
+    /// <summary>
+    /// the total level of this stat is used to increase the players overall ranged damage
+    /// the player gains .2 movementSpeed per level of DEX
+    /// </summary>
     public void IncreasePlayerDexterity()
     {
         dexterity  += 1;
         playerController.maxSpeed += .2f;
     }
 
-    //burning/radiant damage
+    /// <summary>
+    /// the total level of this stat is used to increase the burn damage of the player when they hit an enemy
+    /// </summary>
     public void IncreasePlayerFaith()
     {
         faith  += 1;
     }
 
-    //increases crit chance
+    /// <summary>
+    /// the total level of this stat is used to increase the players criticalStrikeChance
+    /// </summary>
     public void IncreasePlayerLuck()
     {
         luck  += 1;

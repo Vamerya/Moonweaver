@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controls the players ranged weapon
+/// </summary>
 public class PlayerRangedWeaponBehaviour : MonoBehaviour
 {
     [SerializeField] SpriteRenderer playerSpriteRenderer;
@@ -38,6 +41,12 @@ public class PlayerRangedWeaponBehaviour : MonoBehaviour
         //     weaponSpriteRenderer.sortingOrder = playerSpriteRenderer.sortingOrder;
     }
 
+    /// <summary>
+    /// instanties a new projectile based on the prefab when this method gets called
+    /// the projectile gets spawned in the position/rotation of the projectileSpawner
+    /// the direction of flight is dependent on the direction the player looks at 
+    /// the damageAmount gets put in by the function DetermineBulletDamage
+    /// </summary>
     public void Shoot()
     {
         GameObject newProjectile = Instantiate(projectilePrefab, projectileSpawner.position, Quaternion.identity);
@@ -45,6 +54,10 @@ public class PlayerRangedWeaponBehaviour : MonoBehaviour
         newProjectile.GetComponent<ProjectileBehaviour>().ProjectileSetup(playerController.lookDir, DetermineBulletDamage());
     }
 
+    /// <summary>
+    /// determines the damage of the projectiles based on the players dexterity level put into a logarithmic function with funky numbers
+    /// </summary>
+    /// <returns>the amount a projectile should deal</returns>
     float DetermineBulletDamage()
     {
         bulletDamage = Mathf.Log(playerLevelBehaviour.dexterity, 2) * 10;

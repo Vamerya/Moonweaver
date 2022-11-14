@@ -8,6 +8,7 @@ public class GameData
     public Vector3 playerPos;
     public int moonwater;
     public bool obtainedRangedWeapon;
+    public bool obtainedMoonFragment;
     #region Stats
     public float moonLight;
     public int playerLevel;
@@ -22,7 +23,9 @@ public class GameData
     public SerializableDictionary<string, bool> enemiesDefeated;
 
 
-    //default values for when the game starts with no data to load
+    /// <summary>
+    /// default values for when the game starts with no data to load
+    /// </summary>
     public GameData()
     {
         this.moonLight = 0;
@@ -37,6 +40,7 @@ public class GameData
         this.moonwater = 3;
         playerPos = Vector3.zero;
         obtainedRangedWeapon = false;
+        obtainedMoonFragment = false;
         enemiesDefeated = new SerializableDictionary<string, bool>();
     }
 }

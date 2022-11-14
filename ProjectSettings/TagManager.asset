@@ -4,12 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Interactable
-  - Weapon
-  - Dialogue
   - Shrine
+  - MoonFragment
+  - FirstMoonFragment
+  - Interactable
   - WeaponPickup
+  - Weapon
+  - Bullet
+  - Enemy
+  - IntroEnemy
+  - Dialogue
   layers:
   - Default
   - TransparentFX

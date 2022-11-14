@@ -39,6 +39,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     [Header ("Bools")]
     public bool isAlive;
     public bool obtainedRangedWeapon;
+    public bool obtainedMoonFragment;
     public bool isDamaged;
     [SerializeField] bool swappedWeapon;
     #endregion
@@ -59,30 +60,38 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     void Start()
     {
+        if(!obtainedMoonFragment)
+            playerCombat.enabled = false;
+        
         startingPos = transform.position;
         respawnTimer = respawnTimerInit;
         playerHealth = playerMaxHealth;
         playerStamina = playerMaxStamina;
         invincibilityTimer = invincibilityTimerInit;
-
         PlayerStatPercentage();
     }
 
     /// <summary>
     /// loads data that has been saved
     /// loads default data if there's no saveFile
-    /// destroys the rangedWeapon in the scene if it was already picked up by the player
+    /// destroys the rangedWeapon/firstMoonFragment in the scene if it was already picked up by the player
     /// </summary>
     /// <param name="data"></param>
     public void LoadData(GameData data)
     {
         this.playerLevel = data.playerLevel;
         this.obtainedRangedWeapon = data.obtainedRangedWeapon;
+        this.obtainedMoonFragment = data.obtainedMoonFragment;
         this.transform.position = data.playerPos;
         if(data.obtainedRangedWeapon)
-       {
+        {
             Destroy(GameObject.FindGameObjectWithTag("WeaponPickup"));
-       }
+        }
+
+        if (data.obtainedMoonFragment)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("FirstMoonFragment"));
+        }
 
     }
 
@@ -94,6 +103,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     {
         data.playerLevel = this.playerLevel;
         data.obtainedRangedWeapon = this.obtainedRangedWeapon;
+        data.obtainedMoonFragment = this.obtainedMoonFragment;
         data.playerPos = this.transform.position;
     }
 
@@ -168,7 +178,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     }
     
     /// <summary>
-    /// resets playerValues
+    /// resets playerValues to the values that were saved beforehand
     /// </summary>
     void ResetPlayer()
     {
@@ -177,5 +187,11 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         respawnTimer = respawnTimerInit;
         PlayerStatPercentage();
         healthBarBehaviour.SetStat(playerHealthPercentage);
+    }
+
+    public void ObtainedFirstMoonFragment()
+    {
+        obtainedMoonFragment = true;
+        playerCombat.enabled = true;
     }
 }

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controls when the player is in range of a shrine and refills Moonwater upon interacting
+/// </summary>
 public class ShrineBehaviour : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
@@ -10,6 +13,10 @@ public class ShrineBehaviour : MonoBehaviour
     [SerializeField] GameObject levelUpUI;
     bool playerInRange;
 
+    /// <summary>
+    /// opens the leveUpUI if the player is in range and interacting
+    /// closes it if the player is neither
+    /// </summary>
     void Update()
     {
         if(playerInRange && playerController.isInteracting)
@@ -21,12 +28,20 @@ public class ShrineBehaviour : MonoBehaviour
             levelUpUI.SetActive(false);
     }
 
+    /// <summary>
+    /// sets playerInRange to true upon colliding with the player
+    /// </summary>
+    /// <param name="collision"></param>
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
             playerInRange = true;
     }
 
+    /// <summary>
+    /// sets playerInRange and isInteracting to false when the player leaves the hitbox
+    /// </summary>
+    /// <param name="collision"></param>
     void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))

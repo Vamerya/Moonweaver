@@ -60,6 +60,10 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
             float amountToHeal = playerInfos.playerMaxHealth * healAmount;
             amountToHeal = Mathf.RoundToInt(amountToHeal);
             playerInfos.playerHealth += amountToHeal;
+            if(playerInfos.playerHealth > playerInfos.playerMaxHealth)
+            {
+                playerInfos.playerHealth = playerInfos.playerMaxHealth;
+            }
             moonwaterAmount.UpdateMoonWaterAmount();
         }
     }

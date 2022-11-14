@@ -42,43 +42,43 @@ public class LevelUpManager : MonoBehaviour
                 playerLevelBehaviour.IncreasePlayerHP();
                 statName = "Vigor";
                 currentLevel = playerLevelBehaviour.vigor;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             case 1:
                 playerLevelBehaviour.IncreasePlayerEndurance();
                 statName = "Endurance";
                 currentLevel = playerLevelBehaviour.endurance;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             case 2:
                 playerLevelBehaviour.IncreasePlayerMind();
                 statName = "Mind";
                 currentLevel = playerLevelBehaviour.mind;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             case 3:
                 playerLevelBehaviour.IncreasePlayerStrength();
                 statName = "Strength";
                 currentLevel = playerLevelBehaviour.strength;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             case 4:
                 playerLevelBehaviour.IncreasePlayerDexterity();
                 statName = "Dexterity";
                 currentLevel = playerLevelBehaviour.dexterity;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             case 5:
                 playerLevelBehaviour.IncreasePlayerFaith();
                 statName = "Faith";
                 currentLevel = playerLevelBehaviour.faith;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             case 6:
                 playerLevelBehaviour.IncreasePlayerLuck();
                 statName = "Luck";
                 currentLevel = playerLevelBehaviour.luck;
-                playerLevelBehaviour.RequiredRunes(playerInfos.playerLevel);
+                playerLevelBehaviour.RequiredMoonlight(playerInfos.playerLevel);
                 break;
             default:
                 Debug.Log("No Stat ID");

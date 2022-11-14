@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the overall behaviour of the players melee weapon
+/// </summary>
 public class PlayerMeleeWeaponBehaviour : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
@@ -11,12 +14,11 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     [SerializeField] float playerCriticalStrikeChance;
     [SerializeField] float playerCriticalStrikeDamage;
     [SerializeField] public float playerBurnDamage;
-    float _playbackTime;
 
     #region stats and what they do
     // - Vigor -> Overall HP
     // - Endurance -> Overall stamina
-    // - Mind -> Execute @ specific hp% && crit chance
+    // - Mind -> criticalStrikeChance
     // - Strength -> do stuff but heavy
     // - Dexterity -> do stuff but fast || increase ranged weapon damage
     // - Faith -> burning damage
@@ -43,10 +45,11 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     }
 
 
-/// <summary>
-/// 
-/// </summary>
-/// <returns></returns>
+    /// <summary>
+    /// determines the players melee weapon damage based on their level of strength put into a logarithmic function with some funky numbers
+    /// that just work
+    /// </summary>
+    /// <returns>playerWeaponDamage</returns>
     public float DetermineWeaponDamage()
     {
         playerWeaponDamage = Mathf.Log(playerLevelBehaviour.strength, 5) * 50;
@@ -59,12 +62,19 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         // ToDo - increase attackSpeed
     }
 
+    /// <summary>
+    /// decreases the amount of time needed to charge a heavy attack based on the level of strengt the player has
+    /// </summary>
     public void DetermineStrengthWeaponValues()
     {
         //decreases heavy charge timer
         playerCombat.chargingTimerGoal = (Mathf.Log(playerLevelBehaviour.strength, 5) / -1) + 3;
     }
 
+    /// <summary>
+    /// determines how much damage each tick of burning damage should do
+    /// </summary>
+    /// <returns>burnDamage per tick</returns>
     public float DetermineBurningDamage()
     {
         playerBurnDamage = Mathf.Log(playerLevelBehaviour.faith, 2) * 2.5f;
@@ -72,12 +82,19 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         return playerBurnDamage;
     }
 
+    /// <summary>
+    /// determines the chance the player lands a critical strike based on their level of luck
+    /// </summary>
     public void DetermineCriticalStrikeChance()
     {
         playerCriticalStrikeChance = Mathf.Log(playerLevelBehaviour.luck, 5);
         playerCriticalStrikeChance /= 10;
     }
 
+    /// <summary>
+    /// determines how much damage a critical strike should deal based on the normal melee damage
+    /// </summary>
+    /// <returns>damage when the player lands a critical strike</returns>
     public float DetermineCriticalStrikeDamage()
     {
         playerCriticalStrikeDamage = playerWeaponDamage * (2 + (playerLevelBehaviour.mind / 100));
@@ -89,6 +106,12 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         //ToDo - add execute
     }
 
+    /// <summary>
+    /// Method that gets used to damage enemiese
+    /// if the random value is smaller than the criticalStrikeChance the critDamage gets applied instead of the normal damage
+    /// if the random value is bigger than the criticalStrikeChance the normal amount of damage gets applied
+    /// </summary>
+    /// <returns>amount of damaged based on if the playere landed a critical strike or not</returns>
     public float DamageEnemyMelee()
     {
         if(Random.value < playerCriticalStrikeChance)

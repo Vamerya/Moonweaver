@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// saves all the infos for the enemies
+/// </summary>
 public class EnemyInfos : MonoBehaviour, IDataPersistence
 {
-    
+    /// <summary>
+    /// saves the enemys ID
+    /// </summary>
     [SerializeField] string id;
     [ContextMenu("Generate GUID for ID")]
+    
+    /// <summary>
+    /// generates a unique ID for each enemy
+    /// </summary>
     void GenerateGuid()
     {
         id = System.Guid.NewGuid().ToString();
@@ -21,10 +30,17 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     public bool isDead;
     public bool isBurning;
 
+    /// <summary>
+    /// grabs references of necessary components
+    /// </summary>
     void Awake()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
+    /// <summary>
+    /// sets isDead to false when the game starts
+    /// saves the maincolor based on the current color
+    /// </summary>
     void Start()
     {
         isDead = false;
@@ -49,6 +65,10 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         data.enemiesDefeated.Add(id, isDead);
     }
 
+    /// <summary>
+    /// counts down the timer for how long th enemy is burning
+    /// changes the sprite color for the duration the enemy is burning
+    /// </summary>
     void Update()
     {
         if(burningTimer > 0)
@@ -62,6 +82,11 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
             spriteRenderer.color = mainColor;
     }
 
+    /// <summary>
+    /// determines the type of enemy based on their ID
+    /// </summary>
+    /// <param name="ID">the id of the enemy is used to determine which case to use</param>
+    /// <returns>returns a Vector3 with the enemys stats for Moonlight carried, their Damage and total HP</returns>
     public Vector3 DetermineEnemyType(int ID)
     {
         switch(ID)
@@ -93,7 +118,12 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         return moonLightDamageHP;
     }
 
-    void EnemyTakeDamage(float dmg)
+    /// <summary>
+    /// recalculates the enemys health
+    /// adds Moonlight to the player if their hp is below 1, sets their isDead bool to true and destroys the gameObject afterwards
+    /// </summary>
+    /// <param name="dmg">value which is used to input the amount of damage the player dealt</param>
+    public void EnemyTakeDamage(float dmg)
     {
         moonLightDamageHP.z -= dmg;
         
@@ -105,6 +135,11 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         }
     }
 
+    /// <summary>
+    /// periodically removes hp from the enemy while its burning
+    /// </summary>
+    /// <param name="burnDmg">damage determined by the players Faith level</param>
+    /// <returns>waits for .4 seconds before returning</returns>
     IEnumerator EnemyTakeBurnDamage(float burnDmg)
     {
         while(isBurning)
@@ -114,11 +149,20 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         }
     }
 
+    /// <summary>
+    /// adds the amount of Moonlight the enemy carried to the total amount of Moonlight the player has
+    /// </summary>
     void AddMoonLight()
     {
         playerLevelBehaviour.moonLight += moonLightDamageHP.x; 
     }
 
+    /// <summary>
+    /// calls the EnemyTakeDamage upon colliding with either the players melee weapon or one of the projectiles, grabbing references to either 
+    /// weapons behaviour in order to input the damage
+    /// if the players faith level is above 1 the enemy is also burning with the amount of damage input from the respective function
+    /// </summary>
+    /// <param name="collision">checks what the enemy was hit with and grabs references to specific scripts from that collision</param>
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Weapon"))

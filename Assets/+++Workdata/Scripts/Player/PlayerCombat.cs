@@ -99,34 +99,33 @@ public class PlayerCombat : MonoBehaviour
     /// </summary>
     public void Attack()
     {
-        if(playerInfos.inventoryState == 0)
+        if (playerInfos.inventoryState == 0)
         {
             attackReleased = false;
 
-            if(attackState == 0 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+            if (attackState == 0 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 Attack1();
             }
-            else if(attackState == 1 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+            else if (attackState == 1 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 Attack2();
             }
-            else if(attackState == 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+            else if (attackState == 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 Attack3();
             }
-            else if(attackState > 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+            else if (attackState > 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
                 attackState = 0;
                 Attack1();
             }
 
             HeavyAttackCharge();
-            
+
             staminaBarBehaviour.FadingBarBehaviour();
-                
         }
-        else 
+        else
         {
             playerRangedWeaponBehaviour.Shoot();
         }

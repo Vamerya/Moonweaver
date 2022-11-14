@@ -13,7 +13,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     PlayerCombat playerCombat;
     EnemyInfos enemyInfos;
     [SerializeField] StatBarBehaviour healthBarBehaviour;
-    Vector3 startingPos;
+    [SerializeField] GameObject companion;
 
     [Header ("Timer")]
     [SerializeField] float respawnTimer;
@@ -35,6 +35,8 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     public float playerHealthPercentage;
     public float playerStaminaPercentage;
     public int inventoryState;
+    Vector3 startingPos;
+
 
     [Header ("Bools")]
     public bool isAlive;
@@ -62,7 +64,9 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     {
         if(!obtainedMoonFragment)
             playerCombat.enabled = false;
-        
+        else
+            companion.SetActive(true);
+
         startingPos = transform.position;
         respawnTimer = respawnTimerInit;
         playerHealth = playerMaxHealth;

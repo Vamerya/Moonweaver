@@ -45,7 +45,7 @@ public class PulsingLightBehaviour : MonoBehaviour
         while(increaseLightStrength)
         {
             _light.intensity += intensityValue;
-            yield return new WaitForSecondsRealtime(timer);    
+            yield return new WaitForSecondsRealtime(timer);
         }
     }
 

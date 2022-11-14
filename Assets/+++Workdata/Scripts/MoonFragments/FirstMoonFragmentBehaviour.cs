@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class FirstMoonFragmentBehaviour : MonoBehaviour
 {
+    [SerializeField] GameObject companion;
     [SerializeField] GameObject[] introEnemies;    
 
 
@@ -33,6 +34,7 @@ public class FirstMoonFragmentBehaviour : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            companion.SetActive(true);
             collision.GetComponentInParent<PlayerInfos>().ObtainedFirstMoonFragment();
 
             foreach(GameObject _introEnemy in introEnemies)

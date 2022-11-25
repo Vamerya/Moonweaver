@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] ShrineBehaviour shrineBehaviour;
     [SerializeField] LevelUpManager levelUpManager;
     [SerializeField] MenuButtons menuButtons;
+    [SerializeField] Transform playerRangedWeapon;
 
     [Header ("Inventory")]
     [SerializeField] public GameObject _playerInventory;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
     public float speed;
     public float movementX, movementY, directionState;
-    public Vector2 mousePos;
+    Vector2 mousePos;
     public Vector3 lookDir;
     bool isMoving;
     public bool isInteracting, isTalking;
@@ -194,8 +195,8 @@ public class PlayerController : MonoBehaviour
         if(playerInfos.inventoryState == 1)
         {
             lookDir = mainCamera.ScreenToWorldPoint(mousePos);
-            var dir = lookDir.normalized;
-            // playerGun.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
+            var dir = lookDir.normalized - playerRangedWeapon.position;
+            playerRangedWeapon.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
 
             anim.SetFloat("LookDirX", dir.x);
             anim.SetFloat("LookDirY", dir.y);
@@ -213,7 +214,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// player is moved depending on the input of the player
     /// 
-    /// if the player can dash and is inputting the key, isDashing gets sets set to true, canDash to false, the trailrenderer is emitting during the dash
+    /// if the player can dash and is inputting the key, isDashing gets set to true, canDash to false, the trailrenderer is emitting during the dash
     /// and the dashingDirection is determined by the movementDirection of the player
     /// if the direction would be 0 the direction just gets set to 1, 1
     /// afterwards the StopDashing method gets called
@@ -293,7 +294,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// toggles between the player hotbar and inventory, sets time scale to 0 when inventory is openend
+    /// toggles between the player hotbar and inventory, (sets time scale to 0 when inventory is openend)
     /// </summary>
     void InventoryToggle()
     {
@@ -302,14 +303,14 @@ public class PlayerController : MonoBehaviour
             inventoryHotbarState = 1;
             _playerHotbar.SetActive(false);
             _playerInventory.SetActive(true);
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
         }
         else if(inventoryHotbarState == 1)
         {
             inventoryHotbarState = 0;
             _playerHotbar.SetActive(true);
             _playerInventory.SetActive(false);
-            Time.timeScale = 1f;
+            //Time.timeScale = 1f;
         }
     }
 
@@ -320,18 +321,25 @@ public class PlayerController : MonoBehaviour
     {
         if (movementX == 0 && movementY > 0)        //Up
             directionState = 0;
+            
         else if(movementX > 0 && movementY > 0)     //UpRight
             directionState = 1;
+        
         else if(movementX > 0 && movementY == 0)    //Right
             directionState = 2;
+        
         else if(movementX > 0 && movementY < 0)     //DownRight
             directionState = 3;
+        
         else if(movementX == 0 && movementY < 0)    //Down
             directionState = 4;
+        
         else if(movementX < 0 && movementY < 0)     //DownLeft
             directionState = 5;
+        
         else if(movementX < 0 && movementY == 0)    //Left
             directionState = 6;
+        
         else if(movementX < 0 && movementY > 0)     //UpLeft
             directionState = 7;
 
@@ -349,10 +357,10 @@ public class PlayerController : MonoBehaviour
 
     /// <summary>
     /// after being called the method is halted for the length of the dashingTime which causes the player to dash for that amount of time
-    /// afterwards the trailRenderer stops emitting, isDashing gets set to false the players stamina is drained and applied to the staminaBar
+    /// afterwards the trailRenderer stops emitting, isDashing is set to false, the players stamina is drained and applied to the staminaBar
     /// and the dashBufferTimer is reset to the dashBufferLength
     /// </summary>
-    /// <returns>waits for the dashingTimer to reach 0 before continuing with the rest</returns>
+    /// <returns>the duration the dash should last for</returns>
     IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(dashingTime);

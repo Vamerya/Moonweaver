@@ -9,7 +9,8 @@ using UnityEngine;
 public class FirstMoonFragmentBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject companion;
-    [SerializeField] GameObject[] introEnemies;    
+    [SerializeField] GameObject[] introEnemies;
+    [SerializeField] string enemyTag;
 
 
     void Awake()
@@ -22,7 +23,7 @@ public class FirstMoonFragmentBehaviour : MonoBehaviour
     /// </summary>
     void Start()
     {
-        introEnemies = GameObject.FindGameObjectsWithTag("IntroEnemy");
+        introEnemies = GameObject.FindGameObjectsWithTag(enemyTag);
     }
 
     /// <summary>
@@ -46,7 +47,7 @@ public class FirstMoonFragmentBehaviour : MonoBehaviour
             //ToDo - play transformation cutscene
         }
 
-        if(collision.CompareTag("Enemy"))
+        if(collision.CompareTag(enemyTag))
         {
             //ToDo - transform enemy into boss, smacking Asters ass
         }

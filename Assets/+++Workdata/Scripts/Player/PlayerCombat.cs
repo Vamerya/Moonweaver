@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Controls the attack states of the player as well heavy attacks, ultimate attacks and the according stamina drain 
-/// for said attacks
+/// for said attacks. Also manages the type of attack (melee/ranged) depending on the inventory state of the player
 /// </summary>
 public class PlayerCombat : MonoBehaviour
 {
@@ -27,12 +27,16 @@ public class PlayerCombat : MonoBehaviour
     [Header ("Attack State")]
     [SerializeField] int attackState;
 
-    [Header ("Bools")]
+    [Header ("Bools Melee")]
     [SerializeField] public bool isAttacking;
     [SerializeField] public bool isCharging;
     [SerializeField] bool staminaLight, staminaHeavy;
     [SerializeField] bool isUlting;
     [SerializeField] bool attackReleased;
+
+    [Header("Shooting Variables")]
+    [SerializeField] bool canShoot;
+    [SerializeField] float shootingBuffer;
     #endregion
 
 
@@ -48,7 +52,7 @@ public class PlayerCombat : MonoBehaviour
 
 
     /// <summary>
-    /// mainly controls the timer used to increase attackState with successive attacks or reset the state back to 0 after the timer reached 0
+    /// Mainly controls the timer used to increase attackState with successive attacks or reset the state back to 0 after the timer reached 0
     /// also controls the parameters for the playerAnimator as well as some necessary bools
     /// </summary>
     void Update()
@@ -91,7 +95,7 @@ public class PlayerCombat : MonoBehaviour
 
     /// <summary>
     /// is called when attacking
-    /// checks whether the player has enough stamina. released their attack and which attackState the player currently has
+    /// checks whether the player has enough stamina, released their attack and which attackState the player currently has
     /// before calling the method with the according attack from 1-3
     /// if the attack is not released a counter will start counting up from 0, calling the HeavyAttack method when reaching its goal
     /// 
@@ -103,22 +107,29 @@ public class PlayerCombat : MonoBehaviour
         {
             attackReleased = false;
 
-            if (attackState == 0 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+            if(playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
-                Attack1();
+                switch(attackState)
+                {
+                    case 0:
+                        Attack1();
+                        break;
+                    case 1:
+                        Attack2();
+                        break;
+                    case 2:
+                        Attack3();
+                        break;
+                    default:
+                        attackState = 0;
+                        Attack1();
+                        break;
+                }
             }
-            else if (attackState == 1 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+            else
             {
-                Attack2();
-            }
-            else if (attackState == 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
-            {
-                Attack3();
-            }
-            else if (attackState > 2 && playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
-            {
+                StopAttacking();
                 attackState = 0;
-                Attack1();
             }
 
             HeavyAttackCharge();
@@ -127,7 +138,12 @@ public class PlayerCombat : MonoBehaviour
         }
         else
         {
-            playerRangedWeaponBehaviour.Shoot();
+            if(canShoot)
+            {
+                playerRangedWeaponBehaviour.Shoot();
+                canShoot = false;
+                StartCoroutine(StopShooting());
+            }
         }
     }
 
@@ -188,7 +204,7 @@ public class PlayerCombat : MonoBehaviour
         {
             if(attackTimer > 0)
             {
-                attackState++;
+                //attackState++;
             }
 
             attackReleased = true;
@@ -211,7 +227,6 @@ public class PlayerCombat : MonoBehaviour
             {
                 StopAttacking();
             }
-
     }
 
     /// <summary>
@@ -239,6 +254,7 @@ public class PlayerCombat : MonoBehaviour
     public void StopAttacking()
     {
         isAttacking = false;
+        attackState++;
         playerController.canDash = true;
         playerController.anim.SetBool("isAttacking", isAttacking);
     }
@@ -257,5 +273,15 @@ public class PlayerCombat : MonoBehaviour
     {
         isUlting = false;
         playerController.speed = playerController.maxSpeed;
+    }
+
+    /// <summary>
+    /// sets the canShoot bool to true
+    /// </summary>
+    /// <returns>the amount of time this Method should be delayed by before getting called</returns>
+    IEnumerator StopShooting()
+    {
+        yield return new WaitForSecondsRealtime(shootingBuffer);
+        canShoot = true;
     }
 }

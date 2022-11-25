@@ -139,7 +139,7 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     /// periodically removes hp from the enemy while its burning
     /// </summary>
     /// <param name="burnDmg">damage determined by the players Faith level</param>
-    /// <returns>waits for .4 seconds before returning</returns>
+    /// <returns>the amount of time that should pass between each call</returns>
     IEnumerator EnemyTakeBurnDamage(float burnDmg)
     {
         while(isBurning)

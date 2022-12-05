@@ -35,6 +35,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     public float playerHealthPercentage;
     public float playerStaminaPercentage;
     public int inventoryState;
+    public Vector3 respawnPos;
     Vector3 startingPos;
 
 
@@ -187,12 +188,15 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     void ResetPlayer()
     {
         playerHealth = playerMaxHealth;
-        transform.position = startingPos;
+        transform.position = respawnPos;
         respawnTimer = respawnTimerInit;
         PlayerStatPercentage();
         healthBarBehaviour.SetStat(playerHealthPercentage);
     }
 
+    /// <summary>
+    /// enables combat after the player collected the first Moonfragment
+    /// </summary>
     public void ObtainedFirstMoonFragment()
     {
         obtainedMoonFragment = true;

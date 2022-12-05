@@ -27,6 +27,7 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     SpriteRenderer spriteRenderer;
     Color mainColor;
     public Vector3 moonLightDamageHP;
+    public float maxHP;
     public bool isDead;
     public bool isBurning;
 
@@ -36,6 +37,7 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     void Awake()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
     }
     /// <summary>
     /// sets isDead to false when the game starts
@@ -43,8 +45,11 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     void Start()
     {
+        maxHP = moonLightDamageHP.z;
         isDead = false;
         mainColor = spriteRenderer.color;
+        GenerateGuid();
+
     }
 
     public void LoadData(GameData data)
@@ -107,10 +112,10 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
                 moonLightDamageHP = new Vector3(500, 100, 1000); //open slot
                 break;
             case 5:
-                moonLightDamageHP = new Vector3(500, 100, 1000); //open slot
+                moonLightDamageHP = new Vector3(10000, 1000, 5000); //BossType
                 break;
             default:
-                moonLightDamageHP = new Vector3(10000, 1000, 5000); //Boss type
+                moonLightDamageHP = new Vector3(Random.Range(400, 600), 1000, 5000); //IntroEnemies
                 break;
 
         }

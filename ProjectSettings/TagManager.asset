@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - IntroEnemy
   - Dialogue
+  - EnemyHitBox
   layers:
   - Default
   - TransparentFX

@@ -5,29 +5,28 @@ using UnityEngine;
 public class NPCDialogueBehaviour : MonoBehaviour
 {   
     [SerializeField] PlayerController playerController;
-    [SerializeField] DialogueManager dialogueManager;
-
+    [SerializeField] GameObject indicator;
     bool playerInRange;
-    public Sprite npcPotrait; 
-    public string npcName, npcTitle;
-    public bool reachedEndOfDialogue;
-
-    [Multiline(10)]
-    public string[] npcDialogue;
-
+    
 
 
     void Start() 
     {
-        reachedEndOfDialogue = false;
+    
     }
 
     void Update() 
     {
         if (playerInRange && playerController.isInteracting)
         {
-            dialogueManager.ShowDialogueBox(npcPotrait, npcName, npcTitle, npcDialogue);
+            //SendMessage("OnUse", this.transform, SendMessageOptions.DontRequireReceiver);
+            //StartCoroutine(NegateInteraction());
         }
+    }
+
+    IEnumerator NegateInteraction()
+    {
+        yield return new WaitForSecondsRealtime(.4f);
     }
 
     void OnTriggerEnter2D(Collider2D collision) 
@@ -35,6 +34,7 @@ public class NPCDialogueBehaviour : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInRange = true;
+            indicator.SetActive(true);
         }
     }
 
@@ -43,6 +43,7 @@ public class NPCDialogueBehaviour : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInRange = false;
+            indicator.SetActive(false);
             playerController.isInteracting = false;
         }
     }

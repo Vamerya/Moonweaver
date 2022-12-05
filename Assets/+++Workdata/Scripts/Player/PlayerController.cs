@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera mainCamera;
     [SerializeField] PlayerHealthflaskBehaviour playerHealthflaskBehaviour;
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
-    [SerializeField] ShrineBehaviour shrineBehaviour;
+    [SerializeField] ShrineManager shrineManager;
     [SerializeField] LevelUpManager levelUpManager;
     [SerializeField] MenuButtons menuButtons;
     [SerializeField] Transform playerRangedWeapon;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     Vector2 mousePos;
     public Vector3 lookDir;
     bool isMoving;
-    public bool isInteracting, isTalking;
+    public bool isInteracting, isTalking, shrineNearby;
     public int inventoryHotbarState;
 
     [Header ("Dash Variables")]
@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
             playerSpriteRenderer.flipX = false;
 
         if(playerCombat.isAttacking || playerCombat.isCharging)
-            speed = maxSpeed / 3;
+            speed = maxSpeed / 5;
         else
             speed = maxSpeed;
 
@@ -288,9 +288,20 @@ public class PlayerController : MonoBehaviour
     void Interact()
     {
         if(!isInteracting)
+        {
             isInteracting = true;
+            if(shrineNearby)
+            {
+                shrineManager.ShowLevelUpUI();
+                playerHealthflaskBehaviour.RefillFlask();
+                playerInfos.playerHealth = playerInfos.playerMaxHealth;
+                playerInfos.respawnPos = transform.position;
+            }
+        }
         else if(isInteracting)
+        {
             isInteracting = false;
+        }
     }
 
     /// <summary>
@@ -369,5 +380,21 @@ public class PlayerController : MonoBehaviour
         playerInfos.playerStamina -= playerInfos.dashStaminaRequirement;
         staminaBarBehaviour.FadingBarBehaviour();
         dashBufferTimer = dashBufferLength;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Shrine"))
+        {
+            shrineNearby = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Shrine"))
+        {
+            shrineNearby = false;
+        }
     }
 }

@@ -111,25 +111,25 @@ public class PlayerCombat : MonoBehaviour
             {
                 switch(attackState)
                 {
-                    case 0:
+                    case 1:
                         Attack1();
                         break;
-                    case 1:
+                    case 2:
                         Attack2();
                         break;
-                    case 2:
+                    case 3:
                         Attack3();
                         break;
                     default:
-                        attackState = 0;
+                        attackState = 1;
                         Attack1();
                         break;
                 }
             }
             else
             {
-                StopAttacking();
-                attackState = 0;
+                //StopAttacking();
+                //attackState = 0;
             }
 
             HeavyAttackCharge();
@@ -223,7 +223,7 @@ public class PlayerCombat : MonoBehaviour
                 isCharging = true;
                 isAttacking = true;
             }
-            else if (attackReleased)
+        else if (attackReleased)
             {
                 StopAttacking();
             }
@@ -257,6 +257,7 @@ public class PlayerCombat : MonoBehaviour
         attackState++;
         playerController.canDash = true;
         playerController.anim.SetBool("isAttacking", isAttacking);
+        //playerController.anim.SetFloat("attackState", attackState);
     }
 
     public void UltAttack()

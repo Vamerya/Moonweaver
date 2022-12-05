@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Variables")]
     public GameObject _dialogueboxContainer;
     public GameObject _inventoryCanvas;
+    public GameObject _playerBars;
+    public GameObject _playerMoonlight;
     public GameObject _hotbarCanvas;
     public GameObject _backgroundDim;
     public GameObject _nextButton, _closeButton;
@@ -50,6 +52,8 @@ public class DialogueManager : MonoBehaviour
         _backgroundDim.SetActive(true);
         _inventoryCanvas.SetActive(false);
         _hotbarCanvas.SetActive(false);
+        _playerBars.SetActive(false);
+        _playerMoonlight.SetActive(false);
         _nextButton.SetActive(true);
         dialogueLength = npcDialogue.Length;
         potraitImage.sprite = npcPotrait;
@@ -67,6 +71,8 @@ public class DialogueManager : MonoBehaviour
             _backgroundDim.SetActive(true);
             _inventoryCanvas.SetActive(false);
             _hotbarCanvas.SetActive(false);
+            _playerBars.SetActive(false);
+            _playerMoonlight.SetActive(false);
             _nextButton.SetActive(false);
             _closeButton.SetActive(true);
             dialogueLength = npcDialogue.Length;
@@ -85,6 +91,8 @@ public class DialogueManager : MonoBehaviour
             _backgroundDim.SetActive(true);
             _inventoryCanvas.SetActive(false);
             _hotbarCanvas.SetActive(false);
+            _playerBars.SetActive(false);
+            _playerMoonlight.SetActive(false);
             _nextButton.SetActive(false);
             _closeButton.SetActive(true);
             dialogueLength = npcDialogue.Length;
@@ -103,6 +111,8 @@ public class DialogueManager : MonoBehaviour
 
         _dialogueboxContainer.SetActive(false);
         _backgroundDim.SetActive(false);
+        _playerBars.SetActive(true);
+        _playerMoonlight.SetActive(true);
         _hotbarCanvas.SetActive(true);
 
         playerController.isTalking = false;

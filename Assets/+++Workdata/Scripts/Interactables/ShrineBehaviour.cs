@@ -9,9 +9,9 @@ public class ShrineBehaviour : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerHealthflaskBehaviour healthflaskBehaviour;
-    [SerializeField] LevelUpManager levelUpManager;
-    [SerializeField] GameObject levelUpUI;
-    bool playerInRange;
+    [SerializeField] public ShrineManager shrineManager;
+    [SerializeField] GameObject _indicator;
+    [SerializeField] bool playerInRange;
 
     /// <summary>
     /// opens the leveUpUI if the player is in range and interacting
@@ -21,11 +21,17 @@ public class ShrineBehaviour : MonoBehaviour
     {
         if(playerInRange && playerController.isInteracting)
         {
-            levelUpUI.SetActive(true);
-            healthflaskBehaviour.RefillFlask();
+            
         }
+        else if(!playerController.isInteracting)
+        {
+            shrineManager.HideLevelUpUI();
+        }
+
+        if(playerInRange)
+            _indicator.SetActive(true);
         else
-            levelUpUI.SetActive(false);
+            _indicator.SetActive(false);
     }
 
     /// <summary>

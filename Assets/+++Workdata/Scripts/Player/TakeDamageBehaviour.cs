@@ -23,13 +23,14 @@ public class TakeDamageBehaviour : MonoBehaviour
     /// afterwards the playerHealth gets recalculated and the damage of the enemy the player collided with gets put into that function
     /// </summary>
     /// <param name="collision">collision with an enemys hitbox</param>
-    void OnTriggerEnter2D(Collider2D collision) 
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy") && !playerInfos.isDamaged)
+        if (collision.CompareTag("EnemyHitBox") && !playerInfos.isDamaged)
         {
             playerInfos.isDamaged = true;
             playerInfos.invincibilityTimer = playerInfos.invincibilityTimerInit;
-            playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponent<EnemyInfos>().moonLightDamageHP.y);
+            playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<EnemyInfos>().moonLightDamageHP.y);
+            Debug.Log("KSKSKSKs");
         }
     }
 }

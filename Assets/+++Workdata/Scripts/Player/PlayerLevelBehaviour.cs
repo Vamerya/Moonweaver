@@ -117,12 +117,24 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     }
 
     /// <summary>
+    /// used for the initial calculation of the level up cost based on the players level witout initializing a level up/increasing 
+    /// the level of the player
+    /// </summary>
+    /// <param name="_playerLevel">level of the player</param>
+    public void RequiredMoonlight(int _playerLevel)
+    {
+        requiredMoonLight = _playerLevel * (_playerLevel * (0.02f * _playerLevel + 3.06f)) + 105.6f * _playerLevel;
+        requiredMoonLight = Mathf.Floor(requiredMoonLight);
+        Debug.Log(requiredMoonLight);
+    }
+
+    /// <summary>
     /// calculates the needed amount of Moonlight based on the formula and the players overall level
     /// y = 0.02x³ + 3.06x² + 105.6x - 895 => y = requiredMoonLight, x = playerLevel + 1
     /// idk if the conversion is right, but the returned values make sense
     /// </summary>
     /// <param name="_playerLevel">requires the playerlevel to determine the amount of Moonlight needed</param>
-    public void RequiredMoonlight(int _playerLevel)
+    public void RequiredMoonlightAfterLevelUp(int _playerLevel)
     {
         LevelUp();
         _playerLevel += 1;

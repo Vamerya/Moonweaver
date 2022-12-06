@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] Transform[] enemySpawnPoint;
     [SerializeField] GameObject enemyPrefab;
+    public List<GameObject> spawnedEnemies;
     public bool canSpawnEnemies;
 
     void Awake()
@@ -17,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     /// <summary>
-    /// sets the bool for the collider if it can spawn enemies to try
+    /// sets the bool for the collider if it can spawn enemies
     /// </summary>
     void Start()
     {
@@ -38,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
         {
             Debug.Log("KSKSKS");
             GameObject newEnemy = Instantiate(enemyPrefab, enemySpawnPoint[i].position, Quaternion.identity);
+            spawnedEnemies.Add(newEnemy);
         }
     }
 

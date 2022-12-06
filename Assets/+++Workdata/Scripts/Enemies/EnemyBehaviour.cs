@@ -14,7 +14,8 @@ public class EnemyBehaviour : MonoBehaviour
     public int enemyID;
 
     public Animator anim;
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
+    public Rigidbody2D rb;
     [SerializeField] bool isAttacking;
     [SerializeField] bool isMoving;
 
@@ -26,6 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
         enemyInfos = gameObject.GetComponent<EnemyInfos>();
         aiPath = gameObject.GetComponent<AIPath>();
         anim = gameObject.GetComponent<Animator>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
     void Start()
     {

@@ -5425,7 +5425,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.8828125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &499968630
@@ -5622,7 +5622,6 @@ GameObject:
   - component: {fileID: 518158875}
   - component: {fileID: 518158876}
   - component: {fileID: 518158878}
-  - component: {fileID: 518158880}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -5676,20 +5675,6 @@ MonoBehaviour:
   enemySpawner: []
   _levelUpUI: {fileID: 1152957257}
   playerController: {fileID: 1284838113}
---- !u!114 &518158880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518158874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d38c6154c29fe04781687f399b16f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarCanvas: []
-  enemies: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,7 +5690,6 @@ GameObject:
   - component: {fileID: 519420034}
   - component: {fileID: 519420036}
   - component: {fileID: 519420038}
-  - component: {fileID: 519420037}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5858,66 +5842,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!114 &519420037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 519420032}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!114 &519420038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10926,7 +10850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIeyrxTDcbwIAACgFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtS4zAQ/JWUzgtlm7zY264JgQOQImxx8UVY41gVRXJJMkmg8u87I9uxN5tL5J5WT8/D/mZSuwpyb+zSSvFkBLCfI/bozA68lTmB7MeoZz3AgW+MXssv6MjvUviSSDxwXrmXBvGYrnU6v/RGEXkaXUf0u5ljtNayMHa3EBtIjfMO4wVXDjBkjScZjdD3iB3w72o8QfyIp2QW4ekLT7fR6ITHHLQH21Pjacucd8SGV+tc8V0Fgtz39NuopbdyGutqGTekbpSSrvXC/LEKRae8cjWWhAQhORYZDMTXCQIlyE3pyenw+ktROCCU0ll+vJMWu9Xost+maeGOu23j7JOrmjLFyTy4akSf/otfxSFcWLN76PLGEeXwpcy3r/yYc+cHrR3CdwProUF7rrb8Q8F7CfrZLK2ptcCgtzVdrR0kd/3jubS0hHzb443VC7Cu+o53De/GQzWcQvWHVMndB4Wuxw2wViZ0PEwJLM7mEQ2H5XCtBKLk4o+DN74ZblEbuJfWeQy1VWqy92FqS1S2CD2jamqfGqshwK3pCjRX/rhCGX85wovYIO1F5J7Ti9Mmb2Pd+3BxJcA9P4ouQiuzPw/LlWb/BK58qb2SGnrTFHjGPqVG62bDhj3prq1rW/B8cG1TS/HvarHbm1hMEs7HxWw6meX51VTwPOZJPJ5Pk9lkNmVh96TGOrlaNUbb9uDUdC+ucc9Ikb4no6XlVdh2Yfl+Kb92ZtByqQuzzi2AfmkUzsbBYhJ8L8VCSGzQGryXOsybfWdMmXwLIjsLZaHSxcFbnvUqGavkp/GEZCwN342MEXze5ZWFTwl7St6JndjpL1BLAwQUAAAICAAACCHsz+7e9G0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kqWxYYqpUWKiSZq5mal5crKuWUpismGikaGJhZmRuam5mVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsq8Uw3G8CAAAoBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsz+7e9G0AAAB4AAAACQAkAAAAAAAAAAAAAAC8AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHQDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAIIewhLYvekwIAAFEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVFFzojAQ/itOnk8HUEDu7Y5a24e2Tu1NX3hJySIZIWGSULUd//ttAgrn+WL4dvfbb78sfBMudAO5kWqtOHuSDMjPCXnUsgajeG5B8mMyZD3Ake6k2PIvuCS/c2ZKm0Rdzis1XCLu27ILzy+xq2xy5M08+5svMdoKXkhVr9gOUqmNxnhBKw0YUtJYGoHQ94Qc8W+6CBE/4SmIPTx94SnxJmc85iAMqFGqH838eeAH86QviRazKA4XUV/nz+LYS6IwXK6mXuQ4WpFXtG6A2ckGKn/p9RR4cokCp+5z5ra3rCque6XEnBpnSUob3eLAmMA4RQucPH8WIFAC35XGzjEufykKDRa1/RQ93XGFXna85LfsDK6p3nfaPmnV2k5+sHSqOtKn/+JT34ULJeuHS1/fsz1MyfP9Kz3lVJuR8WP4biTdWXSg1Z5+VPBegniWayVbwTBoVGtLWw3B3fB4HS0tId8PeCf1BmybwfOr4zM/CbxkjncU9xdnxzk7I45pxesPmz1bdMC2ks78xNaDwmt6RO1ui3TPiqgV9EfDG92N160P3HOlDYb6gYVV+iFbZVPJytlnB2tNKpUAB/f6GxC0MqcN0pjb27yJjdreRO6pfcP65n3s8uLclDh4yPe8m9BGHq73pkt5eAJdvrSm4gIG0TbwjD6lUohu2caeXMq2rSpoPirbtZz9u2UkmfssDChdFHEUxnk+jRjNfRr4i2UUxGEcEbeGXOCctNp0Qnt78NbEQC5w5Syj/fBM1oo2bvGZooc1/6rlyHIuCrnNFYB46RiuwkFhE3xF2YpxNGgLxnDh7pt8Z6SS+R5YdiXK3KSro1E0G1gy0vBPaSySkdR9YDJi4etabxR8cjjY5heyMzn/BVBLAwQUAAAICAAACCHsz+7e9G0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kqWxYYqpUWKiSZq5mal5crKuWUpismGikaGJhZmRuam5mVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsIS2L3pMCAABRBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsz+7e9G0AAAB4AAAACQAkAAAAAAAAAAAAAADgAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAJgDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -11337,7 +11261,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.8828125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1122443792
@@ -13581,6 +13505,7 @@ MonoBehaviour:
   playerHealthPercentage: 0
   playerStaminaPercentage: 0
   inventoryState: 0
+  respawnPos: {x: 0, y: 0, z: 0}
   isAlive: 0
   obtainedRangedWeapon: 0
   obtainedMoonFragment: 0
@@ -15181,6 +15106,7 @@ MonoBehaviour:
   - {fileID: 337075173}
   - {fileID: 521881671}
   enemyPrefab: {fileID: 1129525327956887830, guid: 1aef06cdcae01d9479316e87fa7768db, type: 3}
+  spawnedEnemies: []
   canSpawnEnemies: 0
 --- !u!1 &1503243281
 GameObject:
@@ -15407,7 +15333,6 @@ GameObject:
   - component: {fileID: 1518987406}
   - component: {fileID: 1518987403}
   - component: {fileID: 1518987402}
-  - component: {fileID: 1518987407}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Dialogue
@@ -15511,7 +15436,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.8828125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1518987405
@@ -15543,18 +15468,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1284838113}
   indicator: {fileID: 0}
---- !u!114 &1518987407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518987400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1534442971
 GameObject:
   m_ObjectHideFlags: 0
@@ -33562,9 +33475,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
+  m_FalloffIntensity: 0.544
   m_Color: {r: 0.514151, g: 0.67066616, b: 1, a: 1}
-  m_Intensity: 1.06
+  m_Intensity: 1.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 771732f5a1a04c2a4d5522e1
@@ -33572,7 +33485,7 @@ MonoBehaviour:
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 1
+  m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
@@ -33615,7 +33528,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360.00003
   m_PointLightOuterAngle: 360.00003
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 8.46
+  m_PointLightOuterRadius: 6.38
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -33639,7 +33552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _light: {fileID: 0}
-  currentLightStrength: 0
+  currentLightStrength: 1.9
   minLightStrength: 1.5
   maxLightStrength: 1.9
   intensityValue: 0.01

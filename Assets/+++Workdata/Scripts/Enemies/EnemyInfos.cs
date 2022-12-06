@@ -21,10 +21,10 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         id = System.Guid.NewGuid().ToString();
     }
 
+    [SerializeField] EnemyBehaviour enemyBehaviour;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] float burningTimer, burningTimerInit;
-
-    SpriteRenderer spriteRenderer;
+    [SerializeField] float knockbackForce = 10;
     Color mainColor;
     public Vector3 moonLightDamageHP;
     public float maxHP;
@@ -36,7 +36,7 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     void Awake()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        enemyBehaviour = gameObject.GetComponent<EnemyBehaviour>();
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
     }
     /// <summary>
@@ -47,7 +47,7 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     {
         maxHP = moonLightDamageHP.z;
         isDead = false;
-        mainColor = spriteRenderer.color;
+        mainColor = enemyBehaviour.spriteRenderer.color;
         GenerateGuid();
 
     }
@@ -82,9 +82,9 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
             isBurning = false;
 
         if(isBurning)
-            spriteRenderer.color = Color.yellow;
+            enemyBehaviour.spriteRenderer.color = Color.yellow;
         else
-            spriteRenderer.color = mainColor;
+            enemyBehaviour.spriteRenderer.color = mainColor;
     }
 
     /// <summary>
@@ -172,6 +172,7 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
     {
         if(collision.CompareTag("Weapon"))
         {
+            enemyBehaviour.rb.AddForce((enemyBehaviour.aiPath.desiredVelocity * -1) * knockbackForce, ForceMode2D.Force);
             EnemyTakeDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DamageEnemyMelee());
             if(collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
             {

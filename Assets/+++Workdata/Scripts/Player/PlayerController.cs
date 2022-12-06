@@ -92,24 +92,49 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerKeyboardMouseActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
 
 
-        //CONTROLLER
-        inGameInputActions.PlayerControllerActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
-        inGameInputActions.PlayerControllerActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
+        //XBOX CONTROLLER
+        inGameInputActions.PlayerXBOXActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
+        inGameInputActions.PlayerXBOXActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
 
-        inGameInputActions.PlayerControllerActionMap.Interact.performed += ctx => Interact();
-        inGameInputActions.PlayerControllerActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
+        inGameInputActions.PlayerXBOXActionMap.Interact.performed += ctx => Interact();
+        inGameInputActions.PlayerXBOXActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
 
-        inGameInputActions.PlayerControllerActionMap.Attack.performed += ctx => playerCombat.Attack();
-        inGameInputActions.PlayerControllerActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+        inGameInputActions.PlayerXBOXActionMap.Attack.performed += ctx => playerCombat.Attack();
+        inGameInputActions.PlayerXBOXActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
-        inGameInputActions.PlayerControllerActionMap.Dash.performed += ctx => Dash(true);
-        inGameInputActions.PlayerControllerActionMap.Dash.canceled += ctx => Dash(false);
+        inGameInputActions.PlayerXBOXActionMap.Dash.performed += ctx => Dash(true);
+        inGameInputActions.PlayerXBOXActionMap.Dash.canceled += ctx => Dash(false);
 
-        inGameInputActions.PlayerControllerActionMap.OpenInventory.performed += ctx => InventoryToggle();
+        inGameInputActions.PlayerXBOXActionMap.OpenInventory.performed += ctx => InventoryToggle();
 
-        inGameInputActions.PlayerControllerActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+        inGameInputActions.PlayerXBOXActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
-        inGameInputActions.PlayerControllerActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
+        inGameInputActions.PlayerXBOXActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
+
+        inGameInputActions.PlayerXBOXActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
+
+
+
+        //PS4 CONTROLLER
+        inGameInputActions.PlayerPS4ActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
+        inGameInputActions.PlayerPS4ActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
+
+        inGameInputActions.PlayerPS4ActionMap.Interact.performed += ctx => Interact();
+        inGameInputActions.PlayerPS4ActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
+
+        inGameInputActions.PlayerPS4ActionMap.Attack.performed += ctx => playerCombat.Attack();
+        inGameInputActions.PlayerPS4ActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
+
+        inGameInputActions.PlayerPS4ActionMap.Dash.performed += ctx => Dash(true);
+        inGameInputActions.PlayerPS4ActionMap.Dash.canceled += ctx => Dash(false);
+
+        inGameInputActions.PlayerPS4ActionMap.OpenInventory.performed += ctx => InventoryToggle();
+
+        inGameInputActions.PlayerPS4ActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
+
+        inGameInputActions.PlayerPS4ActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
+
+        inGameInputActions.PlayerPS4ActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
     }
 
     /// <summary>

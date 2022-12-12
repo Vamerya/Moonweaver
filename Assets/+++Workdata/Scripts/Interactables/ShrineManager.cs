@@ -26,6 +26,19 @@ public class ShrineManager : MonoBehaviour
     public void ShowLevelUpUI()
     {
         _levelUpUI.SetActive(true);
+        RemoveAllEnemies();
+    }
+
+    /// <summary>
+    /// hides the level up UI
+    /// </summary>
+    public void HideLevelUpUI()
+    {
+        _levelUpUI.SetActive(false);
+    }
+
+    public void RemoveAllEnemies()
+    {
         for (int i = 0; i < enemySpawner.Length; i++)
         {
             for (int j = 0; j < enemySpawner[i].spawnedEnemies.Count; j = 0)
@@ -35,13 +48,5 @@ public class ShrineManager : MonoBehaviour
             }
             enemySpawner[i].canSpawnEnemies = true;
         }
-    }
-
-    /// <summary>
-    /// hides the level up UI
-    /// </summary>
-    public void HideLevelUpUI()
-    {
-        _levelUpUI.SetActive(false);
     }
 }

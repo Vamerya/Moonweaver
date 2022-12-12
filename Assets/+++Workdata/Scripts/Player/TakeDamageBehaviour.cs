@@ -29,7 +29,13 @@ public class TakeDamageBehaviour : MonoBehaviour
         {
             playerInfos.isDamaged = true;
             playerInfos.invincibilityTimer = playerInfos.invincibilityTimerInit;
-            playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<EnemyInfos>().moonLightDamageHP.y);
+            try{
+                playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<EnemyInfos>().moonLightDamageHP.y);
+            }
+            catch{
+                playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<BossInfos>().bossDamage);
+            }
+            
             Debug.Log("KSKSKSKs");
         }
     }

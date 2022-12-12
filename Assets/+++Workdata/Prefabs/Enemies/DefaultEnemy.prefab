@@ -209,6 +209,8 @@ MonoBehaviour:
   enemyInfos: {fileID: 0}
   enemyID: 0
   anim: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  rb: {fileID: 0}
   isAttacking: 0
   isMoving: 0
 --- !u!114 &1129525327956887831
@@ -224,9 +226,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  enemyBehaviour: {fileID: 0}
   playerLevelBehaviour: {fileID: 0}
   burningTimer: 0
   burningTimerInit: 3
+  knockbackForce: 10
   moonLightDamageHP: {x: 0, y: 0, z: 0}
   maxHP: 0
   isDead: 0
@@ -290,7 +294,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 4294967295
     useGraphRaycasting: 0
-  traversableTags: -1
+  traversableTags: -3
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1

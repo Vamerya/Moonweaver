@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// used mainly for playerMovement as well and some menu toggles
+/// Mainly used for playerMovement as well and some menu toggles
 /// </summary>
 public class PlayerController : MonoBehaviour
 {
@@ -219,7 +219,7 @@ public class PlayerController : MonoBehaviour
 
         if(playerInfos.inventoryState == 1)
         {
-            lookDir = mainCamera.ScreenToWorldPoint(mousePos);
+            lookDir = Camera.main.ScreenToWorldPoint(mousePos);
             var dir = lookDir.normalized - playerRangedWeapon.position;
             playerRangedWeapon.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
 
@@ -262,8 +262,9 @@ public class PlayerController : MonoBehaviour
             dashingDir = move;
             if(dashingDir == Vector2.zero)
             {
-                dashingDir = new Vector2(transform.localScale.x, transform.localScale.y);
+                dashingDir = new Vector2(0, 0);
             }
+            gameObject.GetComponentInChildren<Collider2D>().enabled = false;
             StartCoroutine(StopDashing());
         }
 
@@ -281,7 +282,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Method gives back Vector2 values for the playermovement, sets according values fo the playerAnimator
     /// </summary>
-    /// <param name="direction">direction from the X and Y axis depending on the playerInput of the WASD keys</param>
+    /// <param name="direction">direction of the X and Y axis depending on the playerInput of the WASD keys</param>
     void Movement(Vector2 direction)
     {
         movementX = direction.x;
@@ -309,6 +310,7 @@ public class PlayerController : MonoBehaviour
 
     /// <summary>
     /// checks whether the player is interacting via assigned button and sets bool accordingly
+    /// also opens up the level up UI if a shrine is nearby
     /// </summary>
     void Interact()
     {
@@ -405,6 +407,7 @@ public class PlayerController : MonoBehaviour
         playerInfos.playerStamina -= playerInfos.dashStaminaRequirement;
         staminaBarBehaviour.FadingBarBehaviour();
         dashBufferTimer = dashBufferLength;
+        gameObject.GetComponentInChildren<Collider2D>().enabled = true;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -13,6 +13,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     PlayerCombat playerCombat;
     EnemyInfos enemyInfos;
     [SerializeField] StatBarBehaviour healthBarBehaviour;
+    [SerializeField] ShrineManager shrineManager;
     [SerializeField] GameObject companion;
 
     [Header ("Timer")]
@@ -23,6 +24,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
 
     [Header ("Player Stats")]
     public int playerLevel;
+    public int collectedMoonFragments;
     public float playerMaxHealth;
     public float playerHealth;
     public float staminaRechargeSpeed;
@@ -125,10 +127,10 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
             isAlive = true;
         if(!isAlive)
         {
-            if(respawnTimer > 0)
-                respawnTimer -= Time.deltaTime;
-            else
-                ResetPlayer();
+            // if(respawnTimer > 0)
+            //     respawnTimer -= Time.deltaTime;
+            // else
+            //     ResetPlayer();
         }
             
         if(invincibilityTimer > 0)
@@ -185,13 +187,14 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     /// <summary>
     /// resets playerValues to the values that were saved beforehand
     /// </summary>
-    void ResetPlayer()
+    public void ResetPlayer()
     {
         playerHealth = playerMaxHealth;
         transform.position = respawnPos;
         respawnTimer = respawnTimerInit;
         PlayerStatPercentage();
         healthBarBehaviour.SetStat(playerHealthPercentage);
+        shrineManager.RemoveAllEnemies();
     }
 
     /// <summary>

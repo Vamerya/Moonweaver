@@ -15,6 +15,9 @@ TagManager:
   - IntroEnemy
   - Dialogue
   - EnemyHitBox
+  - Boss
+  - Ground
+  - Obstacle
   layers:
   - Default
   - TransparentFX

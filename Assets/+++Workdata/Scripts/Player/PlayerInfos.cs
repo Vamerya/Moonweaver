@@ -12,6 +12,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     PlayerController playerController;
     PlayerCombat playerCombat;
     EnemyInfos enemyInfos;
+    PlayerHealthflaskBehaviour playerHealthflaskBehaviour;
     [SerializeField] StatBarBehaviour healthBarBehaviour;
     [SerializeField] ShrineManager shrineManager;
     [SerializeField] GameObject companion;
@@ -55,6 +56,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     void Awake()
     {
+        playerHealthflaskBehaviour = gameObject.GetComponent<PlayerHealthflaskBehaviour>();
         playerController = gameObject.GetComponent<PlayerController>();
         playerCombat = gameObject.GetComponent<PlayerCombat>();
         enemyInfos = gameObject.GetComponent<EnemyInfos>();
@@ -172,6 +174,9 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         if(playerHealth < 1)
             isAlive = false;
 
+        if(!isAlive)
+            playerController.isInteracting = false;
+
         healthBarBehaviour.FadingBarBehaviour();
     }
 
@@ -194,6 +199,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         respawnTimer = respawnTimerInit;
         PlayerStatPercentage();
         healthBarBehaviour.SetStat(playerHealthPercentage);
+        playerHealthflaskBehaviour.RefillFlask();
         shrineManager.RemoveAllEnemies();
     }
 

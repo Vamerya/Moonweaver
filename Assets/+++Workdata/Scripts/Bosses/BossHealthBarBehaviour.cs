@@ -45,7 +45,7 @@ public class BossHealthBarBehaviour : MonoBehaviour
 
     public void SetStat(float statNormalized)
     {
-        //sets fillamount of the healthbar to the normalized value of the player health
+        //sets fillamount of the healthbar to the normalized value of the Boss health
         barImage.fillAmount = statNormalized;
     }
 

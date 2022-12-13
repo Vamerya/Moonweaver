@@ -18,6 +18,7 @@ TagManager:
   - Boss
   - Ground
   - Obstacle
+  - Bench
   layers:
   - Default
   - TransparentFX

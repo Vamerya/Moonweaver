@@ -97,7 +97,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     /// <returns>damage when the player lands a critical strike</returns>
     public float DetermineCriticalStrikeDamage()
     {
-        playerCriticalStrikeDamage = playerWeaponDamage * (2 + (playerLevelBehaviour.mind / 100));
+        playerCriticalStrikeDamage = playerWeaponDamage * (2 + (playerLevelBehaviour.mind / 10));
         return playerCriticalStrikeDamage;
     }
 

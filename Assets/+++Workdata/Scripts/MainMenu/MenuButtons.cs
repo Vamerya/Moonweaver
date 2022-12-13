@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuButtons : MonoBehaviour
 {
     #region Variables
+    [SerializeField] DataPersistenceManager dataPersistenceManager;
     bool mainMenuActive;
     bool pauseMenuActive;
     [SerializeField] GameObject _mainMenu;
@@ -14,6 +15,9 @@ public class MenuButtons : MonoBehaviour
     [SerializeField] GameObject _pauseMenu;
     #endregion
 
+    void Awake()
+    {
+    }
     void Start()
     {
         Time.timeScale = 1f;
@@ -23,11 +27,18 @@ public class MenuButtons : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         //switches between scenes
-        SceneManager.LoadScene(sceneName);
+        var activeScene = SceneManager.GetActiveScene().ToString();
+        if (activeScene == "MainGame")
+        {
+            dataPersistenceManager.SaveGame();
+            SceneManager.LoadScene(sceneName);
+        }
+        else
+            SceneManager.LoadScene(sceneName);
     }
 
     public void ExitGame()
-    {   
+    {
         //exits the game
         Application.Quit();
     }
@@ -38,12 +49,12 @@ public class MenuButtons : MonoBehaviour
     }
     public void TogglePauseMenu()
     {
-        if(!pauseMenuActive)
+        if (!pauseMenuActive)
         {
             _pauseMenu.SetActive(true);
             pauseMenuActive = true;
         }
-        else if(pauseMenuActive)
+        else if (pauseMenuActive)
         {
             _pauseMenu.SetActive(false);
             pauseMenuActive = false;
@@ -61,13 +72,13 @@ public class MenuButtons : MonoBehaviour
     //swaps between the main menu buttons and save files
     public void ToggleSaves()
     {
-        if(mainMenuActive)
+        if (mainMenuActive)
         {
             _mainMenu.SetActive(false);
             _saveFiles.SetActive(true);
             mainMenuActive = false;
         }
-        else if(!mainMenuActive)
+        else if (!mainMenuActive)
         {
             _mainMenu.SetActive(true);
             _saveFiles.SetActive(false);
@@ -77,13 +88,13 @@ public class MenuButtons : MonoBehaviour
 
     public void ToggleOptions()
     {
-        if(pauseMenuActive)
+        if (pauseMenuActive)
         {
             _mainMenu.SetActive(false);
             _options.SetActive(true);
             pauseMenuActive = false;
         }
-        else if(!pauseMenuActive)
+        else if (!pauseMenuActive)
         {
             _mainMenu.SetActive(true);
             _options.SetActive(false);

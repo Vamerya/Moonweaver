@@ -312,9 +312,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.731
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1.19
+  m_Intensity: 2.23
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000771732f5a1a04c2a4d5522e167b270ae
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 2.67
+  m_PointLightOuterRadius: 6.51
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -864,11 +864,9 @@ GameObject:
   - component: {fileID: 3652588066090148961}
   - component: {fileID: 3652588066090148960}
   - component: {fileID: 3652588066090148963}
-  - component: {fileID: 3652588066090148987}
   - component: {fileID: 3652588066090148962}
   - component: {fileID: 3652588066090148965}
   - component: {fileID: 3652588066090148964}
-  - component: {fileID: 3652588066090148986}
   - component: {fileID: 3652588066090148989}
   - component: {fileID: 3652588066090148988}
   - component: {fileID: 3652588066090148991}
@@ -894,6 +892,7 @@ Transform:
   - {fileID: 3652588065896098007}
   - {fileID: 3652588064326273790}
   - {fileID: 3652588064584124560}
+  - {fileID: 9190054083656565943}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1006,22 +1005,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.24197276, y: 0.12442722}
   m_Size: {x: 1.0346675, y: 0.4743358}
   m_Direction: 1
---- !u!58 &3652588066090148987
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652588066090148966}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.20000002, y: 0.97}
-  serializedVersion: 2
-  m_Radius: 2.16
 --- !u!114 &3652588066090148962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,24 +1070,11 @@ MonoBehaviour:
   knockbackForce: 10
   bossMoonLight: 10000
   bossDamage: 100
-  bossHealth: 10000
+  bossHealth: 3000
   bossMaxHealth: 0
   bossHealthPercentage: 0
   isDead: 0
   isBurning: 0
---- !u!114 &3652588066090148986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652588066090148966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538e5dba34d8e99409386b43ba19f944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInRange: 0
 --- !u!114 &3652588066090148989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,3 +1159,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!1 &8224502695136270666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9190054083656565943}
+  - component: {fileID: 7700125143749893725}
+  - component: {fileID: 1858194673295712604}
+  m_Layer: 0
+  m_Name: InRangeCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9190054083656565943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224502695136270666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3652588066090148967}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7700125143749893725
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224502695136270666}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.20000002, y: 0.97}
+  serializedVersion: 2
+  m_Radius: 3.24
+--- !u!114 &1858194673295712604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8224502695136270666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538e5dba34d8e99409386b43ba19f944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0

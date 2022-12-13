@@ -249,7 +249,8 @@ public class PlayerCombat : MonoBehaviour
     }
 
     /// <summary>
-    /// sets the isAttacking bool to false, the player can dash again and the according parameter in the animator gets set
+    /// Sets the isAttacking bool to false, the player can dash again and the according parameter in the animator gets set
+    /// This is called at the end of the attackAnimations as an event to ensure that everything is timed correctly
     /// </summary>
     public void StopAttacking()
     {

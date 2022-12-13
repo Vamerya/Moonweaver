@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region Variables
-    [Header ("Main Components")]
+    [Header("Main Components")]
     Rigidbody2D rb;
     public Animator anim;
     TrailRenderer trailRenderer;
@@ -20,24 +20,25 @@ public class PlayerController : MonoBehaviour
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
     [SerializeField] ShrineManager shrineManager;
     [SerializeField] LevelUpManager levelUpManager;
+    [SerializeField] PlayerSittingBehaviour sittingBehaviour;
     [SerializeField] MenuButtons menuButtons;
     [SerializeField] Transform playerRangedWeapon;
 
-    [Header ("Inventory")]
+    [Header("Inventory")]
     [SerializeField] public GameObject _playerInventory;
     [SerializeField] public GameObject _playerHotbar;
 
-    [Header ("Movement, interaction and inventory")]
+    [Header("Movement, interaction and inventory")]
     public float maxSpeed;
     public float speed;
     public float movementX, movementY, directionState;
     Vector2 mousePos;
     public Vector3 lookDir;
-    bool isMoving;
+    public bool isMoving, isSitting;
     public bool isInteracting, isTalking, shrineNearby;
     public int inventoryHotbarState;
 
-    [Header ("Dash Variables")]
+    [Header("Dash Variables")]
     [SerializeField] float dashBufferLength;
     [SerializeField] float dashingVelocity;
     [SerializeField] float dashingTime;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
     bool dashInput;
     bool isDashing;
 
-    [Header ("Input actions")]
+    [Header("Input actions")]
     public InputActions inGameInputActions;
     #endregion
 
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
 
         inGameInputActions.PlayerKeyboardMouseActionMap.Interact.performed += ctx => Interact();
         inGameInputActions.PlayerKeyboardMouseActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
-        
+
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.performed += ctx => playerCombat.Attack();
         inGameInputActions.PlayerKeyboardMouseActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
 
@@ -151,6 +152,7 @@ public class PlayerController : MonoBehaviour
         playerCombat = gameObject.GetComponent<PlayerCombat>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
         playerHealthflaskBehaviour = gameObject.GetComponent<PlayerHealthflaskBehaviour>();
+        sittingBehaviour = gameObject.GetComponent<PlayerSittingBehaviour>();
 
         speed = maxSpeed;
     }
@@ -162,7 +164,7 @@ public class PlayerController : MonoBehaviour
     /// <param name="data"></param>
     public void LoadData(GameData data)
     {
-       this.transform.position = data.playerPos;
+        this.transform.position = data.playerPos;
 
     }
 
@@ -172,7 +174,7 @@ public class PlayerController : MonoBehaviour
     /// <param name="data"></param>
     public void SaveData(ref GameData data)
     {
-        data.playerPos= this.transform.position;
+        data.playerPos = this.transform.position;
     }
 
     /// <summary>
@@ -191,33 +193,33 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(!playerInfos.isAlive || isTalking)
+        if (!playerInfos.isAlive || isTalking)
             inGameInputActions.Disable();
         else
             inGameInputActions.Enable();
 
         anim.SetBool("isAlive", playerInfos.isAlive);
 
-        if(dashBufferTimer > 0)
+        if (dashBufferTimer > 0)
         {
             dashBufferTimer -= Time.deltaTime;
             canDash = false;
         }
-        else if(playerInfos.playerStamina > playerInfos.dashStaminaRequirement)
+        else if (playerInfos.playerStamina > playerInfos.dashStaminaRequirement)
             canDash = true;
 
-        if(movementX < 0)
+        if (movementX < 0)
             playerSpriteRenderer.flipX = true;
-        else if(movementX > 0)
+        else if (movementX > 0)
             playerSpriteRenderer.flipX = false;
 
-        if(playerCombat.isAttacking || playerCombat.isCharging)
+        if (playerCombat.isAttacking || playerCombat.isCharging)
             speed = maxSpeed / 5;
         else
             speed = maxSpeed;
 
 
-        if(playerInfos.inventoryState == 1)
+        if (playerInfos.inventoryState == 1)
         {
             lookDir = Camera.main.ScreenToWorldPoint(mousePos);
             var dir = lookDir.normalized - playerRangedWeapon.position;
@@ -234,6 +236,10 @@ public class PlayerController : MonoBehaviour
         }
 
         DetermineDirectionState();
+
+        if (!isSitting)
+        {
+        }
     }
 
     /// <summary>
@@ -254,13 +260,13 @@ public class PlayerController : MonoBehaviour
         move = new Vector2(movementX * speed, movementY * speed);
         rb.velocity = move;
 
-        if(dashInput && canDash)
+        if (dashInput && canDash)
         {
             isDashing = true;
             canDash = false;
             trailRenderer.emitting = true;
             dashingDir = move;
-            if(dashingDir == Vector2.zero)
+            if (dashingDir == Vector2.zero)
             {
                 dashingDir = new Vector2(0, 0);
             }
@@ -268,7 +274,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(StopDashing());
         }
 
-        if(isDashing)
+        if (isDashing)
         {
             rb.velocity = dashingDir.normalized * dashingVelocity;
             dashBufferTimer = dashBufferLength;
@@ -288,7 +294,7 @@ public class PlayerController : MonoBehaviour
         movementX = direction.x;
         movementY = direction.y;
 
-        if(movementX != 0 || movementY != 0)
+        if (movementX != 0 || movementY != 0)
             isMoving = true;
 
         else
@@ -314,20 +320,47 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Interact()
     {
-        if(!isInteracting)
+        if (!isInteracting)
         {
             isInteracting = true;
-            if(shrineNearby)
+            if (shrineNearby)
             {
                 shrineManager.ShowLevelUpUI();
                 playerHealthflaskBehaviour.RefillFlask();
                 playerInfos.playerHealth = playerInfos.playerMaxHealth;
                 playerInfos.respawnPos = transform.position;
             }
+            if (sittingBehaviour.canSit)
+            {
+                try
+                {
+                    mainCamera.GetComponentInChildren<ChangeTargetBehaviour>().ChangeFollowTarget(sittingBehaviour.cameraLookAtPoint);
+                    try{
+                        sittingBehaviour.benchBehaviour.IncreaseLightStrength();
+                    }
+                    catch{
+                        
+                    }
+                    
+                }
+                catch
+                {
+
+                }
+            }
         }
-        else if(isInteracting)
+        else if (isInteracting)
         {
             isInteracting = false;
+            mainCamera.GetComponentInChildren<ChangeTargetBehaviour>().ResetFollowTarget();
+            try
+            {
+                sittingBehaviour.benchBehaviour.DecreaseLightStrength();
+            }
+            catch
+            {
+
+            }
         }
     }
 
@@ -336,14 +369,14 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void InventoryToggle()
     {
-        if(inventoryHotbarState == 0)
+        if (inventoryHotbarState == 0)
         {
             inventoryHotbarState = 1;
             _playerHotbar.SetActive(false);
             _playerInventory.SetActive(true);
             //Time.timeScale = 0f;
         }
-        else if(inventoryHotbarState == 1)
+        else if (inventoryHotbarState == 1)
         {
             inventoryHotbarState = 0;
             _playerHotbar.SetActive(true);
@@ -359,26 +392,26 @@ public class PlayerController : MonoBehaviour
     {
         if (movementX == 0 && movementY > 0)        //Up
             directionState = 0;
-            
-        else if(movementX > 0 && movementY > 0)     //UpRight
+
+        else if (movementX > 0 && movementY > 0)     //UpRight
             directionState = 1;
-        
-        else if(movementX > 0 && movementY == 0)    //Right
+
+        else if (movementX > 0 && movementY == 0)    //Right
             directionState = 2;
-        
-        else if(movementX > 0 && movementY < 0)     //DownRight
+
+        else if (movementX > 0 && movementY < 0)     //DownRight
             directionState = 3;
-        
-        else if(movementX == 0 && movementY < 0)    //Down
+
+        else if (movementX == 0 && movementY < 0)    //Down
             directionState = 4;
-        
-        else if(movementX < 0 && movementY < 0)     //DownLeft
+
+        else if (movementX < 0 && movementY < 0)     //DownLeft
             directionState = 5;
-        
-        else if(movementX < 0 && movementY == 0)    //Left
+
+        else if (movementX < 0 && movementY == 0)    //Left
             directionState = 6;
-        
-        else if(movementX < 0 && movementY > 0)     //UpLeft
+
+        else if (movementX < 0 && movementY > 0)     //UpLeft
             directionState = 7;
 
         anim.SetFloat("DirectionState", directionState);
@@ -412,7 +445,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Shrine"))
+        if (collision.CompareTag("Shrine"))
         {
             shrineNearby = true;
         }
@@ -420,7 +453,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Shrine"))
+        if (collision.CompareTag("Shrine"))
         {
             shrineNearby = false;
         }

@@ -133,7 +133,7 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     /// y = 0.02x³ + 3.06x² + 105.6x - 895 => y = requiredMoonLight, x = playerLevel + 1
     /// idk if the conversion is right, but the returned values make sense
     /// </summary>
-    /// <param name="_playerLevel">requires the playerlevel to determine the amount of Moonlight needed</param>
+    /// <param name="_playerLevel">playerlevel to determine the amount of Moonlight needed</param>
     public void RequiredMoonlightAfterLevelUp(int _playerLevel)
     {
         LevelUp();

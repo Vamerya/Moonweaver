@@ -1041,12 +1041,13 @@ MonoBehaviour:
   bossBehaviour: {fileID: 0}
   playerInRangeCheck: {fileID: 0}
   playerPosition: {fileID: 0}
+  spikePrefab: {fileID: 4128924534193177481, guid: 3dc1ad8ae0598c24cac708636e4771b3, type: 3}
+  summonedSpikes: []
   canAttack: 0
   isAttacking: 0
-  attackID: 0
   attackTimer: 3
   attackCooldown: 0
-  attackCooldownInit: 1.5
+  attackCooldownInit: 1
 --- !u!114 &3652588066090148964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,16 +1060,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28187c87382859458f7e2c59c1b0b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 80432473-ac40-432f-aaf9-24c8a9c8f6a2
   bossName: Eggbert
   bossTitle: the Egg Demolisher
   bossBehaviour: {fileID: 0}
+  bossHealthBar: {fileID: 0}
   nameAndTitle: {fileID: 0}
   playerLevelBehaviour: {fileID: 0}
   moonFragment: {fileID: 1389729249234874474, guid: 168a7e9ec0b76ce40bf8abe2e5276551, type: 3}
   burningTimer: 0
   burningTimerInit: 3
   knockbackForce: 10
-  bossMoonLight: 10000
+  bossMoonLight: 3000
   bossDamage: 100
   bossHealth: 3000
   bossMaxHealth: 0

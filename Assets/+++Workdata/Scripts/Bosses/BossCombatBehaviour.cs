@@ -12,10 +12,11 @@ public class BossCombatBehaviour : MonoBehaviour
     AIDestinationSetter destinationSetter;
 
     [SerializeField] Transform playerPosition;
+    [SerializeField] GameObject spikePrefab;
+    [SerializeField] List<GameObject> summonedSpikes;
 
     [SerializeField] bool canAttack;
     [SerializeField] bool isAttacking;
-    [SerializeField] int attackID;
     [SerializeField] float attackTimer;
     [SerializeField] float attackCooldown;
     [SerializeField] float attackCooldownInit;
@@ -55,7 +56,7 @@ public class BossCombatBehaviour : MonoBehaviour
             canAttack = false;
 
         if (canAttack)
-            EnemyAttack(Random.Range(0, 2));
+            EnemyAttack(Random.Range(0, 3));
     }
 
     /// <summary>
@@ -67,17 +68,17 @@ public class BossCombatBehaviour : MonoBehaviour
         switch (_attackID)
         {
             case 0:
-                EnemyIsAttacking();
+                BossIsAttacking();
                 //StartCoroutine(StopAttacking());
                 break;
 
             case 1:
-                EnemyIsAttacking();
+                BossIsAttacking();
                 //StartCoroutine(StopAttacking());
                 break;
 
             case 2:
-                EnemyDodge();
+                //SummonSpike();
                 //StartCoroutine(StopAttacking());
                 break;
 
@@ -86,6 +87,7 @@ public class BossCombatBehaviour : MonoBehaviour
                 break;
         }
 
+        Debug.LogWarning(_attackID);
         bossBehaviour.anim.SetInteger("attackState", _attackID);
         bossBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
@@ -93,15 +95,33 @@ public class BossCombatBehaviour : MonoBehaviour
     /// <summary>
     /// controls the bool for the enemy and its animator
     /// </summary>
-    void EnemyIsAttacking()
+    void BossIsAttacking()
     {
         isAttacking = true;
         bossBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
 
-    void EnemyDodge()
+    void BossDodge()
     {
 
+    }
+
+    void SummonSpike()
+    {
+        isAttacking = true;
+        //GameObject spike = Instantiate(spikePrefab, playerPosition.transform.position, Quaternion.identity);
+        GameObject spike = Instantiate(spikePrefab, this.transform.position + new Vector3(Random.Range(-10, 10), Random.Range(-10, 10)), Quaternion.identity);
+        spike.GetComponent<SpikeBehaviour>().DetermineSpikeDamage(bossInfos.bossDamage / 10);
+        summonedSpikes.Add(spike);
+    }
+    
+    void DestroySpike()
+    {
+        for (int i = 0; i < summonedSpikes.Count; i = 0)
+        {
+            Destroy(summonedSpikes[i]);
+            summonedSpikes.RemoveAt(i);
+        }
     }
 
     /// <summary>

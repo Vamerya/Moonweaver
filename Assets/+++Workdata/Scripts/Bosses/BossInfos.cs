@@ -3,10 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class BossInfos : MonoBehaviour
+public class BossInfos : MonoBehaviour, IDataPersistence
 {
+    /// <summary>
+    /// saves the boss ID
+    /// </summary>
+    public string id;
+    [ContextMenu("Generate GUID for ID")]
+
+    /// <summary>
+    /// generates a unique ID for each boss
+    /// </summary>
+    void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
     [SerializeField] string bossName, bossTitle;
     [SerializeField] BossBehaviour bossBehaviour;
+    [SerializeField] BossHealthBarBehaviour bossHealthBar;
     [SerializeField] TextMeshProUGUI nameAndTitle;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] GameObject moonFragment;
@@ -27,6 +42,7 @@ public class BossInfos : MonoBehaviour
     void Awake()
     {
         bossBehaviour = gameObject.GetComponent<BossBehaviour>();
+        bossHealthBar = gameObject.GetComponentInChildren<BossHealthBarBehaviour>();
         nameAndTitle = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
     }
@@ -43,9 +59,28 @@ public class BossInfos : MonoBehaviour
         DetermineBossHealthPercentage();
     }
 
+    public void LoadData(GameData data)
+    {
+        data.bossesDefeated.TryGetValue(id, out isDead);
+        if (isDead)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (data.bossesDefeated.ContainsKey(id))
+        {
+            data.bossesDefeated.Remove(id);
+        }
+        data.bossesDefeated.Add(id, isDead);
+    }
+
+
     /// <summary>
-    /// counts down the timer for how long th enemy is burning
-    /// changes the sprite color for the duration the enemy is burning
+    /// counts down the timer for how long the boss is burning
+    /// changes the sprite color for the duration the boss is burning
     /// </summary>
     void Update()
     {
@@ -61,16 +96,7 @@ public class BossInfos : MonoBehaviour
     }
 
     /// <summary>
-    /// determines the type of enemy based on their ID
-    /// </summary>
-    /// <returns>returns a Vector3 with the enemys stats for Moonlight carried, their Damage and total HP</returns>
-    public void DetermineBossValues()
-    {
-        
-    }
-
-    /// <summary>
-    /// recalculates the enemys health
+    /// recalculates the boss health
     /// adds Moonlight to the player if their hp is below 1, sets their isDead bool to true and destroys the gameObject afterwards
     /// </summary>
     /// <param name="dmg">value which is used to input the amount of damage the player dealt</param>
@@ -78,12 +104,14 @@ public class BossInfos : MonoBehaviour
     {
         bossHealth -= dmg;
         DetermineBossHealthPercentage();
+        bossHealthBar.FadingBarBehaviour();
 
         if (bossHealth < 1)
         {
             AddMoonLight();
             GameObject droppedMoonFragment = Instantiate(moonFragment, transform.position, Quaternion.identity);
             isDead = true;
+            //BroadcastMessage("BossDefeated");
             Destroy(gameObject);
         }
     }
@@ -99,6 +127,7 @@ public class BossInfos : MonoBehaviour
         {
             bossHealth -= burnDmg;
             DetermineBossHealthPercentage();
+            bossHealthBar.FadingBarBehaviour();
             yield return new WaitForSecondsRealtime(.4f);
         }
     }
@@ -112,7 +141,7 @@ public class BossInfos : MonoBehaviour
     }
 
     /// <summary>
-    /// calls the EnemyTakeDamage upon colliding with either the players melee weapon or one of the projectiles, grabbing references to either 
+    /// calls the  BossTakeDamage upon colliding with either the players melee weapon or one of the projectiles, grabbing references to either 
     /// weapons behaviour in order to input the damage
     /// if the players faith level is above 1 the enemy is also burning with the amount of damage input from the respective function
     /// </summary>
@@ -129,12 +158,6 @@ public class BossInfos : MonoBehaviour
                 burningTimer = burningTimerInit;
                 StartCoroutine(BossTakeBurnDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineBurningDamage()));
             }
-            Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
-        }
-
-        if (collision.CompareTag("Bullet"))
-        {
-            BossTakeDamage(collision.GetComponent<ProjectileBehaviour>().DamageEnemyRanged());
             Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
         }
     }

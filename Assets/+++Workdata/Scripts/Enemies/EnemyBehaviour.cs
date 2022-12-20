@@ -45,8 +45,14 @@ public class EnemyBehaviour : MonoBehaviour
 
 
         if(direction.x < 0)
+        {
             spriteRenderer.flipX = true;        //left
-        else
+            GetComponentInChildren<PolygonCollider2D>().transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(direction.x > 0)
+        {
             spriteRenderer.flipX = false;       //right
+            GetComponentInChildren<PolygonCollider2D>().transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }

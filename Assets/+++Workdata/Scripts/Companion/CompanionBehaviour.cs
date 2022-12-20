@@ -9,9 +9,9 @@ public class CompanionBehaviour : MonoBehaviour
 {
     Rigidbody2D rb;
     public Transform target;
-    Vector2 _distanceToPlayer;
-    float distanceToPlayer;
-    float followRange = 1; 
+    public Collider2D boxCollider;
+    Vector2 _distanceToTarget;
+    float distanceToTarget;
     float stoppingRange = 1.5f;
     [SerializeField] float force;
 
@@ -21,17 +21,22 @@ public class CompanionBehaviour : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<Collider2D>();
     }
 
+    void Start()
+    {
+        rb.AddForce(new Vector2(force, force / 2), ForceMode2D.Impulse);
+    }
     /// <summary>
     /// calculates how far the companion is away (on the X and Y axis) from the player based on the players position
     /// </summary>
     void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, target.position);
-        _distanceToPlayer = target.position - transform.position;
-        _distanceToPlayer = _distanceToPlayer.normalized;
-        _distanceToPlayer = _distanceToPlayer * force;
+        distanceToTarget = Vector2.Distance(transform.position, target.position);
+        _distanceToTarget = target.position - transform.position;
+        _distanceToTarget = _distanceToTarget.normalized;
+        _distanceToTarget = _distanceToTarget * Random.Range(90, 110);
     }
 
     /// <summary>
@@ -39,7 +44,7 @@ public class CompanionBehaviour : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        if(distanceToPlayer > stoppingRange)
-                rb.AddForce(_distanceToPlayer);
+        if(distanceToTarget > stoppingRange)
+                rb.AddForce(_distanceToTarget);
     }
 }

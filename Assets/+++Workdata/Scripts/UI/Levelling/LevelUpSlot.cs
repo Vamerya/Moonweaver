@@ -13,7 +13,6 @@ public class LevelUpSlot : MonoBehaviour
     public Image statIcon;
     public TextMeshProUGUI statText;
     public TextMeshProUGUI statLevel;
-    public TextMeshProUGUI errorMessage, randomMessage;
     public int slotID;
     float timer;
 
@@ -28,17 +27,11 @@ public class LevelUpSlot : MonoBehaviour
         levelUpManager.LevelUpInitiator(slotID);
         statText.text = levelUpManager.statName.ToString() + ": ";
         statLevel.text = levelUpManager.currentLevel.ToString();
-
-        randomMessage.text = playerLevelBehaviour.requiredMoonLight.ToString() + " Moonlight is required for the next level up";
-        errorMessage.text = "You have " + playerLevelBehaviour.moonLight.ToString() + " Moonlight available";
-
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
-        if(timer < 0)
-            errorMessage.text = "You have " + playerLevelBehaviour.moonLight.ToString() + " Moonlight available";
+
     }
 
     public void InitiateLevelUP()
@@ -49,12 +42,6 @@ public class LevelUpSlot : MonoBehaviour
         
             statText.text = levelUpManager.statName.ToString() + ": ";
             statLevel.text = levelUpManager.currentLevel.ToString();
-            randomMessage.text = playerLevelBehaviour.requiredMoonLight.ToString() + " Moonlight is required for the next level up";
-        }
-        else
-        {
-            errorMessage.text = "Not enough Moonlight";
-            timer = 4f;        
         }    
     }
 }

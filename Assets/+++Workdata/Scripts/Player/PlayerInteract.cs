@@ -40,7 +40,6 @@ public class PlayerInteract : MonoBehaviour
     /// <param name="collision">compareTag is used to determine what the player is interacting with</param>
     void OnTriggerStay2D(Collider2D collision)
     {
-
         if (collision.CompareTag("WeaponPickup") && playerController.isInteracting) //COLLECT RANGED WEAPON
         {
             playerInfos.obtainedRangedWeapon = true;

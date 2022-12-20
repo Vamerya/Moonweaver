@@ -9,13 +9,16 @@ public class PlayerSittingBehaviour : MonoBehaviour
 {
     PlayerController playerController;
     SpriteRenderer spriteRenderer;
-    public BenchBehaviour benchBehaviour;
     Camera mainCam;
+    public BenchBehaviour benchBehaviour;
     public GameObject cameraLookAtPoint;
     public float focalLength;
     public bool canSit;
     [SerializeField] Vector3 offset;
 
+    /// <summary>
+    /// Grabs references to necessary components
+    /// </summary>
     void Awake()
     {
         playerController = gameObject.GetComponent<PlayerController>();
@@ -27,6 +30,9 @@ public class PlayerSittingBehaviour : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Sets bools based on given values
+    /// </summary>
     void Update()
     {
         if(canSit && playerController.isInteracting)
@@ -73,9 +79,8 @@ public class PlayerSittingBehaviour : MonoBehaviour
     /// <summary>
     /// If the player is sitting their position gets set to the position of the object they collided with (the bench) + an offset to ensure the player
     /// is placed on the bench properly
-    /// Also grabs the BenchBehaviour Script reference from the bench the player collided with
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision">This is what the player collided with</param>
     void OnTriggerStay2D(Collider2D collision)
     {
         if(playerController.isSitting)

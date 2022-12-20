@@ -17,6 +17,7 @@ public class MenuButtons : MonoBehaviour
 
     void Awake()
     {
+        
     }
     void Start()
     {

@@ -12,7 +12,6 @@ public class PlayerCombat : MonoBehaviour
     [Header ("Main Components")]
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerInfos playerInfos;
-    [SerializeField] PlayerRangedWeaponBehaviour playerRangedWeaponBehaviour;
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
 
     [Header ("Timer")]
@@ -34,9 +33,6 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] bool isUlting;
     [SerializeField] bool attackReleased;
 
-    [Header("Shooting Variables")]
-    [SerializeField] bool canShoot;
-    [SerializeField] float shootingBuffer;
     #endregion
 
 
@@ -47,7 +43,6 @@ public class PlayerCombat : MonoBehaviour
     {
         playerController = gameObject.GetComponent<PlayerController>();
         playerInfos = gameObject.GetComponent<PlayerInfos>();
-        playerRangedWeaponBehaviour = gameObject.GetComponent<PlayerRangedWeaponBehaviour>();
     }
 
 
@@ -135,15 +130,6 @@ public class PlayerCombat : MonoBehaviour
             HeavyAttackCharge();
 
             staminaBarBehaviour.FadingBarBehaviour();
-        }
-        else
-        {
-            if(canShoot)
-            {
-                playerRangedWeaponBehaviour.Shoot();
-                canShoot = false;
-                StartCoroutine(StopShooting());
-            }
         }
     }
 
@@ -275,15 +261,5 @@ public class PlayerCombat : MonoBehaviour
     {
         isUlting = false;
         playerController.speed = playerController.maxSpeed;
-    }
-
-    /// <summary>
-    /// sets the canShoot bool to true
-    /// </summary>
-    /// <returns>the amount of time this Method should be delayed by before getting called</returns>
-    IEnumerator StopShooting()
-    {
-        yield return new WaitForSecondsRealtime(shootingBuffer);
-        canShoot = true;
     }
 }

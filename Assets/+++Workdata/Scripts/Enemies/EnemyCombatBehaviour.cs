@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Rendering.Universal;
 
 /// <summary>
 /// Controls the combat Behaviour of the enemies
@@ -13,6 +14,8 @@ public class EnemyCombatBehaviour : MonoBehaviour
     public PlayerInRangeCheck playerInRangeCheck;
     PlayerController playerController;
     AIDestinationSetter destinationSetter;
+    Light2D eyeLight;
+    Color defaultEyeColor;
 
     [SerializeField] Transform playerPosition;
 
@@ -32,6 +35,7 @@ public class EnemyCombatBehaviour : MonoBehaviour
         enemyInfos = gameObject.GetComponent<EnemyInfos>();
         enemyBehaviour = gameObject.GetComponent<EnemyBehaviour>();
         playerInRangeCheck = gameObject.GetComponentInChildren<PlayerInRangeCheck>();
+        eyeLight = gameObject.GetComponentInChildren<Light2D>();
         playerController = GameObject.FindObjectOfType<PlayerController>();
         destinationSetter = gameObject.GetComponent<AIDestinationSetter>();
         playerPosition = playerController.transform;
@@ -40,7 +44,7 @@ public class EnemyCombatBehaviour : MonoBehaviour
 
     void Start()
     {
-        
+        defaultEyeColor = eyeLight.color;
     }
 
     /// <summary>
@@ -53,7 +57,10 @@ public class EnemyCombatBehaviour : MonoBehaviour
             attackCooldown -= Time.deltaTime;
 
         if(playerInRangeCheck.playerInRange && attackCooldown <= 0)
+        {
             canAttack = true;
+            eyeLight.color = Color.red;
+        }
         else
             canAttack = false;
 
@@ -114,6 +121,7 @@ public class EnemyCombatBehaviour : MonoBehaviour
     {
         //yield return new WaitForSecondsRealtime(1f);
         isAttacking = false;
+        eyeLight.color = defaultEyeColor;
         attackCooldown = attackCooldownInit;
 
         enemyBehaviour.anim.SetBool("isAttacking", isAttacking);

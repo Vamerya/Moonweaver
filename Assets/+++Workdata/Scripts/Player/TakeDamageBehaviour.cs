@@ -33,7 +33,12 @@ public class TakeDamageBehaviour : MonoBehaviour
                 playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<EnemyInfos>().moonLightDamageHP.y);
             }
             catch{
+                try{
                 playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<BossInfos>().bossDamage);
+                }
+                catch{
+                playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<SpikeBehaviour>().SpikeDamage());
+                }
             }
             
             Debug.Log("KSKSKSKs");

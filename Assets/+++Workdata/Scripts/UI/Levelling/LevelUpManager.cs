@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LevelUpManager : MonoBehaviour
 {
@@ -8,9 +9,8 @@ public class LevelUpManager : MonoBehaviour
     [SerializeField] PlayerHealthflaskBehaviour healthflaskBehaviour;
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerInfos playerInfos;
-    [SerializeField] GameObject _levelUpUI;
-    [SerializeField] GameObject _requiredRunesText;
-    [SerializeField] GameObject _errorMessage;
+    [SerializeField] TextMeshProUGUI _requiredMoonText;
+    [SerializeField] TextMeshProUGUI _availableLevelUps;
     public string statName;
     public int currentLevel;
     public int levelUpMenuState = 0;
@@ -34,6 +34,19 @@ public class LevelUpManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Displays how much Moonlight the player has available and how much the next LevelUp costs
+    /// </summary>
+    void Update()
+    {
+        _availableLevelUps.text = "You have " + playerLevelBehaviour.moonLight + " Moonlight available";
+        _requiredMoonText.text = playerLevelBehaviour.requiredMoonLight + " Moonlight is required for the next level up";
+    }
+
+    /// <summary>
+    /// Determines which stat is being levelled
+    /// </summary>
+    /// <param name="stat">ID passed in from the LevelUpSlots</param>
     public void DetermineStatToLevel(int stat)
     {
         switch (stat)
@@ -85,6 +98,11 @@ public class LevelUpManager : MonoBehaviour
                 break;
         }
     }
+
+    /// <summary>
+    /// Initiates the levelup
+    /// </summary>
+    /// <param name="stat">Determines what should be levelled based on the ID of the LevelUpSlots</param>
     public void LevelUpInitiator(int stat)
     {
         switch (stat)

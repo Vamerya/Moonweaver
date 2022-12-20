@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// saves all the infos for the enemies
 /// </summary>
-public class EnemyInfos : MonoBehaviour, IDataPersistence
+public class EnemyInfos : MonoBehaviour
 {
     /// <summary>
     /// saves the enemys ID
@@ -48,26 +48,6 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         maxHP = moonLightDamageHP.z;
         isDead = false;
         mainColor = enemyBehaviour.spriteRenderer.color;
-        GenerateGuid();
-
-    }
-
-    public void LoadData(GameData data)
-    {
-        data.enemiesDefeated.TryGetValue(id, out isDead);
-        if(isDead)
-        {
-            gameObject.SetActive(false);
-        }
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        if(data.enemiesDefeated.ContainsKey(id))
-        {
-            data.enemiesDefeated.Remove(id);
-        }
-        data.enemiesDefeated.Add(id, isDead);
     }
 
     /// <summary>
@@ -97,16 +77,16 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
         switch(ID)
         {
             case 0:
-                moonLightDamageHP = new Vector3(Random.Range(400, 600), Random.Range(80, 120), 1000); //normal melee add
+                moonLightDamageHP = new Vector3(Random.Range(20, 40), Random.Range(55, 90), 800); //normal melee add
                 break;
             case 1:
-                moonLightDamageHP = new Vector3(Random.Range(400, 600), Random.Range(180, 220), 500); //normal ranged add
+                moonLightDamageHP = new Vector3(Random.Range(40, 100), Random.Range(180, 220), 500); //normal ranged add
                 break;
             case 2:
-                moonLightDamageHP = new Vector3(Random.Range(800, 1200), Random.Range(80, 120), 1500); //tanky enemy
+                moonLightDamageHP = new Vector3(Random.Range(100, 250), Random.Range(80, 120), 1500); //tanky enemy
                 break;
             case 3:
-                moonLightDamageHP = new Vector3(Random.Range(1300, 1700), Random.Range(800, 1200), 500); //assassin
+                moonLightDamageHP = new Vector3(Random.Range(1300, 1700), Random.Range(800, 1200), 300); //assassin
                 break;
             case 4:
                 moonLightDamageHP = new Vector3(500, 100, 1000); //open slot
@@ -180,12 +160,6 @@ public class EnemyInfos : MonoBehaviour, IDataPersistence
                 burningTimer = burningTimerInit;
                 StartCoroutine(EnemyTakeBurnDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineBurningDamage()));
             }
-            Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
-        }
-        
-        if(collision.CompareTag("Bullet"))
-        {
-            EnemyTakeDamage(collision.GetComponent<ProjectileBehaviour>().DamageEnemyRanged());
             Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
         }
     }

@@ -27,15 +27,15 @@ public class PlayerController : MonoBehaviour
     [Header("Inventory")]
     [SerializeField] public GameObject _playerInventory;
     [SerializeField] public GameObject _playerHotbar;
+    [SerializeField] GameObject _storeMoonFragmentsButton;
 
     [Header("Movement, interaction and inventory")]
-    public float maxSpeed;
-    public float speed;
+    public float maxSpeed, speed;
     public float movementX, movementY, directionState;
-    Vector2 mousePos;
-    public Vector3 lookDir;
+    public Vector2 lookDir;
     public bool isMoving, isSitting;
     public bool isInteracting, isTalking, shrineNearby;
+    public bool isMainShrine;
     public int inventoryHotbarState;
 
     [Header("Dash Variables")]
@@ -43,10 +43,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashingVelocity;
     [SerializeField] float dashingTime;
     [SerializeField] public bool canDash;
-    Vector2 dashingDir;
+    public Vector2 dashingDir;
     float dashBufferTimer;
     bool dashInput;
-    bool isDashing;
+    [SerializeField] bool isDashing;
 
     [Header("Input actions")]
     public InputActions inGameInputActions;
@@ -90,8 +90,6 @@ public class PlayerController : MonoBehaviour
 
         inGameInputActions.PlayerKeyboardMouseActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
 
-        inGameInputActions.PlayerKeyboardMouseActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
-
 
         //XBOX CONTROLLER
         inGameInputActions.PlayerXBOXActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
@@ -111,8 +109,6 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerXBOXActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
         inGameInputActions.PlayerXBOXActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
-
-        inGameInputActions.PlayerXBOXActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
 
 
 
@@ -134,8 +130,6 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerPS4ActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
         inGameInputActions.PlayerPS4ActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
-
-        inGameInputActions.PlayerPS4ActionMap.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
     }
 
     /// <summary>
@@ -219,27 +213,30 @@ public class PlayerController : MonoBehaviour
             speed = maxSpeed;
 
 
-        if (playerInfos.inventoryState == 1)
-        {
-            lookDir = Camera.main.ScreenToWorldPoint(mousePos);
-            var dir = lookDir.normalized - playerRangedWeapon.position;
-            playerRangedWeapon.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
+        // if (playerInfos.inventoryState == 1)
+        // {
+        //     lookDir = Camera.main.ScreenToWorldPoint(mousePos);
+        //     var dir = lookDir.normalized - playerRangedWeapon.position;
+        //     playerRangedWeapon.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
 
-            anim.SetFloat("LookDirX", dir.x);
-            anim.SetFloat("LookDirY", dir.y);
+        //     anim.SetFloat("LookDirX", dir.x);
+        //     anim.SetFloat("LookDirY", dir.y);
 
-            if (dir.x > 0) //right
-                playerSpriteRenderer.flipX = false;
+        //     if (dir.x > 0) //right
+        //         playerSpriteRenderer.flipX = false;
 
-            else if (dir.x < 0) //left
-                playerSpriteRenderer.flipX = true;
-        }
+        //     else if (dir.x < 0) //left
+        //         playerSpriteRenderer.flipX = true;
+        // }
 
         DetermineDirectionState();
 
-        if (!isSitting)
-        {
-        }
+        anim.SetBool("isDashing", isDashing);
+    }
+
+    void RotateRangedWeapon()
+    {
+
     }
 
     /// <summary>
@@ -280,9 +277,6 @@ public class PlayerController : MonoBehaviour
             dashBufferTimer = dashBufferLength;
             return;
         }
-
-
-        anim.SetBool("isDashing", isDashing);
     }
 
     /// <summary>
@@ -293,25 +287,16 @@ public class PlayerController : MonoBehaviour
     {
         movementX = direction.x;
         movementY = direction.y;
+        lookDir = direction;
 
         if (movementX != 0 || movementY != 0)
             isMoving = true;
-
         else
             isMoving = false;
 
         anim.SetFloat("MovementX", movementX);
         anim.SetFloat("MovementY", movementY);
         anim.SetBool("isMoving", isMoving);
-    }
-
-    /// <summary>
-    /// direction gets set to the mousePosition
-    /// </summary>
-    /// <param name="direction">used to determine where the mouse is in relation to the player</param>
-    void Look(Vector3 direction)
-    {
-        mousePos = direction;
     }
 
     /// <summary>
@@ -325,7 +310,12 @@ public class PlayerController : MonoBehaviour
             isInteracting = true;
             if (shrineNearby)
             {
-                shrineManager.ShowLevelUpUI();
+                shrineManager.ShowShrineMenu();
+                if(!isMainShrine)
+                    _storeMoonFragmentsButton.SetActive(false);
+                else
+                    _storeMoonFragmentsButton.SetActive(true);
+
                 playerHealthflaskBehaviour.RefillFlask();
                 playerInfos.playerHealth = playerInfos.playerMaxHealth;
                 playerInfos.respawnPos = transform.position;
@@ -335,13 +325,7 @@ public class PlayerController : MonoBehaviour
                 try
                 {
                     mainCamera.GetComponentInChildren<ChangeTargetBehaviour>().ChangeFollowTarget(sittingBehaviour.cameraLookAtPoint);
-                    try{
-                        sittingBehaviour.benchBehaviour.IncreaseLightStrength();
-                    }
-                    catch{
-                        
-                    }
-                    
+                    sittingBehaviour.benchBehaviour.IncreaseLightStrength();
                 }
                 catch
                 {
@@ -448,6 +432,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Shrine"))
         {
             shrineNearby = true;
+            isMainShrine = collision.GetComponent<ShrineBehaviour>().mainShrine;
         }
     }
 

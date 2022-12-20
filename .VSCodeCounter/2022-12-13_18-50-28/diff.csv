@@ -1,0 +1,28 @@
+"filename", "language", "C#", "comment", "blank", "total"
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\DataPersistenceManager.cs", "C#", 67, 5, 15, 87
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\Data\GameData.cs", "C#", 40, 3, 4, 47
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\FileDataHandler.cs", "C#", 60, 3, 8, 71
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\IDataPersistence.cs", "C#", 8, 9, 3, 20
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\SerializableTypes\SerializableDictionary.cs", "C#", 31, 0, 5, 36
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Input\InputActions.cs", "C#", 1199, 16, 16, 1231
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossBehaviour.cs", "C#", 50, 0, 10, 60
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossCombatBehaviour.cs", "C#", 77, 21, 21, 119
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossHealthBarBehaviour.cs", "C#", 63, 1, 8, 72
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossInfos.cs", "C#", 99, 34, 14, 147
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Camera\ChangeTargetBehaviour.cs", "C#", 35, 0, 5, 40
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyBehaviour.cs", "C#", 2, 0, 0, 2
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyCombatBehaviour.cs", "C#", -1, 21, 1, 21
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyInfos.cs", "C#", 4, 0, 0, 4
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemySpawner.cs", "C#", 14, 13, 0, 27
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\BenchBehaviour.cs", "C#", 28, 0, 6, 34
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\ShrineManager.cs", "C#", 15, 9, 2, 26
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MainMenu\MenuButtons.cs", "C#", 11, 0, 0, 11
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\FirstMoonFragmentBehaviour.cs", "C#", -9, -1, 0, -10
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\MoonFragmentBehaviour.cs", "C#", 14, 0, 2, 16
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerCombat.cs", "C#", 0, 1, 0, 1
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerController.cs", "C#", 46, 2, 16, 64
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInfos.cs", "C#", 5, 7, 1, 13
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerSittingBehaviour.cs", "C#", 60, 17, 10, 87
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\TakeDamageBehaviour.cs", "C#", 6, 0, 1, 7
+"d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\EnemyHealthbars\EnemyHealthbarBehaviour.cs", "C#", 5, 0, 4, 9
+"Total", "-", 1929, 161, 152, 2242

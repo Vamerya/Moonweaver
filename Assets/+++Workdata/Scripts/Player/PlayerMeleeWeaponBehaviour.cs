@@ -11,6 +11,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] PlayerCombat playerCombat;
     [SerializeField] public float playerWeaponDamage;
+    [SerializeField] public float playerRangedDamage;
     [SerializeField] float playerCriticalStrikeChance;
     [SerializeField] float playerCriticalStrikeDamage;
     [SerializeField] public float playerBurnDamage;
@@ -52,7 +53,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     /// <returns>playerWeaponDamage</returns>
     public float DetermineWeaponDamage()
     {
-        playerWeaponDamage = Mathf.Log(playerLevelBehaviour.strength, 5) * 50;
+        playerWeaponDamage = 20 + (Mathf.Log(playerLevelBehaviour.strength, 5) * 50);
         playerWeaponDamage = Mathf.Floor(playerWeaponDamage);
 
         return playerWeaponDamage;
@@ -63,7 +64,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// decreases the amount of time needed to charge a heavy attack based on the level of strengt the player has
+    /// decreases the amount of time needed to charge a heavy attack based on the level of strength the player has
     /// </summary>
     public void DetermineStrengthWeaponValues()
     {
@@ -99,6 +100,13 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     {
         playerCriticalStrikeDamage = playerWeaponDamage * (2 + (playerLevelBehaviour.mind / 10));
         return playerCriticalStrikeDamage;
+    }
+
+    float DetermineRangedDamage()
+    {
+        playerRangedDamage = 15 + (Mathf.Log(playerLevelBehaviour.dexterity, 2) * 10);
+        playerRangedDamage = Mathf.Floor(playerRangedDamage);
+        return playerRangedDamage;
     }
 
     public void ExecuteEnemy() //or maybe big damage after a specific amount of buildup is reached (Dark Souls/Elden Ring bleed)

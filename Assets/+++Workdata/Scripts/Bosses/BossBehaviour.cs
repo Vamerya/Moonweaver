@@ -28,7 +28,7 @@ public class BossBehaviour : MonoBehaviour
     }
     void Start()
     {
-        bossInfos.DetermineBossValues();
+        
     }
 
     void Update()
@@ -38,6 +38,8 @@ public class BossBehaviour : MonoBehaviour
             isMoving = true;
         else
             isMoving = false;
+
+        anim.SetBool("isMoving", isMoving);
     }
 
     void FaceVelocity()

@@ -10,9 +10,9 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] private string fileName;
     [SerializeField] private bool useEncryption;
 
-    private GameData gameData;
-    private List<IDataPersistence> dataPersistenceObjects;
-    private FileDataHandler dataHandler;
+    GameData gameData;
+    List<IDataPersistence> dataPersistenceObjects;
+    FileDataHandler dataHandler;
 
     public static DataPersistenceManager instance { get; private set; }
 
@@ -69,11 +69,6 @@ public class DataPersistenceManager : MonoBehaviour
     }
 
     void OnApplicationQuit() 
-    {
-        SaveGame();
-    }
-    
-    void OnDisable()
     {
         SaveGame();
     }

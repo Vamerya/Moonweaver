@@ -7,6 +7,10 @@ using UnityEngine;
 /// </summary>
 public class ShrineBehaviour : MonoBehaviour
 {
+    [Header("Check this if this is the main Shrine")]
+    [SerializeField] public bool mainShrine;
+
+    [Header("Variables")]
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerHealthflaskBehaviour healthflaskBehaviour;
     [SerializeField] public ShrineManager shrineManager;
@@ -25,7 +29,7 @@ public class ShrineBehaviour : MonoBehaviour
         }
         else if(!playerController.isInteracting)
         {
-            shrineManager.HideLevelUpUI();
+            shrineManager.HideShrineMenu();
         }
 
         if(playerInRange)

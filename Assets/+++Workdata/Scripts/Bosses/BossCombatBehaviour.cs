@@ -10,16 +10,22 @@ public class BossCombatBehaviour : MonoBehaviour
     public PlayerInRangeCheck playerInRangeCheck;
     PlayerController playerController;
     AIDestinationSetter destinationSetter;
+    Rigidbody2D rb;
+    AIPath aIPath;
 
     [SerializeField] Transform playerPosition;
+    public Vector2 distanceToPlayer;
     [SerializeField] GameObject spikePrefab;
+    [SerializeField] GameObject[] dashSpots;
     [SerializeField] List<GameObject> summonedSpikes;
 
     [SerializeField] bool canAttack;
     [SerializeField] bool isAttacking;
-    [SerializeField] float attackTimer;
     [SerializeField] float attackCooldown;
     [SerializeField] float attackCooldownInit;
+    [SerializeField] float dashCooldown;
+    [SerializeField] float dashCooldownInit;
+    [SerializeField] float maxSpeed;
 
 
     /// <summary>
@@ -27,13 +33,16 @@ public class BossCombatBehaviour : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        rb = gameObject.GetComponent<Rigidbody2D>();
         bossInfos = gameObject.GetComponent<BossInfos>();
         bossBehaviour = gameObject.GetComponent<BossBehaviour>();
-        playerInRangeCheck = gameObject.GetComponentInChildren<PlayerInRangeCheck>();
         playerController = GameObject.FindObjectOfType<PlayerController>();
         destinationSetter = gameObject.GetComponent<AIDestinationSetter>();
+        playerInRangeCheck = gameObject.GetComponentInChildren<PlayerInRangeCheck>();
         playerPosition = playerController.transform;
         destinationSetter.target = playerPosition;
+        aIPath = gameObject.GetComponent<AIPath>();
+        maxSpeed = aIPath.maxSpeed;
     }
 
     void Start()
@@ -55,8 +64,15 @@ public class BossCombatBehaviour : MonoBehaviour
         else
             canAttack = false;
 
-        if (canAttack)
-            EnemyAttack(Random.Range(0, 3));
+        if(dashCooldown > 0)
+            dashCooldown -= Time.deltaTime;
+        else
+            BossDodge();
+
+        if (canAttack && !isAttacking)
+            EnemyAttack(Random.Range(0, 2));
+
+        distanceToPlayer = transform.position - playerPosition.transform.position;
     }
 
     /// <summary>
@@ -69,17 +85,10 @@ public class BossCombatBehaviour : MonoBehaviour
         {
             case 0:
                 BossIsAttacking();
-                //StartCoroutine(StopAttacking());
                 break;
-
+                
             case 1:
-                BossIsAttacking();
-                //StartCoroutine(StopAttacking());
-                break;
-
-            case 2:
-                //SummonSpike();
-                //StartCoroutine(StopAttacking());
+                SummonSpike();
                 break;
 
             default:
@@ -103,15 +112,26 @@ public class BossCombatBehaviour : MonoBehaviour
 
     void BossDodge()
     {
+        var dashSpot = Random.Range(0, dashSpots.Length);
+        destinationSetter.target = dashSpots[dashSpot].transform;
+        aIPath.maxSpeed *= 2;
+        dashCooldown = Random.Range(dashCooldownInit - 2, dashCooldownInit + 2);
+        StartCoroutine(ResetFollowTarget());
+    }
 
+    IEnumerator ResetFollowTarget()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        destinationSetter.target = playerPosition;
+        yield return new WaitForSecondsRealtime(1f);
+        aIPath.maxSpeed = maxSpeed;
     }
 
     void SummonSpike()
     {
         isAttacking = true;
-        //GameObject spike = Instantiate(spikePrefab, playerPosition.transform.position, Quaternion.identity);
-        GameObject spike = Instantiate(spikePrefab, this.transform.position + new Vector3(Random.Range(-10, 10), Random.Range(-10, 10)), Quaternion.identity);
-        spike.GetComponent<SpikeBehaviour>().DetermineSpikeDamage(bossInfos.bossDamage / 10);
+        GameObject spike = Instantiate(spikePrefab, playerPosition.position, Quaternion.identity);
+        spike.GetComponent<SpikeBehaviour>().DetermineSpikeDamage(bossInfos.bossDamage / 5);
         summonedSpikes.Add(spike);
     }
     
@@ -121,6 +141,7 @@ public class BossCombatBehaviour : MonoBehaviour
         {
             Destroy(summonedSpikes[i]);
             summonedSpikes.RemoveAt(i);
+            isAttacking = false;
         }
     }
 
@@ -129,7 +150,6 @@ public class BossCombatBehaviour : MonoBehaviour
     /// </summary>
     void StopAttacking()
     {
-        //yield return new WaitForSecondsRealtime(1f);
         isAttacking = false;
         attackCooldown = attackCooldownInit;
 

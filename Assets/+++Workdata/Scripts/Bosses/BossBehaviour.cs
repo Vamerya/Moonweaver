@@ -8,6 +8,7 @@ public class BossBehaviour : MonoBehaviour
     public AIPath aiPath;
     Vector2 direction;
     public BossInfos bossInfos;
+    public BossCombatBehaviour bossCombat;
     public int enemyID;
 
     public Animator anim;
@@ -20,6 +21,7 @@ public class BossBehaviour : MonoBehaviour
 
     void Awake()
     {
+        bossCombat = gameObject.GetComponent<BossCombatBehaviour>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         bossInfos = gameObject.GetComponent<BossInfos>();
         aiPath = gameObject.GetComponent<AIPath>();
@@ -39,6 +41,11 @@ public class BossBehaviour : MonoBehaviour
         else
             isMoving = false;
 
+        if(bossCombat.distanceToPlayer.x > 0)
+            spriteRenderer.flipX = true;
+        else
+            spriteRenderer.flipX = false;
+
         anim.SetBool("isMoving", isMoving);
     }
 
@@ -49,12 +56,12 @@ public class BossBehaviour : MonoBehaviour
 
         if (direction.x < 0)
         {
-            spriteRenderer.flipX = true;        //left
+            //spriteRenderer.flipX = true;        //left
             GetComponentInChildren<PolygonCollider2D>().transform.localScale = new Vector3(-1, 1, 1);
         }
         else if(direction.x > 0)
         {
-            spriteRenderer.flipX = false;       //right
+            //spriteRenderer.flipX = false;       //right
             GetComponentInChildren<PolygonCollider2D>().transform.localScale = new Vector3(1, 1, 1);
         }
     }

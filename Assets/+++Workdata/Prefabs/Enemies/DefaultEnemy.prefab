@@ -222,7 +222,7 @@ MonoBehaviour:
   attackID: 0
   attackTimer: 0
   attackCooldown: 0
-  attackCooldownInit: 2.5
+  attackCooldownInit: 4
 --- !u!114 &1129525327956888032
 MonoBehaviour:
   m_ObjectHideFlags: 0

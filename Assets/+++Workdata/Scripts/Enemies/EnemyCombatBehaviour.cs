@@ -59,8 +59,9 @@ public class EnemyCombatBehaviour : MonoBehaviour
         if(playerInRangeCheck.playerInRange && attackCooldown <= 0)
         {
             canAttack = true;
-            eyeLight.color = Color.red;
         }
+        if(playerInRangeCheck.playerInRange && attackCooldown < 1)
+            eyeLight.color = Color.red;
         else
             canAttack = false;
 

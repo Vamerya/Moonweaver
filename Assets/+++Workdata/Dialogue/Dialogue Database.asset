@@ -603,8 +603,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 3.5399148, y: 4.953621}
+    canvasZoom: 1.1087514
   syncInfo:
     syncActors: 0
     syncItems: 0

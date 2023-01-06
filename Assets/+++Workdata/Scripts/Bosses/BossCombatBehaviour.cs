@@ -84,11 +84,11 @@ public class BossCombatBehaviour : MonoBehaviour
         switch (_attackID)
         {
             case 0:
-                BossIsAttacking();
+                Attack1();
                 break;
                 
             case 1:
-                SummonSpike();
+                Attack2();
                 break;
 
             default:
@@ -97,26 +97,28 @@ public class BossCombatBehaviour : MonoBehaviour
         }
 
         Debug.LogWarning(_attackID);
-        bossBehaviour.anim.SetInteger("attackState", _attackID);
         bossBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
 
     /// <summary>
     /// controls the bool for the enemy and its animator
     /// </summary>
-    void BossIsAttacking()
+    void BossAttack(int _attackID)
     {
         isAttacking = true;
+        bossBehaviour.anim.SetFloat("attackState", _attackID);
         bossBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
 
+/// <summary>
+/// one of the dashing points is picked as a new follow target and then gets reset after a set amount of time
+/// </summary>
     void BossDodge()
     {
         var dashSpot = Random.Range(0, dashSpots.Length);
         destinationSetter.target = dashSpots[dashSpot].transform;
         aIPath.maxSpeed *= 2;
         dashCooldown = Random.Range(dashCooldownInit - 2, dashCooldownInit + 2);
-        StartCoroutine(ResetFollowTarget());
     }
 
     IEnumerator ResetFollowTarget()
@@ -127,8 +129,9 @@ public class BossCombatBehaviour : MonoBehaviour
         aIPath.maxSpeed = maxSpeed;
     }
 
-    void SummonSpike()
+    IEnumerator SummonSpike()
     {
+        yield return new WaitForSecondsRealtime(1f);
         isAttacking = true;
         GameObject spike = Instantiate(spikePrefab, playerPosition.position, Quaternion.identity);
         spike.GetComponent<SpikeBehaviour>().DetermineSpikeDamage(bossInfos.bossDamage / 5);
@@ -143,6 +146,25 @@ public class BossCombatBehaviour : MonoBehaviour
             summonedSpikes.RemoveAt(i);
             isAttacking = false;
         }
+    }
+
+    void Attack1()
+    {
+        isAttacking = true;
+        BossDodge();
+        StartCoroutine(SummonSpike());
+        StartCoroutine(ResetFollowTarget());
+        BossAttack(1);
+    }
+
+    void Attack2()
+    {
+        isAttacking = true;
+        BossDodge();
+        StartCoroutine(ResetFollowTarget());
+        BossDodge();
+        StartCoroutine(ResetFollowTarget());
+        BossAttack(2);
     }
 
     /// <summary>

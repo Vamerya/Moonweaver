@@ -7,6 +7,8 @@ public class ShrineManager : MonoBehaviour, IDataPersistence
     [SerializeField] PlayerInfos playerInfos;
     [SerializeField] public PlayerController playerController;
     public GameObject _shrineMenu;
+    public GameObject _levelUpMenu;
+    public GameObject _statMenu;
     [SerializeField] Transform mainShrine;
     [SerializeField] Vector3 offset;
     [SerializeField] EnemySpawner[] enemySpawner;
@@ -70,6 +72,8 @@ public class ShrineManager : MonoBehaviour, IDataPersistence
     public void HideShrineMenu()
     {
         _shrineMenu.SetActive(false);
+        _levelUpMenu.SetActive(false);
+        _statMenu.SetActive(false);
     }
 
     /// <summary>

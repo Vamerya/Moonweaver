@@ -1,0 +1,1554 @@
+fileFormatVersion: 2
+guid: 62a84fada66d57d459ff45143ff815d4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 316
+        width: 17
+        height: 30
+      alignment: 9
+      pivot: {x: 0.64705884, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662f19a765cdb9242ad192f974abfdca
+      internalID: 1855831349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 316
+        width: 15
+        height: 29
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e8decdeb164f54a8aac5b498c837c5
+      internalID: -864649623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 316
+        width: 26
+        height: 30
+      alignment: 9
+      pivot: {x: 0.7307693, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd7e400239323c48a0a9a01d2848351
+      internalID: 619079463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 308
+        width: 24
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4166667, y: 0.15789473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298a0a51f8a571548a800e3bc6ce9223
+      internalID: 1756143385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 298
+        width: 26
+        height: 40
+      alignment: 9
+      pivot: {x: 0.1923077, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078fa063b0d589b4ea5753467f86ec3c
+      internalID: 318427498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 289
+        width: 35
+        height: 51
+      alignment: 9
+      pivot: {x: 0.2, y: 0.4901961}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb7a2e0f034f4a4b82ac12187c82512
+      internalID: -1543543418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 274
+        width: 48
+        height: 69
+      alignment: 9
+      pivot: {x: 0.1875, y: 0.6086957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515ef505506cab74fb1d4f01e1826ceb
+      internalID: -814411679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 316
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6677a30f7bb12d4c9405d4f221c9a4c
+      internalID: 547704925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 316
+        width: 21
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20372d9a0b7b3dd46823eb0ebd66dd04
+      internalID: -1804003569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 316
+        width: 21
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2112285b5ec27e4393c7e12e0f24621
+      internalID: -750853114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 316
+        width: 21
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aab36ecbdb760d438766bd77e5645f1
+      internalID: -501180505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 316
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20c58125f821bf4cbc762006172974e
+      internalID: 380732972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 316
+        width: 21
+        height: 47
+      alignment: 9
+      pivot: {x: 0.52380955, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb162195fb85a5c4398212f01a5c3d0b
+      internalID: -751445610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 236
+        width: 18
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8305aecdbbaa82c4ca9d4207b55df88e
+      internalID: 1095085044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 236
+        width: 18
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.032258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a338f358f2e923d4da4d6007a0e71e68
+      internalID: 1725233422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 236
+        width: 21
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2143cf7c7810945b0bfa29d1661656
+      internalID: 64824389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 228
+        width: 18
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab586d2425ca2845bede0195595b0c4
+      internalID: 994163197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 217
+        width: 18
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbff1dac5b9a0945b1608162a5a0350
+      internalID: -118494246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 208
+        width: 16
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb238af182ef3a44a874b0617d5d0d5f
+      internalID: 1328854074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 194
+        width: 16
+        height: 67
+      alignment: 9
+      pivot: {x: 0.625, y: 0.6268657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20426c6f7babd5547b0a3dc0d75b5cdf
+      internalID: 1943179163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 236
+        width: 18
+        height: 29
+      alignment: 9
+      pivot: {x: 0.6111111, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff92c92ddb811548b6de8ed0b7e385d
+      internalID: 1301269406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 236
+        width: 17
+        height: 45
+      alignment: 9
+      pivot: {x: 0.7058824, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f5583beee2c7e49b9a06efa91c4fe5
+      internalID: 265199575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 236
+        width: 17
+        height: 48
+      alignment: 9
+      pivot: {x: 0.7058824, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773475bee781b96458a98f197ee13f86
+      internalID: -1503424253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 236
+        width: 17
+        height: 48
+      alignment: 9
+      pivot: {x: 0.7058824, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3c577a998a3ae48abcca6a6e529c27
+      internalID: -923219925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 236
+        width: 18
+        height: 48
+      alignment: 9
+      pivot: {x: 0.6666667, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af1191bf214bf24d8861e0cb0877ebc
+      internalID: 278187424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 236
+        width: 18
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7babd8446073128439467212e8aebf23
+      internalID: -1057134916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 156
+        width: 14
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6428572, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584805f8339771b45a54dee8611de2e0
+      internalID: -1677418699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 156
+        width: 13
+        height: 28
+      alignment: 9
+      pivot: {x: 0.6923077, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076eab5d6e2127c47a0cb15d2a12fedd
+      internalID: -1793288825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 155
+        width: 29
+        height: 31
+      alignment: 9
+      pivot: {x: 0.86206895, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c10824aa0e748549b950ed5d15eda38
+      internalID: -576495538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 156
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa37d4f0597aa4e459628ef222b905fe
+      internalID: -29756595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 156
+        width: 55
+        height: 21
+      alignment: 9
+      pivot: {x: 0.29090908, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf545c6a532a5a4db0b8b582dfba5e6
+      internalID: 1410708687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 156
+        width: 62
+        height: 23
+      alignment: 9
+      pivot: {x: 0.19354838, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa6b5d04e7dfd54fa42c72b81eca589
+      internalID: 1021835762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 156
+        width: 75
+        height: 28
+      alignment: 9
+      pivot: {x: 0.120000005, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c48c55f720d1944c8dea2daf22abf0d
+      internalID: -542589905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 156
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34536ded144f2b348badfc9694621102
+      internalID: 834429079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 156
+        width: 19
+        height: 47
+      alignment: 9
+      pivot: {x: 0.57894737, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba895237985f19439f22ad763cfb12c
+      internalID: -1400265769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 156
+        width: 20
+        height: 49
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ddbf38b29214e499ea7b07845b18c0
+      internalID: 1473820405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 156
+        width: 20
+        height: 51
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2cc36863c0b0f45bd49889db4d776a
+      internalID: -263100407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 156
+        width: 19
+        height: 46
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25934e4416b3724880574f05b89abef
+      internalID: 638551563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 156
+        width: 16
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6875, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8936d34dad8d2524a910519ab05015a0
+      internalID: -731485717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 76
+        width: 18
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6111111, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3426c41df1a1c4e922533b3c596fdb
+      internalID: 1760928947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 75
+        width: 15
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6666667, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d23647b330dc4d4c977dd7b529644bf
+      internalID: -1867726233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 76
+        width: 20
+        height: 27
+      alignment: 9
+      pivot: {x: 0.65000004, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d6e0c5edc9f634cb4b00dfcc26986a
+      internalID: -1291626854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 76
+        width: 23
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5652174, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337c036e9de444640aae940a4ea5e0c0
+      internalID: 164932154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 76
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5909091, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932f31092f4bffb4082b589338d9b5c4
+      internalID: 783935148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 76
+        width: 23
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c1f479377824042b16b0805a540a0e
+      internalID: 120642136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 76
+        width: 18
+        height: 72
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b6bc986c4bb1f4ea4960d79c3a742d
+      internalID: 331454825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 76
+        width: 20
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19eb8a2068519540a10c06f0fea4eb3
+      internalID: -1613952302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 76
+        width: 20
+        height: 50
+      alignment: 9
+      pivot: {x: 0.6, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88feabb02484c74ba397f75ef860c77
+      internalID: 1141296568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 76
+        width: 20
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9d619d2c7dc754aa1f9c64312ad3cb
+      internalID: 1801111320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 76
+        width: 20
+        height: 48
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa8689da2d113146bcdbbc504cac2b4
+      internalID: 858085297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 76
+        width: 20
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3b817a3a62b3847989c15073434438
+      internalID: 51562523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 76
+        width: 20
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9b346036985c0469e502facba10b2f
+      internalID: 200584692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 12
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.625, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8403393c00f3674abecc468105077e2
+      internalID: -1668885917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 12
+        width: 17
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5882353, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928c7be2613caa34097d59ee57f94b3b
+      internalID: 344120510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 11
+        width: 29
+        height: 26
+      alignment: 9
+      pivot: {x: 0.7241379, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3079eeed069ee734fa2f3157aba7aabf
+      internalID: 673987102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 12
+        width: 41
+        height: 27
+      alignment: 9
+      pivot: {x: 0.41463414, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b32514173dc521459622d4f07ed2ede
+      internalID: 1559891651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 12
+        width: 47
+        height: 29
+      alignment: 9
+      pivot: {x: 0.31914893, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc032bfc30fe04948a5a00d2ccb3685c
+      internalID: -1784093682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 12
+        width: 47
+        height: 35
+      alignment: 9
+      pivot: {x: 0.23404254, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6653d14f93e2be4b8d5b462e53a9614
+      internalID: 606717985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 12
+        width: 49
+        height: 38
+      alignment: 9
+      pivot: {x: 0.20408162, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f9768af63e8bf458371b939fe27a25
+      internalID: 425635336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 12
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6459653473462584f8abbfc3fc89e8ec
+      internalID: 1452356013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 12
+        width: 20
+        height: 43
+      alignment: 9
+      pivot: {x: 0.7, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31abdb293d76cd0469081809a388838f
+      internalID: -655543584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 12
+        width: 20
+        height: 48
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742c00d97a7d7394facedbec0e2f663a
+      internalID: 327760551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 12
+        width: 21
+        height: 50
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fc9b5ead06ca14c9cb4201fb592dc7
+      internalID: -336423672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 12
+        width: 22
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6363636, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfc798987b003d4185453233a430ac6
+      internalID: 2092575544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throw_weapon-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 12
+        width: 19
+        height: 47
+      alignment: 9
+      pivot: {x: 0.7368421, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0b36c16b3c4a44897fc315844a0ef6
+      internalID: 976111391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      throw_weapon-Sheet_55: 1559891651
+      throw_weapon-Sheet_20: 1301269406
+      throw_weapon-Sheet_6: -814411679
+      throw_weapon-Sheet_17: -118494246
+      throw_weapon-Sheet_12: -751445610
+      throw_weapon-Sheet_16: 994163197
+      throw_weapon-Sheet_53: 344120510
+      throw_weapon-Sheet_2: 619079463
+      throw_weapon-Sheet_15: 64824389
+      throw_weapon-Sheet_50: 51562523
+      throw_weapon-Sheet_10: -501180505
+      throw_weapon-Sheet_61: 327760551
+      throw_weapon-Sheet_19: 1943179163
+      throw_weapon-Sheet_38: -731485717
+      throw_weapon-Sheet_62: -336423672
+      throw_weapon-Sheet_29: -29756595
+      throw_weapon-Sheet_64: 976111391
+      throw_weapon-Sheet_42: 164932154
+      throw_weapon-Sheet_48: 1801111320
+      throw_weapon-Sheet_25: -1057134916
+      throw_weapon-Sheet_22: -1503424253
+      throw_weapon-Sheet_46: -1613952302
+      throw_weapon-Sheet_36: -263100407
+      throw_weapon-Sheet_37: 638551563
+      throw_weapon-Sheet_31: 1021835762
+      throw_weapon-Sheet_18: 1328854074
+      throw_weapon-Sheet_33: 834429079
+      throw_weapon-Sheet_44: 120642136
+      throw_weapon-Sheet_21: 265199575
+      throw_weapon-Sheet_49: 858085297
+      throw_weapon-Sheet_35: 1473820405
+      throw_weapon-Sheet_40: -1867726233
+      throw_weapon-Sheet_30: 1410708687
+      throw_weapon-Sheet_63: 2092575544
+      throw_weapon-Sheet_9: -750853114
+      throw_weapon-Sheet_45: 331454825
+      throw_weapon-Sheet_7: 547704925
+      throw_weapon-Sheet_26: -1677418699
+      throw_weapon-Sheet_27: -1793288825
+      throw_weapon-Sheet_52: -1668885917
+      throw_weapon-Sheet_57: 606717985
+      throw_weapon-Sheet_51: 200584692
+      throw_weapon-Sheet_24: 278187424
+      throw_weapon-Sheet_28: -576495538
+      throw_weapon-Sheet_60: -655543584
+      throw_weapon-Sheet_39: 1760928947
+      throw_weapon-Sheet_8: -1804003569
+      throw_weapon-Sheet_4: 318427498
+      throw_weapon-Sheet_56: -1784093682
+      throw_weapon-Sheet_1: -522354145
+      throw_weapon-Sheet_11: 380732972
+      throw_weapon-Sheet_13: 1095085044
+      throw_weapon-Sheet_34: -1400265769
+      throw_weapon-Sheet_54: 673987102
+      throw_weapon-Sheet_47: 1141296568
+      throw_weapon-Sheet_43: 783935148
+      throw_weapon-Sheet_32: -542589905
+      throw_weapon-Sheet_41: -1291626854
+      throw_weapon-Sheet_58: 425635336
+      throw_weapon-Sheet_5: -1543543418
+      throw_weapon-Sheet_23: -923219925
+      throw_weapon-Sheet_0: 1855831349
+      throw_weapon-Sheet_3: 1756143385
+      throw_weapon-Sheet_14: 1725233422
+      throw_weapon-Sheet_59: 1452356013
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

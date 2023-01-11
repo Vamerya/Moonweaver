@@ -90,7 +90,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
             isBurning = false;
 
         if (isBurning)
-            bossBehaviour.spriteRenderer.color = Color.yellow;
+            bossBehaviour.spriteRenderer.color = Color.blue;
         else
             bossBehaviour.spriteRenderer.color = mainColor;
     }

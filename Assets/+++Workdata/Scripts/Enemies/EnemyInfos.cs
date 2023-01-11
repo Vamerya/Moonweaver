@@ -62,7 +62,7 @@ public class EnemyInfos : MonoBehaviour
             isBurning = false;
 
         if(isBurning)
-            enemyBehaviour.spriteRenderer.color = Color.yellow;
+            enemyBehaviour.spriteRenderer.color = Color.blue;
         else
             enemyBehaviour.spriteRenderer.color = mainColor;
     }

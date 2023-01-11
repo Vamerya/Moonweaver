@@ -27,6 +27,8 @@ public class BossCombatBehaviour : MonoBehaviour
     [SerializeField] float dashCooldownInit;
     [SerializeField] float maxSpeed;
 
+    [SerializeField] bool methodDone;
+
 
     /// <summary>
     /// grabs all necessary references

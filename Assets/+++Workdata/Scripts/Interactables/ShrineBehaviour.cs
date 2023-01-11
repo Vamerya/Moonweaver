@@ -11,12 +11,18 @@ public class ShrineBehaviour : MonoBehaviour
     [SerializeField] public bool mainShrine;
 
     [Header("Variables")]
+    [SerializeField] Animator anim;
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerHealthflaskBehaviour healthflaskBehaviour;
     [SerializeField] public ShrineManager shrineManager;
     [SerializeField] GameObject _indicator;
     [SerializeField] bool playerInRange;
 
+
+    void Awake()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
     /// <summary>
     /// opens the leveUpUI if the player is in range and interacting
     /// closes it if the player is neither
@@ -45,7 +51,11 @@ public class ShrineBehaviour : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
+        {
             playerInRange = true;
+            anim.SetBool("playerInRange", playerInRange);
+        }
+        
     }
 
     /// <summary>
@@ -58,6 +68,7 @@ public class ShrineBehaviour : MonoBehaviour
         {
             playerInRange = false;
             playerController.isInteracting = false;
+            anim.SetBool("playerInRange", playerInRange);
         }
     }
 }

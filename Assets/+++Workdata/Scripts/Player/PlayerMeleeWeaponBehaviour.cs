@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Controls the overall behaviour of the players melee weapon
+/// Controls the overall behaviour and damage values of the players melee weapon
 /// </summary>
 public class PlayerMeleeWeaponBehaviour : MonoBehaviour
 {
@@ -12,8 +12,8 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     [SerializeField] PlayerCombat playerCombat;
     [SerializeField] public float playerWeaponDamage;
     [SerializeField] public float playerRangedDamage;
-    [SerializeField] float playerCriticalStrikeChance;
-    [SerializeField] float playerCriticalStrikeDamage;
+    [SerializeField] public float playerCriticalStrikeChance;
+    [SerializeField] public float playerCriticalStrikeDamage;
     [SerializeField] public float playerBurnDamage;
 
     #region stats and what they do
@@ -36,13 +36,14 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         DetermineAllTheDamages();
     }
 
+    [ContextMenu("Determine Damages")]
     public void DetermineAllTheDamages()
     {
         DetermineDexterityWeaponValues();
         DetermineStrengthWeaponValues();
-        DetermineBurningDamage();
         DetermineCriticalStrikeChance();
         DetermineCriticalStrikeDamage();
+        DetermineBurningDamage();
     }
 
 
@@ -80,6 +81,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     {
         playerBurnDamage = Mathf.Log(playerLevelBehaviour.faith, 2) * 2.5f;
         playerBurnDamage = Mathf.Floor(playerBurnDamage);
+
         return playerBurnDamage;
     }
 
@@ -99,6 +101,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     public float DetermineCriticalStrikeDamage()
     {
         playerCriticalStrikeDamage = playerWeaponDamage * (2 + (playerLevelBehaviour.mind / 10));
+
         return playerCriticalStrikeDamage;
     }
 
@@ -106,6 +109,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     {
         playerRangedDamage = 15 + (Mathf.Log(playerLevelBehaviour.dexterity, 2) * 10);
         playerRangedDamage = Mathf.Floor(playerRangedDamage);
+
         return playerRangedDamage;
     }
 
@@ -127,6 +131,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
             DetermineCriticalStrikeDamage();
             playerCriticalStrikeDamage = Mathf.Floor(playerCriticalStrikeDamage);
             Debug.Log("crit");
+
             return playerCriticalStrikeDamage;
         }
         else
@@ -134,6 +139,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
             DetermineWeaponDamage();
             playerWeaponDamage = Mathf.Floor(playerWeaponDamage);
             Debug.Log("no crit");
+            
             return playerWeaponDamage;
         }
     }

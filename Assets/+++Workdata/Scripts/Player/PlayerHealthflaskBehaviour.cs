@@ -8,8 +8,10 @@ using UnityEngine;
 public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
 {
     [SerializeField] PlayerInfos playerInfos;
+    [SerializeField] PlayerController playerController;
     [SerializeField] DisplayMoonwaterAmount moonwaterAmount;
     [SerializeField] float healAmount;
+    [SerializeField] bool isHealing;
     public int maxAmount, amountAvailable;
 
     /// <summary>
@@ -18,6 +20,7 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     void Awake()
     {
         playerInfos = gameObject.GetComponent<PlayerInfos>();
+        playerController = gameObject.GetComponent<PlayerController>();
     }
 
     /// <summary>
@@ -26,6 +29,14 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     void Start()
     {
         moonwaterAmount.UpdateMoonWaterAmount();
+    }
+
+    void Update()
+    {
+        if(isHealing)
+            playerController.speed = 0;
+        else
+            playerController.speed = playerController.maxSpeed;
     }
 
     /// <summary>
@@ -56,15 +67,11 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     {
         if(amountAvailable > 0 && playerInfos.playerHealth < playerInfos.playerMaxHealth)
         {
+            isHealing = true;
             amountAvailable -= 1;
-            float amountToHeal = playerInfos.playerMaxHealth * healAmount;
-            amountToHeal = Mathf.RoundToInt(amountToHeal);
-            playerInfos.playerHealth += amountToHeal;
-            if(playerInfos.playerHealth > playerInfos.playerMaxHealth)
-            {
-                playerInfos.playerHealth = playerInfos.playerMaxHealth;
-            }
             moonwaterAmount.UpdateMoonWaterAmount();
+
+            playerController.anim.SetBool("isHealing", isHealing);
         }
     }
 
@@ -77,4 +84,19 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
         moonwaterAmount.UpdateMoonWaterAmount();
     }
 
+    public void PlayerHealing()
+    {
+        float amountToHeal = (playerInfos.playerMaxHealth * healAmount) / 3;
+        amountToHeal = Mathf.RoundToInt(amountToHeal);
+        playerInfos.playerHealth += amountToHeal;
+        if (playerInfos.playerHealth > playerInfos.playerMaxHealth)
+        {
+            playerInfos.playerHealth = playerInfos.playerMaxHealth;
+        }
+    }
+    public void FinishedHealing()
+    {
+        isHealing = false;
+        playerController.anim.SetBool("isHealing", isHealing);
+    }
 }

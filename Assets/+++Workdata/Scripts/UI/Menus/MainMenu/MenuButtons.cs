@@ -52,6 +52,7 @@ public class MenuButtons : MonoBehaviour
     {
         if (!pauseMenuActive)
         {
+            Time.timeScale = 0f;
             _pauseMenu.SetActive(true);
             pauseMenuActive = true;
         }

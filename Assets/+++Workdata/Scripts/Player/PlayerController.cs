@@ -25,12 +25,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform playerRangedWeapon;
 
     [Header("Inventory")]
-    [SerializeField] public GameObject _playerInventory;
-    [SerializeField] public GameObject _playerHotbar;
     [SerializeField] GameObject _storeMoonFragmentsButton;
 
     [Header("Movement, interaction and inventory")]
-    public float maxSpeed, speed;
+    public float maxSpeed; 
+    public float speed;
     public float movementX, movementY, directionState;
     public Vector2 lookDir;
     public bool isMoving, isSitting;
@@ -212,23 +211,6 @@ public class PlayerController : MonoBehaviour
         else
             speed = maxSpeed;
 
-
-        // if (playerInfos.inventoryState == 1)
-        // {
-        //     lookDir = Camera.main.ScreenToWorldPoint(mousePos);
-        //     var dir = lookDir.normalized - playerRangedWeapon.position;
-        //     playerRangedWeapon.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
-
-        //     anim.SetFloat("LookDirX", dir.x);
-        //     anim.SetFloat("LookDirY", dir.y);
-
-        //     if (dir.x > 0) //right
-        //         playerSpriteRenderer.flipX = false;
-
-        //     else if (dir.x < 0) //left
-        //         playerSpriteRenderer.flipX = true;
-        // }
-
         DetermineDirectionState();
 
         anim.SetBool("isDashing", isDashing);
@@ -356,15 +338,11 @@ public class PlayerController : MonoBehaviour
         if (inventoryHotbarState == 0)
         {
             inventoryHotbarState = 1;
-            _playerHotbar.SetActive(false);
-            _playerInventory.SetActive(true);
             //Time.timeScale = 0f;
         }
         else if (inventoryHotbarState == 1)
         {
             inventoryHotbarState = 0;
-            _playerHotbar.SetActive(true);
-            _playerInventory.SetActive(false);
             //Time.timeScale = 1f;
         }
     }

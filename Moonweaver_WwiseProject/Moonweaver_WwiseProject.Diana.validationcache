@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ValidationCache Version="1" SchemaVersion="103">
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1663349967" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\States\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Queries\Factory Queries.wwu" DateLow="1663348230" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1663348230" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Moonweaver_WwiseProject.wproj" DateLow="1663350026" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Moonweaver_WwiseProject.Diana.wsettings" DateLow="1664442101" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1663349967" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1663349967" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1663349967" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Events\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Effects\Factory Effects.wwu" DateLow="1663348230" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1663348230" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1663349967" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1663350140" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
-	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1663349968" DateHigh="0"/>
+<ValidationCache Version="1" SchemaVersion="110">
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1673858314" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\States\Default Work Unit.wwu" DateLow="1673858314" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Queries\Factory Queries.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Moonweaver_WwiseProject.wproj" DateLow="1673858935" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Moonweaver_WwiseProject.Diana.wsettings" DateLow="1673860109" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Events\Default Work Unit.wwu" DateLow="1673858314" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Effects\Factory Effects.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1673858315" DateHigh="0"/>
+	<ValidationCacheItem File="D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1673860107" DateHigh="0"/>
 </ValidationCache>

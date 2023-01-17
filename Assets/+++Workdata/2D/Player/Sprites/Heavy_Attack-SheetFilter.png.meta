@@ -1,0 +1,2544 @@
+fileFormatVersion: 2
+guid: 9d7cc04180113ef4f95de45fbaa99382
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 272
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6875, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804e9034c31020641b76c89b0ab9a271
+      internalID: 1095874641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 271
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.7407408, y: 0.04761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2dd7038200b6c49b9be49e8943c66e
+      internalID: -1334990274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 270
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.7307693, y: 0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858c8952a5614dd40ad517a5757c8c9f
+      internalID: 854416389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 269
+        width: 25
+        height: 23
+      alignment: 9
+      pivot: {x: 0.71999997, y: 0.13043478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36371e28ac1cd384dbc8b20324763985
+      internalID: -883325050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_4
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 265
+        width: 46
+        height: 31
+      alignment: 9
+      pivot: {x: 0.3478261, y: 0.2580645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92efe060badd35444a4dd0b055fee00b
+      internalID: 1945758415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_5
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 265
+        width: 40
+        height: 31
+      alignment: 9
+      pivot: {x: 0.3, y: 0.22580644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3d9d049b280f64ba87d1de3d7b38bf
+      internalID: 916020879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 269
+        width: 41
+        height: 27
+      alignment: 9
+      pivot: {x: 0.29268292, y: 0.11111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73141741b9981042b8ec084c19e4741
+      internalID: 1160439508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_7
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 272
+        width: 40
+        height: 24
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29599c4ca1511e4a9625f6a37d4f8d7
+      internalID: 592620470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_8
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 270
+        width: 35
+        height: 26
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd951e2a95c0c54f99e2d0779320cd7
+      internalID: 289872267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_9
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 263
+        width: 27
+        height: 33
+      alignment: 9
+      pivot: {x: 0.3703704, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082e118f6de79e449921b1ae790b10b3
+      internalID: -666654452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_10
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 262
+        width: 23
+        height: 34
+      alignment: 9
+      pivot: {x: 0.43478262, y: 0.29411766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b2f92ee2d985c4ca6d41118228ef12
+      internalID: -451626971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_11
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 265
+        width: 47
+        height: 33
+      alignment: 9
+      pivot: {x: 0.59574467, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740fd7d52ad9f6944a3c5e610cd349e0
+      internalID: 1812958989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_12
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 267
+        width: 42
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5952381, y: 0.16129032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea0f523b89f5734baf325b28efe66bd
+      internalID: -1370074199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_13
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 266
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8083aa9e5c28d4990615981014c5cb
+      internalID: 1691355237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_14
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 268
+        width: 24
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4166667, y: 0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d35a3b6630c640409b6a7fbf37c6827
+      internalID: -2051707350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_15
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 271
+        width: 27
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.045454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0b31b6beac66648ae859483c821b7a
+      internalID: 1115746942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_16
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 272
+        width: 23
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47826087, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086a17e6c03761e4bb9e1a033397f423
+      internalID: -2128051512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_17
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 272
+        width: 20
+        height: 21
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da24e229e8aaac34294ab830addec6f1
+      internalID: 2002476079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_18
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 271
+        width: 42
+        height: 30
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.033333335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b457df4f7a0a064e832116bf97ced34
+      internalID: 23794242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_19
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 271
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3, y: 0.033333335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f323d39440aa844d83720719473e26a
+      internalID: -698876603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_20
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 270
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.34285715, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bc337940e24ad40af385cbd7c54c9b
+      internalID: 940452071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_21
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 271
+        width: 36
+        height: 31
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.032258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6c000b409d87745bfce397d790dc32
+      internalID: 1112195498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_22
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 224
+        width: 18
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6111111, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46ed6f9d581418469ef87b93ae9c075
+      internalID: 2077297135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_23
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 18
+        height: 25
+      alignment: 9
+      pivot: {x: 0.6111111, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2554b543661cf9a47b6f48b8c07081a0
+      internalID: -405789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 18
+        height: 25
+      alignment: 9
+      pivot: {x: 0.6111111, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89aaa8cc480dfea4a866e31cc803e12d
+      internalID: 1177145154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_25
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 224
+        width: 18
+        height: 25
+      alignment: 9
+      pivot: {x: 0.6111111, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e04978ab3aac448a9f9716f5f8d637
+      internalID: 1368471398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_26
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 216
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.72727275, y: 0.37142858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d258a371d18b3f49b50f712daceb30b
+      internalID: -2118740151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_27
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 217
+        width: 24
+        height: 34
+      alignment: 9
+      pivot: {x: 0.7083334, y: 0.32352942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25005557ce32d74e82ff0cdeeb3bc48
+      internalID: 740804441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_28
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 217
+        width: 22
+        height: 33
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.24242425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f12e768f97183b4bb4860256b4dba61
+      internalID: 995874638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_29
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 217
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7124d43134445364e83a8da6679a0b93
+      internalID: 1280517880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_30
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 216
+        width: 17
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.26666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57383fbc9edb2b7449ca268838cf6130
+      internalID: -835889985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_31
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 216
+        width: 18
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26666668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff911bb8d6fce847a2dae3ea09ffe10
+      internalID: 513013387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_32
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 218
+        width: 20
+        height: 28
+      alignment: 9
+      pivot: {x: 0.45000002, y: 0.21428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48566af06d5ab2944ad6cf8ba43781f6
+      internalID: 795887756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_33
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 224
+        width: 34
+        height: 33
+      alignment: 9
+      pivot: {x: 0.47058824, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e636385377450499b90bd7f6d0e7d0
+      internalID: 72758189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_34
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 224
+        width: 34
+        height: 34
+      alignment: 9
+      pivot: {x: 0.47058824, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025f0eaaf66ae3a4da2f1096f15431ff
+      internalID: -1316311607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_35
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 224
+        width: 30
+        height: 29
+      alignment: 9
+      pivot: {x: 0.3, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfdc637d1b179f40b544bd4fdfed4d3
+      internalID: -425804290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_36
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 224
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b2db4e3f14e3f45b96b004e46c183c
+      internalID: -392491034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_37
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 224
+        width: 16
+        height: 22
+      alignment: 9
+      pivot: {x: 0.625, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701a843dd269ed747b1d6c8752837ea3
+      internalID: -1404318064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_38
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 224
+        width: 16
+        height: 22
+      alignment: 9
+      pivot: {x: 0.625, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512307b7293bc264cbbb99c0027b1491
+      internalID: -1383906049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_39
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 224
+        width: 14
+        height: 22
+      alignment: 9
+      pivot: {x: 0.6428572, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee50441f46f1174686050e9761fbb47
+      internalID: 760645283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_40
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 217
+        width: 24
+        height: 35
+      alignment: 9
+      pivot: {x: 0.375, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a9950a58f4b8d49919041298577023
+      internalID: 2144376503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_41
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 217
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 0.35999998, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee011ef0ea867344a6ae222f24f539b
+      internalID: 2059322941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_42
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 216
+        width: 15
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6, y: 0.22857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea23ee87d804b8847a5b0ee8e5ce73ae
+      internalID: -444634618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_43
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 216
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: 0.625, y: 0.23529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7948d72eb01702249b9fffb3136b429a
+      internalID: 1834768884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 14
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6428572, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdc6329b579b6440980a361ec23cbad
+      internalID: 1724330636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_45
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 160
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.72727275, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86af4ac31c65e2641a64ad8a16bcd11b
+      internalID: 887731365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_46
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 160
+        width: 21
+        height: 24
+      alignment: 9
+      pivot: {x: 0.71428573, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f51b47607b71c1469f5330b33d7c3b1
+      internalID: -1882010733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_47
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 160
+        width: 20
+        height: 24
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc3d06788378c743a1d9a0ef690c965
+      internalID: -810282539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_48
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 156
+        width: 47
+        height: 34
+      alignment: 9
+      pivot: {x: 0.3829787, y: 0.11764706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5866062e7ebdcf4f8b1468163f15a4b
+      internalID: -629448782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_49
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 155
+        width: 37
+        height: 35
+      alignment: 9
+      pivot: {x: 0.32432434, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0007d2f2dbd322044adfc7e7dc59b50d
+      internalID: 1468836308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_50
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 159
+        width: 35
+        height: 32
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.03125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3b26e017b3ac04ab2afce3a0b669c1
+      internalID: -1841977141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_51
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 160
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.3125, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22aede2ce487ad4b8f0e10f7c13ad69
+      internalID: -2141666267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_52
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 159
+        width: 31
+        height: 26
+      alignment: 9
+      pivot: {x: 0.29032257, y: 0.03846154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10314625b061de84493c4eab561e2b64
+      internalID: -2102781705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_53
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 159
+        width: 29
+        height: 25
+      alignment: 9
+      pivot: {x: 0.31034482, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39844b4a715a5b41a88b595ace9a8e0
+      internalID: 401207246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_54
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 156
+        width: 26
+        height: 28
+      alignment: 9
+      pivot: {x: 0.34615386, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3677ed9e358b7604aa32cc2facd2fd58
+      internalID: 2130737244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_55
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 154
+        width: 34
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5588235, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bf550d9468c5048abadfe026f8b000
+      internalID: -584623039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_56
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 153
+        width: 30
+        height: 42
+      alignment: 9
+      pivot: {x: 0.73333335, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bba3572182d51418c8d711206150e7
+      internalID: 1906180026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_57
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 160
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.7916667, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29f2baa5ce734b4d80553254f1cc294
+      internalID: -912843652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_58
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 160
+        width: 18
+        height: 25
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d4ac694f3364047850220d73283c1e
+      internalID: -1254529369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_59
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 160
+        width: 19
+        height: 20
+      alignment: 9
+      pivot: {x: 0.6315789, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec762afea035197459a003e1eb19ff5b
+      internalID: -2080132549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_60
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 160
+        width: 18
+        height: 20
+      alignment: 9
+      pivot: {x: 0.6111111, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92362fd18456d040b1e607af05e2b0f
+      internalID: -1530805526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_61
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 160
+        width: 17
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5882353, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e0f0c0c0e0f4449af0dc41148ababa
+      internalID: -1030849296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_62
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 154
+        width: 43
+        height: 36
+      alignment: 9
+      pivot: {x: 0.3255814, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcfc84b5a916624aad4429f2e5ac180
+      internalID: 186306458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_63
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 155
+        width: 40
+        height: 35
+      alignment: 9
+      pivot: {x: 0.275, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841f44b316c86be41b3cb72cc626ce0e
+      internalID: -506992552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_64
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 158
+        width: 36
+        height: 32
+      alignment: 9
+      pivot: {x: 0.2777778, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe5868f3fc6db445a85cf0b4b8ac6c1
+      internalID: 1709959810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_65
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 159
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.3125, y: 0.03125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cead2f9e1810e8943ab7582ac31f030d
+      internalID: 117807118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_66
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 18
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6111111, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcfa7a0acb2c834f82f0b56e7c9c225
+      internalID: 1518152096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_67
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 89
+        width: 15
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6, y: 0.23333335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c33fc05205df834bb7476be0cd18808
+      internalID: 1654445485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_68
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 90
+        width: 17
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.20689654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5feecd401880a4bb053897f777e4b2
+      internalID: 2059238353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_69
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 90
+        width: 18
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.20689654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d454a7cb3473bce4fbefe8ffaefe7763
+      internalID: 785320595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_70
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 90
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d6c309d517a6440a8f43bb490a6c7c
+      internalID: 373904458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_71
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 96
+        width: 27
+        height: 35
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9de842c341b3b499cb8536bf20c03b
+      internalID: 125971251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_72
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 96
+        width: 23
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b6de80425c7304a8b43d299c535a8d
+      internalID: -151312643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_73
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 96
+        width: 18
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ae39c3ea299194f95f3358c23c1633
+      internalID: -783602512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_74
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 95
+        width: 18
+        height: 23
+      alignment: 9
+      pivot: {x: 0.7777778, y: 0.08695652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee274c51d92252489a77db549b9903c
+      internalID: -400631052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_75
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 96
+        width: 17
+        height: 23
+      alignment: 9
+      pivot: {x: 0.7647059, y: 0.04347826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4b39a8628fd894ab6f1e9be982ddae
+      internalID: 866613550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_76
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 93
+        width: 16
+        height: 26
+      alignment: 9
+      pivot: {x: 0.6875, y: 0.15384616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f1d20315a9356458d7078f3cf590c0
+      internalID: -475926009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_77
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 92
+        width: 26
+        height: 32
+      alignment: 9
+      pivot: {x: 0.61538464, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c74a68a167e10242ac5d85ed451a88b
+      internalID: -1412748469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_78
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 92
+        width: 22
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5909091, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f28f2c67410f841b610d8bf2911130
+      internalID: -404415267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_79
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 91
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.79999995, y: 0.15625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbc5b950f98f4d499527ee621e85db3
+      internalID: -1499132393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_80
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 89
+        width: 15
+        height: 32
+      alignment: 9
+      pivot: {x: 0.73333335, y: 0.21875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fddfd0f1161af74c8c5a993cac64d06
+      internalID: -1345814806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_81
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 95
+        width: 27
+        height: 25
+      alignment: 9
+      pivot: {x: 0.3703704, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f2f3341dbd3384888e865f41a0d1e9
+      internalID: 1169428412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_82
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 95
+        width: 26
+        height: 25
+      alignment: 9
+      pivot: {x: 0.3846154, y: 0.04}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8273790b4fd7bb147b446ba2aeda78de
+      internalID: -1100138155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_83
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 91
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.43478262, y: 0.1724138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99394ff772cdb348a3c931300dbe3a7
+      internalID: -1976568053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_84
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 90
+        width: 34
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5882353, y: 0.14634146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32262249bbf88a4a889c4493eec7af2
+      internalID: 1177213323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_85
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 89
+        width: 30
+        height: 42
+      alignment: 9
+      pivot: {x: 0.73333335, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37184563f0abe7246800468eb361ffa8
+      internalID: -951080739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_86
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 96
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.7916667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda7e1eae33c6524285e1a0f1c24bb39
+      internalID: -1921437165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_87
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 96
+        width: 18
+        height: 25
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fc619fd67a18343871dee3f5046b0b
+      internalID: 301468423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_88
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.625, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669e7861deb4129428262df01c55485d
+      internalID: 728736480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_89
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 29
+        width: 16
+        height: 26
+      alignment: 9
+      pivot: {x: 0.6875, y: 0.11538462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7571106ff3c3e488d368fc66418e4b
+      internalID: -897780995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_90
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 29
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37d870c599344a4cba5aa9407b87b6f
+      internalID: -1057003594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_91
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 30
+        width: 15
+        height: 24
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bd70bf4e0df374ab28f41f2445db93
+      internalID: 1014243604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_92
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 25
+        width: 44
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3409091, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382fa3464fcbf2742878ece818c172ee
+      internalID: 138783536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_93
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 24
+        width: 41
+        height: 31
+      alignment: 9
+      pivot: {x: 0.29268292, y: 0.19354838}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7a20f4aace769459ea10d0394fe5f6
+      internalID: 860076886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_94
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 28
+        width: 40
+        height: 27
+      alignment: 9
+      pivot: {x: 0.3, y: 0.074074075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a084ea123993efe468f1ae23b8653a84
+      internalID: -1311014892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_95
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 28
+        width: 38
+        height: 26
+      alignment: 9
+      pivot: {x: 0.31578946, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7304eeacabfbf4994e66f3ebd37161
+      internalID: 1781308420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_96
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 30
+        width: 35
+        height: 26
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c18c4f47be68b4896ccd3344f819d6
+      internalID: 1630467195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_97
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 23
+        width: 27
+        height: 33
+      alignment: 9
+      pivot: {x: 0.3703704, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6478dfd2e73c4de4ba3ebceecead0055
+      internalID: 1331946931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_98
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 22
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cccf421ae433e4ea413b27b70c7578
+      internalID: 868700638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_99
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 22
+        width: 44
+        height: 36
+      alignment: 9
+      pivot: {x: 0.75, y: 0.2777778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1408f4cd4e07d94e8ca8d8a2adde1b9
+      internalID: 2146914102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_100
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 21
+        width: 42
+        height: 37
+      alignment: 9
+      pivot: {x: 0.7857143, y: 0.2972973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771dcde0aa39e6747bfeec3387942930
+      internalID: 1355156906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_101
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 24
+        width: 30
+        height: 34
+      alignment: 9
+      pivot: {x: 0.90000004, y: 0.23529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4eeb994a75bf84fa66fd37c2556b1b
+      internalID: -115238841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_102
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 29
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.8636364, y: 0.10000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbb7a8d436b3cd479df5eada2b162f0
+      internalID: 1302962011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_103
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 29
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.8636364, y: 0.125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6c111e8d7c0de47813a2c88ddcc202
+      internalID: 1167007536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_104
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 25
+        width: 19
+        height: 28
+      alignment: 9
+      pivot: {x: 0.84210527, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cc892dfe1eecc488cbdea900768995
+      internalID: 1978368554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_105
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 22
+        width: 17
+        height: 31
+      alignment: 9
+      pivot: {x: 0.8235294, y: 0.32258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f1cf09d79551a448a7a2e39ac1d20a
+      internalID: 791345299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_106
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 26
+        width: 45
+        height: 36
+      alignment: 9
+      pivot: {x: 0.4, y: 0.19444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d914cdb14085405449a042a84d1147c3
+      internalID: 457433021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_107
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 28
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.3, y: 0.11764706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9468a48710eafc46b8665702d9e81a1
+      internalID: -898172728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_108
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 30
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.31578946, y: 0.0625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d18c02be9ceaf488fa6ddc9e7298cd
+      internalID: 1584771093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy_Attack-SheetFilter_109
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 32
+        width: 35
+        height: 30
+      alignment: 9
+      pivot: {x: 0.34285715, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb445272c3c20794dbf0c57d6d867fa3
+      internalID: -930013249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Heavy_Attack-SheetFilter_18: -1432618635
+      Heavy_Attack-SheetFilter_93: 860076886
+      Heavy_Attack-SheetFilter_88: 728736480
+      Heavy_Attack-SheetFilter_30: 2117388196
+      Heavy_Attack-SheetFilter_27: 740804441
+      Heavy_Attack-SheetFilter_77: -1412748469
+      Heavy_Attack-SheetFilter_56: 1906180026
+      Heavy_Attack-SheetFilter_84: 1177213323
+      Heavy_Attack-SheetFilter_33: -107191805
+      Heavy_Attack-SheetFilter_79: -1499132393
+      Heavy_Attack-SheetFilter_47: -810282539
+      Heavy_Attack-SheetFilter_99: 2146914102
+      Heavy_Attack-SheetFilter_19: -828182579
+      Heavy_Attack-SheetFilter_100: 1355156906
+      Heavy_Attack-SheetFilter_98: 868700638
+      Heavy_Attack-SheetFilter_87: 301468423
+      Heavy_Attack-SheetFilter_6: 1087273013
+      Heavy_Attack-SheetFilter_57: -912843652
+      Heavy_Attack-SheetFilter_5: 126625688
+      Heavy_Attack-SheetFilter_4: -1303988542
+      Heavy_Attack-SheetFilter_9: 456397336
+      Heavy_Attack-SheetFilter_109: -930013249
+      Heavy_Attack-SheetFilter_35: -1316311607
+      Heavy_Attack-SheetFilter_63: -506992552
+      Heavy_Attack-SheetFilter_69: 785320595
+      Heavy_Attack-SheetFilter_12: 836149249
+      Heavy_Attack-SheetFilter_50: -1841977141
+      Heavy_Attack-SheetFilter_29: 1280517880
+      Heavy_Attack-SheetFilter_17: -312265787
+      Heavy_Attack-SheetFilter_2: -1567934756
+      Heavy_Attack-SheetFilter_10: -418402510
+      Heavy_Attack-SheetFilter_64: 1709959810
+      Heavy_Attack-SheetFilter_38: -963442947
+      Heavy_Attack-SheetFilter_75: 866613550
+      Heavy_Attack-SheetFilter_104: 1978368554
+      Heavy_Attack-SheetFilter_51: -2141666267
+      Heavy_Attack-SheetFilter_107: -898172728
+      Heavy_Attack-SheetFilter_13: 1148153054
+      Heavy_Attack-SheetFilter_61: -1030849296
+      Heavy_Attack-SheetFilter_28: 995874638
+      Heavy_Attack-SheetFilter_31: -835889985
+      Heavy_Attack-SheetFilter_32: 513013387
+      Heavy_Attack-SheetFilter_0: -525842587
+      Heavy_Attack-SheetFilter_23: -405789
+      Heavy_Attack-SheetFilter_48: -629448782
+      Heavy_Attack-SheetFilter_21: -439578800
+      Heavy_Attack-SheetFilter_78: -404415267
+      Heavy_Attack-SheetFilter_42: -1383906049
+      Heavy_Attack-SheetFilter_53: 401207246
+      Heavy_Attack-SheetFilter_8: 216994426
+      Heavy_Attack-SheetFilter_20: 397116836
+      Heavy_Attack-SheetFilter_54: 2130737244
+      Heavy_Attack-SheetFilter_36: -425804290
+      Heavy_Attack-SheetFilter_73: -151312643
+      Heavy_Attack-SheetFilter_62: 186306458
+      Heavy_Attack-SheetFilter_22: 2077297135
+      Heavy_Attack-SheetFilter_25: 1368471398
+      Heavy_Attack-SheetFilter_3: -274870496
+      Heavy_Attack-SheetFilter_80: -1345814806
+      Heavy_Attack-SheetFilter_70: 373904458
+      Heavy_Attack-SheetFilter_76: -475926009
+      Heavy_Attack-SheetFilter_90: -1057003594
+      Heavy_Attack-SheetFilter_108: 1584771093
+      Heavy_Attack-SheetFilter_58: -1254529369
+      Heavy_Attack-SheetFilter_71: 125971251
+      Heavy_Attack-SheetFilter_7: 997309212
+      Heavy_Attack-SheetFilter_94: -1311014892
+      Heavy_Attack-SheetFilter_83: -1976568053
+      Heavy_Attack-SheetFilter_72: -1249559913
+      Heavy_Attack-SheetFilter_37: -392491034
+      Heavy_Attack-SheetFilter_55: -584623039
+      Heavy_Attack-SheetFilter_59: -2080132549
+      Heavy_Attack-SheetFilter_52: -2102781705
+      Heavy_Attack-SheetFilter_11: 27830999
+      Heavy_Attack-SheetFilter_1: 182222228
+      Heavy_Attack-SheetFilter_34: 72758189
+      Heavy_Attack-SheetFilter_91: 1014243604
+      Heavy_Attack-SheetFilter_26: -2118740151
+      Heavy_Attack-SheetFilter_44: 1724330636
+      Heavy_Attack-SheetFilter_65: 117807118
+      Heavy_Attack-SheetFilter_81: 1169428412
+      Heavy_Attack-SheetFilter_106: 457433021
+      Heavy_Attack-SheetFilter_39: -652845889
+      Heavy_Attack-SheetFilter_49: 1468836308
+      Heavy_Attack-SheetFilter_24: 1177145154
+      Heavy_Attack-SheetFilter_85: -951080739
+      Heavy_Attack-SheetFilter_89: -897780995
+      Heavy_Attack-SheetFilter_60: -1530805526
+      Heavy_Attack-SheetFilter_46: -1882010733
+      Heavy_Attack-SheetFilter_43: 760645283
+      Heavy_Attack-SheetFilter_102: 1302962011
+      Heavy_Attack-SheetFilter_41: -1771236772
+      Heavy_Attack-SheetFilter_67: 1654445485
+      Heavy_Attack-SheetFilter_14: 1637522713
+      Heavy_Attack-SheetFilter_15: -182844809
+      Heavy_Attack-SheetFilter_97: 1331946931
+      Heavy_Attack-SheetFilter_101: -115238841
+      Heavy_Attack-SheetFilter_66: 1518152096
+      Heavy_Attack-SheetFilter_103: 1167007536
+      Heavy_Attack-SheetFilter_68: 2059238353
+      Heavy_Attack-SheetFilter_45: 887731365
+      Heavy_Attack-SheetFilter_74: -807923361
+      Heavy_Attack-SheetFilter_96: 1630467195
+      Heavy_Attack-SheetFilter_86: -1921437165
+      Heavy_Attack-SheetFilter_40: -1404318064
+      Heavy_Attack-SheetFilter_82: -1100138155
+      Heavy_Attack-SheetFilter_16: -1085451311
+      Heavy_Attack-SheetFilter_92: 138783536
+      Heavy_Attack-SheetFilter_105: 791345299
+      Heavy_Attack-SheetFilter_95: 1781308420
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// controls all the infos of the player such as hp, stamina, ultCharge, whether they're alive, if they obtained the ranged weapon and more
+/// controls all the infos of the player such as hp, stamina, ultCharge, whether they're alive, if they obtained their second weapon and more
 /// </summary>
 public class PlayerInfos : MonoBehaviour, IDataPersistence
 {
@@ -27,6 +27,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     [Header ("Player Stats")]
     public int playerLevel;
     public int collectedMoonFragments;
+    public int inventoryState;
     public float playerMaxHealth;
     public float playerHealth;
     public float staminaRechargeSpeed;
@@ -38,14 +39,13 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     public float playerUltDamage;
     public float playerHealthPercentage;
     public float playerStaminaPercentage;
-    public int inventoryState;
     public Vector3 respawnPos;
     Vector3 startingPos;
 
 
     [Header ("Bools")]
     public bool isAlive;
-    public bool obtainedRangedWeapon;
+    public bool obtainedSecondaryWeapon;
     public bool obtainedMoonFragment;
     public bool isDamaged;
     [SerializeField] bool swappedWeapon;
@@ -93,11 +93,11 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         this.playerLevel = data.playerLevel;
         this.playerMaxHealth = data.playerHealth;
         this.playerMaxStamina = data.playerStamina;
-        this.obtainedRangedWeapon = data.obtainedRangedWeapon;
+        this.obtainedSecondaryWeapon = data.obtainedSecondaryWeapon;
         this.obtainedMoonFragment = data.obtainedMoonFragment;
         this.collectedMoonFragments = data.moonFragments;
         this.transform.position = data.playerPos;
-        if(data.obtainedRangedWeapon)
+        if(data.obtainedSecondaryWeapon)
         {
             Destroy(GameObject.FindGameObjectWithTag("WeaponPickup"));
         }
@@ -119,7 +119,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         data.playerLevel = this.playerLevel;
         data.playerHealth = this.playerMaxHealth;
         data.playerStamina = this.playerMaxStamina;
-        data.obtainedRangedWeapon = this.obtainedRangedWeapon;
+        data.obtainedSecondaryWeapon = this.obtainedSecondaryWeapon;
         data.obtainedMoonFragment = this.obtainedMoonFragment;
         data.moonFragments = this.collectedMoonFragments;
         data.playerPos = this.transform.position;
@@ -152,7 +152,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     public void SwapWeapon()
     {
-        if(obtainedRangedWeapon)
+        if(obtainedSecondaryWeapon)
             swappedWeapon = !swappedWeapon;
 
         if(swappedWeapon)
@@ -160,7 +160,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         else
             inventoryState = 0;
 
-        playerController.anim.SetFloat("InventoryState", inventoryState);
+        playerController.anim.SetInteger("inventoryState", inventoryState);
     }
 
     /// <summary>

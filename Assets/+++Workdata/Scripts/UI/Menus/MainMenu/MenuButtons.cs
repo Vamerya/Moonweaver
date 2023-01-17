@@ -7,6 +7,7 @@ public class MenuButtons : MonoBehaviour
 {
     #region Variables
     [SerializeField] DataPersistenceManager dataPersistenceManager;
+    [SerializeField] OptionsBehaviour optionsBehaviour;
     bool mainMenuActive;
     bool pauseMenuActive;
     [SerializeField] GameObject _mainMenu;
@@ -32,6 +33,7 @@ public class MenuButtons : MonoBehaviour
         if (activeScene == "MainGame")
         {
             dataPersistenceManager.SaveGame();
+            StartCoroutine(WaitSoThisFlipFinallySaves());
             SceneManager.LoadScene(sceneName);
         }
         else
@@ -55,9 +57,12 @@ public class MenuButtons : MonoBehaviour
             Time.timeScale = 0f;
             _pauseMenu.SetActive(true);
             pauseMenuActive = true;
+            _options.SetActive(false);
+            optionsBehaviour.CloseAllOptions();
         }
         else if (pauseMenuActive)
         {
+            Time.timeScale = 1f;
             _pauseMenu.SetActive(false);
             pauseMenuActive = false;
         }
@@ -102,5 +107,14 @@ public class MenuButtons : MonoBehaviour
             _options.SetActive(false);
             pauseMenuActive = false;
         }
+    }
+
+    /// <summary>
+    /// this clusterfuck is just here so that the savni system finally saves when scenes are switched
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator WaitSoThisFlipFinallySaves()
+    {
+        yield return new WaitForSecondsRealtime(2f);
     }
 }

@@ -9,6 +9,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
+    [SerializeField] PlayerInfos playerInfos;
     [SerializeField] PlayerCombat playerCombat;
     [SerializeField] public float playerWeaponDamage;
     [SerializeField] public float playerRangedDamage;
@@ -26,6 +27,10 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     // - Luck -> crit damage
     #endregion
 
+    void Awake()
+    {
+        playerInfos = gameObject.GetComponentInParent<PlayerInfos>();
+    }
     void Start()
     {
 
@@ -54,8 +59,16 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     /// <returns>playerWeaponDamage</returns>
     public float DetermineWeaponDamage()
     {
-        playerWeaponDamage = 20 + (Mathf.Log(playerLevelBehaviour.strength, 5) * 50);
-        playerWeaponDamage = Mathf.Floor(playerWeaponDamage);
+        if(playerInfos.inventoryState == 0)
+        {
+            playerWeaponDamage = 20 + (Mathf.Log(playerLevelBehaviour.dexterity, 5) * 45);
+            playerWeaponDamage = Mathf.Floor(playerWeaponDamage);
+        }
+        else if(playerInfos.inventoryState == 1)
+        {
+            playerWeaponDamage = 50 + (Mathf.Log(playerLevelBehaviour.strength, 5) * 50);
+            playerWeaponDamage = Mathf.Floor(playerWeaponDamage);
+        }
 
         return playerWeaponDamage;
     }

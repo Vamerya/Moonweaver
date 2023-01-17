@@ -42,7 +42,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if (collision.CompareTag("WeaponPickup") && playerController.isInteracting) //COLLECT RANGED WEAPON
         {
-            playerInfos.obtainedRangedWeapon = true;
+            playerInfos.obtainedSecondaryWeapon = true;
             Destroy(collision.gameObject);
         }
     }

@@ -1,0 +1,828 @@
+fileFormatVersion: 2
+guid: c27741cd3dba1804cb29937415dd7325
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 451
+        width: 23
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672bab25100621a4d8dcb5f79e2c9ec7
+      internalID: -1419479793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 424
+        width: 34
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b52f3fc81d903429e4e7ba558ccc4b
+      internalID: -1283714273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 452
+        width: 33
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d318e1d60ba909c44a8bc8c91b2af0e9
+      internalID: -1665458868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 425
+        width: 30
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b829ddc23e7984d9223da31eec0d35
+      internalID: 754278901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 452
+        width: 34
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b86dec193967e04ea068d791e662850
+      internalID: 1318109301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_5
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 425
+        width: 35
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9f9296540bef041aefb96eeb886ed8
+      internalID: 639177567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_6
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 420
+        width: 75
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb02fc9cb3042d54cb623a446c537a20
+      internalID: 2005202030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_7
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 420
+        width: 75
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1a830a0faf3ce42a99ce547f8bf6dc
+      internalID: 1621225572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_8
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 425
+        width: 35
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200307ae800169b4c86d6c744088973a
+      internalID: 1167198762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_9
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 452
+        width: 34
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537abc3f552ff434b99a83e3ef8e163f
+      internalID: -1551601603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_10
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 425
+        width: 23
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b083929c5ef9b4b98d37706893017a
+      internalID: -1053149245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_11
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 455
+        width: 33
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9d161a063cb414e95313cab612178d
+      internalID: 611431479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_12
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 424
+        width: 34
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691e9ec173a493f429262ba539fb7897
+      internalID: 346927048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 451
+        width: 23
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7717b52bbd25c43b6848adc8f33552
+      internalID: -364155876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 252
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb58fe34a3c39d745938f470589e8a8f
+      internalID: -1321130907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_15
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 253
+        width: 75
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a4cab3d2c47984faf808a3efa18e45
+      internalID: 73262969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_16
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 253
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509fcd1f991d06a44a0205a074231ad9
+      internalID: 262377579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_17
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 252
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4781f69fd7b7aaf43bc61789b9505e58
+      internalID: 432742373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_18
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 252
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d61e92bd1b28c642a29dd37e39fb168
+      internalID: 1172686571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_19
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 253
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb536454b7d1cf4d9539327dbd38c8e
+      internalID: -882033799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_20
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 253
+        width: 75
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78a8eb7efcec2e43aa13591a2bd9f29
+      internalID: 576966076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_21
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 252
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365a0f13cc17b634185d30b95f3387ae
+      internalID: 1189457539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_22
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 120
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ab8bd251e5a5547a682a8ac78b003b
+      internalID: 1766266280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_23
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 138
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798e01e9e872f804398cc0d65cc7d5af
+      internalID: -52440049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_24
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 118
+        width: 36
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b51a04cfcb44449ae3830b78bc71ee
+      internalID: -957737265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_25
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 119
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6281af60d2d284d9359d6b5b9659bb
+      internalID: -1142639956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_26
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 118
+        width: 77
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d012e51610b45468b0b3e7fc214baa
+      internalID: 1540064870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_27
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 117
+        width: 77
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f46ccde750ddf648a38c8179b6865f4
+      internalID: 1408728497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_28
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 119
+        width: 76
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c157be72609e4d947b37b9ceefa46d91
+      internalID: -1297206609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_29
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 117
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c757df457c0af24198225401030cc6f
+      internalID: 1317889261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_30
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 138
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc265686c84aa1640a1c7f46ba5b81d2
+      internalID: 602645292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ruine_Tiles_Moonweaver_31
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 120
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200407271ba5f3b4bbc264c8be326ffd
+      internalID: 2050391151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ruine_Tiles_Moonweaver_15: 73262969
+      Ruine_Tiles_Moonweaver_3: 754278901
+      Ruine_Tiles_Moonweaver_31: 2050391151
+      Ruine_Tiles_Moonweaver_16: 262377579
+      Ruine_Tiles_Moonweaver_20: 576966076
+      Ruine_Tiles_Moonweaver_27: 1408728497
+      Ruine_Tiles_Moonweaver_6: 2005202030
+      Ruine_Tiles_Moonweaver_9: -1551601603
+      Ruine_Tiles_Moonweaver_30: 602645292
+      Ruine_Tiles_Moonweaver_0: -1419479793
+      Ruine_Tiles_Moonweaver_18: 1172686571
+      Ruine_Tiles_Moonweaver_10: -1053149245
+      Ruine_Tiles_Moonweaver_21: 1189457539
+      Ruine_Tiles_Moonweaver_25: -1142639956
+      Ruine_Tiles_Moonweaver_29: 1317889261
+      Ruine_Tiles_Moonweaver_12: 346927048
+      Ruine_Tiles_Moonweaver_24: -957737265
+      Ruine_Tiles_Moonweaver_28: -1297206609
+      Ruine_Tiles_Moonweaver_5: 639177567
+      Ruine_Tiles_Moonweaver_13: -364155876
+      Ruine_Tiles_Moonweaver_8: 1167198762
+      Ruine_Tiles_Moonweaver_4: 1318109301
+      Ruine_Tiles_Moonweaver_22: 1766266280
+      Ruine_Tiles_Moonweaver_26: 1540064870
+      Ruine_Tiles_Moonweaver_7: 1621225572
+      Ruine_Tiles_Moonweaver_11: 611431479
+      Ruine_Tiles_Moonweaver_19: -882033799
+      Ruine_Tiles_Moonweaver_17: 432742373
+      Ruine_Tiles_Moonweaver_1: -1283714273
+      Ruine_Tiles_Moonweaver_23: -52440049
+      Ruine_Tiles_Moonweaver_2: -1665458868
+      Ruine_Tiles_Moonweaver_14: -1321130907
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

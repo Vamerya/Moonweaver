@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Rendering.Universal;
 
 /// <summary>
 /// Controls the general Behaviour of the enemies
@@ -39,6 +40,9 @@ public class EnemyBehaviour : MonoBehaviour
         FaceVelocity();
     }
 
+    /// <summary>
+    /// Checks what the desired velocity is and flips the sprite based on the direction
+    /// </summary>
     void FaceVelocity()
     {
         direction = aiPath.desiredVelocity;
@@ -47,12 +51,14 @@ public class EnemyBehaviour : MonoBehaviour
         if(direction.x < 0)
         {
             spriteRenderer.flipX = true;        //left
-            GetComponentInChildren<PolygonCollider2D>().transform.localScale = new Vector3(-1, 1, 1);
+            GetComponentInChildren<BoxCollider2D>().transform.localScale = new Vector3(-1, 1, 1);
+            GetComponentInChildren<Light2D>().transform.localScale = new Vector3(-1, 1, 1);
         }
         else if(direction.x > 0)
         {
             spriteRenderer.flipX = false;       //right
-            GetComponentInChildren<PolygonCollider2D>().transform.localScale = new Vector3(1, 1, 1);
+            GetComponentInChildren<BoxCollider2D>().transform.localScale = new Vector3(1, 1, 1);
+            GetComponentInChildren<Light2D>().transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }

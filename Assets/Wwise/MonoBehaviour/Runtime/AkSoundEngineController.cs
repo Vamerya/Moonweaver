@@ -1,5 +1,23 @@
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
 
+/*******************************************************************************
+The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
+Technology released in source code form as part of the game integration package.
+The content of this file may not be used without valid licenses to the
+AUDIOKINETIC Wwise Technology.
+Note that the use of the game engine is subject to the Unity(R) Terms of
+Service at https://unity3d.com/legal/terms-of-service
+ 
+License Usage
+ 
+Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
+this file in accordance with the end user license agreement provided with the
+software or, alternatively, in accordance with the terms contained
+in a written agreement between you and Audiokinetic Inc.
+Copyright (c) 2022 Audiokinetic Inc.
+*******************************************************************************/
+
+
 #if AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES
 using AK.Wwise.Unity.WwiseAddressables;
 #endif
@@ -63,6 +81,9 @@ public class AkSoundEngineController
 		AkCallbackManager.PostCallbacks();
 #if !(AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES)
 		AkBankManager.DoUnloadBanks();
+#endif
+#if UNITY_WEBGL && !UNITY_EDITOR
+		AkSoundEngine.PerformStreamMgrIO();
 #endif
 		AkSoundEngine.RenderAudio();
 	}
@@ -196,6 +217,18 @@ public class AkSoundEngineController
 
 	public void OnApplicationFocus(bool focus)
 	{
+	}
+#elif UNITY_WEBGL
+	// On WebGL, allow background audio when browser is un-focused in development builds to make the Wwise Profiler usable.
+	public void OnApplicationPause(bool pauseStatus) 
+	{
+		if (!UnityEngine.Debug.isDebugBuild)
+			ActivateAudio(!pauseStatus);
+	}
+	public void OnApplicationFocus(bool focus)
+	{
+		if (!UnityEngine.Debug.isDebugBuild)
+			ActivateAudio(focus, AkWwiseInitializationSettings.ActivePlatformSettings.RenderDuringFocusLoss);
 	}
 #else
 	public void OnApplicationPause(bool pauseStatus) 

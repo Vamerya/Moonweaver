@@ -14,14 +14,17 @@ public class EnemyCombatBehaviour : MonoBehaviour
     public PlayerInRangeCheck playerInRangeCheck;
     PlayerController playerController;
     AIDestinationSetter destinationSetter;
+    AIPath aiPath;
     Light2D eyeLight;
     Color defaultEyeColor;
 
     [SerializeField] Transform playerPosition;
+    [SerializeField] GameObject dashSpot;
 
     [SerializeField] bool canAttack;
     [SerializeField] bool isAttacking;
     [SerializeField] int attackID;
+    [SerializeField] float maxSpeed;
     [SerializeField] float attackTimer;
     [SerializeField] float attackCooldown;
     [SerializeField] float attackCooldownInit;
@@ -40,6 +43,8 @@ public class EnemyCombatBehaviour : MonoBehaviour
         destinationSetter = gameObject.GetComponent<AIDestinationSetter>();
         playerPosition = playerController.transform;
         destinationSetter.target = playerPosition;
+        aiPath = gameObject.GetComponent<AIPath>();
+        maxSpeed = aiPath.maxSpeed;
     }
 
     void Start()
@@ -65,8 +70,8 @@ public class EnemyCombatBehaviour : MonoBehaviour
         else
             canAttack = false;
 
-        if(canAttack)
-            EnemyAttack(Random.Range(0, 2));
+        if(canAttack && !isAttacking)
+            EnemyAttack(Random.Range(0, 3));
     }
 
     /// <summary>
@@ -78,12 +83,12 @@ public class EnemyCombatBehaviour : MonoBehaviour
         switch(_attackID)
         {
             case 0:
-                EnemyIsAttacking();
+                EnemyAttack1(0);
                 //StartCoroutine(StopAttacking());
                 break;
 
             case 1:
-                EnemyIsAttacking();
+                EnemyAttack1(1);
                 //StartCoroutine(StopAttacking());
                 break;
 
@@ -97,22 +102,38 @@ public class EnemyCombatBehaviour : MonoBehaviour
                 break;
         }
 
-        enemyBehaviour.anim.SetFloat("attackState", _attackID);
         enemyBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
 
     /// <summary>
     /// controls the bool for the enemy and its animator
     /// </summary>
-    void EnemyIsAttacking()
+    void EnemyAttack1(int _attackID)
     {
         isAttacking = true;
         enemyBehaviour.anim.SetBool("isAttacking", isAttacking);
+        enemyBehaviour.anim.SetInteger("attackState", _attackID);
     }
 
+    /// <summary>
+    /// one of the dashing points is picked as a new follow target and then gets reset after a set amount of time
+    /// </summary>
     void EnemyDodge()
     {
+        isAttacking = true;
+        destinationSetter.target = dashSpot.transform;
+        aiPath.maxSpeed *= 1.1f;
 
+        StartCoroutine(ResetFollowTarget());
+    }
+
+    IEnumerator ResetFollowTarget()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        destinationSetter.target = playerPosition;
+        yield return new WaitForSecondsRealtime(1.5f);
+        aiPath.maxSpeed = maxSpeed;
+        isAttacking = false;
     }
 
     /// <summary>

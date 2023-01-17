@@ -12,6 +12,7 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     [SerializeField] DisplayMoonwaterAmount moonwaterAmount;
     [SerializeField] float healAmount;
     [SerializeField] bool isHealing;
+    [SerializeField] bool canHeal;
     public int maxAmount, amountAvailable;
 
     /// <summary>
@@ -35,8 +36,6 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     {
         if(isHealing)
             playerController.speed = 0;
-        else
-            playerController.speed = playerController.maxSpeed;
     }
 
     /// <summary>
@@ -59,15 +58,15 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     }
 
     /// <summary>
-    /// if the player has more than 0 flasks available and less hp than their maxHP the available amount gets decreased by one, and the player is healed
-    /// by the determined amount of hp
+    /// if the player has more than 0 flasks available and less hp than their maxHP the available amount of healing flasks gets decreased by one
     /// afterwards the available amount of flasks is updated
     /// </summary>
     public void UseFlask()
     {
-        if(amountAvailable > 0 && playerInfos.playerHealth < playerInfos.playerMaxHealth)
+        if(amountAvailable > 0 && playerInfos.playerHealth < playerInfos.playerMaxHealth && canHeal)
         {
             isHealing = true;
+            canHeal = false;
             amountAvailable -= 1;
             moonwaterAmount.UpdateMoonWaterAmount();
 
@@ -84,9 +83,12 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
         moonwaterAmount.UpdateMoonWaterAmount();
     }
 
+    /// <summary>
+    /// the player is healed by an 8th of a specific amount 8 times during the animation
+    /// </summary>
     public void PlayerHealing()
     {
-        float amountToHeal = (playerInfos.playerMaxHealth * healAmount) / 3;
+        float amountToHeal = (playerInfos.playerMaxHealth * healAmount) / 8;
         amountToHeal = Mathf.RoundToInt(amountToHeal);
         playerInfos.playerHealth += amountToHeal;
         if (playerInfos.playerHealth > playerInfos.playerMaxHealth)
@@ -97,6 +99,8 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     public void FinishedHealing()
     {
         isHealing = false;
+        canHeal = true;
+        playerController.speed = playerController.maxSpeed; 
         playerController.anim.SetBool("isHealing", isHealing);
     }
 }

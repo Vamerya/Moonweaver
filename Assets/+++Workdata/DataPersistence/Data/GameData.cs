@@ -10,7 +10,7 @@ public class GameData
     public int moonwater;
     public int moonFragments;
     public float storedMoonFragments;
-    public bool obtainedRangedWeapon;
+    public bool obtainedSecondaryWeapon;
     public bool obtainedMoonFragment;
     public float playerHealth;
     public float playerStamina;
@@ -37,7 +37,7 @@ public class GameData
         this.storedMoonFragments = 0;
         this.playerLevel = 1;
         this.playerHealth = 400;
-        this.playerStamina = 150;
+        this.playerStamina = 120;
         this.vigor = 1;
         this.endurance = 1;
         this.mind = 1;
@@ -47,9 +47,9 @@ public class GameData
         this.luck = 1;
         this.moonwater = 3;
         this.moonFragments = 0;
-        playerPos = Vector3.zero;
+        playerPos = new Vector3(5, .85f, 0);
         respawnPos = Vector3.zero;
-        obtainedRangedWeapon = false;
+        obtainedSecondaryWeapon = false;
         obtainedMoonFragment = false;
         bossesDefeated = new SerializableDictionary<string, bool>();
     }

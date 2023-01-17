@@ -11,12 +11,12 @@ public class BossCombatBehaviour : MonoBehaviour
     PlayerController playerController;
     AIDestinationSetter destinationSetter;
     Rigidbody2D rb;
-    AIPath aIPath;
+    AIPath aiPath;
 
     [SerializeField] Transform playerPosition;
     public Vector2 distanceToPlayer;
     [SerializeField] GameObject spikePrefab;
-    [SerializeField] GameObject[] dashSpots;
+    [SerializeField] GameObject dashSpot;
     [SerializeField] List<GameObject> summonedSpikes;
 
     [SerializeField] bool canAttack;
@@ -26,6 +26,7 @@ public class BossCombatBehaviour : MonoBehaviour
     [SerializeField] float dashCooldown;
     [SerializeField] float dashCooldownInit;
     [SerializeField] float maxSpeed;
+    [SerializeField] int attackCounter;
 
     [SerializeField] bool methodDone;
 
@@ -43,8 +44,8 @@ public class BossCombatBehaviour : MonoBehaviour
         playerInRangeCheck = gameObject.GetComponentInChildren<PlayerInRangeCheck>();
         playerPosition = playerController.transform;
         destinationSetter.target = playerPosition;
-        aIPath = gameObject.GetComponent<AIPath>();
-        maxSpeed = aIPath.maxSpeed;
+        aiPath = gameObject.GetComponent<AIPath>();
+        maxSpeed = aiPath.maxSpeed;
     }
 
     void Start()
@@ -66,10 +67,10 @@ public class BossCombatBehaviour : MonoBehaviour
         else
             canAttack = false;
 
-        if(dashCooldown > 0)
-            dashCooldown -= Time.deltaTime;
-        else
-            BossDodge();
+        // if (dashCooldown > 0)
+        //     dashCooldown -= Time.deltaTime;
+        // else
+        //     BossDodge();
 
         if (canAttack && !isAttacking)
             EnemyAttack(Random.Range(0, 2));
@@ -88,7 +89,7 @@ public class BossCombatBehaviour : MonoBehaviour
             case 0:
                 Attack1();
                 break;
-                
+
             case 1:
                 Attack2();
                 break;
@@ -98,37 +99,36 @@ public class BossCombatBehaviour : MonoBehaviour
                 break;
         }
 
-        Debug.LogWarning(_attackID);
         bossBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
 
     /// <summary>
     /// controls the bool for the enemy and its animator
     /// </summary>
-    void BossAttack(int _attackID)
+    void BossAttack(int _attackState)
     {
-        isAttacking = true;
-        bossBehaviour.anim.SetFloat("attackState", _attackID);
+        bossBehaviour.anim.SetInteger("attackState", _attackState);
         bossBehaviour.anim.SetBool("isAttacking", isAttacking);
     }
 
-/// <summary>
-/// one of the dashing points is picked as a new follow target and then gets reset after a set amount of time
-/// </summary>
+    /// <summary>
+    /// one of the dashing points is picked as a new follow target and then gets reset after a set amount of time
+    /// </summary>
     void BossDodge()
     {
-        var dashSpot = Random.Range(0, dashSpots.Length);
-        destinationSetter.target = dashSpots[dashSpot].transform;
-        aIPath.maxSpeed *= 2;
+        destinationSetter.target = dashSpot.transform;
+        aiPath.maxSpeed *= 2;
         dashCooldown = Random.Range(dashCooldownInit - 2, dashCooldownInit + 2);
+
+        StartCoroutine(ResetFollowTarget());
     }
 
     IEnumerator ResetFollowTarget()
     {
         yield return new WaitForSecondsRealtime(1f);
         destinationSetter.target = playerPosition;
-        yield return new WaitForSecondsRealtime(1f);
-        aIPath.maxSpeed = maxSpeed;
+        yield return new WaitForSecondsRealtime(1.5f);
+        aiPath.maxSpeed = maxSpeed;
     }
 
     IEnumerator SummonSpike()
@@ -139,7 +139,7 @@ public class BossCombatBehaviour : MonoBehaviour
         spike.GetComponent<SpikeBehaviour>().DetermineSpikeDamage(bossInfos.bossDamage / 5);
         summonedSpikes.Add(spike);
     }
-    
+
     void DestroySpike()
     {
         for (int i = 0; i < summonedSpikes.Count; i = 0)
@@ -155,22 +155,19 @@ public class BossCombatBehaviour : MonoBehaviour
         isAttacking = true;
         BossDodge();
         StartCoroutine(SummonSpike());
-        StartCoroutine(ResetFollowTarget());
-        BossAttack(1);
+        BossAttack(0);
     }
 
     void Attack2()
     {
         isAttacking = true;
         BossDodge();
-        StartCoroutine(ResetFollowTarget());
         BossDodge();
-        StartCoroutine(ResetFollowTarget());
-        BossAttack(2);
+        BossAttack(1);
     }
 
     /// <summary>
-    /// controls the bool for the enemy and its animator and also resets its cooldown until the next attack
+    /// controls the bool for the enemy and its animator and also resets its cooldown for the next attack
     /// </summary>
     void StopAttacking()
     {

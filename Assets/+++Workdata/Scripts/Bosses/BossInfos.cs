@@ -25,6 +25,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     [SerializeField] TextMeshProUGUI nameAndTitle;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] GameObject moonFragment;
+    [SerializeField] Color burnColor;
     [SerializeField] float burningTimer, burningTimerInit;
     [SerializeField] float knockbackForce = 10;
     Color mainColor;
@@ -90,7 +91,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
             isBurning = false;
 
         if (isBurning)
-            bossBehaviour.spriteRenderer.color = Color.blue;
+            bossBehaviour.spriteRenderer.color = burnColor;
         else
             bossBehaviour.spriteRenderer.color = mainColor;
     }

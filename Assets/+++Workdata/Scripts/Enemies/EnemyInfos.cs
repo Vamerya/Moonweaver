@@ -143,7 +143,7 @@ public class EnemyInfos : MonoBehaviour
     }
 
     /// <summary>
-    /// calls the EnemyTakeDamage upon colliding with either the players melee weapon or one of the projectiles, grabbing references to either 
+    /// calls the EnemyTakeDamage upon colliding with the players melee weapon, grabbing references to either 
     /// weapons behaviour in order to input the damage
     /// if the players faith level is above 1 the enemy is also burning with the amount of damage input from the respective function
     /// </summary>
@@ -152,7 +152,7 @@ public class EnemyInfos : MonoBehaviour
     {
         if(collision.CompareTag("Weapon"))
         {
-            enemyBehaviour.rb.AddForce((enemyBehaviour.aiPath.desiredVelocity * -1) * knockbackForce, ForceMode2D.Force);
+            EnemyKnockback();
             EnemyTakeDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DamageEnemyMelee());
             if(collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
             {
@@ -162,5 +162,15 @@ public class EnemyInfos : MonoBehaviour
             }
             Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
         }
+    }
+
+    IEnumerator EnemyKnockback()
+    {
+        var velo = enemyBehaviour.aiPath.maxSpeed;
+        enemyBehaviour.aiPath.maxSpeed = 0;
+        enemyBehaviour.rb.AddForce((enemyBehaviour.aiPath.desiredVelocity * -1) * knockbackForce, ForceMode2D.Impulse);
+        yield return new WaitForSecondsRealtime(.3f);
+        enemyBehaviour.aiPath.maxSpeed = velo;
+        //Debug.LogError(enemyBehaviour.rb.velocity);
     }
 }

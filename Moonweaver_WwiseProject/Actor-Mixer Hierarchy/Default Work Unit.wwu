@@ -3,7 +3,10 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{7BE573DD-43F6-4B7F-B441-1D21C4CDAAC8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Overgrowth" ID="{81430CDB-A181-452F-8A98-EF6C58BF5FF2}" ShortID="753968126">
+				<Sound Name="Veronica, the Queen Slayer" ID="{9553FA46-B707-479A-8BF5-A862C4F45F8A}" ShortID="970902119">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
@@ -13,16 +16,32 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Overgrowth (1)" ID="{7EE06DF0-1D78-40A6-AD45-9BEA8BC7C3D8}">
+						<AudioFileSource Name="Veronica, the Queen Slayer" ID="{B349ECAF-89BA-4409-875E-BDFB46BC1349}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="34.90909"/>
+								<Property Name="LoopEnd" Type="Real64" Value="279.301171700909"/>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
-							<AudioFile>Overgrowth (1).wav</AudioFile>
+							<AudioFile>Veronica, the Queen Slayer.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="94768878"/>
+								<MediaID ID="578271736"/>
 							</MediaIDList>
+							<PluginInnerObjectList>
+								<List Name="Markers">
+									<PluginInnerObject Name="" ID="{4A1BE3F9-83C5-493D-B3DC-90822D80CC9E}" PluginName="Marker" CompanyID="0" PluginID="993">
+										<PropertyList>
+											<Property Name="Label" Type="string" Value="Loop Start "/>
+											<Property Name="Time" Type="Real64" Value="34.9090929705215"/>
+										</PropertyList>
+									</PluginInnerObject>
+								</List>
+							</PluginInnerObjectList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Overgrowth (1)" ID="{7EE06DF0-1D78-40A6-AD45-9BEA8BC7C3D8}" Platform="Linked"/>
+						<ActiveSource Name="Veronica, the Queen Slayer" ID="{B349ECAF-89BA-4409-875E-BDFB46BC1349}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

@@ -214,6 +214,8 @@ public class PlayerController : MonoBehaviour
         DetermineDirectionState();
 
         anim.SetBool("isDashing", isDashing);
+
+        Debug.LogWarning(Time.timeScale);
     }
 
     void RotateRangedWeapon()

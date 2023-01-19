@@ -10,6 +10,9 @@ public class ShrineBehaviour : MonoBehaviour
     [Header("Check this if this is the main Shrine")]
     [SerializeField] public bool mainShrine;
 
+    [Header("Name of the area this Shrine is placed in")]
+    [SerializeField] public string areaName;
+
     [Header("Variables")]
     [SerializeField] Animator anim;
     [SerializeField] PlayerController playerController;
@@ -53,6 +56,7 @@ public class ShrineBehaviour : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInRange = true;
+            shrineManager._areaName.text = areaName;
             anim.SetBool("playerInRange", playerInRange);
         }
         

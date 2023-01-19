@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: dc16e8e7f4bb3f44b901baae02b926d1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 21
+        width: 34
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.27659574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dab3d6d99d61f4db189aefd74f940e
+      internalID: -344468716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 21
+        width: 38
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32352942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff1efc0358adc54c9de3120b86fbfe5
+      internalID: 2082358670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 21
+        width: 34
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1724138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1920b6e081f9de84b82ebdeb6b30dea1
+      internalID: 1909750836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 21
+        width: 34
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.23214287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405c58e68ab36d94dad51668b40644c9
+      internalID: -1548524410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 21
+        width: 34
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14772728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc2102d301e75c49bcd22bc476276c1
+      internalID: 559369123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 21
+        width: 34
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22807017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39be4a1817be44b469f6abe14448bd54
+      internalID: -222452932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 21
+        width: 65
+        height: 48
+      alignment: 9
+      pivot: {x: 0.50769234, y: 0.4104167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ad4acc6e94a5a4792c0ef90463de17
+      internalID: 92830116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 21
+        width: 34
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48863637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56a8f5ba515b344d8b02742b42a5872
+      internalID: -1631290797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 21
+        width: 34
+        height: 67
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10447761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4eb9cc2fb50f64f888ade69faea7a7
+      internalID: 274065146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 21
+        width: 34
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14772727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1e4d3711e0149439a0e0cd3d63cdb0
+      internalID: 250930293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 21
+        width: 52
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2647059}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a11968134172be4eb99252483c7588b
+      internalID: 197115997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrinePillar-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 21
+        width: 80
+        height: 71
+      alignment: 9
+      pivot: {x: 0.52500004, y: 0.52112675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402f79414721e7547b5f33ad84557928
+      internalID: 1099526723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ShrinePillar-Sheet_7: -1631290797
+      ShrinePillar-Sheet_6: 92830116
+      ShrinePillar-Sheet_4: 559369123
+      ShrinePillar-Sheet_2: 1909750836
+      ShrinePillar-Sheet_11: 1099526723
+      ShrinePillar-Sheet_9: 250930293
+      ShrinePillar-Sheet_3: -1548524410
+      ShrinePillar-Sheet_8: 274065146
+      ShrinePillar-Sheet_10: 197115997
+      ShrinePillar-Sheet_0: -344468716
+      ShrinePillar-Sheet_5: -222452932
+      ShrinePillar-Sheet_1: 2082358670
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

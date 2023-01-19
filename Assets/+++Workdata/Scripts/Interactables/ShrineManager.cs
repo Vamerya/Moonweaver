@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShrineManager : MonoBehaviour, IDataPersistence
 {
@@ -9,6 +10,9 @@ public class ShrineManager : MonoBehaviour, IDataPersistence
     public GameObject _shrineMenu;
     public GameObject _levelUpMenu;
     public GameObject _statMenu;
+    [SerializeField] public TextMeshProUGUI _areaName;
+    [SerializeField] GameObject _playerBars;
+    [SerializeField] GameObject _playerHeldMoonlight;
     [SerializeField] Transform mainShrine;
     [SerializeField] Vector3 offset;
     [SerializeField] EnemySpawner[] enemySpawner;
@@ -61,6 +65,8 @@ public class ShrineManager : MonoBehaviour, IDataPersistence
     public void ShowShrineMenu()
     {
         _shrineMenu.SetActive(true);
+        _playerBars.SetActive(false);
+        _playerHeldMoonlight.SetActive(false);
         playerController.inGameInputActions.Disable();
         RemoveAllEnemies();
         RemoveAllBosses();
@@ -74,6 +80,9 @@ public class ShrineManager : MonoBehaviour, IDataPersistence
         _shrineMenu.SetActive(false);
         _levelUpMenu.SetActive(false);
         _statMenu.SetActive(false);
+
+        _playerBars.SetActive(true);
+        _playerHeldMoonlight.SetActive(true);
     }
 
     /// <summary>

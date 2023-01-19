@@ -44,7 +44,6 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     [ContextMenu("Determine Damages")]
     public void DetermineAllTheDamages()
     {
-        DetermineDexterityWeaponValues();
         DetermineStrengthWeaponValues();
         DetermineCriticalStrikeChance();
         DetermineCriticalStrikeDamage();
@@ -71,10 +70,6 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         }
 
         return playerWeaponDamage;
-    }
-    public void DetermineDexterityWeaponValues()
-    {
-        // ToDo - increase attackSpeed
     }
 
     /// <summary>

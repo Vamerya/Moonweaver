@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0B65487A-D1F4-4D07-9B9E-05C7F12C376B}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{0B65487A-D1F4-4D07-9B9E-05C7F12C376B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0B65487A-D1F4-4D07-9B9E-05C7F12C376B}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="PlayerCombat" ID="{A9DCB8BF-40FF-40B7-B5D7-4AC099B5D0A1}">
+					<ChildrenList>
+						<State Name="None" ID="{F0A10D7C-2C3E-42A4-AC67-242776AE894C}"/>
+						<State Name="InCombat" ID="{64A284E0-8EC1-4279-A5B8-B941A46CFB77}"/>
+						<State Name="OutOfCombat" ID="{5F123105-6018-4549-A799-1F7E2BC34C8B}"/>
+						<State Name="InBossCombat" ID="{ADB9914D-57B4-41FB-89B7-72B93321A4B2}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="PlayerHealthState" ID="{98C6344C-E7AB-4A0E-844F-C4F8D0B2BEF3}">
+					<ChildrenList>
+						<State Name="None" ID="{8C7A5D73-E327-44F1-AEE3-A882EFAA5679}"/>
+						<State Name="Healthy" ID="{1E16E56A-E9C1-451D-8FE3-84A424E5E736}"/>
+						<State Name="LowLife" ID="{C3463D52-0312-4295-B888-D24E1B3515E7}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

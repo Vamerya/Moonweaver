@@ -12,7 +12,7 @@ public class EnemyInfos : MonoBehaviour
     /// </summary>
     [SerializeField] string id;
     [ContextMenu("Generate GUID for ID")]
-    
+
     /// <summary>
     /// generates a unique ID for each enemy
     /// </summary>
@@ -24,12 +24,18 @@ public class EnemyInfos : MonoBehaviour
     [SerializeField] EnemyBehaviour enemyBehaviour;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] float burningTimer, burningTimerInit;
-    [SerializeField] float knockbackForce = 10;
     Color mainColor;
     public Vector3 moonLightDamageHP;
     public float maxHP;
     public bool isDead;
     public bool isBurning;
+    
+    
+    bool knockedBack;
+    public float knockbackDistance, knockBackSpeed;
+    Vector3 knockbackPos;
+
+    public float aiVelo;
 
     /// <summary>
     /// grabs references of necessary components
@@ -39,6 +45,12 @@ public class EnemyInfos : MonoBehaviour
         enemyBehaviour = gameObject.GetComponent<EnemyBehaviour>();
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
     }
+
+    void OnDisable()
+    {
+        this.enabled = true;
+    }
+
     /// <summary>
     /// sets isDead to false when the game starts
     /// saves the maincolor based on the current color
@@ -48,6 +60,8 @@ public class EnemyInfos : MonoBehaviour
         maxHP = moonLightDamageHP.z;
         isDead = false;
         mainColor = enemyBehaviour.spriteRenderer.color;
+
+        aiVelo = enemyBehaviour.aiPath.maxSpeed;
     }
 
     /// <summary>
@@ -56,15 +70,31 @@ public class EnemyInfos : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(burningTimer > 0)
+        if (burningTimer > 0)
             burningTimer -= Time.deltaTime;
         else
             isBurning = false;
 
-        if(isBurning)
+        if (isBurning)
             enemyBehaviour.spriteRenderer.color = Color.blue;
         else
             enemyBehaviour.spriteRenderer.color = mainColor;
+    }
+
+    void FixedUpdate()
+    {
+        if (knockedBack)
+        {
+            
+            transform.position = Vector3.MoveTowards(transform.position, knockbackPos, knockBackSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, knockbackPos) < .2f)
+            {
+                Debug.Log("Stop Knockback");
+                knockedBack = false;
+                AiPathFinding(true);
+            }
+        }
     }
 
     /// <summary>
@@ -74,7 +104,7 @@ public class EnemyInfos : MonoBehaviour
     /// <returns>returns a Vector3 with the enemys stats for Moonlight carried, their Damage and total HP</returns>
     public Vector3 DetermineEnemyType(int ID)
     {
-        switch(ID)
+        switch (ID)
         {
             case 0:
                 moonLightDamageHP = new Vector3(Random.Range(20, 40), Random.Range(55, 90), 800); //normal melee add
@@ -92,7 +122,7 @@ public class EnemyInfos : MonoBehaviour
                 moonLightDamageHP = new Vector3(500, 100, 1000); //open slot
                 break;
             case 5:
-                moonLightDamageHP = new Vector3(10000, 1000, 5000); //BossType
+                moonLightDamageHP = new Vector3(1, 1, 9999999); //Debug Enemy
                 break;
             default:
                 moonLightDamageHP = new Vector3(Random.Range(400, 600), 1000, 5000); //IntroEnemies
@@ -111,8 +141,8 @@ public class EnemyInfos : MonoBehaviour
     public void EnemyTakeDamage(float dmg)
     {
         moonLightDamageHP.z -= dmg;
-        
-        if(moonLightDamageHP.z < 1)
+
+        if (moonLightDamageHP.z < 1)
         {
             AddMoonLight();
             isDead = true;
@@ -127,7 +157,7 @@ public class EnemyInfos : MonoBehaviour
     /// <returns>the amount of time that should pass between each call</returns>
     IEnumerator EnemyTakeBurnDamage(float burnDmg)
     {
-        while(isBurning)
+        while (isBurning)
         {
             moonLightDamageHP.z -= burnDmg;
             yield return new WaitForSecondsRealtime(.4f);
@@ -139,7 +169,7 @@ public class EnemyInfos : MonoBehaviour
     /// </summary>
     void AddMoonLight()
     {
-        playerLevelBehaviour.moonLight += moonLightDamageHP.x; 
+        playerLevelBehaviour.moonLight += moonLightDamageHP.x;
     }
 
     /// <summary>
@@ -150,11 +180,13 @@ public class EnemyInfos : MonoBehaviour
     /// <param name="collision">checks what the enemy was hit with and grabs references to specific scripts from that collision</param>
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Weapon"))
+        if (collision.CompareTag("Weapon"))
         {
-            EnemyKnockback();
+            knockbackDistance = collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineKnockbackDistance();
+            knockBackSpeed = collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineKnockbackSpeed();
+            CalculateKnockbackPos(collision.transform);
             EnemyTakeDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DamageEnemyMelee());
-            if(collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
+            if (collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
             {
                 isBurning = true;
                 burningTimer = burningTimerInit;
@@ -164,13 +196,41 @@ public class EnemyInfos : MonoBehaviour
         }
     }
 
-    IEnumerator EnemyKnockback()
+
+
+
+    void AiPathFinding(bool value)
     {
-        var velo = enemyBehaviour.aiPath.maxSpeed;
-        enemyBehaviour.aiPath.maxSpeed = 0;
-        enemyBehaviour.rb.AddForce((enemyBehaviour.aiPath.desiredVelocity * -1) * knockbackForce, ForceMode2D.Impulse);
-        yield return new WaitForSecondsRealtime(.3f);
-        enemyBehaviour.aiPath.maxSpeed = velo;
-        //Debug.LogError(enemyBehaviour.rb.velocity);
+        if (!value)
+        {
+            enemyBehaviour.aiPath.maxSpeed = 0;
+            enemyBehaviour.aiPath.enabled = false;
+        }
+        else
+        {
+            enemyBehaviour.aiPath.maxSpeed = aiVelo;
+            enemyBehaviour.aiPath.enabled = true;
+        }
+    }
+
+    void CalculateKnockbackPos(Transform player)
+    {
+        Vector3 a = player.position;
+        Vector3 b = transform.position;
+        Vector3 c = knockbackPos;
+        Vector3 dir = a - b;
+        c = b;
+
+        c = c - dir;
+
+        float distance = Vector3.Distance(c, b);
+        Vector3 fromOriginToObject = c - b;
+        fromOriginToObject *= knockbackDistance / distance;
+        c = b + fromOriginToObject;
+        knockbackPos = c;
+
+        AiPathFinding(false);
+        knockedBack = true;
+
     }
 }

@@ -8,6 +8,7 @@ using UnityEngine;
 public class TakeDamageBehaviour : MonoBehaviour
 {
     PlayerInfos playerInfos;
+    [SerializeField] PlayerStateManager playerState;
 
     /// <summary>
     /// grabs necessary reference to scripts
@@ -29,18 +30,22 @@ public class TakeDamageBehaviour : MonoBehaviour
         {
             playerInfos.isDamaged = true;
             playerInfos.invincibilityTimer = playerInfos.invincibilityTimerInit;
-            try{
+            try
+            {
                 playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<EnemyInfos>().moonLightDamageHP.y);
             }
-            catch{
-                try{
-                playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<BossInfos>().bossDamage);
+            catch
+            {
+                try
+                {
+                    playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<BossInfos>().bossDamage);
                 }
-                catch{
-                playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<SpikeBehaviour>().SpikeDamage());
+                catch
+                {
+                    playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<SpikeBehaviour>().SpikeDamage());
                 }
             }
-            
+
             Debug.Log("KSKSKSKs");
         }
     }

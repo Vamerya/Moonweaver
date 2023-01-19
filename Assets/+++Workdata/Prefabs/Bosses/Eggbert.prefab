@@ -1153,6 +1153,8 @@ MonoBehaviour:
   bossHealthPercentage: 0
   isDead: 0
   isBurning: 0
+  knockbackResistance: 0.5
+  aiVelo: 0
 --- !u!114 &3652588066090148989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1287,6 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   distanceToPlayer: {x: 0, y: 0, z: 0}
-  dashSpotPos: {x: 0, y: 0, z: 0}
 --- !u!1 &8224502695136270666
 GameObject:
   m_ObjectHideFlags: 0

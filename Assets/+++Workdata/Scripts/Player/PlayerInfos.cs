@@ -172,6 +172,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     {
         if(isDamaged)
             playerHealth -= dmg;
+            
         if(playerHealth < 1 && isAlive)
         {
             isAlive = false;

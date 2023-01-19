@@ -20,6 +20,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     }
 
     [SerializeField] string bossName, bossTitle;
+    [SerializeField] string akEventName;
     [SerializeField] BossBehaviour bossBehaviour;
     [SerializeField] BossHealthBarBehaviour bossHealthBar;
     [SerializeField] TextMeshProUGUI nameAndTitle;
@@ -27,7 +28,6 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     [SerializeField] GameObject moonFragment;
     [SerializeField] Color burnColor;
     [SerializeField] float burningTimer, burningTimerInit;
-    [SerializeField] float knockbackForce = 10;
     Color mainColor;
     public float bossMoonLight;
     public float bossDamage;
@@ -36,6 +36,14 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     public float bossHealthPercentage;
     public bool isDead;
     public bool isBurning;
+
+    [Header ("Determine the knockback resistance as a fraction of 1")]
+    [SerializeField] float knockbackResistance;
+    bool knockedBack;
+    [SerializeField] float knockbackDistance, knockBackSpeed;
+    Vector3 knockbackPos;
+
+    public float aiVelo;
 
     /// <summary>
     /// grabs references of necessary components
@@ -46,6 +54,8 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         bossHealthBar = gameObject.GetComponentInChildren<BossHealthBarBehaviour>();
         nameAndTitle = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
+
+        AkSoundEngine.PostEvent(akEventName, this.gameObject);
     }
     /// <summary>
     /// sets isDead to false when the game starts
@@ -58,6 +68,8 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         mainColor = bossBehaviour.spriteRenderer.color;
         nameAndTitle.text = bossName + ", " + bossTitle;
         DetermineBossHealthPercentage();
+
+        aiVelo = bossBehaviour.aiPath.maxSpeed;
     }
 
     public void LoadData(GameData data)
@@ -94,6 +106,23 @@ public class BossInfos : MonoBehaviour, IDataPersistence
             bossBehaviour.spriteRenderer.color = burnColor;
         else
             bossBehaviour.spriteRenderer.color = mainColor;
+    }
+
+    void FixedUpdate()
+    {
+        if (knockedBack)
+        {
+
+            transform.position = Vector3.MoveTowards(transform.position, knockbackPos, knockBackSpeed * Time.deltaTime);
+
+        }
+        
+        if (Vector3.Distance(transform.position, knockbackPos) < .2f)
+        {
+            Debug.Log("Stop Knockback");
+            knockedBack = false;
+            AiPathFinding(true);
+        }
     }
 
     /// <summary>
@@ -151,7 +180,9 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     {
         if (collision.CompareTag("Weapon"))
         {
-            bossBehaviour.rb.AddForce((bossBehaviour.aiPath.desiredVelocity * -1) * knockbackForce, ForceMode2D.Force);
+            knockbackDistance = collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineKnockbackDistance() * (1 - knockbackResistance);
+            knockBackSpeed = collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineKnockbackSpeed();
+            CalculateKnockbackPos(collision.transform);
             BossTakeDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DamageEnemyMelee());
             if (collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
             {
@@ -166,5 +197,40 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     void DetermineBossHealthPercentage()
     {
         bossHealthPercentage = bossHealth / bossMaxHealth;
+    }
+
+    void AiPathFinding(bool value)
+    {
+        if (!value)
+        {
+            bossBehaviour.aiPath.maxSpeed = 0;
+            bossBehaviour.aiPath.enabled = false;
+        }
+        else
+        {
+            bossBehaviour.aiPath.enabled = true;
+            bossBehaviour.aiPath.maxSpeed = aiVelo;
+        }
+    }
+
+    void CalculateKnockbackPos(Transform player)
+    {
+        Vector3 a = player.position;
+        Vector3 b = transform.position;
+        Vector3 c = knockbackPos;
+        Vector3 dir = a - b;
+        c = b;
+
+        c = c - dir;
+
+        float distance = Vector3.Distance(c, b);
+        Vector3 fromOriginToObject = c - b;
+        fromOriginToObject *= knockbackDistance / distance;
+        c = b + fromOriginToObject;
+        knockbackPos = c;
+
+        AiPathFinding(false);
+        knockedBack = true;
+
     }
 }

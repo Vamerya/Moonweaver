@@ -1,20 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
-		<ProjectRoot>D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
-	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
-			<ObjectPath>Init</ObjectPath>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{807C013E-374E-FEF3-2217-192B09AA4BB1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="585797371" Name="Music_Gameplay_State">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="1823678183" Name="Exploring"/>
+						<State Id="2764240573" Name="Combat"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1634810678" Name="PlayerCombat">
+					<States>
+						<State Id="687614019" Name="InBossCombat"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2773031252" Name="OutOfCombat"/>
+						<State Id="3373579172" Name="InCombat"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2698781627" Name="PlayerHealthState">
+					<States>
+						<State Id="19277431" Name="LowLife"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2874639328" Name="Healthy"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F3E83868-D692-947D-1B25-F8673BCB6232}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="665866384" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Veronica, the Queen Slayer.wav</ShortName>
+					<CachePath>SFX/Veronica, the Queen Slayer_32BB0324.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="212041160" Name="VeronicaBossMusic" DurationType="OneShot" DurationMin="366.61835" DurationMax="366.61835">
+					<MediaRefs>
+						<MediaRef Id="665866384"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0E3E9487-2562-8161-CF73-30D6CFA3E27A}">
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
+	<FileHash>{D6416741-5985-E889-DB1A-058BAB91C4FB}</FileHash>
 </SoundBanksInfo>

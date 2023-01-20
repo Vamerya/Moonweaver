@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: d933278df2584b4a8978f35a7ed74501
     GuidInternal: 
-    m_lastTime: -8585277485704273209
+    m_lastTime: -8585274431510002901
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: b16642fd83c8bc4c96d9a209c7cea467
     GuidInternal: 
-    m_lastTime: -8585277485704565528
+    m_lastTime: -8585274431512293272
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,6 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585273795923509922
     List:
     - name: Main
@@ -82,6 +83,10 @@ MonoBehaviour:
         ObjectType: 7
         guid: 92a6c7b535f9f146a4fda07267164b14
       Path: SoundBanks\Default Work Unit\Main
+=======
+    m_lastTime: -8585274431510017925
+    List: []
+>>>>>>> remotes/origin/main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,6 +99,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f0ecfe22b3ad344ab111bd467979de16
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585273831119139008
     List:
     - name: VeronicaBossMusic
@@ -147,6 +153,10 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+=======
+    m_lastTime: -8585274431512300778
+    List: []
+>>>>>>> remotes/origin/main
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -159,7 +169,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e181ec1466b604bbeac278ae343a2e9
     GuidInternal: 
-    m_lastTime: -8585277485704507468
+    m_lastTime: -8585274431512300778
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -173,6 +183,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7a48650bf4d1074d9b9e05c7f12c376b
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585273831119192225
     List:
     - name: PlayerCombat
@@ -418,6 +429,10 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+=======
+    m_lastTime: -8585274431510010415
+    List: []
+>>>>>>> remotes/origin/main
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -430,7 +445,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f129b962d6daf1499732233c75e54b8b
     GuidInternal: 
-    m_lastTime: -8585277485704812392
+    m_lastTime: -8585274431510002901
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -444,6 +459,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f12d3d8097129240812e037938411b68
     GuidInternal: 
+<<<<<<< HEAD
     m_lastTime: -8585273882695189018
     List:
     - name: OnHealthyHP
@@ -474,6 +490,10 @@ MonoBehaviour:
         ObjectType: 14
         guid: 000d36dd4e3d664db0693f8fcb0838d6
       Path: Triggers\Default Work Unit\OnLowHP
+=======
+    m_lastTime: -8585274431510002901
+    List: []
+>>>>>>> remotes/origin/main
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000b0000000c0000000d0000000e00000011000000120000001300000014000000150000007e0000007f00000081000000f8000000f9000000a0010000ae010000af010000de010000ec010000
   AutoSyncSelection: 0

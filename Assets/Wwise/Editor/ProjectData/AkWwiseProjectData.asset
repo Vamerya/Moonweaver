@@ -67,6 +67,7 @@ MonoBehaviour:
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_lastTime: -8585273795923509922
     List:
     - name: Main
@@ -84,6 +85,8 @@ MonoBehaviour:
         guid: 92a6c7b535f9f146a4fda07267164b14
       Path: SoundBanks\Default Work Unit\Main
 =======
+=======
+>>>>>>> a55e6e32d7ae84321016670da427fbd6def91bf5
     m_lastTime: -8585274431510017925
     List: []
 >>>>>>> remotes/origin/main
@@ -99,6 +102,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f0ecfe22b3ad344ab111bd467979de16
     GuidInternal: 
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_lastTime: -8585273831119139008
     List:
@@ -154,6 +158,8 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
 =======
+=======
+>>>>>>> a55e6e32d7ae84321016670da427fbd6def91bf5
     m_lastTime: -8585274431512300778
     List: []
 >>>>>>> remotes/origin/main
@@ -183,6 +189,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7a48650bf4d1074d9b9e05c7f12c376b
     GuidInternal: 
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_lastTime: -8585273831119192225
     List:
@@ -430,6 +437,8 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
 =======
+=======
+>>>>>>> a55e6e32d7ae84321016670da427fbd6def91bf5
     m_lastTime: -8585274431510010415
     List: []
 >>>>>>> remotes/origin/main
@@ -459,6 +468,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f12d3d8097129240812e037938411b68
     GuidInternal: 
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_lastTime: -8585273882695189018
     List:
@@ -491,6 +501,8 @@ MonoBehaviour:
         guid: 000d36dd4e3d664db0693f8fcb0838d6
       Path: Triggers\Default Work Unit\OnLowHP
 =======
+=======
+>>>>>>> a55e6e32d7ae84321016670da427fbd6def91bf5
     m_lastTime: -8585274431510002901
     List: []
 >>>>>>> remotes/origin/main

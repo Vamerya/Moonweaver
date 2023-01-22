@@ -36,7 +36,7 @@ public class BossBehaviour : MonoBehaviour
     void Update()
     {
         FaceVelocity();
-        if (aiPath.desiredVelocity.x > 0 || aiPath.desiredVelocity.y > 0)
+        if (aiPath.desiredVelocity.x != 0 || aiPath.desiredVelocity.y != 0)
             isMoving = true;
         else
             isMoving = false;

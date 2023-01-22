@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" SchemaVersion="110">
+	<InteractiveMusic>
+		<WorkUnit Name="Music" ID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="GameplayMusicSwitch" ID="{1692FCF0-99DC-44BA-B0EE-7988513F8944}" ShortID="458286710">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Ambient" ID="{0CF0E8E1-7394-4259-8DF9-6AC04C677758}" ShortID="340529830">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Weaving The Moon" ID="{2CE23C34-87F8-4C05-9F27-ECD880F52625}" ShortID="615536438">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Weaving The Moon" ID="{8CE468C6-63DC-4A2D-8A2B-FD65ABFC5B71}">
+											<Language>SFX</Language>
+											<AudioFile>Weaving The Moon.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="179012500"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{9314E337-6496-44DF-AA98-9DFD6AD0789F}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{053CEBEC-CE8D-4C86-9FD9-481D8450379D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Weaving The Moon" ID="{961D7852-CAEC-4C53-B413-3CA93DDF7C34}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="887750"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Weaving The Moon" ID="{8CE468C6-63DC-4A2D-8A2B-FD65ABFC5B71}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{58F58A35-888F-4DFB-973B-24320BE8C66D}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{79ACDE15-AD86-494C-8366-E9D5E9570F71}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="BossMusic" ID="{7D31A301-6A11-41AA-A395-76A6B61F8C80}" ShortID="776359470">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Veronica the Queen Slayer" ID="{6BE2B75F-4D67-4922-86C1-1D6DA87263AC}" ShortID="231765934">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Veronica, the Queen Slayer" ID="{2DFAA768-3487-4EDB-8593-1C22F1478F1C}">
+											<Language>SFX</Language>
+											<AudioFile>Veronica, the Queen Slayer.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="578271736"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{8D7EC3E8-DACE-4F51-886A-CF3EA450B203}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{84040413-2F88-47C9-86F4-EA193A196B7D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Veronica, the Queen Slayer" ID="{8ECB7D73-BAF2-4942-9BEE-D29B7D66C24C}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="366545.464852608"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Veronica, the Queen Slayer" ID="{2DFAA768-3487-4EDB-8593-1C22F1478F1C}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{33EEC390-28E1-4BB2-A5BE-E6CA0454E337}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{4C509DB5-95B8-406B-84BF-CE263FD99E1A}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="MainMenuMusic" ID="{A8D04DEF-A588-4532-A79C-7C53DF00A86C}" ShortID="828701602">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="430000"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Aster, the Weaver" ID="{7F655FB3-A6D4-4486-9309-3708A63786BA}" ShortID="665793951">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Aster, the Weaver" ID="{E8F2CE77-DBFC-44D3-99DA-1274CD1E8EBD}">
+											<Language>SFX</Language>
+											<AudioFile>Aster, the Weaver.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="145994054"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{36310A6E-ED96-4D5A-9124-92269A57E80E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C054E6D7-F51C-4261-A746-21B2B647713F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Aster, the Weaver" ID="{42EC702C-FE18-4D08-BC1B-9C96A1932D73}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="430000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Aster, the Weaver" ID="{E8F2CE77-DBFC-44D3-99DA-1274CD1E8EBD}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{F8A6F80F-DB9F-462F-AF4E-658B18C4BA31}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{9124B28C-343D-4008-84F1-4CD6A39D593F}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerHealthState" ID="{726F63B6-4C56-4974-931A-5847081F516B}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="MenuState" ID="{D2F9248B-25C9-450A-A43C-505BD7136797}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Healthy" ID="{E7F5CDA1-7E5E-41BB-9B79-B19409F8E4E2}"/>
+								<CustomState Name="" ID="{0823E7CE-1BEC-4DB3-B54E-B4CEFC8C90F8}" ShortID="1022315310"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Lowlife" ID="{7A0D68AA-4B2E-4377-9BD4-F8946F7100A2}"/>
+								<CustomState Name="" ID="{C4A2629B-F0EE-464A-98F8-044F9BB42110}" ShortID="255651808">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Unpaused" ID="{BFF4534E-C537-4417-9AD5-587A8C354CF3}"/>
+								<CustomState Name="" ID="{28515825-303E-4E9A-AA70-6466A79D833E}" ShortID="981869173"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Paused" ID="{EB438444-C26D-4817-BA08-0DCE3E839D07}"/>
+								<CustomState Name="" ID="{27388B8B-9B9F-4BE0-A0FF-FFB271D2D724}" ShortID="717835655">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16" Value="40"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{4FB803FC-93A0-4216-A820-5F77215895D6}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{B6AF7733-95D8-433B-BFB5-C192B51CA388}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="GameplayMusicState" ID="{CC0A56FF-F7FE-4A95-9A40-FE3C5A4D4BAB}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Ambient" ID="{0CF0E8E1-7394-4259-8DF9-6AC04C677758}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Boss" ID="{3F9371F6-580B-4921-B301-E73DCC833428}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="BossMusic" ID="{7D31A301-6A11-41AA-A395-76A6B61F8C80}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="MainMenu" ID="{AA7F6A30-17A8-4636-9852-5F6A56369C78}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="MainMenuMusic" ID="{A8D04DEF-A588-4532-A79C-7C53DF00A86C}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4C4BEA78-FA2E-341F-855A-34A2785CC953}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6F2D0A33-6F0F-59CB-9743-1E70B9BF14D7}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,52 +22,61 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<StateGroups>
-				<StateGroup Id="585797371" Name="Music_Gameplay_State">
+				<StateGroup Id="1548586727" Name="MenuState">
 					<States>
+						<State Id="319258907" Name="Paused"/>
 						<State Id="748895195" Name="None"/>
-						<State Id="1560169506" Name="Boss"/>
-						<State Id="1823678183" Name="Exploring"/>
-						<State Id="2764240573" Name="Combat"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="1634810678" Name="PlayerCombat">
-					<States>
-						<State Id="687614019" Name="InBossCombat"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="2773031252" Name="OutOfCombat"/>
-						<State Id="3373579172" Name="InCombat"/>
+						<State Id="1365518790" Name="Unpaused"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2698781627" Name="PlayerHealthState">
 					<States>
-						<State Id="19277431" Name="LowLife"/>
+						<State Id="19277431" Name="Lowlife"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2874639328" Name="Healthy"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="2854737089" Name="GameplayMusicState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="1823678183" Name="Exploring"/>
+						<State Id="3604647259" Name="MainMenu"/>
+					</States>
+				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F3E83868-D692-947D-1B25-F8673BCB6232}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{565515C6-DCDE-2131-E13D-5DA2C6E30EF9}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
-				<File Id="665866384" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="145994054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Aster, the Weaver.wav</ShortName>
+					<CachePath>SFX/Aster, the Weaver_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="179012500" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Weaving The Moon.wav</ShortName>
+					<CachePath>SFX/Weaving The Moon_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="578271736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Veronica, the Queen Slayer.wav</ShortName>
-					<CachePath>SFX/Veronica, the Queen Slayer_32BB0324.wem</CachePath>
+					<CachePath>SFX/Veronica, the Queen Slayer_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="212041160" Name="VeronicaBossMusic" DurationType="OneShot" DurationMin="366.61835" DurationMax="366.61835">
-					<MediaRefs>
-						<MediaRef Id="665866384"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="3991942870" Name="Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
-		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{0E3E9487-2562-8161-CF73-30D6CFA3E27A}">
-			<ShortName>Music</ShortName>
-			<Path>Music.bnk</Path>
+			<StateGroups>
+				<StateGroup Id="2854737089" Name="GameplayMusicState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="1823678183" Name="Exploring"/>
+						<State Id="3604647259" Name="MainMenu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{86CD485C-98F6-3146-B573-49806461D679}</FileHash>
+	<FileHash>{1A3F0A33-06C2-A1B2-5C24-39248EE16CB8}</FileHash>
 </SoundBanksInfo>

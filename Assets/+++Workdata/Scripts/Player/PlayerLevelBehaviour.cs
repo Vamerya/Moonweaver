@@ -125,7 +125,6 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
     {
         requiredMoonLight = _playerLevel * (_playerLevel * (0.02f * _playerLevel + 3.06f)) + 105.6f * _playerLevel;
         requiredMoonLight = Mathf.Floor(requiredMoonLight);
-        Debug.Log(requiredMoonLight);
     }
 
     /// <summary>
@@ -140,7 +139,6 @@ public class PlayerLevelBehaviour : MonoBehaviour, IDataPersistence
         _playerLevel += 1;
         requiredMoonLight = _playerLevel * (_playerLevel * (0.02f * _playerLevel + 3.06f)) + 105.6f * _playerLevel; 
         requiredMoonLight = Mathf.Floor(requiredMoonLight);
-        Debug.Log(requiredMoonLight);
     }
 
     #region Stat increases

@@ -56,6 +56,8 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
 
         AkSoundEngine.PostEvent(akEventName, this.gameObject);
+
+        AkSoundEngine.SetState("GameplayMusicState", "Boss");
     }
     /// <summary>
     /// sets isDead to false when the game starts
@@ -141,7 +143,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
             AddMoonLight();
             GameObject droppedMoonFragment = Instantiate(moonFragment, transform.position, Quaternion.identity);
             isDead = true;
-            //BroadcastMessage("BossDefeated");
+            AkSoundEngine.SetState("GameplayMusicState", "Exploring");
             Destroy(gameObject);
         }
     }

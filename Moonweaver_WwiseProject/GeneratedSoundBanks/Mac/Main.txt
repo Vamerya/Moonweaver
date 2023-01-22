@@ -1,25 +1,29 @@
 Event	ID	Name			Wwise Object Path	Notes
-	212041160	VeronicaBossMusic			\Default Work Unit\VeronicaBossMusic	
+	3991942870	Music			\Music\Music	
 
 State Group	ID	Name			Wwise Object Path	Notes
-	585797371	Music_Gameplay_State			\Music\Music_Gameplay_State	
-	2698781627	PlayerHealthState			\Default Work Unit\PlayerHealthState	
+	1548586727	MenuState			\Music\MenuState	
+	2698781627	PlayerHealthState			\Music\PlayerHealthState	
+	2854737089	GameplayMusicState			\Music\GameplayMusicState	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Music_Gameplay_State			
-	1560169506	Boss	Music_Gameplay_State			
-	1823678183	Exploring	Music_Gameplay_State			
-	2764240573	Combat	Music_Gameplay_State			
-	19277431	LowLife	PlayerHealthState			
+	319258907	Paused	MenuState			
+	748895195	None	MenuState			
+	1365518790	Unpaused	MenuState			
+	19277431	Lowlife	PlayerHealthState			
 	748895195	None	PlayerHealthState			
 	2874639328	Healthy	PlayerHealthState			
+	748895195	None	GameplayMusicState			
+	1560169506	Boss	GameplayMusicState			
+	1823678183	Exploring	GameplayMusicState			
+	3604647259	MainMenu	GameplayMusicState			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	290465945	LowLife	PlayerHealthState	\Interactive Music Hierarchy\Default Work Unit\GameplayMusicSwitchContainer		
-
-Trigger	ID	Name			Wwise Object Path	Notes
-	1242301544	OnLowHP			\Default Work Unit\OnLowHP	
+	255651808	Lowlife	PlayerHealthState	\Interactive Music Hierarchy\Music\GameplayMusicSwitch		
+	717835655	Paused	MenuState	\Interactive Music Hierarchy\Music\GameplayMusicSwitch		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	665866384	Veronica, the Queen Slayer	D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Mac\SFX\Veronica, the Queen Slayer_32BB0324.wem		\Interactive Music Hierarchy\Default Work Unit\GameplayMusicSwitchContainer\BossMusic\Veronica, the Queen Slayer\Veronica, the Queen Slayer		64658876
+	145994054	Aster, the Weaver	F:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Mac\SFX\Aster, the Weaver_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\MainMenuMusic\Aster, the Weaver		75852144
+	179012500	Weaving The Moon	F:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Mac\SFX\Weaving The Moon_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\Ambient\Weaving The Moon		156599244
+	578271736	Veronica the Queen Slayer	F:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Mac\SFX\Veronica, the Queen Slayer_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\BossMusic\Veronica the Queen Slayer		64658844
 

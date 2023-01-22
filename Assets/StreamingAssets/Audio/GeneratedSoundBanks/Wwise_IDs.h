@@ -13,36 +13,35 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID VERONICABOSSMUSIC = 212041160U;
+        static const AkUniqueID MUSIC = 3991942870U;
     } // namespace EVENTS
 
     namespace STATES
     {
-        namespace MUSIC_GAMEPLAY_STATE
+        namespace GAMEPLAYMUSICSTATE
         {
-            static const AkUniqueID GROUP = 585797371U;
+            static const AkUniqueID GROUP = 2854737089U;
 
             namespace STATE
             {
                 static const AkUniqueID BOSS = 1560169506U;
-                static const AkUniqueID COMBAT = 2764240573U;
                 static const AkUniqueID EXPLORING = 1823678183U;
+                static const AkUniqueID MAINMENU = 3604647259U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
-        } // namespace MUSIC_GAMEPLAY_STATE
+        } // namespace GAMEPLAYMUSICSTATE
 
-        namespace PLAYERCOMBAT
+        namespace MENUSTATE
         {
-            static const AkUniqueID GROUP = 1634810678U;
+            static const AkUniqueID GROUP = 1548586727U;
 
             namespace STATE
             {
-                static const AkUniqueID INBOSSCOMBAT = 687614019U;
-                static const AkUniqueID INCOMBAT = 3373579172U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID OUTOFCOMBAT = 2773031252U;
+                static const AkUniqueID PAUSED = 319258907U;
+                static const AkUniqueID UNPAUSED = 1365518790U;
             } // namespace STATE
-        } // namespace PLAYERCOMBAT
+        } // namespace MENUSTATE
 
         namespace PLAYERHEALTHSTATE
         {
@@ -58,17 +57,10 @@ namespace AK
 
     } // namespace STATES
 
-    namespace TRIGGERS
-    {
-        static const AkUniqueID ONHEALTHYHP = 1940819977U;
-        static const AkUniqueID ONLOWHP = 1242301544U;
-    } // namespace TRIGGERS
-
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
-        static const AkUniqueID MUSIC = 3991942870U;
     } // namespace BANKS
 
     namespace BUSSES

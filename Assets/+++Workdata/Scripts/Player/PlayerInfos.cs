@@ -141,8 +141,11 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         else
             isDamaged = false;
 
-        if(playerStamina < playerMaxStamina)
+        if(playerStamina < playerMaxStamina && !playerCombat.isAttacking)
             playerStamina += Time.deltaTime * staminaRechargeSpeed;
+
+        if(playerStamina < 0)
+            playerStamina = 0;
 
         PlayerStatPercentage();
     }
@@ -206,6 +209,8 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
         playerHealthflaskBehaviour.RefillFlask();
         shrineManager.RemoveAllEnemies();
         shrineManager.RemoveAllBosses();
+
+        AkSoundEngine.SetState("GameplayMusicState", "Exploring");
     }
 
     /// <summary>

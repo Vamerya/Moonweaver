@@ -7,8 +7,22 @@
 					<ChildrenList>
 						<State Name="None" ID="{03D4FAA4-3A54-45AB-9AFB-1D16A7237594}"/>
 						<State Name="Boss" ID="{3F9371F6-580B-4921-B301-E73DCC833428}"/>
-						<State Name="Combat" ID="{AA7F6A30-17A8-4636-9852-5F6A56369C78}"/>
+						<State Name="MainMenu" ID="{AA7F6A30-17A8-4636-9852-5F6A56369C78}"/>
 						<State Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="PlayerHealthState" ID="{726F63B6-4C56-4974-931A-5847081F516B}">
+					<ChildrenList>
+						<State Name="None" ID="{AFE31E39-8E3B-4C16-8802-A419BD785DCF}"/>
+						<State Name="Healthy" ID="{E7F5CDA1-7E5E-41BB-9B79-B19409F8E4E2}"/>
+						<State Name="Lowlife" ID="{7A0D68AA-4B2E-4377-9BD4-F8946F7100A2}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MenuState" ID="{D2F9248B-25C9-450A-A43C-505BD7136797}">
+					<ChildrenList>
+						<State Name="None" ID="{2D78172A-6FBC-420F-AE99-ED63CCD1209B}"/>
+						<State Name="Paused" ID="{EB438444-C26D-4817-BA08-0DCE3E839D07}"/>
+						<State Name="Unpaused" ID="{BFF4534E-C537-4417-9AD5-587A8C354CF3}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

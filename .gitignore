@@ -48,3 +48,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 /Packages
+
+*.wem
+*.akd
+*.wav
+*.bnk

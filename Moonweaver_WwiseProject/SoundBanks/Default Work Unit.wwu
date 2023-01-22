@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{111F8AD0-FBBD-48B5-88A1-F63D2E8FB3C5}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{111F8AD0-FBBD-48B5-88A1-F63D2E8FB3C5}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{111F8AD0-FBBD-48B5-88A1-F63D2E8FB3C5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{48321ED9-9CEA-4184-8ABD-1336D4D59083}">
+					<ObjectInclusionList>
+						<ObjectRef Name="BossMusic" ID="{7D31A301-6A11-41AA-A395-76A6B61F8C80}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambient" ID="{0CF0E8E1-7394-4259-8DF9-6AC04C677758}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainMenuMusic" ID="{A8D04DEF-A588-4532-A79C-7C53DF00A86C}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

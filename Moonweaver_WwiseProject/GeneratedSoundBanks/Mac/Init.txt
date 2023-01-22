@@ -1,3 +1,20 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1548586727	MenuState			\Music\MenuState	
+	2698781627	PlayerHealthState			\Music\PlayerHealthState	
+	2854737089	GameplayMusicState			\Music\GameplayMusicState	
+
+State	ID	Name	State Group			Notes
+	319258907	Paused	MenuState			
+	748895195	None	MenuState			
+	1365518790	Unpaused	MenuState			
+	19277431	Lowlife	PlayerHealthState			
+	748895195	None	PlayerHealthState			
+	2874639328	Healthy	PlayerHealthState			
+	748895195	None	GameplayMusicState			
+	1560169506	Boss	GameplayMusicState			
+	1823678183	Exploring	GameplayMusicState			
+	3604647259	MainMenu	GameplayMusicState			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

@@ -42984,7 +42984,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 90611be64dd00024aa41e191b81ba592, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 52329cc005cd00c4ca4a3e9b6f47e99a, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -43037,7 +43037,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6ef06f73a47cbd8439fcd99d6a913374, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 3410240ce6d46c04a8361f0400141aa4, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0

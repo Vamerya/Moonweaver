@@ -13,7 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID MAINMUSIC = 3479155863U;
+        static const AkUniqueID MUSIC = 3991942870U;
     } // namespace EVENTS
 
     namespace STATES
@@ -25,8 +25,8 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID BOSS = 1560169506U;
-                static const AkUniqueID COMBAT = 2764240573U;
                 static const AkUniqueID EXPLORING = 1823678183U;
+                static const AkUniqueID MAINMENU = 3604647259U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace GAMEPLAYMUSICSTATE
@@ -56,12 +56,6 @@ namespace AK
         } // namespace PLAYERHEALTHSTATE
 
     } // namespace STATES
-
-    namespace TRIGGERS
-    {
-        static const AkUniqueID ONHEALTHYHP = 1940819977U;
-        static const AkUniqueID ONLOWHP = 1242301544U;
-    } // namespace TRIGGERS
 
     namespace BANKS
     {

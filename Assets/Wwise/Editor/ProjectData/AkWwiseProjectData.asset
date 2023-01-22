@@ -66,10 +66,10 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
-    m_lastTime: -8585272816129676421
+    m_lastTime: -8585271991433736200
     List:
     - name: Main
-      guid: 92a6c7b535f9f146a4fda07267164b14
+      guid: d91e3248ea9c84418abd1336d4d59083
       id: 3161908922
       PathAndIcons:
       - ElementName: SoundBanks
@@ -80,7 +80,7 @@ MonoBehaviour:
         guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
       - ElementName: Main
         ObjectType: 7
-        guid: 92a6c7b535f9f146a4fda07267164b14
+        guid: d91e3248ea9c84418abd1336d4d59083
       Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
@@ -103,26 +103,26 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Music
       ObjectType: 12
-      guid: 37015e480e41014daea7117a1f5878f3
+      guid: 9fd66b419a5a284fab755d2d5dfd0f1d
     ParentPath: Events\Music
-    guid: 37015e480e41014daea7117a1f5878f3
+    guid: 9fd66b419a5a284fab755d2d5dfd0f1d
     GuidInternal: 
-    m_lastTime: -8585272965715656695
+    m_lastTime: -8585271996042189980
     List:
-    - name: MainMusic
-      guid: 91521dc2c87c5e4782ba79195c6ecb15
-      id: 3479155863
+    - name: Music
+      guid: efd990fd095a9d449312dd2451a4bd92
+      id: 3991942870
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Music
         ObjectType: 12
-        guid: 37015e480e41014daea7117a1f5878f3
-      - ElementName: MainMusic
+        guid: 9fd66b419a5a284fab755d2d5dfd0f1d
+      - ElementName: Music
         ObjectType: 3
-        guid: 91521dc2c87c5e4782ba79195c6ecb15
-      Path: Events\Music\MainMusic
+        guid: efd990fd095a9d449312dd2451a4bd92
+      Path: Events\Music\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -152,74 +152,8 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7a48650bf4d1074d9b9e05c7f12c376b
     GuidInternal: 
-    m_lastTime: -8585272968613812367
-    List:
-    - name: PlayerHealthState
-      guid: 4c34c698abe70e4a844fc4f8d0b2bef3
-      id: 2698781627
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 7a48650bf4d1074d9b9e05c7f12c376b
-      - ElementName: PlayerHealthState
-        ObjectType: 9
-        guid: 4c34c698abe70e4a844fc4f8d0b2bef3
-      Path: States\Default Work Unit\PlayerHealthState
-      values:
-      - name: Healthy
-        guid: 6ae5161ec1e91d458fe384a424e5e736
-        id: 2874639328
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 7a48650bf4d1074d9b9e05c7f12c376b
-        - ElementName: PlayerHealthState
-          ObjectType: 9
-          guid: 4c34c698abe70e4a844fc4f8d0b2bef3
-        - ElementName: Healthy
-          ObjectType: 8
-          guid: 6ae5161ec1e91d458fe384a424e5e736
-      - name: LowLife
-        guid: 523d46c312039542b888d24e1b3515e7
-        id: 19277431
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 7a48650bf4d1074d9b9e05c7f12c376b
-        - ElementName: PlayerHealthState
-          ObjectType: 9
-          guid: 4c34c698abe70e4a844fc4f8d0b2bef3
-        - ElementName: LowLife
-          ObjectType: 8
-          guid: 523d46c312039542b888d24e1b3515e7
-      - name: None
-        guid: 735d7a8c27e3f144aee3a882efaa5679
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 7a48650bf4d1074d9b9e05c7f12c376b
-        - ElementName: PlayerHealthState
-          ObjectType: 9
-          guid: 4c34c698abe70e4a844fc4f8d0b2bef3
-        - ElementName: None
-          ObjectType: 8
-          guid: 735d7a8c27e3f144aee3a882efaa5679
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8585272002966992737
+    List: []
   - PhysicalPath: States\Music.wwu
     PathAndIcons:
     - ElementName: States
@@ -231,7 +165,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
     GuidInternal: 
-    m_lastTime: -8585272799270114951
+    m_lastTime: -8585271991868243984
     List:
     - name: GameplayMusicState
       guid: ff560accfef7954a9a40fe3c5a4d4bab
@@ -264,22 +198,6 @@ MonoBehaviour:
         - ElementName: Boss
           ObjectType: 8
           guid: f671933f0b582149b301e73dcc833428
-      - name: Combat
-        guid: 306a7faaa817364698525f6a56369c78
-        id: 2764240573
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Music
-          ObjectType: 12
-          guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
-        - ElementName: GameplayMusicState
-          ObjectType: 9
-          guid: ff560accfef7954a9a40fe3c5a4d4bab
-        - ElementName: Combat
-          ObjectType: 8
-          guid: 306a7faaa817364698525f6a56369c78
       - name: Exploring
         guid: 5c8808f25acdc946b28a3ccdcc7138ba
         id: 1823678183
@@ -296,6 +214,22 @@ MonoBehaviour:
         - ElementName: Exploring
           ObjectType: 8
           guid: 5c8808f25acdc946b28a3ccdcc7138ba
+      - name: MainMenu
+        guid: 306a7faaa817364698525f6a56369c78
+        id: 3604647259
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
+        - ElementName: GameplayMusicState
+          ObjectType: 9
+          guid: ff560accfef7954a9a40fe3c5a4d4bab
+        - ElementName: MainMenu
+          ObjectType: 8
+          guid: 306a7faaa817364698525f6a56369c78
       - name: None
         guid: a4fad403543aab459afb1d16a7237594
         id: 748895195
@@ -316,7 +250,7 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
     - name: MenuState
-      guid: d21fdfd4cb2867419e63c44e50a2a6d1
+      guid: 8b24f9d2c9250a45a43c505bd7136797
       id: 1548586727
       PathAndIcons:
       - ElementName: States
@@ -327,11 +261,11 @@ MonoBehaviour:
         guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
       - ElementName: MenuState
         ObjectType: 9
-        guid: d21fdfd4cb2867419e63c44e50a2a6d1
+        guid: 8b24f9d2c9250a45a43c505bd7136797
       Path: States\Music\MenuState
       values:
       - name: None
-        guid: a656299243aeea4498fcb7a57708a99d
+        guid: 2a17782dbc6f0f42ae99ed63ccd1209b
         id: 748895195
         PathAndIcons:
         - ElementName: States
@@ -342,12 +276,12 @@ MonoBehaviour:
           guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
         - ElementName: MenuState
           ObjectType: 9
-          guid: d21fdfd4cb2867419e63c44e50a2a6d1
+          guid: 8b24f9d2c9250a45a43c505bd7136797
         - ElementName: None
           ObjectType: 8
-          guid: a656299243aeea4498fcb7a57708a99d
+          guid: 2a17782dbc6f0f42ae99ed63ccd1209b
       - name: Paused
-        guid: cbc130b3b091094aa978f28a71aa24c9
+        guid: 448443eb6dc21748ba080dce3e839d07
         id: 319258907
         PathAndIcons:
         - ElementName: States
@@ -358,12 +292,12 @@ MonoBehaviour:
           guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
         - ElementName: MenuState
           ObjectType: 9
-          guid: d21fdfd4cb2867419e63c44e50a2a6d1
+          guid: 8b24f9d2c9250a45a43c505bd7136797
         - ElementName: Paused
           ObjectType: 8
-          guid: cbc130b3b091094aa978f28a71aa24c9
+          guid: 448443eb6dc21748ba080dce3e839d07
       - name: Unpaused
-        guid: d63b3eda9df42242aef2b9c90df03a84
+        guid: 4e53f4bf37c517449ad5587a8c354cf3
         id: 1365518790
         PathAndIcons:
         - ElementName: States
@@ -374,10 +308,76 @@ MonoBehaviour:
           guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
         - ElementName: MenuState
           ObjectType: 9
-          guid: d21fdfd4cb2867419e63c44e50a2a6d1
+          guid: 8b24f9d2c9250a45a43c505bd7136797
         - ElementName: Unpaused
           ObjectType: 8
-          guid: d63b3eda9df42242aef2b9c90df03a84
+          guid: 4e53f4bf37c517449ad5587a8c354cf3
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: PlayerHealthState
+      guid: b6636f72564c7449931a5847081f516b
+      id: 2698781627
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
+      - ElementName: PlayerHealthState
+        ObjectType: 9
+        guid: b6636f72564c7449931a5847081f516b
+      Path: States\Music\PlayerHealthState
+      values:
+      - name: Healthy
+        guid: a1cdf5e75e7ebb419b79b19409f8e4e2
+        id: 2874639328
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
+        - ElementName: PlayerHealthState
+          ObjectType: 9
+          guid: b6636f72564c7449931a5847081f516b
+        - ElementName: Healthy
+          ObjectType: 8
+          guid: a1cdf5e75e7ebb419b79b19409f8e4e2
+      - name: Lowlife
+        guid: aa680d7a2e4b77439bd4f8946f7100a2
+        id: 19277431
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
+        - ElementName: PlayerHealthState
+          ObjectType: 9
+          guid: b6636f72564c7449931a5847081f516b
+        - ElementName: Lowlife
+          ObjectType: 8
+          guid: aa680d7a2e4b77439bd4f8946f7100a2
+      - name: None
+        guid: 391ee3af3b8e164c8802a419bd785dcf
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
+        - ElementName: PlayerHealthState
+          ObjectType: 9
+          guid: b6636f72564c7449931a5847081f516b
+        - ElementName: None
+          ObjectType: 8
+          guid: 391ee3af3b8e164c8802a419bd785dcf
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -407,38 +407,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f12d3d8097129240812e037938411b68
     GuidInternal: 
-    m_lastTime: -8585273024390103540
-    List:
-    - name: OnHealthyHP
-      guid: df5bb22325d0114b9c0126fe6c80a870
-      id: 1940819977
-      PathAndIcons:
-      - ElementName: Triggers
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: f12d3d8097129240812e037938411b68
-      - ElementName: OnHealthyHP
-        ObjectType: 14
-        guid: df5bb22325d0114b9c0126fe6c80a870
-      Path: Triggers\Default Work Unit\OnHealthyHP
-    - name: OnLowHP
-      guid: 000d36dd4e3d664db0693f8fcb0838d6
-      id: 1242301544
-      PathAndIcons:
-      - ElementName: Triggers
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: f12d3d8097129240812e037938411b68
-      - ElementName: OnLowHP
-        ObjectType: 14
-        guid: 000d36dd4e3d664db0693f8fcb0838d6
-      Path: Triggers\Default Work Unit\OnLowHP
+    m_lastTime: -8585272002966992737
+    List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000130000001c0000006100000063000000
+  ExpandedWaapiItemIds: 0b000000890000008b000000f7000000f8000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

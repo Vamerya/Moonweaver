@@ -211,11 +211,14 @@ MonoBehaviour:
   playerLevelBehaviour: {fileID: 0}
   burningTimer: 0
   burningTimerInit: 3
-  knockbackForce: 10
   moonLightDamageHP: {x: 0, y: 0, z: 0}
   maxHP: 0
   isDead: 0
   isBurning: 0
+  knockbackDistance: 5
+  knockBackSpeed: 15
+  aiVelo: 7
+  debugTri: {fileID: 0}
 --- !u!114 &1129525327956888033
 MonoBehaviour:
   m_ObjectHideFlags: 0

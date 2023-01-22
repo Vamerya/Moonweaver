@@ -353,7 +353,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.731
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.6834848, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -1025,7 +1025,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1137,6 +1137,7 @@ MonoBehaviour:
   id: 7d2cd3ed-a458-4adf-aa1a-81bdd372e72a
   bossName: Veronica
   bossTitle: the Queen Slayer
+  akEventName: VeronicaBossMusic
   bossBehaviour: {fileID: 0}
   bossHealthBar: {fileID: 0}
   nameAndTitle: {fileID: 0}
@@ -1145,7 +1146,6 @@ MonoBehaviour:
   burnColor: {r: 0.48584908, g: 0.86736053, b: 1, a: 1}
   burningTimer: 0
   burningTimerInit: 3
-  knockbackForce: 10
   bossMoonLight: 3000
   bossDamage: 100
   bossHealth: 3000
@@ -1153,6 +1153,10 @@ MonoBehaviour:
   bossHealthPercentage: 0
   isDead: 0
   isBurning: 0
+  knockbackResistance: 0.3
+  knockbackDistance: 0
+  knockBackSpeed: 0
+  aiVelo: 0
 --- !u!114 &3652588066090148989
 MonoBehaviour:
   m_ObjectHideFlags: 0

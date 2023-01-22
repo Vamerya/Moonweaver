@@ -16,6 +16,7 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
     [SerializeField] public float playerCriticalStrikeChance;
     [SerializeField] public float playerCriticalStrikeDamage;
     [SerializeField] public float playerBurnDamage;
+    [SerializeField] public float knockbackDistance, knockBackSpeed;
 
     #region stats and what they do
     // - Vigor -> Overall HP
@@ -70,6 +71,40 @@ public class PlayerMeleeWeaponBehaviour : MonoBehaviour
         }
 
         return playerWeaponDamage;
+    }
+
+    public float DetermineKnockbackDistance()
+    {
+        switch (playerInfos.inventoryState)
+        {
+            case 0:
+                knockbackDistance = 2;
+                break;
+            case 1:
+                knockbackDistance = 5;
+                break;
+            default:
+                break;
+        }
+
+        return knockbackDistance;
+    }
+
+    public float DetermineKnockbackSpeed()
+    {
+        switch(playerInfos.inventoryState)
+        {
+            case 0:
+                knockBackSpeed = 7;
+                break;
+            case 1:
+                knockBackSpeed = 15;
+                break;
+            default:
+                break;
+        }
+
+        return knockBackSpeed;
     }
 
     /// <summary>

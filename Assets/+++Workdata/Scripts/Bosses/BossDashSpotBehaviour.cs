@@ -23,7 +23,7 @@ public class BossDashSpotBehaviour : MonoBehaviour
     void Update()
     {
         playerPosition = playerController.transform.position;
-        distanceToPlayer = playerPosition -     bossInfos.transform.position;
+        distanceToPlayer = playerPosition - bossInfos.transform.position;
         this.transform.position = bossInfos.transform.position + (distanceToPlayer * -1);
     }
 }

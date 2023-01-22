@@ -1,0 +1,25 @@
+Event	ID	Name			Wwise Object Path	Notes
+	212041160	VeronicaBossMusic			\Default Work Unit\VeronicaBossMusic	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	585797371	Music_Gameplay_State			\Music\Music_Gameplay_State	
+	2698781627	PlayerHealthState			\Default Work Unit\PlayerHealthState	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Music_Gameplay_State			
+	1560169506	Boss	Music_Gameplay_State			
+	1823678183	Exploring	Music_Gameplay_State			
+	2764240573	Combat	Music_Gameplay_State			
+	19277431	LowLife	PlayerHealthState			
+	748895195	None	PlayerHealthState			
+	2874639328	Healthy	PlayerHealthState			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	290465945	LowLife	PlayerHealthState	\Interactive Music Hierarchy\Default Work Unit\GameplayMusicSwitchContainer		
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	1242301544	OnLowHP			\Default Work Unit\OnLowHP	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	665866384	Veronica, the Queen Slayer	D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Mac\SFX\Veronica, the Queen Slayer_32BB0324.wem		\Interactive Music Hierarchy\Default Work Unit\GameplayMusicSwitchContainer\BossMusic\Veronica, the Queen Slayer\Veronica, the Queen Slayer		64658876
+

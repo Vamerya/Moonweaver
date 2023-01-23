@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
-    m_lastTime: -8585271991433736200
+    m_lastTime: -8585271295647733556
     List:
     - name: Main
       guid: d91e3248ea9c84418abd1336d4d59083
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f0ecfe22b3ad344ab111bd467979de16
     GuidInternal: 
-    m_lastTime: -8585272966447624561
+    m_lastTime: -8585271341694942948
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -107,7 +107,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 9fd66b419a5a284fab755d2d5dfd0f1d
     GuidInternal: 
-    m_lastTime: -8585271996042189980
+    m_lastTime: -8585271295647668332
     List:
     - name: Music
       guid: efd990fd095a9d449312dd2451a4bd92
@@ -152,7 +152,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7a48650bf4d1074d9b9e05c7f12c376b
     GuidInternal: 
-    m_lastTime: -8585272002966992737
+    m_lastTime: -8585271341420094595
     List: []
   - PhysicalPath: States\Music.wwu
     PathAndIcons:
@@ -165,7 +165,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
     GuidInternal: 
-    m_lastTime: -8585271991868243984
+    m_lastTime: -8585271940453739068
     List:
     - name: GameplayMusicState
       guid: ff560accfef7954a9a40fe3c5a4d4bab
@@ -407,10 +407,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f12d3d8097129240812e037938411b68
     GuidInternal: 
-    m_lastTime: -8585272002966992737
+    m_lastTime: -8585271340069909554
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0b000000890000008b000000f7000000f8000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -206,10 +206,10 @@ public class PlayerController : MonoBehaviour
         else if (movementX > 0)
             playerSpriteRenderer.flipX = false;
 
-        if (playerCombat.isAttacking || playerCombat.isCharging)
-            speed = maxSpeed / 5;
-        else
-            speed = maxSpeed;
+        // if (playerCombat.isAttacking || playerCombat.isCharging)
+        //     speed = maxSpeed / 5;
+        // else
+        //     speed = maxSpeed;
 
         DetermineDirectionState();
 
@@ -403,6 +403,16 @@ public class PlayerController : MonoBehaviour
         staminaBarBehaviour.FadingBarBehaviour();
         dashBufferTimer = dashBufferLength;
         gameObject.GetComponentInChildren<Collider2D>().enabled = true;
+    }
+
+    public void DecreaseWalkingSpeed()
+    {
+        speed = maxSpeed / 5;
+    }
+
+    public void ResetWalkingSpeed()
+    {
+        speed = maxSpeed;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

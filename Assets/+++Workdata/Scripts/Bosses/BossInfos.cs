@@ -55,7 +55,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         nameAndTitle = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
 
-        AkSoundEngine.PostEvent(akEventName, this.gameObject);
+        //AkSoundEngine.PostEvent(akEventName, this.gameObject);
 
         AkSoundEngine.SetState("GameplayMusicState", "Boss");
     }

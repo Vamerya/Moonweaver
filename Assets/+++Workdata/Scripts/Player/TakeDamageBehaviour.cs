@@ -45,8 +45,6 @@ public class TakeDamageBehaviour : MonoBehaviour
                     playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<SpikeBehaviour>().SpikeDamage());
                 }
             }
-
-            Debug.Log("KSKSKSKs");
         }
     }
 }

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{803D2DF1-1297-4092-812E-037938411B68}" SchemaVersion="110">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{803D2DF1-1297-4092-812E-037938411B68}" PersistMode="Standalone">
-			<ChildrenList>
-				<Trigger Name="OnLowHP" ID="{DD360D00-3D4E-4D66-B069-3F8FCB0838D6}"/>
-				<Trigger Name="OnHealthyHP" ID="{23B25BDF-D025-4B11-9C01-26FE6C80A870}"/>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{803D2DF1-1297-4092-812E-037938411B68}" PersistMode="Standalone"/>
 	</Triggers>
 </WwiseDocument>

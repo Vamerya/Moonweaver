@@ -37,7 +37,6 @@ public class EnemySpawner : MonoBehaviour
     {   
         for (int i = 0; i < enemySpawnPoint.Length; i++)
         {
-            Debug.Log("KSKSKS");
             GameObject newEnemy = Instantiate(enemyPrefab, enemySpawnPoint[i].position, Quaternion.identity);
             spawnedEnemies.Add(newEnemy);
         }

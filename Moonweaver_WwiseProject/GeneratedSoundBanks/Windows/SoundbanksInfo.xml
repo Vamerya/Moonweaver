@@ -46,7 +46,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{565515C6-DCDE-2131-E13D-5DA2C6E30EF9}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B200193F-53D1-E6FB-29EB-68761712D7AE}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -64,7 +64,46 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3991942870" Name="Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3991942870" Name="Music" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2854737089" Id="1823678183"/>
+							<MediaRefs>
+								<MediaRef Id="179012500"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2854737089" Id="1560169506"/>
+							<MediaRefs>
+								<MediaRef Id="578271736"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2854737089" Id="3604647259"/>
+							<MediaRefs>
+								<MediaRef Id="145994054"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2854737089" Id="1823678183"/>
+							<MediaRefs>
+								<MediaRef Id="179012500"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2854737089" Id="1560169506"/>
+							<MediaRefs>
+								<MediaRef Id="578271736"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2854737089" Id="3604647259"/>
+							<MediaRefs>
+								<MediaRef Id="145994054"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="2854737089" Name="GameplayMusicState">
@@ -78,5 +117,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{684CB2FE-A456-9972-769F-FC17ED40A270}</FileHash>
+	<FileHash>{0041EF47-791F-A58D-845C-4B790592F02E}</FileHash>
 </SoundBanksInfo>

@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{22FEECF0-ADB3-4A34-B111-BD467979DE16}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{22FEECF0-ADB3-4A34-B111-BD467979DE16}" PersistMode="Standalone">
-			<ChildrenList>
-				<Event Name="VeronicaBossMusic" ID="{A3037CC5-52CB-4D98-9D26-0ACC81E50FA3}">
-					<ChildrenList>
-						<Action Name="" ID="{865C8A07-E19C-497B-80D5-73B42F4782EF}" ShortID="627006802">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Veronica, the Queen Slayer" ID="{FE6C6A9F-B9D0-4B7C-926F-70A0650F00AF}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="VeronicaLowPassFilter" ID="{8C594FD5-8C8E-4119-BDDD-CFCDA6FFB563}">
-					<ChildrenList>
-						<Action Name="" ID="{BABDE758-E61C-4D23-8135-C99495AB0A84}" ShortID="205229573">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="26"/>
-								<Property Name="Lowpass" Type="int16" Value="16"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Veronica, the Queen Slayer" ID="{DEC9E46F-2A9A-43F6-BB9B-F916B27E7438}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="VeronicaResetFilter" ID="{75D81544-16D6-49CC-A95C-52582D0B2E06}">
-					<ChildrenList>
-						<Action Name="" ID="{34C1BC47-8645-4651-91C4-2D6EB1DA5A66}" ShortID="775158072">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="27"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Veronica, the Queen Slayer" ID="{DEC9E46F-2A9A-43F6-BB9B-F916B27E7438}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{22FEECF0-ADB3-4A34-B111-BD467979DE16}" PersistMode="Standalone"/>
 	</Events>
 </WwiseDocument>

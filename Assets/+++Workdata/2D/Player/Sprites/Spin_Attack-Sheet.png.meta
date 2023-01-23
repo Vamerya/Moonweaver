@@ -1,0 +1,610 @@
+fileFormatVersion: 2
+guid: b79790abb5d38b040b8d0ab4adc3c7dd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 27
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a0f50fa3c88af449bc2e1f95f99514
+      internalID: 1975745691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 26
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.7037037, y: 0.04761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91d89fdb0de64d4c871d4536fc44de9
+      internalID: 938676818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 26
+        width: 27
+        height: 21
+      alignment: 9
+      pivot: {x: 0.7037037, y: 0.04761905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db801d0f74290a49b0273f5d19d6663
+      internalID: 82044263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 25
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.6923077, y: 0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af16894b08bd30e4ea708bade933f344
+      internalID: -187939510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 23
+        width: 34
+        height: 30
+      alignment: 9
+      pivot: {x: 0.32352942, y: 0.16666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0317ba1741f86004a8bccdc1992c6c09
+      internalID: -830808161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 23
+        width: 34
+        height: 30
+      alignment: 9
+      pivot: {x: 0.2647059, y: 0.13333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67835bcac84f4546ab6dc62cd70b2c0
+      internalID: -395455477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 27
+        width: 41
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4634146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420d7cb27611d374bafe83f948068f66
+      internalID: 391621000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 27
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bba7489f1ce5d04392e02158c063a80
+      internalID: -2117096925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 18
+        width: 48
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f7d7a2b621eee438db1eaa7c877415
+      internalID: -1953853357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 21
+        width: 48
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2820513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fa0927a430dfa4395c99adbba06b8a
+      internalID: 1466040440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 18
+        width: 50
+        height: 40
+      alignment: 9
+      pivot: {x: 0.48, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aea6744825151a48bfa4e052a26fade
+      internalID: 1095912730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 19
+        width: 49
+        height: 38
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0.28947368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e52a085423a964cac2357bc269bf1f
+      internalID: -489122683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 17
+        width: 50
+        height: 41
+      alignment: 9
+      pivot: {x: 0.48, y: 0.26829267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8bbcf793ea4ec478a4999a7495077b
+      internalID: -2023732990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 20
+        width: 49
+        height: 38
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0.28947368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842ef4c632a659a499a040fa799df05c
+      internalID: -1046061175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 18
+        width: 50
+        height: 43
+      alignment: 9
+      pivot: {x: 0.48, y: 0.25581396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c928c5871b90e42ae70a7461b177b8
+      internalID: 393799269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 20
+        width: 49
+        height: 37
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0.2972973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eba0bd9a10ff3d44b1d386984209a5d
+      internalID: -617157497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 27
+        width: 41
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4634146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe91bd954624fca44b1fd45975428e28
+      internalID: -103700300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 27
+        width: 38
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78eb13026036f564ebc3df94262f8e30
+      internalID: -2002474183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 22
+        width: 36
+        height: 30
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.20000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74d5d1a40e2e1c40a3cdf90ac86522d
+      internalID: 721352524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 23
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.11111111, y: 0.14285715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69ade1c6ba75dd488f617cb8b98f20a
+      internalID: -1265438393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 24
+        width: 24
+        height: 28
+      alignment: 9
+      pivot: {x: 0.083333336, y: 0.107142866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae827b74c8b781b4da22518b6d5cd75c
+      internalID: -2032946775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin_Attack-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 27
+        width: 18
+        height: 29
+      alignment: 9
+      pivot: {x: 0.2777778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e134ca0933ba9489bc989470a7c0ae
+      internalID: -689772783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Spin_Attack-Sheet_8: -1953853357
+      Spin_Attack-Sheet_20: -2032946775
+      Spin_Attack-Sheet_2: 82044263
+      Spin_Attack-Sheet_18: 721352524
+      Spin_Attack-Sheet_24: 2121416118
+      Spin_Attack-Sheet_1: 938676818
+      Spin_Attack-Sheet_7: -2117096925
+      Spin_Attack-Sheet_13: -1046061175
+      Spin_Attack-Sheet_14: 393799269
+      Spin_Attack-Sheet_16: -103700300
+      Spin_Attack-Sheet_21: -689772783
+      Spin_Attack-Sheet_11: -489122683
+      Spin_Attack-Sheet_12: -2023732990
+      Spin_Attack-Sheet_3: -187939510
+      Spin_Attack-Sheet_25: 141131076
+      Spin_Attack-Sheet_15: -617157497
+      Spin_Attack-Sheet_5: -395455477
+      Spin_Attack-Sheet_6: 391621000
+      Spin_Attack-Sheet_10: 1095912730
+      Spin_Attack-Sheet_19: -1265438393
+      Spin_Attack-Sheet_17: -2002474183
+      Spin_Attack-Sheet_0: 1975745691
+      Spin_Attack-Sheet_9: 1466040440
+      Spin_Attack-Sheet_4: -830808161
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -104,6 +104,7 @@ public class PlayerCombat : MonoBehaviour
 
         if (playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
         {
+            playerController.DecreaseWalkingSpeed();
             switch (attackState)
             {
                 case 1:

@@ -23,7 +23,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	717835655	Paused	MenuState	\Interactive Music Hierarchy\Music\GameplayMusicSwitch		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	145994054	Aster, the Weaver	F:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\SFX\Aster, the Weaver_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\MainMenuMusic\Aster, the Weaver		75852144
-	179012500	Weaving The Moon	F:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\SFX\Weaving The Moon_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\Ambient\Weaving The Moon		156599244
-	578271736	Veronica the Queen Slayer	F:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\SFX\Veronica, the Queen Slayer_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\BossMusic\Veronica the Queen Slayer		64658844
+	145994054	Aster, the Weaver	D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\SFX\Aster, the Weaver_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\MainMenuMusic\Aster, the Weaver		75852144
+	179012500	Weaving The Moon	D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\SFX\Weaving The Moon_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\Ambient\Weaving The Moon		156599244
+	578271736	Veronica the Queen Slayer	D:\3. SAP\Moonweaver\Moonweaver_WwiseProject\.cache\Windows\SFX\Veronica, the Queen Slayer_D79FB2B7.wem		\Interactive Music Hierarchy\Music\GameplayMusicSwitch\BossMusic\Veronica the Queen Slayer		64658844
 

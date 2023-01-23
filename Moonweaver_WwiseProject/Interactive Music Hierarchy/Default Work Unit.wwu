@@ -161,9 +161,7 @@
 								<ObjectList Name="Stingers">
 									<Reference>
 										<Local>
-											<MusicStinger Name="" ID="{494300C6-0D46-4E1C-8D22-B0141AB73637}">
-												<TriggerRef Name="OnLowHP" ID="{DD360D00-3D4E-4D66-B069-3F8FCB0838D6}" WorkUnitID="{803D2DF1-1297-4092-812E-037938411B68}"/>
-											</MusicStinger>
+											<MusicStinger Name="" ID="{494300C6-0D46-4E1C-8D22-B0141AB73637}"/>
 										</Local>
 									</Reference>
 								</ObjectList>
@@ -286,27 +284,6 @@
 							</Playlist>
 						</MusicPlaylistContainer>
 					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="PlayerHealthState" ID="{98C6344C-E7AB-4A0E-844F-C4F8D0B2BEF3}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="LowLife" ID="{C3463D52-0312-4295-B888-D24E1B3515E7}"/>
-								<CustomState Name="" ID="{E2ACF20A-5883-443D-A0F1-7A9234862DC5}" ShortID="290465945">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="60"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Healthy" ID="{1E16E56A-E9C1-451D-8FE3-84A424E5E736}"/>
-								<CustomState Name="" ID="{0C03A1DD-E8D0-462F-98A7-DFBD0135BF1B}" ShortID="699082604"/>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{7758E833-664B-43F4-A9CE-DB41CC531873}">
 							<PropertyList>
@@ -335,38 +312,8 @@
 						</MusicTransition>
 					</TransitionList>
 					<ArgumentList>
-						<ArgumentRef Name="PlayerHealthState" ID="{98C6344C-E7AB-4A0E-844F-C4F8D0B2BEF3}"/>
 						<ArgumentRef Name="GameplayMusicState" ID="{CC0A56FF-F7FE-4A95-9A40-FE3C5A4D4BAB}"/>
 					</ArgumentList>
-					<EntryList>
-						<Entry>
-							<Path>
-								<PathElementRef Name="Healthy" ID="{1E16E56A-E9C1-451D-8FE3-84A424E5E736}"/>
-								<PathElementRef Name="Boss" ID="{3F9371F6-580B-4921-B301-E73DCC833428}"/>
-							</Path>
-							<AudioNodeInfo>
-								<AudioNodeRef Name="BossMusic" ID="{627D4D5A-8685-4305-A265-3E951F0EC0B3}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}" Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
-								<PathElementRef Name="Healthy" ID="{1E16E56A-E9C1-451D-8FE3-84A424E5E736}"/>
-								<PathElementRef Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
-							</Path>
-							<AudioNodeInfo>
-								<AudioNodeRef Name="Explore" ID="{499C41B1-9D21-4122-9DBF-BFFC1EBB13E3}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}" Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
-								<PathElementRef Name="Healthy" ID="{1E16E56A-E9C1-451D-8FE3-84A424E5E736}"/>
-								<PathElementRef Name="None" ID="{03D4FAA4-3A54-45AB-9AFB-1D16A7237594}"/>
-							</Path>
-							<AudioNodeInfo>
-								<AudioNodeRef Name="Explore" ID="{499C41B1-9D21-4122-9DBF-BFFC1EBB13E3}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}" Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-					</EntryList>
 				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>

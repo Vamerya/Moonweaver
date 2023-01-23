@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuButtons : MonoBehaviour
 {
     #region Variables
-    [SerializeField] DataPersistenceManager dataPersistenceManager;
     [SerializeField] OptionsBehaviour optionsBehaviour;
     bool mainMenuActive;
     bool pauseMenuActive;
     [SerializeField] GameObject _mainMenu;
-    [SerializeField] GameObject _saveFiles;
     [SerializeField] GameObject _options;
     [SerializeField] GameObject _pauseMenu;
     #endregion
@@ -26,18 +24,11 @@ public class MenuButtons : MonoBehaviour
         mainMenuActive = true;
         pauseMenuActive = false;
     }
+
     public void LoadScene(string sceneName)
     {
-        //switches between scenes
-        var activeScene = SceneManager.GetActiveScene().ToString();
-        if (activeScene == "MainGame")
-        {
-            dataPersistenceManager.SaveGame();
-            StartCoroutine(WaitSoThisFlipFinallySaves());
-            SceneManager.LoadScene(sceneName);
-        }
-        else
-            SceneManager.LoadScene(sceneName);
+        DataPersistenceManager.instance.SaveGame();
+        SceneManager.LoadSceneAsync(sceneName);
     }
 
     public void ExitGame()
@@ -76,22 +67,6 @@ public class MenuButtons : MonoBehaviour
         gameObject.GetComponent<PlayerController>().inGameInputActions.Enable();
     }
 
-    //swaps between the main menu buttons and save files
-    public void ToggleSaves()
-    {
-        if (mainMenuActive)
-        {
-            _mainMenu.SetActive(false);
-            _saveFiles.SetActive(true);
-            mainMenuActive = false;
-        }
-        else if (!mainMenuActive)
-        {
-            _mainMenu.SetActive(true);
-            _saveFiles.SetActive(false);
-            mainMenuActive = true;
-        }
-    }
 
     public void ToggleOptions()
     {

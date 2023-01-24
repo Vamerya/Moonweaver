@@ -83,8 +83,6 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerKeyboardMouseActionMap.Dash.performed += ctx => Dash(true);
         inGameInputActions.PlayerKeyboardMouseActionMap.Dash.canceled += ctx => Dash(false);
 
-        inGameInputActions.PlayerKeyboardMouseActionMap.OpenInventory.performed += ctx => InventoryToggle();
-
         inGameInputActions.PlayerKeyboardMouseActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
         inGameInputActions.PlayerKeyboardMouseActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
@@ -103,32 +101,9 @@ public class PlayerController : MonoBehaviour
         inGameInputActions.PlayerXBOXActionMap.Dash.performed += ctx => Dash(true);
         inGameInputActions.PlayerXBOXActionMap.Dash.canceled += ctx => Dash(false);
 
-        inGameInputActions.PlayerXBOXActionMap.OpenInventory.performed += ctx => InventoryToggle();
-
         inGameInputActions.PlayerXBOXActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
 
         inGameInputActions.PlayerXBOXActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
-
-
-
-        //PS4 CONTROLLER
-        inGameInputActions.PlayerPS4ActionMap.Movement.performed += ctx => Movement(ctx.ReadValue<Vector2>());
-        inGameInputActions.PlayerPS4ActionMap.Movement.canceled += ctx => Movement(ctx.ReadValue<Vector2>());
-
-        inGameInputActions.PlayerPS4ActionMap.Interact.performed += ctx => Interact();
-        inGameInputActions.PlayerPS4ActionMap.UseFlask.performed += ctx => playerHealthflaskBehaviour.UseFlask();
-
-        inGameInputActions.PlayerPS4ActionMap.Attack.performed += ctx => playerCombat.Attack();
-        inGameInputActions.PlayerPS4ActionMap.Attack.canceled += ctx => playerCombat.AttackRelease();
-
-        inGameInputActions.PlayerPS4ActionMap.Dash.performed += ctx => Dash(true);
-        inGameInputActions.PlayerPS4ActionMap.Dash.canceled += ctx => Dash(false);
-
-        inGameInputActions.PlayerPS4ActionMap.OpenInventory.performed += ctx => InventoryToggle();
-
-        inGameInputActions.PlayerPS4ActionMap.SwapWeapon.performed += ctx => playerInfos.SwapWeapon();
-
-        inGameInputActions.PlayerPS4ActionMap.TogglePauseMenu.performed += ctx => menuButtons.TogglePauseMenu();
     }
 
     /// <summary>
@@ -206,19 +181,9 @@ public class PlayerController : MonoBehaviour
         else if (movementX > 0)
             playerSpriteRenderer.flipX = false;
 
-        // if (playerCombat.isAttacking || playerCombat.isCharging)
-        //     speed = maxSpeed / 5;
-        // else
-        //     speed = maxSpeed;
-
         DetermineDirectionState();
 
         anim.SetBool("isDashing", isDashing);
-    }
-
-    void RotateRangedWeapon()
-    {
-
     }
 
     /// <summary>
@@ -327,23 +292,6 @@ public class PlayerController : MonoBehaviour
             {
 
             }
-        }
-    }
-
-    /// <summary>
-    /// toggles between the player hotbar and inventory, (sets time scale to 0 when inventory is openend)
-    /// </summary>
-    void InventoryToggle()
-    {
-        if (inventoryHotbarState == 0)
-        {
-            inventoryHotbarState = 1;
-            //Time.timeScale = 0f;
-        }
-        else if (inventoryHotbarState == 1)
-        {
-            inventoryHotbarState = 0;
-            //Time.timeScale = 1f;
         }
     }
 

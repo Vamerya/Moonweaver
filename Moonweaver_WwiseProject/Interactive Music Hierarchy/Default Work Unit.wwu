@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}" SchemaVersion="110">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Stingers" ID="{C6657A16-4FE5-42D0-BFFA-DACEBEC99FA2}" ShortID="214329351">
+					<ChildrenList>
+						<MusicSegment Name="heartbeat_1" ID="{4CD72319-56A6-4E52-B9AE-82E8DC755268}" ShortID="145184246">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="heartbeat_1" ID="{2BBDDD43-1589-46D1-8707-8942692677F5}" ShortID="1055000530">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="heartbeat_1" ID="{F255BF8B-C48B-4F8B-8AD5-98E1543C070B}">
+											<Language>SFX</Language>
+											<AudioFile>heartbeat_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="817154691"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{93FEFDD6-8CD6-4648-A174-FA224D3BA3A9}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B0D4E384-77A2-47BB-B384-3AFA237127F6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="heartbeat_1" ID="{89D1DBB2-FAD8-4013-A647-DEF9EBD1E226}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="428.571428571429"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="heartbeat_1" ID="{F255BF8B-C48B-4F8B-8AD5-98E1543C070B}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{8C13A853-6DAB-4F15-B6F2-7D55874D7FDC}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{CA5A8E1A-4863-4555-9D48-D431173AF91A}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

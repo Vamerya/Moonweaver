@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class TakeDamageBehaviour : MonoBehaviour
 {
+    [SerializeField] PlayerSoundBehaviour playerSoundBehaviour;
     PlayerInfos playerInfos;
-    [SerializeField] PlayerStateManager playerState;
 
     /// <summary>
     /// grabs necessary reference to scripts
@@ -29,7 +29,9 @@ public class TakeDamageBehaviour : MonoBehaviour
         if (collision.CompareTag("EnemyHitBox") && !playerInfos.isDamaged)
         {
             playerInfos.isDamaged = true;
+            playerSoundBehaviour.PlayPlayerDamagedAudio();
             playerInfos.invincibilityTimer = playerInfos.invincibilityTimerInit;
+
             try
             {
                 playerInfos.CalculatePlayerHealth(collision.gameObject.GetComponentInParent<EnemyInfos>().moonLightDamageHP.y);

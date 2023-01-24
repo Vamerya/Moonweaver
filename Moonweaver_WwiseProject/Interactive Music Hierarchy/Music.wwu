@@ -9,7 +9,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+							<ObjectRef Name="Music" ID="{1A9376F6-656B-4377-B290-9693EB9D28F5}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -98,6 +98,9 @@
 							</ObjectLists>
 						</MusicSegment>
 						<MusicSegment Name="BossMusic" ID="{7D31A301-6A11-41AA-A395-76A6B61F8C80}" ShortID="776359470">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="366545.464852608"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
@@ -173,6 +176,19 @@
 													<Property Name="TimeMs" Type="Real64" Value="1000"/>
 												</PropertyList>
 											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="Stingers">
+									<Reference>
+										<Local>
+											<MusicStinger Name="" ID="{F412FA74-70EC-4D34-9220-8A8EEB85CED6}">
+												<PropertyList>
+													<Property Name="PlaySegmentAt" Type="int16" Value="2"/>
+												</PropertyList>
+												<TriggerRef Name="PlayerLowLife" ID="{51715224-0033-4156-871B-0A0699935DCF}" WorkUnitID="{803D2DF1-1297-4092-812E-037938411B68}"/>
+												<SegmentRef Name="heartbeat_1" ID="{4CD72319-56A6-4E52-B9AE-82E8DC755268}" WorkUnitID="{DC949205-D9F5-4432-B9BC-311929FE3AA3}"/>
+											</MusicStinger>
 										</Local>
 									</Reference>
 								</ObjectList>

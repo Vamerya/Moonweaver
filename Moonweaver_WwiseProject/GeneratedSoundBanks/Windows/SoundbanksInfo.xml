@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{910D382E-6F15-03CC-0D51-81BB05FE59BC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D2FC671F-5679-42E7-8C28-25BA2CCB7871}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,8 +19,15 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1359681556" Name="SFX &amp; Environmental"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="SFXVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1548586727" Name="MenuState">
 					<States>
@@ -45,25 +52,144 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="Footsteps">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="2185786256" Name="Gravel"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3991398673" Name="AsterHurt">
+					<Switches>
+						<Switch Id="3983317581" Name="AsterAlive"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B200193F-53D1-E6FB-29EB-68761712D7AE}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5BD83BC6-1673-0D86-DA09-4EF9C07851C0}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="124131288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Aster_Damaged_1.wav</ShortName>
+					<CachePath>SFX/Aster_Damaged_1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="145994054" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Aster, the Weaver.wav</ShortName>
 					<CachePath>SFX/Aster, the Weaver_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="169250338" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concrete-footsteps-6752 - Marker #1.wav</ShortName>
+					<CachePath>SFX/concrete-footsteps-6752 - Marker #1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="179012500" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Weaving The Moon.wav</ShortName>
 					<CachePath>SFX/Weaving The Moon_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="189515617" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concrete-footsteps-6752 - Marker #3.wav</ShortName>
+					<CachePath>SFX/concrete-footsteps-6752 - Marker #3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="243047784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Aster_Damaged_2.wav</ShortName>
+					<CachePath>SFX/Aster_Damaged_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="339925331" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk_Dirt_4.wav</ShortName>
+					<CachePath>SFX/Walk_Dirt_4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="369387489" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concrete-footsteps-6752 - Marker #2.wav</ShortName>
+					<CachePath>SFX/concrete-footsteps-6752 - Marker #2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="394163391" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk_Dirt_2.wav</ShortName>
+					<CachePath>SFX/Walk_Dirt_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="512120213" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk_Dirt_1.wav</ShortName>
+					<CachePath>SFX/Walk_Dirt_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="522937414" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk_Dirt_5.wav</ShortName>
+					<CachePath>SFX/Walk_Dirt_5_10C4C929.wem</CachePath>
+				</File>
 				<File Id="578271736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Veronica, the Queen Slayer.wav</ShortName>
 					<CachePath>SFX/Veronica, the Queen Slayer_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="642349722" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concrete-footsteps-6752 - Marker #4.wav</ShortName>
+					<CachePath>SFX/concrete-footsteps-6752 - Marker #4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="817154691" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>heartbeat_1.wav</ShortName>
+					<CachePath>SFX/heartbeat_1_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1058677426" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk_Dirt_3.wav</ShortName>
+					<CachePath>SFX/Walk_Dirt_3_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="3991398673" Name="AsterHurt" DurationType="OneShot" DurationMin="0.37945578" DurationMax="0.3839229">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3991398673" Id="3983317581" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="124131288"/>
+								<MediaRef Id="243047784"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.19959183" DurationMax="0.75">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2185786256"/>
+							<MediaRefs>
+								<MediaRef Id="339925331"/>
+								<MediaRef Id="394163391"/>
+								<MediaRef Id="512120213"/>
+								<MediaRef Id="522937414"/>
+								<MediaRef Id="1058677426"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="169250338"/>
+								<MediaRef Id="189515617"/>
+								<MediaRef Id="369387489"/>
+								<MediaRef Id="642349722"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2185786256"/>
+							<MediaRefs>
+								<MediaRef Id="339925331"/>
+								<MediaRef Id="394163391"/>
+								<MediaRef Id="512120213"/>
+								<MediaRef Id="522937414"/>
+								<MediaRef Id="1058677426"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="169250338"/>
+								<MediaRef Id="189515617"/>
+								<MediaRef Id="369387489"/>
+								<MediaRef Id="642349722"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2179486487" Name="Heartbeat" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="2116796762" Name="PlayerLowLife"/>
+					</ActionTrigger>
+				</Event>
 				<Event Id="3991942870" Name="Music" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -76,6 +202,7 @@
 							<SwitchValue GroupType="State" GroupId="2854737089" Id="1560169506"/>
 							<MediaRefs>
 								<MediaRef Id="578271736"/>
+								<MediaRef Id="817154691"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -94,6 +221,7 @@
 							<SwitchValue GroupType="State" GroupId="2854737089" Id="1560169506"/>
 							<MediaRefs>
 								<MediaRef Id="578271736"/>
+								<MediaRef Id="817154691"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -115,7 +243,23 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="Footsteps">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="2185786256" Name="Gravel"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3991398673" Name="AsterHurt">
+					<Switches>
+						<Switch Id="3983317581" Name="AsterAlive"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+			<Triggers>
+				<Trigger Id="2116796762" Name="PlayerLowLife"/>
+			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0041EF47-791F-A58D-845C-4B790592F02E}</FileHash>
+	<FileHash>{FB546F22-89F1-3254-2C80-E74A2E621D22}</FileHash>
 </SoundBanksInfo>

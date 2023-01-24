@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b4d8a1a4cf823429cca4b5915c9d4a, type: 3}
+  m_Name: 4A80B7D8-20A2-48FA-BA6D-E0B35B5D2484
+  m_EditorClassIdentifier: 
+  objectName: Concrete
+  id: 841620460
+  guid: 4A80B7D8-20A2-48FA-BA6D-E0B35B5D2484
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: d7cf784e05ea10a4b8177699b126f3a7, type: 2}

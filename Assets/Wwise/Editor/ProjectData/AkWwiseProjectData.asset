@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: b16642fd83c8bc4c96d9a209c7cea467
     GuidInternal: 
-    m_lastTime: -8585274431512293272
+    m_lastTime: -8585270574080081492
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,40 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: f676931a6b657743b2909693eb9d28f5
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b16642fd83c8bc4c96d9a209c7cea467
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: f676931a6b657743b2909693eb9d28f5
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: SFX & Environmental
+      guid: 73edeaf9b04b47488d506d897f09dcbc
+      id: 1359681556
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b16642fd83c8bc4c96d9a209c7cea467
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX & Environmental
+        ObjectType: 2
+        guid: 73edeaf9b04b47488d506d897f09dcbc
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX & Environmental
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
-    m_lastTime: -8585271295647733556
+    m_lastTime: -8585270370602470192
     List:
     - name: Main
       guid: d91e3248ea9c84418abd1336d4d59083
@@ -107,8 +141,25 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 9fd66b419a5a284fab755d2d5dfd0f1d
     GuidInternal: 
-    m_lastTime: -8585271295647668332
+    m_lastTime: -8585270456339682317
     List:
+    - name: Heartbeat
+      guid: 2133ce3905080d4c8eef1d97480cef35
+      id: 2179486487
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 9fd66b419a5a284fab755d2d5dfd0f1d
+      - ElementName: Heartbeat
+        ObjectType: 3
+        guid: 2133ce3905080d4c8eef1d97480cef35
+      Path: Events\Music\Heartbeat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Music
       guid: efd990fd095a9d449312dd2451a4bd92
       id: 3991942870
@@ -126,6 +177,53 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+  - PhysicalPath: Events\SFX.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: SFX
+      ObjectType: 12
+      guid: 29e9b914b7cb2147a5b17533ee07415c
+    ParentPath: Events\SFX
+    guid: 29e9b914b7cb2147a5b17533ee07415c
+    GuidInternal: 
+    m_lastTime: -8585270372283486963
+    List:
+    - name: AsterHurt
+      guid: 7522ec666fd5b343ba48b74cdce0b9ee
+      id: 3991398673
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 29e9b914b7cb2147a5b17533ee07415c
+      - ElementName: AsterHurt
+        ObjectType: 3
+        guid: 7522ec666fd5b343ba48b74cdce0b9ee
+      Path: Events\SFX\AsterHurt
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Footsteps
+      guid: 6aaf8f782f423249a6c196380195915c
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 29e9b914b7cb2147a5b17533ee07415c
+      - ElementName: Footsteps
+        ObjectType: 3
+        guid: 6aaf8f782f423249a6c196380195915c
+      Path: Events\SFX\Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -138,8 +236,73 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e181ec1466b604bbeac278ae343a2e9
     GuidInternal: 
-    m_lastTime: -8585274431512300778
-    List: []
+    m_lastTime: -8585270575081363259
+    List:
+    - name: MasterVolume
+      guid: b792a2a7f968d640b50d78b9f4c3a854
+      id: 2918011349
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0e181ec1466b604bbeac278ae343a2e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 195668da300644469ea323daf8c1cd17
+      - ElementName: MasterVolume
+        ObjectType: 13
+        guid: b792a2a7f968d640b50d78b9f4c3a854
+      Path: Game Parameters\Default Work Unit\Volume\MasterVolume
+    - name: MusicVolume
+      guid: d7c130d4bcd6344f8087c621847e3079
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0e181ec1466b604bbeac278ae343a2e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 195668da300644469ea323daf8c1cd17
+      - ElementName: MusicVolume
+        ObjectType: 13
+        guid: d7c130d4bcd6344f8087c621847e3079
+      Path: Game Parameters\Default Work Unit\Volume\MusicVolume
+    - name: SFXVolume
+      guid: 6970467e4ace084b8e105c96fdcba5ac
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0e181ec1466b604bbeac278ae343a2e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 195668da300644469ea323daf8c1cd17
+      - ElementName: SFXVolume
+        ObjectType: 13
+        guid: 6970467e4ace084b8e105c96fdcba5ac
+      Path: Game Parameters\Default Work Unit\Volume\SFXVolume
+    - name: Volume
+      guid: 195668da300644469ea323daf8c1cd17
+      id: 2415836739
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0e181ec1466b604bbeac278ae343a2e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 195668da300644469ea323daf8c1cd17
+      Path: Game Parameters\Default Work Unit\Volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -393,8 +556,92 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f129b962d6daf1499732233c75e54b8b
     GuidInternal: 
-    m_lastTime: -8585274431510002901
-    List: []
+    m_lastTime: -8585270366649644407
+    List:
+    - name: AsterHurt
+      guid: 6c548a7155d81644bd5cf6892b26cce8
+      id: 3991398673
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f129b962d6daf1499732233c75e54b8b
+      - ElementName: AsterHurt
+        ObjectType: 11
+        guid: 6c548a7155d81644bd5cf6892b26cce8
+      Path: Switches\Default Work Unit\AsterHurt
+      values:
+      - name: AsterAlive
+        guid: 23a2246566c9c34ba65faa7a7cf0fd13
+        id: 3983317581
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f129b962d6daf1499732233c75e54b8b
+        - ElementName: AsterHurt
+          ObjectType: 11
+          guid: 6c548a7155d81644bd5cf6892b26cce8
+        - ElementName: AsterAlive
+          ObjectType: 10
+          guid: 23a2246566c9c34ba65faa7a7cf0fd13
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Footsteps
+      guid: d8b1aa8d6a7c0a448a86615743780f82
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f129b962d6daf1499732233c75e54b8b
+      - ElementName: Footsteps
+        ObjectType: 11
+        guid: d8b1aa8d6a7c0a448a86615743780f82
+      Path: Switches\Default Work Unit\Footsteps
+      values:
+      - name: Concrete
+        guid: d8b7804aa220fa48ba6de0b35b5d2484
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f129b962d6daf1499732233c75e54b8b
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: d8b1aa8d6a7c0a448a86615743780f82
+        - ElementName: Concrete
+          ObjectType: 10
+          guid: d8b7804aa220fa48ba6de0b35b5d2484
+      - name: Gravel
+        guid: 512c30dbbee3ef42827d3d4e56fd8cee
+        id: 2185786256
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f129b962d6daf1499732233c75e54b8b
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: d8b1aa8d6a7c0a448a86615743780f82
+        - ElementName: Gravel
+          ObjectType: 10
+          guid: 512c30dbbee3ef42827d3d4e56fd8cee
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -407,10 +654,24 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f12d3d8097129240812e037938411b68
     GuidInternal: 
-    m_lastTime: -8585271340069909554
-    List: []
+    m_lastTime: -8585270458631175141
+    List:
+    - name: PlayerLowLife
+      guid: 2452715133005641871b0a0699935dcf
+      id: 2116796762
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f12d3d8097129240812e037938411b68
+      - ElementName: PlayerLowLife
+        ObjectType: 14
+        guid: 2452715133005641871b0a0699935dcf
+      Path: Triggers\Default Work Unit\PlayerLowLife
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000016000000170000001800000021000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

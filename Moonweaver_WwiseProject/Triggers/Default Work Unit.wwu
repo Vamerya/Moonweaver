@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{803D2DF1-1297-4092-812E-037938411B68}" SchemaVersion="110">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{803D2DF1-1297-4092-812E-037938411B68}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{803D2DF1-1297-4092-812E-037938411B68}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="PlayerLowLife" ID="{51715224-0033-4156-871B-0A0699935DCF}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Triggers>
 </WwiseDocument>

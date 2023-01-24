@@ -9,12 +9,12 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     #region Variables
-    [Header ("Main Components")]
+    [Header("Main Components")]
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerInfos playerInfos;
     [SerializeField] StatBarBehaviour staminaBarBehaviour;
 
-    [Header ("Timer")]
+    [Header("Timer")]
     [SerializeField] float attackTimer;
     [SerializeField] float attackTimerInit;
     [SerializeField] float chargingTimer;
@@ -23,10 +23,10 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] float requiredStaminaHeavy;
     [SerializeField] float requiredStaminaUltimate;
 
-    [Header ("Attack State")]
+    [Header("Attack State")]
     [SerializeField] int attackState;
 
-    [Header ("Bools Melee")]
+    [Header("Bools Melee")]
     [SerializeField] public bool isAttacking;
     [SerializeField] public bool isCharging;
     [SerializeField] public bool chargeAttack;
@@ -53,35 +53,35 @@ public class PlayerCombat : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(attackTimer > 0)
+        if (attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
         }
-        else 
+        else
         {
             attackState = 0;
             StopAttacking();
         }
 
-        if(!attackReleased && isCharging)
+        if (!attackReleased && isCharging)
         {
             chargingTimer += Time.deltaTime;
 
-            if(chargingTimer > chargingTimerGoal)
+            if (chargingTimer > chargingTimerGoal)
                 ChargeAttack();
         }
-        else    
+        else
             isCharging = false;
 
-        if(playerInfos.playerStamina > requiredStaminaLight)
+        if (playerInfos.playerStamina > requiredStaminaLight)
             staminaLight = true;
         else
             staminaLight = false;
 
-        if(playerInfos.playerStamina > requiredStaminaHeavy)
+        if (playerInfos.playerStamina > requiredStaminaHeavy)
             staminaHeavy = true;
         else
-            staminaHeavy = false;   
+            staminaHeavy = false;
 
         playerController.anim.SetFloat("attackState", attackState);
         playerController.anim.SetBool("isAttacking", isAttacking);
@@ -102,30 +102,28 @@ public class PlayerCombat : MonoBehaviour
     {
         attackReleased = false;
 
-        if (playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
+        if (playerInfos.obtainedMoonFragment)
         {
-            playerController.DecreaseWalkingSpeed();
-            switch (attackState)
+            if (playerInfos.playerStamina > requiredStaminaLight && !isAttacking)
             {
-                case 1:
-                    Attack1();
-                    break;
-                case 2:
-                    Attack2();
-                    break;
-                case 3:
-                    Attack3();
-                    break;
-                default:
-                    attackState = 1;
-                    Attack1();
-                    break;
+                playerController.DecreaseWalkingSpeed();
+                switch (attackState)
+                {
+                    case 1:
+                        Attack1();
+                        break;
+                    case 2:
+                        Attack2();
+                        break;
+                    case 3:
+                        Attack3();
+                        break;
+                    default:
+                        attackState = 1;
+                        Attack1();
+                        break;
+                }
             }
-        }
-        else
-        {
-            //StopAttacking();
-            //attackState = 0;
         }
 
         ChargeAttackCharge();
@@ -201,15 +199,15 @@ public class PlayerCombat : MonoBehaviour
     /// </summary>
     void ChargeAttackCharge()
     {
-        if(!attackReleased)
-            {
-                isCharging = true;
-                isAttacking = true;
-            }
+        if (!attackReleased)
+        {
+            isCharging = true;
+            isAttacking = true;
+        }
         else if (attackReleased)
-            {
-                StopAttacking();
-            }
+        {
+            StopAttacking();
+        }
     }
 
     /// <summary>
@@ -219,11 +217,11 @@ public class PlayerCombat : MonoBehaviour
     /// </summary>
     public void ChargeAttack()
     {
-        if(playerInfos.playerStamina > requiredStaminaHeavy)
+        if (playerInfos.playerStamina > requiredStaminaHeavy)
         {
             chargeAttack = true;
             playerController.speed = .5f;
-            playerInfos.playerStamina -= requiredStaminaHeavy;      
+            playerInfos.playerStamina -= requiredStaminaHeavy;
             isCharging = false;
             chargingTimer = 0;
             staminaBarBehaviour.FadingBarBehaviour();
@@ -249,7 +247,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void UltAttack()
     {
-        if(playerInfos.playerStamina > requiredStaminaUltimate)
+        if (playerInfos.playerStamina > requiredStaminaUltimate)
         {
             playerInfos.playerStamina -= requiredStaminaUltimate;
             isUlting = true;

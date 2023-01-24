@@ -53,3 +53,4 @@ crashlytics-build.properties
 *.akd
 *.wav
 *.bnk
+*.prof

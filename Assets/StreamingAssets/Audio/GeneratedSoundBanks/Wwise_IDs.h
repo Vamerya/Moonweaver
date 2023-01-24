@@ -13,6 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ASTERHURT = 3991398673U;
+        static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID HEARTBEAT = 2179486487U;
         static const AkUniqueID MUSIC = 3991942870U;
     } // namespace EVENTS
 
@@ -57,6 +60,43 @@ namespace AK
 
     } // namespace STATES
 
+    namespace SWITCHES
+    {
+        namespace ASTERHURT
+        {
+            static const AkUniqueID GROUP = 3991398673U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ASTERALIVE = 3983317581U;
+            } // namespace SWITCH
+        } // namespace ASTERHURT
+
+        namespace FOOTSTEPS
+        {
+            static const AkUniqueID GROUP = 2385628198U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID GRAVEL = 2185786256U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEPS
+
+    } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
+    } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID PLAYERLOWLIFE = 2116796762U;
+    } // namespace TRIGGERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -66,6 +106,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX___ENVIRONMENTAL = 1359681556U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

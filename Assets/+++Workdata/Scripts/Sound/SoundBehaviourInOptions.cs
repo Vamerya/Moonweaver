@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundInPauseMenu : MonoBehaviour
+public class SoundBehaviourInOptions : MonoBehaviour
 {
     void OnEnable()
     {

@@ -70,9 +70,6 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     void Start()
     {
-        if(!obtainedMoonFragment)
-            playerCombat.enabled = false;
-
         startingPos = transform.position;
         playerHealth = playerMaxHealth;
         playerStamina = playerMaxStamina;

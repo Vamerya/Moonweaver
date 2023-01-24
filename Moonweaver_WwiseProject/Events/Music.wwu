@@ -14,6 +14,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Heartbeat" ID="{39CE3321-0805-4C0D-8EEF-1D97480CEF35}">
+					<ChildrenList>
+						<Action Name="" ID="{B820587E-27F9-428E-9660-410FFC53348A}" ShortID="55024807">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerLowLife" ID="{51715224-0033-4156-871B-0A0699935DCF}" WorkUnitID="{803D2DF1-1297-4092-812E-037938411B68}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

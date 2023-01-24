@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{14B9E929-CBB7-4721-A5B1-7533EE07415C}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="SFX" ID="{14B9E929-CBB7-4721-A5B1-7533EE07415C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Footsteps" ID="{788FAF6A-422F-4932-A6C1-96380195915C}">
+					<ChildrenList>
+						<Action Name="" ID="{8C4240A2-EC96-450E-AE1B-3EC547E20C94}" ShortID="274261779">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{51D69D53-6416-4BFA-B7F5-893C389CFB3A}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="AsterHurt" ID="{66EC2275-D56F-43B3-BA48-B74CDCE0B9EE}">
+					<ChildrenList>
+						<Action Name="" ID="{53CA1A7A-E933-4EC6-AEF1-056A1939BBC4}" ShortID="278718709">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AsterHurt" ID="{487EC4E7-116A-4314-8E90-EC03E0224947}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4BC61502-05E2-4529-99FA-17ED387E6C2F}" SchemaVersion="110">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{4BC61502-05E2-4529-99FA-17ED387E6C2F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4BC61502-05E2-4529-99FA-17ED387E6C2F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Main Session" ID="{7C52DCCF-6684-4F58-92B0-B8A385A7685A}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Music" ID="{FD90D9EF-5A09-449D-9312-DD2451A4BD92}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Heartbeat" ID="{39CE3321-0805-4C0D-8EEF-1D97480CEF35}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AsterHurt" ID="{487EC4E7-116A-4314-8E90-EC03E0224947}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Footsteps" ID="{51D69D53-6416-4BFA-B7F5-893C389CFB3A}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="MasterVolume" ID="{A7A292B7-68F9-40D6-B50D-78B9F4C3A854}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{2D78172A-6FBC-420F-AE99-ED63CCD1209B}"/>
+						<CurrentStateRef Name="Healthy" ID="{E7F5CDA1-7E5E-41BB-9B79-B19409F8E4E2}"/>
+						<CurrentStateRef Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Concrete" ID="{4A80B7D8-20A2-48FA-BA6D-E0B35B5D2484}"/>
+						<CurrentSwitchRef Name="AsterAlive" ID="{6524A223-C966-4BC3-A65F-AA7A7CF0FD13}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

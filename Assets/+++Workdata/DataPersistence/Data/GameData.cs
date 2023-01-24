@@ -5,6 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    public string settingsValues = "";
+    public float masterVolume;
+    public float musicVolume;
+    public float sfxVolume;
+
+    public string playerValues = "";
+
     public Vector3 playerPos;
     public Vector3 respawnPos;
     public int moonwater;
@@ -33,6 +40,14 @@ public class GameData
     /// </summary>
     public GameData()
     {
+        #region 
+        this.masterVolume = 100;
+        this.musicVolume = 100;
+        this.sfxVolume = 100;
+        #endregion
+
+
+        #region Player Values
         this.moonLight = 0;
         this.storedMoonFragments = 0;
         this.playerLevel = 1;
@@ -52,5 +67,6 @@ public class GameData
         obtainedSecondaryWeapon = false;
         obtainedMoonFragment = false;
         bossesDefeated = new SerializableDictionary<string, bool>();
+        #endregion
     }
 }

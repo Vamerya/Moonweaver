@@ -54,3 +54,4 @@ crashlytics-build.properties
 *.wav
 *.bnk
 *.prof
+/Moonweaver_WwiseProject/GeneratedSoundBanks

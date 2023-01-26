@@ -30,7 +30,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{2D78172A-6FBC-420F-AE99-ED63CCD1209B}"/>
-						<CurrentStateRef Name="Healthy" ID="{E7F5CDA1-7E5E-41BB-9B79-B19409F8E4E2}"/>
+						<CurrentStateRef Name="Lowlife" ID="{7A0D68AA-4B2E-4377-9BD4-F8946F7100A2}"/>
 						<CurrentStateRef Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">

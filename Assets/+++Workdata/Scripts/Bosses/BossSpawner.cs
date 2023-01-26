@@ -7,7 +7,7 @@ public class BossSpawner : MonoBehaviour, IDataPersistence
     [SerializeField] Transform[] bossSpawnPoint;
     [SerializeField] GameObject bossPrefab;
     [SerializeField] List<string> bossID;
-    [SerializeField] bool bossDefeated;
+    public bool bossDefeated;
     public List<GameObject> spawnedBosses;
     public bool canSpawnBosses;
 
@@ -64,6 +64,7 @@ public class BossSpawner : MonoBehaviour, IDataPersistence
         {
             GameObject newBoss = Instantiate(bossPrefab, bossSpawnPoint[i].position, Quaternion.identity);
             spawnedBosses.Add(newBoss);
+            newBoss.GetComponent<BossInfos>().bossSpawner = this;
             bossID.Add(spawnedBosses[i].GetComponent<BossInfos>().id);
         }
     }

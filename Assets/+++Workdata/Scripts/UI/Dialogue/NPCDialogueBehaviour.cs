@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class NPCDialogueBehaviour : MonoBehaviour
 {   
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject indicator;
+    [SerializeField] DialogueSystemTrigger dialogueTrigger;
     bool playerInRange;
     
 
+    void Awake()
+    {
+        dialogueTrigger = gameObject.GetComponent<DialogueSystemTrigger>();
+    }
 
     void Start() 
     {
@@ -34,7 +40,8 @@ public class NPCDialogueBehaviour : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInRange = true;
-            indicator.SetActive(true);
+            if(indicator)
+                indicator.SetActive(true);
         }
     }
 
@@ -43,8 +50,18 @@ public class NPCDialogueBehaviour : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInRange = false;
-            indicator.SetActive(false);
+            if(indicator)
+                indicator.SetActive(false);
             playerController.isInteracting = false;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if(playerController.isInteracting)
+        {
+            dialogueTrigger.enabled = true;
+            Destroy(indicator);
         }
     }
 }

@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: f7e4f8705a6ba714a9f7f1ee277f0266
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VeronicaAttack_2_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 29
+        height: 54
+      alignment: 9
+      pivot: {x: 0.2413793, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4291a78a66a1bc4bb837635601fcbe5
+      internalID: 886325520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 64
+        height: 50
+      alignment: 9
+      pivot: {x: 0.390625, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05500c17bccf5e4c80265794273bed6
+      internalID: 1781123820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 111
+        height: 40
+      alignment: 9
+      pivot: {x: 0.2882883, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e6ae8b9c428ee4397afb7f98a63d96
+      internalID: -135039711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_3
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 0
+        width: 111
+        height: 39
+      alignment: 9
+      pivot: {x: 0.1891892, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e1a1024bb4c6247a4fab7a39fbf1af
+      internalID: -94267424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_4
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 0
+        width: 82
+        height: 38
+      alignment: 9
+      pivot: {x: 0.63414633, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abf5a7e2d0ce2b4eaf4be485273a218
+      internalID: -1470400315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_5
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 0
+        width: 87
+        height: 39
+      alignment: 9
+      pivot: {x: 0.62068963, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555e7ecc7ae8f9e4f8c57e8dd6c4fcbe
+      internalID: -508743856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_6
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 0
+        width: 111
+        height: 39
+      alignment: 9
+      pivot: {x: 0.1981982, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e7ac8d0b3cb664bbfc02568c9e534e
+      internalID: -501383076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_7
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 0
+        width: 91
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6043956, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84a42a347b189246bd20458b502b4a3
+      internalID: -2111116242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_8
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 0
+        width: 115
+        height: 40
+      alignment: 9
+      pivot: {x: 0.27826086, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad081e7adcbc0f4cb290350887bacf8
+      internalID: 6881735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_9
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 0
+        width: 129
+        height: 50
+      alignment: 9
+      pivot: {x: 0.19379845, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3a2576c0fecb24d8c17c734e678474
+      internalID: -1195858945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VeronicaAttack_2_10
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 0
+        width: 33
+        height: 54
+      alignment: 9
+      pivot: {x: 0.24242425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb2284a3932fde448b15c0e53d463b4
+      internalID: -764254969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VeronicaAttack_2_4: -1470400315
+      VeronicaAttack_2_0: 886325520
+      VeronicaAttack_2_10: -764254969
+      VeronicaAttack_2_2: -135039711
+      VeronicaAttack_2_5: -508743856
+      VeronicaAttack_2_6: -501383076
+      VeronicaAttack_2_3: -94267424
+      VeronicaAttack_2_1: 1781123820
+      VeronicaAttack_2_9: -1195858945
+      VeronicaAttack_2_7: -2111116242
+      VeronicaAttack_2_8: 6881735
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

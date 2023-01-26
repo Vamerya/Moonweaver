@@ -6,9 +6,10 @@
 				<StateGroup Name="GameplayMusicState" ID="{CC0A56FF-F7FE-4A95-9A40-FE3C5A4D4BAB}">
 					<ChildrenList>
 						<State Name="None" ID="{03D4FAA4-3A54-45AB-9AFB-1D16A7237594}"/>
-						<State Name="Boss" ID="{3F9371F6-580B-4921-B301-E73DCC833428}"/>
+						<State Name="Veronica" ID="{3F9371F6-580B-4921-B301-E73DCC833428}"/>
 						<State Name="MainMenu" ID="{AA7F6A30-17A8-4636-9852-5F6A56369C78}"/>
 						<State Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
+						<State Name="Eggbert" ID="{DB5FB465-FD37-4542-ABCF-AE9883218458}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="PlayerHealthState" ID="{726F63B6-4C56-4974-931A-5847081F516B}">

@@ -19,15 +19,17 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         id = System.Guid.NewGuid().ToString();
     }
 
+    public BossSpawner bossSpawner;
     [SerializeField] string bossName, bossTitle;
-    [SerializeField] string akEventName;
+    [SerializeField] string akState;
     [SerializeField] BossBehaviour bossBehaviour;
     [SerializeField] BossHealthBarBehaviour bossHealthBar;
     [SerializeField] TextMeshProUGUI nameAndTitle;
     [SerializeField] PlayerLevelBehaviour playerLevelBehaviour;
     [SerializeField] GameObject moonFragment;
     [SerializeField] Color burnColor;
-    [SerializeField] float burningTimer, burningTimerInit;
+    public float burningTimer;
+    public float burningTimerInit;
     Color mainColor;
     public float bossMoonLight;
     public float bossDamage;
@@ -38,9 +40,9 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     public bool isBurning;
 
     [Header ("Determine the knockback resistance as a fraction of 1")]
-    [SerializeField] float knockbackResistance;
+    public float knockbackResistance;
     bool knockedBack;
-    [SerializeField] float knockbackDistance, knockBackSpeed;
+    public float knockbackDistance, knockBackSpeed;
     Vector3 knockbackPos;
 
     public float aiVelo;
@@ -55,9 +57,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         nameAndTitle = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         playerLevelBehaviour = GameObject.FindObjectOfType<PlayerLevelBehaviour>();
 
-        //AkSoundEngine.PostEvent(akEventName, this.gameObject);
-
-        AkSoundEngine.SetState("GameplayMusicState", "Boss");
+        AkSoundEngine.SetState("GameplayMusicState", akState);
     }
     /// <summary>
     /// sets isDead to false when the game starts
@@ -114,14 +114,11 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     {
         if (knockedBack)
         {
-
             transform.position = Vector3.MoveTowards(transform.position, knockbackPos, knockBackSpeed * Time.deltaTime);
-
         }
         
         if (Vector3.Distance(transform.position, knockbackPos) < .2f)
         {
-            Debug.Log("Stop Knockback");
             knockedBack = false;
             AiPathFinding(true);
         }
@@ -140,11 +137,8 @@ public class BossInfos : MonoBehaviour, IDataPersistence
 
         if (bossHealth < 1)
         {
-            AddMoonLight();
-            GameObject droppedMoonFragment = Instantiate(moonFragment, transform.position, Quaternion.identity);
             isDead = true;
-            AkSoundEngine.SetState("GameplayMusicState", "Exploring");
-            Destroy(gameObject);
+            bossBehaviour.anim.SetBool("isDead", isDead);
         }
     }
 
@@ -153,13 +147,18 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     /// </summary>
     /// <param name="burnDmg">damage determined by the players Faith level</param>
     /// <returns>the amount of time that should pass between each call</returns>
-    IEnumerator BossTakeBurnDamage(float burnDmg)
+    public IEnumerator BossTakeBurnDamage(float burnDmg)
     {
         while (isBurning)
         {
             bossHealth -= burnDmg;
             DetermineBossHealthPercentage();
             bossHealthBar.FadingBarBehaviour();
+            if(bossHealth < 1)
+            {
+                isDead = true;
+                bossBehaviour.anim.SetBool("isDead", isDead);
+            }
             yield return new WaitForSecondsRealtime(.4f);
         }
     }
@@ -170,30 +169,6 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     void AddMoonLight()
     {
         playerLevelBehaviour.moonLight += bossMoonLight;
-    }
-
-    /// <summary>
-    /// calls the  BossTakeDamage upon colliding with either the players melee weapon or one of the projectiles, grabbing references to either 
-    /// weapons behaviour in order to input the damage
-    /// if the players faith level is above 1 the enemy is also burning with the amount of damage input from the respective function
-    /// </summary>
-    /// <param name="collision">checks what the enemy was hit with and grabs references to specific scripts from that collision</param>
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Weapon"))
-        {
-            knockbackDistance = collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineKnockbackDistance() * (1 - knockbackResistance);
-            knockBackSpeed = collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineKnockbackSpeed();
-            CalculateKnockbackPos(collision.transform);
-            BossTakeDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DamageEnemyMelee());
-            if (collision.GetComponentInParent<PlayerLevelBehaviour>().faith > 1)
-            {
-                isBurning = true;
-                burningTimer = burningTimerInit;
-                StartCoroutine(BossTakeBurnDamage(collision.GetComponent<PlayerMeleeWeaponBehaviour>().DetermineBurningDamage()));
-            }
-            Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
-        }
     }
 
     void DetermineBossHealthPercentage()
@@ -215,7 +190,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         }
     }
 
-    void CalculateKnockbackPos(Transform player)
+    public void CalculateKnockbackPos(Transform player)
     {
         Vector3 a = player.position;
         Vector3 b = transform.position;
@@ -233,6 +208,16 @@ public class BossInfos : MonoBehaviour, IDataPersistence
 
         AiPathFinding(false);
         knockedBack = true;
+    }
 
+    public void DropMoonFragmentAndMoonLight()
+    {
+        AddMoonLight();
+        GameObject droppedMoonFragment = Instantiate(moonFragment, transform.position, Quaternion.identity);
+     
+        bossSpawner.bossDefeated = true;
+
+        AkSoundEngine.SetState("GameplayMusicState", "Exploring");
+        Destroy(gameObject);
     }
 }

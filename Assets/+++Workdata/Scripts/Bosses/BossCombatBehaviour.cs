@@ -19,6 +19,9 @@ public class BossCombatBehaviour : MonoBehaviour
     [SerializeField] GameObject dashSpot;
     [SerializeField] List<GameObject> summonedSpikes;
 
+    [Header("Amount of attacks this boss has")]
+    [SerializeField] int amountOfAttacks;
+
     [SerializeField] bool canAttack;
     [SerializeField] bool isAttacking;
     [SerializeField] float attackCooldown;
@@ -73,7 +76,7 @@ public class BossCombatBehaviour : MonoBehaviour
         //     BossDodge();
 
         if (canAttack && !isAttacking)
-            EnemyAttack(Random.Range(0, 2));
+            EnemyAttack(Random.Range(0, amountOfAttacks));
 
         distanceToPlayer = transform.position - playerPosition.transform.position;
     }
@@ -94,8 +97,12 @@ public class BossCombatBehaviour : MonoBehaviour
                 Attack2();
                 break;
 
+            case 2:
+                Attack3();
+                break;
+
             default:
-                Debug.Log("No Attack ID given");
+                Attack1();
                 break;
         }
 
@@ -163,7 +170,13 @@ public class BossCombatBehaviour : MonoBehaviour
         isAttacking = true;
         BossDodge();
         BossDodge();
-        BossAttack(1);
+        BossAttack(Random.Range(1, 3));
+    }
+
+    void Attack3()
+    {
+        isAttacking = true;
+        BossAttack(2);
     }
 
     /// <summary>

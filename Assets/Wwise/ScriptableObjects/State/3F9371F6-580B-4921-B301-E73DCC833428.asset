@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3322c6044f0334e46a90a2e9f186aae9, type: 3}
   m_Name: 3F9371F6-580B-4921-B301-E73DCC833428
   m_EditorClassIdentifier: 
-  objectName: Boss
-  id: 1560169506
+  objectName: Veronica
+  id: 2133809136
   guid: 3F9371F6-580B-4921-B301-E73DCC833428
   WwiseStateGroupReference: {fileID: 11400000, guid: a0099521da691b14cba3feb2a9e9fad3, type: 2}

@@ -9,6 +9,7 @@ public class MenuButtons : MonoBehaviour
     [SerializeField] OptionsBehaviour optionsBehaviour;
     bool mainMenuActive;
     bool pauseMenuActive;
+    bool optionsActive;
     [SerializeField] GameObject _mainMenu;
     [SerializeField] GameObject _options;
     [SerializeField] GameObject _pauseMenu;
@@ -81,6 +82,22 @@ public class MenuButtons : MonoBehaviour
             _mainMenu.SetActive(true);
             _options.SetActive(false);
             pauseMenuActive = false;
+        }
+    }
+
+    public void ToggleMainMenuOptions()
+    {
+        if(optionsActive)
+        {
+            _options.SetActive(false);
+            _mainMenu.SetActive(true);
+            optionsActive = false;
+        }
+        else if(!optionsActive)
+        {
+            _options.SetActive(true);
+            _mainMenu.SetActive(false);
+            optionsActive = true;
         }
     }
 

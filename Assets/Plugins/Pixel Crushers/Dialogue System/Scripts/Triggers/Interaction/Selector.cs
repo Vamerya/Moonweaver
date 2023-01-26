@@ -197,7 +197,7 @@ namespace PixelCrushers.DialogueSystem
         /// If <c>true</c>, draws gizmos.
         /// </summary>
         [Tooltip("Tick to draw gizmos in Scene view")]
-        public bool debug = false;
+        public bool debug = true;
 
         /// <summary>
         /// Gets or sets the custom position used when the selectAt is set to SelectAt.CustomPosition.

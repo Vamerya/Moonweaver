@@ -278,7 +278,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-34</Value>
+								<Value>-19</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -290,7 +290,7 @@
 							<ObjectRef Name="AsterAlive" ID="{6524A223-C966-4BC3-A65F-AA7A7CF0FD13}" WorkUnitID="{62B929F1-DAD6-49F1-9732-233C75E54B8B}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+							<ObjectRef Name="SFX &amp; Environmental" ID="{F9EAED73-4BB0-4847-8D50-6D897F09DCBC}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="AsterHurt" ID="{718A546C-D855-4416-BD5C-F6892B26CCE8}" WorkUnitID="{62B929F1-DAD6-49F1-9732-233C75E54B8B}"/>

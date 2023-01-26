@@ -58,11 +58,13 @@ public class BossBehaviour : MonoBehaviour
         {
             //spriteRenderer.flipX = true;        //left
             GetComponentInChildren<BoxCollider2D>().transform.localScale = new Vector3(-1, 1, 1);
+            GetComponentInChildren<CapsuleCollider2D>().transform.localScale = new Vector3(-1, 1, 1);
         }
         else if(direction.x > 0)
         {
             //spriteRenderer.flipX = false;       //right
             GetComponentInChildren<BoxCollider2D>().transform.localScale = new Vector3(1, 1, 1);
+            GetComponentInChildren<CapsuleCollider2D>().transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }

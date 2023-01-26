@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{48321ED9-9CEA-4184-8ABD-1336D4D59083}">
 					<ObjectInclusionList>
-						<ObjectRef Name="BossMusic" ID="{7D31A301-6A11-41AA-A395-76A6B61F8C80}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Veronica" ID="{7D31A301-6A11-41AA-A395-76A6B61F8C80}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambient" ID="{0CF0E8E1-7394-4259-8DF9-6AC04C677758}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="AsterHurt" ID="{487EC4E7-116A-4314-8E90-EC03E0224947}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX" ID="{66E13538-9651-432C-A400-C6E29B8862D2}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}" Origin="Manual" Filter="7"/>
@@ -14,6 +14,7 @@
 						<ObjectRef Name="GameplayMusicSwitch" ID="{1692FCF0-99DC-44BA-B0EE-7988513F8944}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MainMenuMusic" ID="{A8D04DEF-A588-4532-A79C-7C53DF00A86C}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX" ID="{14B9E929-CBB7-4721-A5B1-7533EE07415C}" WorkUnitID="{14B9E929-CBB7-4721-A5B1-7533EE07415C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Eggbert" ID="{4BF0BBE1-EF09-47AD-A8A0-E45C256AB20B}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Heartbeat" ID="{39CE3321-0805-4C0D-8EEF-1D97480CEF35}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>

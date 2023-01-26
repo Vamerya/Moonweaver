@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
-    m_lastTime: -8585270370602470192
+    m_lastTime: -8585269692311451148
     List:
     - name: Main
       guid: d91e3248ea9c84418abd1336d4d59083
@@ -328,7 +328,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
     GuidInternal: 
-    m_lastTime: -8585271940453739068
+    m_lastTime: -8585269694645599678
     List:
     - name: GameplayMusicState
       guid: ff560accfef7954a9a40fe3c5a4d4bab
@@ -345,9 +345,9 @@ MonoBehaviour:
         guid: ff560accfef7954a9a40fe3c5a4d4bab
       Path: States\Music\GameplayMusicState
       values:
-      - name: Boss
-        guid: f671933f0b582149b301e73dcc833428
-        id: 1560169506
+      - name: Eggbert
+        guid: 65b45fdb37fd4245abcfae9883218458
+        id: 1367938641
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -358,9 +358,9 @@ MonoBehaviour:
         - ElementName: GameplayMusicState
           ObjectType: 9
           guid: ff560accfef7954a9a40fe3c5a4d4bab
-        - ElementName: Boss
+        - ElementName: Eggbert
           ObjectType: 8
-          guid: f671933f0b582149b301e73dcc833428
+          guid: 65b45fdb37fd4245abcfae9883218458
       - name: Exploring
         guid: 5c8808f25acdc946b28a3ccdcc7138ba
         id: 1823678183
@@ -409,6 +409,22 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: a4fad403543aab459afb1d16a7237594
+      - name: Veronica
+        guid: f671933f0b582149b301e73dcc833428
+        id: 2133809136
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music
+          ObjectType: 12
+          guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
+        - ElementName: GameplayMusicState
+          ObjectType: 9
+          guid: ff560accfef7954a9a40fe3c5a4d4bab
+        - ElementName: Veronica
+          ObjectType: 8
+          guid: f671933f0b582149b301e73dcc833428
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -671,7 +687,7 @@ MonoBehaviour:
         guid: 2452715133005641871b0a0699935dcf
       Path: Triggers\Default Work Unit\PlayerLowLife
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000016000000170000001800000021000000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000016000000170000001800000021000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

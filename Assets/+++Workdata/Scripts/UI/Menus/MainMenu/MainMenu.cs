@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button continueGameButton;
     [SerializeField] Button newGameButton;
 
+    void Awake()
+    {
+        AkSoundEngine.SetState("GameplayMusicState", "MainMenu");
+    }
+
     void Start()
     {
         if(!DataPersistenceManager.instance.HasGameData())

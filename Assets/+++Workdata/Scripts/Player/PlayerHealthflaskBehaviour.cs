@@ -9,6 +9,7 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
 {
     [SerializeField] PlayerInfos playerInfos;
     [SerializeField] PlayerController playerController;
+    [SerializeField] PlayerSoundBehaviour playerSoundBehaviour;
     [SerializeField] DisplayMoonwaterAmount moonwaterAmount;
     [SerializeField] float healAmount;
     [SerializeField] bool isHealing;
@@ -22,6 +23,7 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
     {
         playerInfos = gameObject.GetComponent<PlayerInfos>();
         playerController = gameObject.GetComponent<PlayerController>();
+        playerSoundBehaviour = gameObject.GetComponent<PlayerSoundBehaviour>();
     }
 
     /// <summary>
@@ -95,6 +97,7 @@ public class PlayerHealthflaskBehaviour : MonoBehaviour, IDataPersistence
         {
             playerInfos.playerHealth = playerInfos.playerMaxHealth;
         }
+        playerSoundBehaviour.UpdatePlayerHealthstate();
     }
     public void FinishedHealing()
     {

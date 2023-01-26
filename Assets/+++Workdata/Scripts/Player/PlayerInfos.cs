@@ -8,7 +8,8 @@ using UnityEngine;
 public class PlayerInfos : MonoBehaviour, IDataPersistence
 {
     #region Variables
-    [Header ("Components")]
+    [Header("Components")]
+    PlayerSoundBehaviour playerSoundBehaviour;
     PlayerController playerController;
     PlayerCombat playerCombat;
     EnemyInfos enemyInfos;
@@ -58,6 +59,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     void Awake()
     {
         playerHealthflaskBehaviour = gameObject.GetComponent<PlayerHealthflaskBehaviour>();
+        playerSoundBehaviour = gameObject.GetComponent<PlayerSoundBehaviour>();
         playerLevelBehaviour = gameObject.GetComponent<PlayerLevelBehaviour>();
         playerDropMoonlight = gameObject.GetComponent<PlayerDropMoonlight>();
         playerController = gameObject.GetComponent<PlayerController>();
@@ -171,7 +173,9 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     public void CalculatePlayerHealth(float dmg) 
     {
         if(isDamaged)
+        {
             playerHealth -= dmg;
+        }
             
         if(playerHealth < 1 && isAlive)
         {

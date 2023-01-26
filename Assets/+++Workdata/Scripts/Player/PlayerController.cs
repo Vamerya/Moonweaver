@@ -9,19 +9,20 @@ public class PlayerController : MonoBehaviour
 {
     #region Variables
     [Header("Main Components")]
-    Rigidbody2D rb;
-    public Animator anim;
-    TrailRenderer trailRenderer;
-    SpriteRenderer playerSpriteRenderer;
-    PlayerInfos playerInfos;
-    PlayerCombat playerCombat;
     [SerializeField] Camera mainCamera;
-    [SerializeField] PlayerHealthflaskBehaviour playerHealthflaskBehaviour;
-    [SerializeField] StatBarBehaviour staminaBarBehaviour;
-    [SerializeField] ShrineManager shrineManager;
-    [SerializeField] LevelUpManager levelUpManager;
+    [SerializeField] PlayerInfos playerInfos;
+    [SerializeField] PlayerCombat playerCombat;
     [SerializeField] PlayerSittingBehaviour sittingBehaviour;
+    [SerializeField] PlayerHealthflaskBehaviour playerHealthflaskBehaviour;
+    [SerializeField] PlayerSoundBehaviour playerSoundBehaviour;
+    [SerializeField] StatBarBehaviour staminaBarBehaviour;
+    [SerializeField] LevelUpManager levelUpManager;
+    [SerializeField] ShrineManager shrineManager;
     [SerializeField] MenuButtons menuButtons;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] public Animator anim;
+    [SerializeField] TrailRenderer trailRenderer;
+    [SerializeField] SpriteRenderer playerSpriteRenderer;
     [SerializeField] Transform playerRangedWeapon;
 
     [Header("Inventory")]

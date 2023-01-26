@@ -27,10 +27,11 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID BOSS = 1560169506U;
+                static const AkUniqueID EGGBERT = 1367938641U;
                 static const AkUniqueID EXPLORING = 1823678183U;
                 static const AkUniqueID MAINMENU = 3604647259U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID VERONICA = 2133809136U;
             } // namespace STATE
         } // namespace GAMEPLAYMUSICSTATE
 

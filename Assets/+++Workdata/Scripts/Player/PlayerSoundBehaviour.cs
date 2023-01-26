@@ -14,10 +14,13 @@ public class PlayerSoundBehaviour : MonoBehaviour
 
     void Update()
     {
+        UpdatePlayerHealthstate();
+    }
+
+    public void UpdatePlayerHealthstate()
+    {
         if (playerInfos.playerHealthPercentage < .3)
-        {
             AkSoundEngine.SetState("PlayerHealthState", "LowLife");
-        }
         else
             AkSoundEngine.SetState("PlayerHealthState", "Healthy");
     }

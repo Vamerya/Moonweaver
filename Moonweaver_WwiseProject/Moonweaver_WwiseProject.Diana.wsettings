@@ -34,7 +34,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="2R4ySOqchEGKvRM21NWQgw=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="2Kqs0OJvM0+6EMho5ubYYAErSsz/////nvWU6RqBOU6ftkEGUMUxuwErSsz/////"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="2Kqs0OJvM0+6EMho5ubYYAEAb34HAAAAwKTirf5/AAC4tEW8owEAAAAAAACjAQAAwKTirf5/AAAEkumt/n8AAODuIdejAQAAAAAAAKMBAAAIAAAAowEAALjhb34HAAAAAAD+rf5/AAAfAf6t/n8AAAAA/q3+fwAAwKTirf5/AADApOKt/n8AALi0RbyjAQAAAQAAAJ71lOkagTlOn7ZBBlDFMbsBAG9+BwAAAMCk4q3+fwAAuLRFvKMBAAAAAAAAowEAAMCk4q3+fwAABJLprf5/AADg7iHXowEAAAAAAACjAQAACAAAAKMBAAC44W9+BwAAAAAA/q3+fwAAHwH+rf5/AAAAAP6t/n8AAMCk4q3+fwAAwKTirf5/AAC4tEW8owEAAAEAAAA="/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="2Kqs0OJvM0+6EMho5ubYYAEAND6KAAAAwKT8rP5/AAB4rmvrYwIAAAAAAABjAgAAwKT8rP5/AAAEkgOt/n8AAIAu3/xjAgAAAAAAAGMCAAAIAAAAYwIAAOjnND6KAAAAAAAYrf5/AAAfARit/n8AAAAAGK3+fwAAwKT8rP5/AADApPys/n8AAHiua+tjAgAAAQAAAJ71lOkagTlOn7ZBBlDFMbsBADQ+igAAAMCk/Kz+fwAAeK5r62MCAAAAAAAAYwIAAMCk/Kz+fwAABJIDrf5/AACALt/8YwIAAAAAAABjAgAACAAAAGMCAADo5zQ+igAAAAAAGK3+fwAAHwEYrf5/AAAAABit/n8AAMCk/Kz+fwAAwKT8rP5/AAB4rmvrYwIAAAEAAAA="/>
 				<Property Name="Interactive Music\x64_{0CF0E8E1-7394-4259-8DF9-6AC04C677758} - SegmentEditorZoomInfo" Type="string" Value="09OnhsGzQkAAAAAAAADwP+m/pumJWeo/AAAAAAAA8D8AAAAAAD6hQAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{27694F36-999A-4B0A-867D-748B2B90FBE3} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAnHJAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{3DD74974-3931-4A38-97C2-2B657707642F} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAnHJAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
@@ -66,8 +66,8 @@
 				<Property Name="Music Transition List\{7031DCDE-FA12-478B-8E96-238CDA5527D3}\Scroll Position" Type="int32" Value="0"/>
 				<Property Name="Music Transition List\{7031DCDE-FA12-478B-8E96-238CDA5527D3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ObjectTabPanel\x64_CurrentObjects_{031E1E2C-DC25-4332-80C3-FFCC371AC803}" Type="string" Value="ewA0ADgAMwAyADEARQBEADkALQA5AEMARQBBAC0ANAAxADgANAAtADgAQQBCAEQALQAxADMAMwA2AEQANABEADUAOQAwADgAMwB9AAAAAAE="/>
-				<Property Name="ObjectTabPanel\x64_CurrentObjects_{D5805147-985E-4C5B-B817-369AF1B7184D}" Type="string" Value="ewAxADYAOQAyAEYAQwBGADAALQA5ADkARABDAC0ANAA0AEIAQQAtAEIAMABFAEUALQA3ADkAOAA4ADUAMQAzAEYAOAA5ADQANAB9AAAAAAE="/>
-				<Property Name="ProjectExplorer\AudioSelectionChannel1\ProjectExplorer2LastScrollState" Type="int32" Value="11"/>
+				<Property Name="ObjectTabPanel\x64_CurrentObjects_{D5805147-985E-4C5B-B817-369AF1B7184D}" Type="string" Value="ewA1ADQAQgBFADEANAA0AEIALQBFADMARAA3AC0ANAA2AEYANwAtAEIARgBFAEEALQBEAEMAQgA5ADAAMgA2ADIANgBCADgAQQB9AAAAAAE="/>
+				<Property Name="ProjectExplorer\AudioSelectionChannel1\ProjectExplorer2LastScrollState" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer\AudioSelectionChannel1\x64_ProjectExplorer2LastExpandedState" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1axZkL9g8i8TJbZognHzqRn2KQUFaYdKkGhfnXKDCFJ8/i7p17AZFBKiCGgfoviHWg4NeFmUZYsQ6QAxuKbiGLS58R+SGoRFEOOkOwD4CJJR1Od1lEWZPpLt/WJPDic+zpLFL5U1+P3Rr/q3LkCYmuKZtP+STC1qEKZO5JIc6q3BwWSlNz12TJEubwxGSn+OqMWemXG5U/QQr/62s6+yZ+iunyg0+WQLE+TAC6ESEmKqPD8khbcmbpEsO55iFE/iUTh6PAMlHNZQo35asBMZ3dY4bvwSwnvrUeooORcJWqyC+9N0KiIpTJFp5x8U98AqGwBozF9EWqqQaOVdqa2H4yA"/>
 				<Property Name="ProjectExplorer\AudioSelectionChannel2\ProjectExplorer2LastScrollState" Type="int32" Value="0"/>
 				<Property Name="ProjectExplorer\AudioSelectionChannel2\x64_ProjectExplorer2LastExpandedState" Type="string" Value="iC8JJ1oiVBFnJcijTz1EguraiCN1l8ZGou3FIio5d1b4u6dewGRQSoghoH6L4h1oODXhZlGWLEOkAMbim4hi0ufEfkhqERRDjpDsA+AiSUfWIupPeGdORJYorT+4LT78ZtP+STC1qEKZO5JIc6q3B7p8oNPlkCxPkwAuhEhJiqjw/JIW3Jm6RLDueYhRP4lE"/>
@@ -82,8 +82,8 @@
 				<Property Name="ProjectExplorer\FirstVisible_5_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_7_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_9_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
-				<Property Name="ProjectExplorer\Game SyncsSelectionChannel1\ProjectExplorer2LastScrollState" Type="int32" Value="0"/>
-				<Property Name="ProjectExplorer\Game SyncsSelectionChannel1\x64_ProjectExplorer2LastExpandedState" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwfEpuWLW2vFJlzIjPHXlS4vYsaqNanwKRIqGYVdDeA+CueepWclhGkapb0mXtUGlnCW5qn69xEpPswjV28mn0nSLJPnSySUKRaQ8UFvXE2eXjoElQH8Jckq2krii4mY9yw4YHsFGa2BLvqwniuNDoukZVmjaMAZERp6jI9r4wc0X/Fd2bFhHQU29TGiwn5HbKfEtPYCXEpJAgS4DeThBG2g="/>
+				<Property Name="ProjectExplorer\Game SyncsSelectionChannel1\ProjectExplorer2LastScrollState" Type="int32" Value="4"/>
+				<Property Name="ProjectExplorer\Game SyncsSelectionChannel1\x64_ProjectExplorer2LastExpandedState" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwfEpuWLW2vFJlzIjPHXlS4vYsaqNanwKRIqGYVdDeA+CueepWclhGkapb0mXtUGlnCW5qn69xEpPswjV28mn0nT/VgrM/veVSppA/jxaTUuriyT50sklCkWkPFBb1xNnl46BJUB/CXJKtpK4ouJmPcsOGB7BRmtgS76sJ4rjQ6LpGVZo2jAGREaeoyPa+MHNF/xXdmxYR0FNvUxosJ+R2ynxLT2AlxKSQIEuA3k4QRto"/>
 				<Property Name="ProjectExplorer\Game SyncsSelectionChannel2\ProjectExplorer2LastScrollState" Type="int32" Value="1"/>
 				<Property Name="ProjectExplorer\Game SyncsSelectionChannel2\x64_ProjectExplorer2LastExpandedState" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwfEpuWLW2vFJlzIjPHXlS4u556lZyWEaRqlvSZe1QaWcJbmqfr3ESk+zCNXbyafSdP9WCsz+95VKmkD+PFpNS6u2Y29yVkx0SZMaWEcIH1FrjoElQH8Jckq2krii4mY9yw4YHsFGa2BLvqwniuNDoukZVmjaMAZERp6jI9r4wc0X/Fd2bFhHQU29TGiwn5HbKQ=="/>
 				<Property Name="ProjectExplorer\QueriesSelectionChannel1\ProjectExplorer2LastScrollState" Type="int32" Value="0"/>

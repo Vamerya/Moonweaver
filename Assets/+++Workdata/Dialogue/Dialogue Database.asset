@@ -296,7 +296,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 70
+        y: 69.237366
         width: 160
         height: 30
     - id: 2
@@ -322,7 +322,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's alright, I just don't quite get what's going on right now
+        value: It's alright, I just don't quite get what's going on right now.
         type: 0
         typeString: 
       - title: Sequence
@@ -689,8 +689,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0.09449315, y: 0.11602361}
-    canvasZoom: 0.95124996
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.3112496
   - id: 2
     fields:
     - title: Title
@@ -1015,8 +1015,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 64
-        y: 251
+        x: 95.30435
+        y: 249.2609
         width: 160
         height: 30
     - id: 6
@@ -1060,12 +1060,6 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 6
         destinationConversationID: 2
-        destinationDialogueID: 7
-        isConnector: 0
-        priority: 2
-      - originConversationID: 2
-        originDialogueID: 6
-        destinationConversationID: 2
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
@@ -1076,8 +1070,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 275
-        y: 233
+        x: 356.73914
+        y: 182.56522
         width: 160
         height: 30
     - id: 7
@@ -1183,8 +1177,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 64
-        y: 301
+        x: 68.34783
+        y: 303.60867
         width: 160
         height: 30
     - id: 9
@@ -1238,8 +1232,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 64
-        y: 351
+        x: 53.56521
+        y: 410.13043
         width: 160
         height: 30
     - id: 10
@@ -1280,7 +1274,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 10
+        destinationConversationID: 2
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -1288,13 +1288,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 272
-        y: 307
+        x: 284.17398
+        y: 321.7826
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 20}
+    canvasZoom: 1.1499999
   - id: 3
     fields:
     - title: Title

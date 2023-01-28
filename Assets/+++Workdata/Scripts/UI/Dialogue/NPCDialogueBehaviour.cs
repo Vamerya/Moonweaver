@@ -4,24 +4,24 @@ using UnityEngine;
 using PixelCrushers.DialogueSystem;
 
 public class NPCDialogueBehaviour : MonoBehaviour
-{   
+{
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject indicator;
     [SerializeField] DialogueSystemTrigger dialogueTrigger;
     bool playerInRange;
-    
+
 
     void Awake()
     {
         dialogueTrigger = gameObject.GetComponent<DialogueSystemTrigger>();
     }
 
-    void Start() 
+    void Start()
     {
-    
+
     }
 
-    void Update() 
+    void Update()
     {
         if (playerInRange && playerController.isInteracting)
         {
@@ -35,22 +35,22 @@ public class NPCDialogueBehaviour : MonoBehaviour
         yield return new WaitForSecondsRealtime(.4f);
     }
 
-    void OnTriggerEnter2D(Collider2D collision) 
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             playerInRange = true;
-            if(indicator)
+            if (indicator)
                 indicator.SetActive(true);
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision) 
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             playerInRange = false;
-            if(indicator)
+            if (indicator)
                 indicator.SetActive(false);
             playerController.isInteracting = false;
         }
@@ -58,7 +58,7 @@ public class NPCDialogueBehaviour : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if(playerController.isInteracting)
+        if (playerController.isInteracting)
         {
             dialogueTrigger.enabled = true;
             Destroy(indicator);

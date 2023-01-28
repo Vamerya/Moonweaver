@@ -39,7 +39,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     public bool isDead;
     public bool isBurning;
 
-    [Header ("Determine the knockback resistance as a fraction of 1")]
+    [Header("Determine the knockback resistance as a fraction of 1")]
     public float knockbackResistance;
     bool knockedBack;
     public float knockbackDistance, knockBackSpeed;
@@ -116,7 +116,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
         {
             transform.position = Vector3.MoveTowards(transform.position, knockbackPos, knockBackSpeed * Time.deltaTime);
         }
-        
+
         if (Vector3.Distance(transform.position, knockbackPos) < .2f)
         {
             knockedBack = false;
@@ -154,7 +154,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
             bossHealth -= burnDmg;
             DetermineBossHealthPercentage();
             bossHealthBar.FadingBarBehaviour();
-            if(bossHealth < 1)
+            if (bossHealth < 1)
             {
                 isDead = true;
                 bossBehaviour.anim.SetBool("isDead", isDead);
@@ -214,7 +214,7 @@ public class BossInfos : MonoBehaviour, IDataPersistence
     {
         AddMoonLight();
         GameObject droppedMoonFragment = Instantiate(moonFragment, transform.position, Quaternion.identity);
-     
+
         bossSpawner.bossDefeated = true;
 
         AkSoundEngine.SetState("GameplayMusicState", "Exploring");

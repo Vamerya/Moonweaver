@@ -6916,7 +6916,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.8828125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &499968630
@@ -53518,6 +53518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   companion: {fileID: 3765437951095974884, guid: ca98039e0eec6ce48948729582367c50, type: 3}
+  merchant: {fileID: 1122443787}
 --- !u!1 &1902602386
 GameObject:
   m_ObjectHideFlags: 0

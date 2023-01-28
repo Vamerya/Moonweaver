@@ -1,0 +1,211 @@
+Date : 2023-01-28 00:17:03
+Directory : f:\3. SAP\Moonweaver\Assets\+++Workdata\
+Total : 125 files,  471 codes, -2 comments, 91 blanks, all 560 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C#       |        125 |        471 |         -2 |         91 |        560 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                   |         66 |      4,961 |        720 |        728 |      6,409 |
+| DataPersistence                                                                                     |          5 |        257 |         22 |         46 |        325 |
+| DataPersistence (Files)                                                                             |          3 |        164 |         19 |         33 |        216 |
+| DataPersistence\Data                                                                                |          1 |         62 |          3 |          8 |         73 |
+| DataPersistence\SerializableTypes                                                                   |          1 |         31 |          0 |          5 |         36 |
+| Input                                                                                               |          1 |      1,199 |         16 |         16 |      1,231 |
+| Scripts                                                                                             |         60 |      3,505 |        682 |        666 |      4,853 |
+| Scripts\Bosses                                                                                      |          8 |        563 |         74 |        107 |        744 |
+| Scripts\Bosses (Files)                                                                              |          7 |        543 |         74 |        103 |        720 |
+| Scripts\Bosses\Spikes                                                                               |          1 |         20 |          0 |          4 |         24 |
+| Scripts\Camera                                                                                      |          1 |         35 |          0 |          5 |         40 |
+| Scripts\Companion                                                                                   |          1 |         34 |         12 |          5 |         51 |
+| Scripts\Enemies                                                                                     |          6 |        399 |         90 |         80 |        569 |
+| Scripts\Interactables                                                                               |          3 |        188 |         58 |         34 |        280 |
+| Scripts\Items                                                                                       |          2 |         33 |          0 |          6 |         39 |
+| Scripts\Light                                                                                       |          1 |         49 |          3 |          9 |         61 |
+| Scripts\MoonFragments                                                                               |          3 |         72 |         26 |         18 |        116 |
+| Scripts\Player                                                                                      |         13 |      1,175 |        357 |        231 |      1,763 |
+| Scripts\Sound                                                                                       |          1 |         14 |          0 |          3 |         17 |
+| Scripts\UI                                                                                          |         21 |        943 |         62 |        168 |      1,173 |
+| Scripts\UI\Dialogue                                                                                 |          3 |        178 |          5 |         36 |        219 |
+| Scripts\UI\EnemyHealthbars                                                                          |          1 |         24 |          0 |          8 |         32 |
+| Scripts\UI\Inventory                                                                                |          2 |         71 |          2 |         14 |         87 |
+| Scripts\UI\Levelling                                                                                |          2 |        155 |         18 |         19 |        192 |
+| Scripts\UI\Menus                                                                                    |          8 |        341 |         12 |         63 |        416 |
+| Scripts\UI\Menus (Files)                                                                            |          2 |         88 |          2 |         21 |        111 |
+| Scripts\UI\Menus\MainMenu                                                                           |          3 |        139 |          6 |         21 |        166 |
+| Scripts\UI\Menus\Options                                                                            |          3 |        114 |          4 |         21 |        139 |
+| Scripts\UI\PlayerBars                                                                               |          4 |        127 |          7 |         18 |        152 |
+| Scripts\UI\Shrines                                                                                  |          1 |         47 |         18 |         10 |         75 |
+| d:\                                                                                                 |         59 |     -4,490 |       -722 |       -637 |     -5,849 |
+| d:\3. SAP                                                                                           |         59 |     -4,490 |       -722 |       -637 |     -5,849 |
+| d:\3. SAP\Moonweaver                                                                                |         59 |     -4,490 |       -722 |       -637 |     -5,849 |
+| d:\3. SAP\Moonweaver\Assets                                                                         |         59 |     -4,490 |       -722 |       -637 |     -5,849 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata                                                             |         59 |     -4,490 |       -722 |       -637 |     -5,849 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence                                             |          5 |       -212 |        -20 |        -34 |       -266 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence (Files)                                     |          3 |       -131 |        -17 |        -25 |       -173 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\Data                                        |          1 |        -50 |         -3 |         -4 |        -57 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\SerializableTypes                           |          1 |        -31 |          0 |         -5 |        -36 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Input                                                       |          1 |     -1,199 |        -16 |        -16 |     -1,231 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts                                                     |         53 |     -3,079 |       -686 |       -587 |     -4,352 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses                                              |          6 |       -459 |        -70 |        -80 |       -609 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses (Files)                                      |          5 |       -439 |        -70 |        -76 |       -585 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\Spikes                                       |          1 |        -20 |          0 |         -4 |        -24 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Camera                                              |          1 |        -35 |          0 |         -5 |        -40 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Companion                                           |          1 |        -34 |        -12 |         -5 |        -51 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies                                             |          5 |       -302 |        -84 |        -56 |       -442 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables                                       |          3 |       -177 |        -58 |        -32 |       -267 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items                                               |          2 |        -33 |          0 |         -6 |        -39 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Light                                               |          1 |        -49 |         -3 |         -9 |        -61 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments                                       |          3 |        -70 |        -26 |        -18 |       -114 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player                                              |         11 |     -1,089 |       -375 |       -226 |     -1,690 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI                                                  |         20 |       -831 |        -58 |       -150 |     -1,039 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue                                         |          3 |       -162 |         -5 |        -35 |       -202 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\EnemyHealthbars                                  |          1 |        -24 |          0 |         -8 |        -32 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory                                        |          2 |        -71 |         -2 |        -14 |        -87 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling                                        |          2 |       -155 |        -18 |        -19 |       -192 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus                                            |          7 |       -245 |         -8 |        -46 |       -299 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus (Files)                                    |          2 |        -88 |         -2 |        -21 |       -111 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\MainMenu                                   |          2 |       -101 |         -4 |        -11 |       -116 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options                                    |          3 |        -56 |         -2 |        -14 |        -72 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars                                       |          4 |       -127 |         -7 |        -18 |       -152 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Shrines                                          |          1 |        -47 |        -18 |        -10 |        -75 |
++-----------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                            | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\DataPersistenceManager.cs                   | C#       |        -63 |         -5 |        -14 |        -82 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\Data\GameData.cs                            | C#       |        -50 |         -3 |         -4 |        -57 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\FileDataHandler.cs                          | C#       |        -60 |         -3 |         -8 |        -71 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\IDataPersistence.cs                         | C#       |         -8 |         -9 |         -3 |        -20 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\SerializableTypes\SerializableDictionary.cs | C#       |        -31 |          0 |         -5 |        -36 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Input\InputActions.cs                                       | C#       |     -1,199 |        -16 |        -16 |     -1,231 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossBehaviour.cs                             | C#       |        -54 |         -2 |        -13 |        -69 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossCombatBehaviour.cs                       | C#       |       -136 |        -20 |        -27 |       -183 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossHealthBarBehaviour.cs                    | C#       |        -63 |         -1 |         -8 |        -72 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossInfos.cs                                 | C#       |       -117 |        -37 |        -16 |       -170 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossSpawner.cs                               | C#       |        -69 |        -10 |        -12 |        -91 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\Spikes\SpikeBehaviour.cs                     | C#       |        -20 |          0 |         -4 |        -24 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Camera\ChangeTargetBehaviour.cs                     | C#       |        -35 |          0 |         -5 |        -40 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Companion\CompanionBehaviour.cs                     | C#       |        -34 |        -12 |         -5 |        -51 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyBehaviour.cs                           | C#       |        -46 |         -3 |        -10 |        -59 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyCombatBehaviour.cs                     | C#       |        -87 |        -24 |        -20 |       -131 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyInfos.cs                               | C#       |       -108 |        -44 |        -14 |       -166 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemySpawner.cs                             | C#       |        -40 |        -13 |         -9 |        -62 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\PlayerInRangeCheck.cs                       | C#       |        -21 |          0 |         -3 |        -24 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\BenchBehaviour.cs                     | C#       |        -28 |          0 |         -6 |        -34 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\ShrineBehaviour.cs                    | C#       |        -50 |        -15 |        -10 |        -75 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\ShrineManager.cs                      | C#       |        -99 |        -43 |        -16 |       -158 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items\ItemBehaviour.cs                              | C#       |        -24 |          0 |         -5 |        -29 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items\ItemScriptableObject.cs                       | C#       |         -9 |          0 |         -1 |        -10 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Light\PulsingLightBehaviour.cs                      | C#       |        -49 |         -3 |         -9 |        -61 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\DroppedMoonlightBehaviour.cs          | C#       |        -15 |          0 |         -3 |        -18 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\FirstMoonFragmentBehaviour.cs         | C#       |        -23 |        -13 |        -10 |        -46 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\MoonFragmentBehaviour.cs              | C#       |        -32 |        -13 |         -5 |        -50 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerCombat.cs                              | C#       |       -176 |        -60 |        -30 |       -266 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerController.cs                          | C#       |       -284 |        -86 |        -77 |       -447 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerDefeatedBosses.cs                      | C#       |        -23 |          0 |         -4 |        -27 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerDropMoonlight.cs                       | C#       |        -33 |          0 |         -6 |        -39 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerHealthflaskBehaviour.cs                | C#       |        -66 |        -28 |        -11 |       -105 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInfos.cs                               | C#       |       -172 |        -55 |        -29 |       -256 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInteract.cs                            | C#       |        -31 |        -10 |         -9 |        -50 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerLevelBehaviour.cs                      | C#       |       -126 |        -64 |        -23 |       -213 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerMeleeWeaponBehaviour.cs                | C#       |        -87 |        -38 |        -22 |       -147 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerSittingBehaviour.cs                    | C#       |        -60 |        -22 |        -10 |        -92 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\TakeDamageBehaviour.cs                       | C#       |        -31 |        -12 |         -5 |        -48 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\ButtonBehaviour.cs                      | C#       |        -22 |          0 |         -7 |        -29 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\DialogueManager.cs                      | C#       |       -101 |         -3 |        -18 |       -122 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\NPCDialogueBehaviour.cs                 | C#       |        -39 |         -2 |        -10 |        -51 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\EnemyHealthbars\EnemyHealthbarBehaviour.cs       | C#       |        -24 |          0 |         -8 |        -32 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory\InventoryManager.cs                    | C#       |        -30 |          0 |         -5 |        -35 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory\InventorySlot.cs                       | C#       |        -41 |         -2 |         -9 |        -52 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling\LevelUpManager.cs                      | C#       |       -117 |        -18 |         -9 |       -144 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling\LevelUpSlot.cs                         | C#       |        -38 |          0 |        -10 |        -48 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\MainMenu\MenuButtons.cs                    | C#       |        -94 |         -4 |         -9 |       -107 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\MainMenu\SaveFileSlot.cs                   | C#       |         -7 |          0 |         -2 |         -9 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options\AudioSettings.cs                   | C#       |        -12 |         -2 |         -5 |        -19 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options\BrightnessSlider.cs                | C#       |         -6 |          0 |         -3 |         -9 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options\OptionsButtonsBehaviour.cs         | C#       |        -38 |          0 |         -6 |        -44 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\PlayerStatSlot.cs                          | C#       |        -26 |         -2 |         -7 |        -35 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\PlayerStatsBehaviour.cs                    | C#       |        -62 |          0 |        -14 |        -76 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayHeldMoonfragments.cs           | C#       |        -13 |         -3 |         -3 |        -19 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayHeldMoonlight.cs               | C#       |        -13 |         -3 |         -3 |        -19 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayMoonwaterAmount.cs             | C#       |        -13 |          0 |         -3 |        -16 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\StatBarBehaviour.cs                   | C#       |        -88 |         -1 |         -9 |        -98 |
+| d:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Shrines\ShrineMenuBehaviour.cs                   | C#       |        -47 |        -18 |        -10 |        -75 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\DataPersistenceManager.cs                   | C#       |         96 |          7 |         22 |        125 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\Data\GameData.cs                            | C#       |         62 |          3 |          8 |         73 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\FileDataHandler.cs                          | C#       |         60 |          3 |          8 |         71 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\IDataPersistence.cs                         | C#       |          8 |          9 |          3 |         20 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\DataPersistence\SerializableTypes\SerializableDictionary.cs | C#       |         31 |          0 |          5 |         36 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Input\InputActions.cs                                       | C#       |      1,199 |         16 |         16 |      1,231 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossBehaviour.cs                             | C#       |         56 |          2 |         13 |         71 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossCombatBehaviour.cs                       | C#       |        138 |         24 |         31 |        193 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossDashSpotBehaviour.cs                     | C#       |         24 |          0 |          6 |         30 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossHealthBarBehaviour.cs                    | C#       |         63 |          1 |          8 |         72 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossHurtboxBehaviour.cs                      | C#       |         27 |          7 |          4 |         38 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossInfos.cs                                 | C#       |        165 |         30 |         29 |        224 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\BossSpawner.cs                               | C#       |         70 |         10 |         12 |         92 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Bosses\Spikes\SpikeBehaviour.cs                     | C#       |         20 |          0 |          4 |         24 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Camera\ChangeTargetBehaviour.cs                     | C#       |         35 |          0 |          5 |         40 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Companion\CompanionBehaviour.cs                     | C#       |         34 |         12 |          5 |         51 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyBehaviour.cs                           | C#       |         49 |          6 |         10 |         65 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyCombatBehaviour.cs                     | C#       |        104 |         27 |         21 |        152 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyDashSpotBehaviour.cs                   | C#       |         26 |          0 |          5 |         31 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemyInfos.cs                               | C#       |        160 |         44 |         32 |        236 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\EnemySpawner.cs                             | C#       |         39 |         13 |          9 |         61 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Enemies\PlayerInRangeCheck.cs                       | C#       |         21 |          0 |          3 |         24 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\BenchBehaviour.cs                     | C#       |         28 |          0 |          6 |         34 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\ShrineBehaviour.cs                    | C#       |         53 |         15 |         11 |         79 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Interactables\ShrineManager.cs                      | C#       |        107 |         43 |         17 |        167 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items\ItemBehaviour.cs                              | C#       |         24 |          0 |          5 |         29 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Items\ItemScriptableObject.cs                       | C#       |          9 |          0 |          1 |         10 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Light\PulsingLightBehaviour.cs                      | C#       |         49 |          3 |          9 |         61 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\DroppedMoonlightBehaviour.cs          | C#       |         15 |          0 |          3 |         18 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\FirstMoonFragmentBehaviour.cs         | C#       |         25 |         13 |         10 |         48 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\MoonFragments\MoonFragmentBehaviour.cs              | C#       |         32 |         13 |          5 |         50 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerCombat.cs                              | C#       |        177 |         57 |         30 |        264 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerController.cs                          | C#       |        257 |         68 |         59 |        384 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerDefeatedBosses.cs                      | C#       |         23 |          4 |          6 |         33 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerDropMoonlight.cs                       | C#       |         33 |          0 |          6 |         39 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerHealthflaskBehaviour.cs                | C#       |         71 |         28 |         11 |        110 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInfos.cs                               | C#       |        177 |         55 |         31 |        263 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerInteract.cs                            | C#       |         31 |         10 |          9 |         50 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerLevelBehaviour.cs                      | C#       |        124 |         64 |         23 |        211 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerMeleeWeaponBehaviour.cs                | C#       |        127 |         37 |         26 |        190 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerSittingBehaviour.cs                    | C#       |         60 |         22 |         10 |         92 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerSoundBehaviour.cs                      | C#       |         38 |          0 |         10 |         48 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\PlayerStateManager.cs                        | C#       |         21 |          0 |          5 |         26 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Player\TakeDamageBehaviour.cs                       | C#       |         36 |         12 |          5 |         53 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\Sound\SoundBehaviourInOptions.cs                    | C#       |         14 |          0 |          3 |         17 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\ButtonBehaviour.cs                      | C#       |         22 |          0 |          7 |         29 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\DialogueManager.cs                      | C#       |        101 |          3 |         18 |        122 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Dialogue\NPCDialogueBehaviour.cs                 | C#       |         55 |          2 |         11 |         68 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\EnemyHealthbars\EnemyHealthbarBehaviour.cs       | C#       |         24 |          0 |          8 |         32 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory\InventoryManager.cs                    | C#       |         30 |          0 |          5 |         35 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Inventory\InventorySlot.cs                       | C#       |         41 |          2 |          9 |         52 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling\LevelUpManager.cs                      | C#       |        117 |         18 |          9 |        144 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Levelling\LevelUpSlot.cs                         | C#       |         38 |          0 |         10 |         48 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\MainMenu\MainMenu.cs                       | C#       |         37 |          0 |          7 |         44 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\MainMenu\MenuButtons.cs                    | C#       |         95 |          6 |         12 |        113 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\MainMenu\SaveFileSlot.cs                   | C#       |          7 |          0 |          2 |          9 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options\AudioSettings.cs                   | C#       |         52 |          4 |         10 |         66 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options\BrightnessSlider.cs                | C#       |          6 |          0 |          3 |          9 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\Options\OptionsButtonsBehaviour.cs         | C#       |         56 |          0 |          8 |         64 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\PlayerStatSlot.cs                          | C#       |         26 |          2 |          7 |         35 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Menus\PlayerStatsBehaviour.cs                    | C#       |         62 |          0 |         14 |         76 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayHeldMoonfragments.cs           | C#       |         13 |          3 |          3 |         19 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayHeldMoonlight.cs               | C#       |         13 |          3 |          3 |         19 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\DisplayMoonwaterAmount.cs             | C#       |         13 |          0 |          3 |         16 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\PlayerBars\StatBarBehaviour.cs                   | C#       |         88 |          1 |          9 |         98 |
+| f:\3. SAP\Moonweaver\Assets\+++Workdata\Scripts\UI\Shrines\ShrineMenuBehaviour.cs                   | C#       |         47 |         18 |         10 |         75 |
+| Total                                                                                               |          |        471 |         -2 |         91 |        560 |
++-----------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

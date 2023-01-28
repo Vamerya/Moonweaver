@@ -9,6 +9,7 @@ using UnityEngine;
 public class FirstMoonFragmentBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject companion;
+    [SerializeField] GameObject merchant;
 
 
 
@@ -38,6 +39,7 @@ public class FirstMoonFragmentBehaviour : MonoBehaviour
             collision.GetComponentInParent<PlayerInfos>().ObtainedFirstMoonFragment();
             collision.GetComponentInParent<PlayerLevelBehaviour>().moonLight = 2000;
 
+            Destroy(merchant);
             Destroy(gameObject);
             //ToDo - play transformation cutscene
         }

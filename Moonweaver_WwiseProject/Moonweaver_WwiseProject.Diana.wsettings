@@ -3,7 +3,8 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{E3F5A826-7D18-435D-B94C-DF3AF0989BD1}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\3. SAP\Sound\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Diana\Downloads\"/>
+				<Property Name="Event Action List\{0FC82B96-518F-4C48-889E-6768BF9CEC72}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{39CE3321-0805-4C0D-8EEF-1D97480CEF35}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{41D09C29-1BD9-4A6C-8760-5167B177AE64}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{66EC2275-D56F-43B3-BA48-B74CDCE0B9EE}\x64_Expand States" Type="string" Value=""/>

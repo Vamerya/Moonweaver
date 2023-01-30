@@ -14,6 +14,11 @@
 						<Switch Name="AsterAlive" ID="{6524A223-C966-4BC3-A65F-AA7A7CF0FD13}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="SwordSwoosh" ID="{D091C4EB-FFEE-4CD7-A9A5-AA4CA89D5533}">
+					<ChildrenList>
+						<Switch Name="Default" ID="{9D9A1CA2-C795-4CCC-82B6-1DB5D25EE344}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

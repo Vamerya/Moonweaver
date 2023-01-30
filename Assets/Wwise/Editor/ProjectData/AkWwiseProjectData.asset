@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: d933278df2584b4a8978f35a7ed74501
     GuidInternal: 
-    m_lastTime: -8585274431510002901
+    m_lastTime: -8585277485704273209
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: b16642fd83c8bc4c96d9a209c7cea467
     GuidInternal: 
-    m_lastTime: -8585267551182137748
+    m_lastTime: -8585270574080081492
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: d08a1f11bdfbb54888a1f63d2e8fb3c5
     GuidInternal: 
-    m_lastTime: -8585267551182107732
+    m_lastTime: -8585265407590207553
     List:
     - name: Main
       guid: d91e3248ea9c84418abd1336d4d59083
@@ -128,7 +128,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f0ecfe22b3ad344ab111bd467979de16
     GuidInternal: 
-    m_lastTime: -8585271099325741166
+    m_lastTime: -8585271341694942948
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -141,7 +141,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 9fd66b419a5a284fab755d2d5dfd0f1d
     GuidInternal: 
-    m_lastTime: -8585267551182167738
+    m_lastTime: -8585270456339682317
     List:
     - name: Heartbeat
       guid: 2133ce3905080d4c8eef1d97480cef35
@@ -188,7 +188,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: 29e9b914b7cb2147a5b17533ee07415c
     GuidInternal: 
-    m_lastTime: -8585267551182157732
+    m_lastTime: -8585265404308528340
     List:
     - name: AsterHurt
       guid: 7522ec666fd5b343ba48b74cdce0b9ee
@@ -224,6 +224,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SwordSwoosh
+      guid: 962bc80f8f51484c889e6768bf9cec72
+      id: 2927843501
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: 29e9b914b7cb2147a5b17533ee07415c
+      - ElementName: SwordSwoosh
+        ObjectType: 3
+        guid: 962bc80f8f51484c889e6768bf9cec72
+      Path: Events\SFX\SwordSwoosh
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -236,7 +253,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0e181ec1466b604bbeac278ae343a2e9
     GuidInternal: 
-    m_lastTime: -8585267551182157732
+    m_lastTime: -8585270575081363259
     List:
     - name: MasterVolume
       guid: b792a2a7f968d640b50d78b9f4c3a854
@@ -315,7 +332,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7a48650bf4d1074d9b9e05c7f12c376b
     GuidInternal: 
-    m_lastTime: -8585271099325696162
+    m_lastTime: -8585271341420094595
     List: []
   - PhysicalPath: States\Music.wwu
     PathAndIcons:
@@ -328,7 +345,7 @@ MonoBehaviour:
     ParentPath: States\Music
     guid: 25b9aa7ebdc44a4fb308d5dbc9a7d274
     GuidInternal: 
-    m_lastTime: -8585267551182097746
+    m_lastTime: -8585269694645599678
     List:
     - name: GameplayMusicState
       guid: ff560accfef7954a9a40fe3c5a4d4bab
@@ -572,7 +589,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f129b962d6daf1499732233c75e54b8b
     GuidInternal: 
-    m_lastTime: -8585267551182097746
+    m_lastTime: -8585265407590402300
     List:
     - name: AsterHurt
       guid: 6c548a7155d81644bd5cf6892b26cce8
@@ -658,6 +675,40 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: SwordSwoosh
+      guid: ebc491d0eeffd74ca9a5aa4ca89d5533
+      id: 2927843501
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f129b962d6daf1499732233c75e54b8b
+      - ElementName: SwordSwoosh
+        ObjectType: 11
+        guid: ebc491d0eeffd74ca9a5aa4ca89d5533
+      Path: Switches\Default Work Unit\SwordSwoosh
+      values:
+      - name: Default
+        guid: a21c9a9d95c7cc4c82b61db5d25ee344
+        id: 782826392
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: f129b962d6daf1499732233c75e54b8b
+        - ElementName: SwordSwoosh
+          ObjectType: 11
+          guid: ebc491d0eeffd74ca9a5aa4ca89d5533
+        - ElementName: Default
+          ObjectType: 10
+          guid: a21c9a9d95c7cc4c82b61db5d25ee344
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -670,7 +721,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f12d3d8097129240812e037938411b68
     GuidInternal: 
-    m_lastTime: -8585267551182097746
+    m_lastTime: -8585270458631175141
     List:
     - name: PlayerLowLife
       guid: 2452715133005641871b0a0699935dcf

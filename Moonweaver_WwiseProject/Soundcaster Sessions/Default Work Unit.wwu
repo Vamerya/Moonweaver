@@ -29,13 +29,14 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{2D78172A-6FBC-420F-AE99-ED63CCD1209B}"/>
-						<CurrentStateRef Name="Lowlife" ID="{7A0D68AA-4B2E-4377-9BD4-F8946F7100A2}"/>
+						<CurrentStateRef Name="Unpaused" ID="{BFF4534E-C537-4417-9AD5-587A8C354CF3}"/>
+						<CurrentStateRef Name="Healthy" ID="{E7F5CDA1-7E5E-41BB-9B79-B19409F8E4E2}"/>
 						<CurrentStateRef Name="Exploring" ID="{F208885C-CD5A-46C9-B28A-3CCDCC7138BA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Concrete" ID="{4A80B7D8-20A2-48FA-BA6D-E0B35B5D2484}"/>
 						<CurrentSwitchRef Name="AsterAlive" ID="{6524A223-C966-4BC3-A65F-AA7A7CF0FD13}"/>
+						<CurrentSwitchRef Name="Default" ID="{9D9A1CA2-C795-4CCC-82B6-1DB5D25EE344}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -38,6 +38,7 @@ public class FirstMoonFragmentBehaviour : MonoBehaviour
             companion.SetActive(true);
             collision.GetComponentInParent<PlayerInfos>().ObtainedFirstMoonFragment();
             collision.GetComponentInParent<PlayerLevelBehaviour>().moonLight = 2000;
+            collision.GetComponentInChildren<PlayerLightBehaviour>().anim.SetTrigger("PickedUpFragment");
 
             Destroy(merchant);
             Destroy(gameObject);

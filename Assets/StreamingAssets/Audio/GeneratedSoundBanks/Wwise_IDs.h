@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID HEARTBEAT = 2179486487U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SWORDSWOOSH = 2927843501U;
     } // namespace EVENTS
 
     namespace STATES
@@ -83,6 +84,16 @@ namespace AK
                 static const AkUniqueID GRAVEL = 2185786256U;
             } // namespace SWITCH
         } // namespace FOOTSTEPS
+
+        namespace SWORDSWOOSH
+        {
+            static const AkUniqueID GROUP = 2927843501U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID DEFAULT = 782826392U;
+            } // namespace SWITCH
+        } // namespace SWORDSWOOSH
 
     } // namespace SWITCHES
 

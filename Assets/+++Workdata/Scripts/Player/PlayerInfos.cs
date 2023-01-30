@@ -18,6 +18,7 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
     [SerializeField] StatBarBehaviour healthBarBehaviour;
     [SerializeField] PlayerDropMoonlight playerDropMoonlight;
     [SerializeField] ShrineManager shrineManager;
+    [SerializeField] PlayerDisplayEquippedWeapon equippedWeapon;
     [SerializeField] GameObject companionPrefab;
     public List<GameObject> companions;
 
@@ -158,9 +159,15 @@ public class PlayerInfos : MonoBehaviour, IDataPersistence
             swappedWeapon = !swappedWeapon;
 
         if(swappedWeapon)
+        {
             inventoryState = 1;
+            equippedWeapon.SwapDisplayedWeapon();
+        }
         else
+        {
             inventoryState = 0;
+            equippedWeapon.SwapDisplayedWeapon();
+        }
 
         playerController.anim.SetInteger("inventoryState", inventoryState);
     }

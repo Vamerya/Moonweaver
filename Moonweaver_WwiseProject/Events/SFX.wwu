@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SwordSwoosh" ID="{0FC82B96-518F-4C48-889E-6768BF9CEC72}">
+					<ChildrenList>
+						<Action Name="" ID="{F8B3B963-2CBD-49F2-871A-4AB1AAFCFB94}" ShortID="513501378">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SwordSwoosh" ID="{F9078079-FD52-4D04-9249-A00ACB0A0D51}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

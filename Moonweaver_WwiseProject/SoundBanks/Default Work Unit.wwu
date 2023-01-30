@@ -16,6 +16,7 @@
 						<ObjectRef Name="SFX" ID="{14B9E929-CBB7-4721-A5B1-7533EE07415C}" WorkUnitID="{14B9E929-CBB7-4721-A5B1-7533EE07415C}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Eggbert" ID="{4BF0BBE1-EF09-47AD-A8A0-E45C256AB20B}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Heartbeat" ID="{39CE3321-0805-4C0D-8EEF-1D97480CEF35}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SwordSwoosh" ID="{F9078079-FD52-4D04-9249-A00ACB0A0D51}" WorkUnitID="{66E13538-9651-432C-A400-C6E29B8862D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" WorkUnitID="{416BD69F-5A9A-4F28-AB75-5D2D5DFD0F1D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" WorkUnitID="{D3A07CBA-90E5-4F2C-9300-2E8448498AA8}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

@@ -370,6 +370,129 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<SwitchContainer Name="SwordSwoosh" ID="{F9078079-FD52-4D04-9249-A00ACB0A0D51}" ShortID="176253732">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Default" ID="{9D9A1CA2-C795-4CCC-82B6-1DB5D25EE344}" WorkUnitID="{62B929F1-DAD6-49F1-9732-233C75E54B8B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX &amp; Environmental" ID="{F9EAED73-4BB0-4847-8D50-6D897F09DCBC}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="SwordSwoosh" ID="{D091C4EB-FFEE-4CD7-A9A5-AA4CA89D5533}" WorkUnitID="{62B929F1-DAD6-49F1-9732-233C75E54B8B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Swords" ID="{E0D95B80-961C-41FA-B1E5-F557E2AA92A8}" ShortID="592233801">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SowrdAtack_3" ID="{58C1B311-9F7A-4414-8F52-26E42C0A9800}" ShortID="433989919">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SowrdAtack_3" ID="{8E7C920C-DA6E-4409-93BA-98EFF94427C1}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.249637879843295"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SowrdAtack_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="771375832"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SowrdAtack_3" ID="{8E7C920C-DA6E-4409-93BA-98EFF94427C1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SowrdAtack_2" ID="{1050311E-D605-4F55-9F3F-C3374A64DAB5}" ShortID="256073205">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SowrdAtack_2" ID="{9D015ACF-47D3-41E2-B446-9374B845636A}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.136760037348273"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SowrdAtack_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="719004946"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SowrdAtack_2" ID="{9D015ACF-47D3-41E2-B446-9374B845636A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SowrdAtack_1" ID="{32C9047F-1CFA-48B4-AEEA-EF0672547B0A}" ShortID="221667970">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{53DBDF2C-A83E-46C7-8A5A-B98251F91933}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FD4266B1-C883-4CBC-96D9-A209C7CEA467}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SowrdAtack_1" ID="{1A7B419D-004C-4931-9258-59DEE3B9ECB7}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.112629718554088"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SowrdAtack_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="386184006"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SowrdAtack_1" ID="{1A7B419D-004C-4931-9258-59DEE3B9ECB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Swords" ID="{E0D95B80-961C-41FA-B1E5-F557E2AA92A8}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Default" ID="{9D9A1CA2-C795-4CCC-82B6-1DB5D25EE344}"/>
+								<ItemList>
+									<ItemRef Name="Swords" ID="{E0D95B80-961C-41FA-B1E5-F557E2AA92A8}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

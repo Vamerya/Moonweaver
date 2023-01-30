@@ -11,6 +11,7 @@ public class LevelUpManager : MonoBehaviour
     [SerializeField] PlayerInfos playerInfos;
     [SerializeField] TextMeshProUGUI _requiredMoonText;
     [SerializeField] TextMeshProUGUI _availableLevelUps;
+    [SerializeField] GameObject[] levelUpButtons;
     public string statName;
     public int currentLevel;
     public int levelUpMenuState = 0;
@@ -24,7 +25,7 @@ public class LevelUpManager : MonoBehaviour
     // - Luck -> crit damage
     #endregion
 
-    void Awake() 
+    void Awake()
     {
 
     }
@@ -36,11 +37,27 @@ public class LevelUpManager : MonoBehaviour
 
     /// <summary>
     /// Displays how much Moonlight the player has available and how much the next LevelUp costs
+    /// deactivates buttons to level up when the player can't level up
     /// </summary>
     void Update()
     {
         _availableLevelUps.text = "You have " + playerLevelBehaviour.moonLight + " Moonlight available";
         _requiredMoonText.text = playerLevelBehaviour.requiredMoonLight + " Moonlight is required for the next level up";
+        if (!playerLevelBehaviour.levelUpReady)
+        {
+            for (int i = 0; i < levelUpButtons.Length; i++)
+            {
+                levelUpButtons[i].SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < levelUpButtons.Length; i++)
+            {
+                levelUpButtons[i].SetActive(true);
+            }
+        }
+
     }
 
     /// <summary>

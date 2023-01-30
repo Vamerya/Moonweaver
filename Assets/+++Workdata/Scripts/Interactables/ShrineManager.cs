@@ -10,7 +10,7 @@ public class ShrineManager : MonoBehaviour, IDataPersistence
     public GameObject _shrineMenu;
     public GameObject _levelUpMenu;
     public GameObject _statMenu;
-    [SerializeField] public TextMeshProUGUI _areaName;
+    [SerializeField] public TextMeshProUGUI[] _areaName;
     [SerializeField] GameObject _playerBars;
     [SerializeField] GameObject _playerHeldMoonlight;
     [SerializeField] Transform mainShrine;

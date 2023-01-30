@@ -13,7 +13,7 @@ public class PlayerStatsBehaviour : MonoBehaviour
         switch(slotID)
         {
             case 0:
-                statName = "HealthPoints";
+                statName = "Health Points";
                 break;
 
             case 1:

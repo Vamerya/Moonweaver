@@ -13,6 +13,6 @@ public class DisplayHeldMoonlight : MonoBehaviour
     /// </summary>
     void Update()
     {
-        heldMoonLight.text = playerLevelBehaviour.moonLight.ToString() + " Moonlight";
+        heldMoonLight.text = playerLevelBehaviour.moonLight.ToString();
     }
 }

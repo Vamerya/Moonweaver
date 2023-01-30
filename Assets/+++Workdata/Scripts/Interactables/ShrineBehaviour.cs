@@ -56,7 +56,8 @@ public class ShrineBehaviour : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             playerInRange = true;
-            shrineManager._areaName.text = areaName;
+            for (int i = 0; i < shrineManager._areaName.Length; i++)
+                shrineManager._areaName[i].text = areaName;
             anim.SetBool("playerInRange", playerInRange);
         }
         

@@ -2,7 +2,7 @@
 
 ## 🌙 General information
 
-**Moonweaver** was created for our final submission of the 3rd semester in our game design school.  
+**Moonweaver** was created as our final submission of the 3rd semester in our game design school.  
 The game was created over the course of two months with 4 members, with me (Vamerya) being the programmer and sounddesigner.
 
 
@@ -19,6 +19,6 @@ Wwise was used for the implementation of the sound and the logic behind it, the 
 Music is available [here](https://soundcloud.com/xvamerya/sets/moonweaver-soundtracks/)!
 
 
-## ❗ Known problems
+## ❗ Known issues
 
 - Sometimes the attack animations freeze (a mechanism was implemented to get rid of the frozen animation after a few seconds)

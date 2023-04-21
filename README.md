@@ -6,3 +6,5 @@
       - New Input System
       - Cinemachine
       - Universal RP
+      
+-- Wwise was used for sound in case you wanna check out the Wwise project --

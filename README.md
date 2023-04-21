@@ -21,5 +21,4 @@ Music is available [here](https://soundcloud.com/xvamerya/sets/moonweaver-soundt
 
 ## ❗ Known problems
 
-- The code became really messy in some places near the end of the deadline (mostly in the player controller, everything else looks fine!)
 - Sometimes the attack animations freeze (a mechanism was implemented to get rid of the frozen animation after a few seconds)
